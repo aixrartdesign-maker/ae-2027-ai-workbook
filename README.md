@@ -4,7 +4,7 @@
 
 애프터이펙트 한 가지 프로그램을 처음부터 끝까지 다루는 실습 교본의 원고와 실습 자료입니다. 앞의 절반은 기본기·모션그래픽·익스프레션·합성·3D이고, 뒤의 절반은 힉스필드 플러그인 패널, Claude 브리지, 애펙 자체 AI(AI Assistant, Object Matte)를 실습합니다.
 
-**책 읽기: [`book/AE_2027_AI_Workbook.pdf`](book/AE_2027_AI_Workbook.pdf)** (122쪽, 182 × 257mm)
+**책 읽기: [`book/AE_2027_AI_Workbook.pdf`](book/AE_2027_AI_Workbook.pdf)** (123쪽, 182 × 257mm)
 
 ## 폴더 구성
 
