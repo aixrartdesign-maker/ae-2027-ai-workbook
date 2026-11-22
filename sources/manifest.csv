@@ -1,0 +1,23 @@
+id,book_chapter,topic,type,model,settings,credits_est,prompt_summary,url
+S01,08,keying,video,seedance_2_0_mini,720p 5s 16:9,5,woman in front of green screen,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141806_bf040f44-10e2-4b24-bbc7-1a839b93f063.mp4
+S03,11,object-matte,video,seedance_2_0_mini,720p 5s 16:9,5,man in red hoodie walking in park,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141806_7c6231c6-4cb9-4736-8ca7-2ac0c7401be0.mp4
+S04,11,content-aware-fill,video,seedance_2_0_mini,720p 5s 16:9,5,street with traffic cone,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141806_88045b5c-bd31-452a-8a3b-124613c929eb.mp4
+S05,10,3d-camera-tracker,video,seedance_2_0_mini,720p 5s 16:9,5,dolly along sidewalk,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141808_ea3ee978-4787-4b0b-952a-cd8743584977.mp4
+S06,10,sky-replacement,video,seedance_2_0_mini,720p 5s 16:9,5,rooftop with white sky,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141806_5857222c-f710-417c-b28c-050fd194352d.mp4
+S07,12,color-grading,video,seedance_2_0_mini,720p 5s 16:9,5,flat log boardwalk,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141806_769361ce-4667-4647-9045-8e8e414babea.mp4
+I11,10,sky-replacement,image,nano_banana_2,16:9,1.5,sunset sky,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141814_a9ae6fd7-0058-467f-a2dd-0660a0e430cf.png
+I12,08,keying,image,nano_banana_2,16:9,1.5,bright studio background,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141814_0ec9e006-1220-4e1d-b107-7a68c1aba43e.png
+I13,09,screen-replace,image,nano_banana_2,9:16,1.5,weather app screen,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_141814_209157c4-c7aa-423b-9fa5-f0f27b72c96f.png
+S02,09,tracking,video,seedance_2_0_mini,720p 5s 16:9,5,hand holding unbranded device with green screen (first prompt with smartphone rejected for IP),https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_142030_0c43ea83-10da-4ca0-9bd0-8950e6a4d3bf.mp4
+P01,18,panel-edit,video,seedance_2_0_mini,480p 5s 16:9,2.5,woman with small flower tattoo walking along brick wall,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_121922_3e74897c-3b53-404c-9481-0ae70042671e.mp4
+P02,20,panel-audio,video,seedance_2_5,480p 10s with audio,30,woman talking in classroom with 2s pause,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_130957_7e79cc3f-29aa-49e5-8773-46c08b36e92e.mp4
+SB1,24,storyboard,image,nano_banana_2,16:9,1.5,small Korean cafe exterior afternoon,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_135431_fd58ed52-8d4a-4449-b886-826f8e93dc0b.png
+SB2,24,storyboard,image,nano_banana_2,16:9,1.5,barista latte art,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_135431_2e82b2d9-72a0-4b8f-969d-e410ab09c8a2.png
+SB3,24,storyboard,image,nano_banana_2,16:9,1.5,woman reading by window,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_135431_8a829854-1e09-4b3a-ae70-5807640f2325.png
+SB4,24,storyboard,image,nano_banana_2,16:9,1.5,same cafe at dusk,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_135430_816c642b-4cff-4a8a-8743-2adf5ab4effb.png
+SB5,24,storyboard,image,nano_banana_2,16:9,1.5,single grey cup end card,https://d8j0ntlcm91z4.cloudfront.net/user_3IPe5CmnBAiVn73ow9XSLtFvVgy/hf_20261122_135430_732a8e14-37ca-4c5c-85be-1f62f65f482d.png
+G01,08,greenscreen-lighting-diagram,image,gpt_image_2_6,16:9,0.75,top-down greenscreen studio lighting layout (labels added in After Effects),book/img/G81_greenscreen_top.png
+G02,08,greenscreen-studio,image,gpt_image_2_6,16:9,0.75,greenscreen studio with softboxes camera and presenter,book/img/G81b_studio.png
+G03,13,light-roles,image,gpt_image_2_6,4 images,3,plaster bust lit by key / fill / rim / three-point light,book/img/L01_light_roles.png
+G04,13,light-moods,image,gpt_image_2_6,6 images,4.5,same subject under six lighting designs,book/img/L02_light_moods.png
+G05,16,job-roles,image,gpt_image_2_6,6 images,4.5,motion designers at work in six roles,book/img/R01_roles.png
