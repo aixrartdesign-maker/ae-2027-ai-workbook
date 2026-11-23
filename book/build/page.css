@@ -98,3 +98,6 @@ th { padding:1.7mm 2.4mm; font-size:8.3pt; }
 ul, ol { margin:0 0 3mm; }
 li { margin-bottom:.7mm; line-height:1.55; }
 .role .rh { font-size:10.4pt; }
+
+.pg.memo .memo-h { font-size:8pt; font-weight:800; letter-spacing:.3em; color:#6b63e6; padding-bottom:3mm; border-bottom:.35mm solid #cfcbff; }
+.pg.memo .memo-lines { height:205mm; background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 8.7mm, #e6e5f2 8.7mm, #e6e5f2 9mm); }

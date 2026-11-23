@@ -82,8 +82,8 @@
   function newPage() {
     var pg = document.createElement('div'); pg.className = 'pg';
     pg.innerHTML = '<div class="pg-head"><span class="hl"></span><span class="hr"></span></div><div class="pg-body"></div><div class="pg-foot"></div>';
-    var colo = document.getElementById('colophon');
-    document.body.insertBefore(pg, colo);
+    var anchor = document.getElementById('colophon') || document.getElementById('backcover');
+    document.body.insertBefore(pg, anchor);
     var P = { pg: pg, body: pg.querySelector('.pg-body'), items: [], deferred: 0 };
     pages.push(P);
     return P;
@@ -555,6 +555,15 @@
       if (kidsBottom + ch + 10 * MM > PAGE_H) { var NP = newPage(); NP.items.push({ part: lastP.items[0].part, chap: lastP.items[0].chap }); NP.body.appendChild(colo); NP.last = true; NP.left = 0; }
     }
 
+    // pad interior to a multiple of 8 with MEMO pages, kept before the final (colophon) page
+    var need = (8 - pages.length % 8) % 8;
+    var lastPg = pages[pages.length - 1];
+    for (var mi = 0; mi < need; mi++) {
+      var mp = document.createElement('div'); mp.className = 'pg memo';
+      mp.innerHTML = '<div class="pg-head"><span class="hl"></span><span class="hr"></span></div><div class="pg-body"><div class="memo-h">MEMO</div><div class="memo-lines"></div></div><div class="pg-foot"></div>';
+      document.body.insertBefore(mp, document.getElementById('backcover'));
+      pages.push({ pg: mp, body: mp.querySelector('.pg-body'), items: [{ part: '', chap: '' }] });
+    }
     // running heads + page numbers (cover = page 1)
     var title = '애프터이펙트 2027 완전 실습';
     pages.forEach(function (Pg, i) {
