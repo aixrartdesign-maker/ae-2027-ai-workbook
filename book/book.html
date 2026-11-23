@@ -215,6 +215,14 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 
 .pair .shot { min-width:0; }
 
+.cover.back .bband { position:absolute; left:0; right:0; bottom:0; height:62mm; background:linear-gradient(135deg,#9b5cff 0%,#ff3d7f 55%,#ffb03b 100%); }
+.cover.back .bq { position:absolute; top:34mm; left:18mm; right:18mm; font-size:15pt; font-weight:800; line-height:1.55; letter-spacing:-0.02em; color:#14143a; }
+.cover.back .bl { position:absolute; top:70mm; left:18mm; right:18mm; font-size:9.6pt; line-height:2; color:#3d4150; padding-left:4mm; }
+.cover.back .bgh { position:absolute; top:128mm; left:18mm; right:18mm; padding:5mm 6mm; border:.35mm solid #cfcbff; border-radius:2.5mm; font-size:11pt; font-weight:700; color:#00005B; letter-spacing:.01em; }
+.cover.back .bgh span { display:block; font-size:7.6pt; font-weight:700; color:#6b63e6; letter-spacing:.14em; margin-bottom:1.5mm; }
+.cover.back .author { bottom:72mm; }
+.cover.back .draft { bottom:72mm; }
+
 </style></head><body><section class="cover">
   <div class="band"></div>
   <div class="tag">AFTER EFFECTS × AI WORKBOOK · 2027 EDITION</div>
@@ -1945,7 +1953,7 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 </table>
 
 <h2>E. 깃허브 저장소 안내</h2>
-<p>이 책의 실습 자료는 깃허브 저장소 <span class="mono">github.com/aixrartdesign-maker/ae-2027-ai-workbook</span>에 정리되어 있습니다. 소스를 그대로 받아 같은 결과를 재현하고, 프롬프트를 고쳐 나만의 결과를 만들어 보세요.</p>
+<p>이 책의 실습 자료는 깃허브 저장소에 정리되어 있습니다. 주소는 뒤표지에 있습니다. 소스를 그대로 받아 같은 결과를 재현하고, 프롬프트를 고쳐 나만의 결과를 만들어 보세요.</p>
 <table>
 <tr><th style="width:30%">폴더</th><th>내용</th></tr>
 <tr><td class="mono">sources/</td><td>실습 영상·이미지 목록(manifest.csv), 생성 모델·설정·크레딧·프롬프트</td></tr>
@@ -2016,9 +2024,17 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <p>이 책의 실습과 화면은 2026년 11월 22일과 23일 이틀 동안, 저자의 지시에 따라 Claude가 Windows PC의 애프터이펙트를 직접 조작해 만들었습니다. 컴포지션과 레이어는 힉스필드 브리지로, 메뉴 선택과 화면 캡처는 Claude의 컴퓨터 사용 기능으로, 실습 영상과 도판 사진은 힉스필드의 생성 모델로 만들었습니다. 로그인과 결제, 무엇을 넣고 뺄지의 판단, 마지막 검수는 사람이 했습니다.</p>
 <table><tr><th style="width:36%">항목</th><th>기록</th></tr><tr><td>화면 캡처와 도판</td><td>99점 (실제 캡처, 직접 그린 도식, 생성 이미지에 표기를 더한 사진)</td></tr><tr><td>애펙 프로젝트</td><td>컴포지션 34개 — 저장소 project 폴더의 .aep 한 파일</td></tr><tr><td>힉스필드 크레딧</td><td>약 238 (25장의 기록표)</td></tr><tr><td>조판</td><td>HTML과 CSS로 짜고 PDF로 출력 (182 × 257mm)</td></tr></table>
 <h2>책 정보</h2>
-<table><tr><th style="width:36%">항목</th><th>내용</th></tr><tr><td>책 이름</td><td>애프터이펙트 2027 완전 실습 — 기본기부터 AI 협업까지</td></tr><tr><td>지은이 · 펴낸 날</td><td>안지아 · 2026년 11월 23일 (2027 EDITION, 1판)</td></tr><tr><td>기준 버전</td><td>Adobe After Effects 27.0 · Higgsfield Plugin v1.0.64</td></tr><tr><td>실습 자료</td><td>github.com/aixrartdesign-maker/ae-2027-ai-workbook</td></tr><tr><td>글꼴</td><td>본문 Noto Sans CJK KR, 도판 나눔고딕 (SIL Open Font License)</td></tr></table>
+<table><tr><th style="width:36%">항목</th><th>내용</th></tr><tr><td>책 이름</td><td>애프터이펙트 2027 완전 실습 — 기본기부터 AI 협업까지</td></tr><tr><td>지은이 · 펴낸 날</td><td>안지아 · 2026년 11월 23일 (2027 EDITION, 1판)</td></tr><tr><td>기준 버전</td><td>Adobe After Effects 27.0 · Higgsfield Plugin v1.0.64</td></tr><tr><td>실습 자료</td><td>깃허브 저장소 (주소는 뒤표지)</td></tr><tr><td>글꼴</td><td>본문 Noto Sans CJK KR, 도판 나눔고딕 (SIL Open Font License)</td></tr></table>
 <p class="src">화면 캡처와 도판은 저자가 직접 만들었습니다. Adobe, After Effects, Premiere는 Adobe Inc.의, Higgsfield는 Higgsfield AI의, Claude는 Anthropic의 상표입니다. 이 책은 각 회사의 공식 출판물이 아닙니다.</p>
-</section><script>
+</section><section class="cover back" id="backcover">
+  <div class="bband"></div>
+  <div class="bq">애펙 한 가지 프로그램을 처음부터 끝까지.<br>손으로 먼저 익히고, AI와 함께 완성합니다.</div>
+  <ul class="bl"><li>기본기 · 모션그래픽 · 익스프레션 · 합성 · 3D</li><li>힉스필드 플러그인 패널 · Claude 브리지 · 애펙 AI Assistant</li><li>실제 화면 캡처와 실제 크레딧 기록</li></ul>
+  <div class="bgh"><span>실습 자료 · 프로젝트 파일</span>github.com/aixrartdesign-maker/ae-2027-ai-workbook</div>
+  <div class="author">안지아 지음</div>
+  <div class="draft">2027 EDITION · 2026.11</div>
+</section>
+<script>
 (function () {
   'use strict';
   var MM = 96 / 25.4;
@@ -2103,8 +2119,8 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
   function newPage() {
     var pg = document.createElement('div'); pg.className = 'pg';
     pg.innerHTML = '<div class="pg-head"><span class="hl"></span><span class="hr"></span></div><div class="pg-body"></div><div class="pg-foot"></div>';
-    var colo = document.getElementById('colophon');
-    document.body.insertBefore(pg, colo);
+    var anchor = document.getElementById('colophon') || document.getElementById('backcover');
+    document.body.insertBefore(pg, anchor);
     var P = { pg: pg, body: pg.querySelector('.pg-body'), items: [], deferred: 0 };
     pages.push(P);
     return P;
