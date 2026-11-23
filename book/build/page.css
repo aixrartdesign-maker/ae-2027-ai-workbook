@@ -71,3 +71,30 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 .cover.back .bqr { position:absolute; right:4mm; top:50%; transform:translateY(-50%); width:24mm; height:24mm; }
 .cover.back .bgh em { display:block; font-style:normal; font-size:7.6pt; font-weight:500; color:#5a5f70; margin-top:2mm; letter-spacing:0; }
 .cover.back .bgh { font-size:9.6pt; white-space:nowrap; }
+
+/* ===== rhythm v2: tight inside a block, open between blocks, size by hierarchy ===== */
+body { line-height:1.62; }
+p { margin:0 0 1.9mm; }
+h1.ch { font-size:20pt; margin:2mm 0 2.6mm; }
+.lead { font-size:10pt; line-height:1.62; margin:0 0 6.5mm; padding-bottom:5mm; }
+h2 { font-size:12.6pt; line-height:1.35; margin:9.5mm 0 2.4mm; }
+h3 { font-size:10.4pt; line-height:1.4; margin:5.5mm 0 1.4mm; color:#1c1c46; }
+h2 + h3 { margin-top:2.5mm; }
+.step { margin:1.3mm 0; line-height:1.58; }
+p + .step, .shot + .step, table + .step, .why + .step, .prompt + .step { margin-top:3mm; }
+.step + p, .step + h3 { margin-top:3.2mm; }
+.tip, .warn, .note, .why, .stuck { line-height:1.55; padding:2.7mm 4mm; margin:4mm 0 4.6mm; }
+.tip b:first-child, .warn b:first-child, .note b:first-child { margin-bottom:.6mm; }
+.prompt { line-height:1.55; padding:3mm 4.2mm; margin:3mm 0 4.6mm; }
+.step + .prompt { margin-top:1.6mm; }
+.howto { line-height:1.6; margin:0 0 4.6mm; }
+.layer3 { margin:4.6mm 0; line-height:1.55; }
+table { line-height:1.45; margin:3.5mm 0 4.6mm; }
+td { padding:1.5mm 2.4mm; }
+th { padding:1.7mm 2.4mm; font-size:8.3pt; }
+.shot { margin:4mm 0 5mm; }
+.shot figcaption { line-height:1.48; margin-top:1.8mm; }
+.pair { margin:4mm 0 5mm; }
+ul, ol { margin:0 0 3mm; }
+li { margin-bottom:.7mm; line-height:1.55; }
+.role .rh { font-size:10.4pt; }
