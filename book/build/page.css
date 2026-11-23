@@ -58,3 +58,16 @@ table.syl td:nth-child(1), table.syl td:nth-child(3) { color:#6b63e6; font-weigh
 table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 
 .pair .shot { min-width:0; }
+
+.cover.back .bband { position:absolute; left:0; right:0; bottom:0; height:62mm; background:linear-gradient(135deg,#9b5cff 0%,#ff3d7f 55%,#ffb03b 100%); }
+.cover.back .bq { position:absolute; top:34mm; left:18mm; right:18mm; font-size:15pt; font-weight:800; line-height:1.55; letter-spacing:-0.02em; color:#14143a; }
+.cover.back .bl { position:absolute; top:70mm; left:18mm; right:18mm; font-size:9.6pt; line-height:2; color:#3d4150; padding-left:4mm; }
+.cover.back .bgh { position:absolute; top:128mm; left:18mm; right:18mm; padding:5mm 6mm; border:.35mm solid #cfcbff; border-radius:2.5mm; font-size:11pt; font-weight:700; color:#00005B; letter-spacing:.01em; }
+.cover.back .bgh span { display:block; font-size:7.6pt; font-weight:700; color:#6b63e6; letter-spacing:.14em; margin-bottom:1.5mm; }
+.cover.back .author { bottom:72mm; }
+.cover.back .draft { bottom:72mm; }
+
+.cover.back .bgh { padding-right:34mm; min-height:24mm; }
+.cover.back .bqr { position:absolute; right:4mm; top:50%; transform:translateY(-50%); width:24mm; height:24mm; }
+.cover.back .bgh em { display:block; font-style:normal; font-size:7.6pt; font-weight:500; color:#5a5f70; margin-top:2mm; letter-spacing:0; }
+.cover.back .bgh { font-size:9.6pt; white-space:nowrap; }
