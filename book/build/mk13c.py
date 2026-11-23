@@ -40,7 +40,7 @@ for sm in secs:
             toc.append(('ch',cid,num,title))
             new=sec.replace('<div class="ch-no">','<div class="ch-no" id="'+cid+'">',1)
         elif label=='APPENDIX':
-            toc.append(('ch','ch-app','부록',' 단축키 · 이펙트 30선 · 플러그인 · 용어 · 저장소 · 작업 기록 · 문제 해결 · 참고 자료'))
+            toc.append(('ch','ch-app','부록','단축키 · 이펙트 30선 · 용어 · 문제 해결 · 참고 자료'))
             new=sec.replace('<div class="ch-no">','<div class="ch-no" id="ch-app">',1)
         elif not mm and '지은이' in title:
             toc.append(('ch','ch-bio','','지은이'))
@@ -53,13 +53,18 @@ out.append(S[pos:]); S=''.join(out)
 # ---- new TOC (two columns, page numbers filled by paginator)
 def entry(kind,cid,label,title):
     if kind=='part':
-        return f'<div class="tp"><span>{label} · {title}</span><span class="pn" data-target="{cid}"></span></div>'
-    return f'<div class="te"><span class="tn">{label}</span><span class="tt">{title.strip()}</span><span class="pn" data-target="{cid}"></span></div>'
-# split into two columns at PART 4
+        no=label.replace('PART ','')
+        return f'<div class="tp"><span class="tpn">PART {no}</span><span class="tpt">{title}</span><span class="pn" data-target="{cid}"></span></div>'
+    lab=label.replace(' · ①','-1').replace(' · ②','-2').replace(' · ③','-3')
+    t=title.strip()
+    if ' — ' in t:
+        a,b=t.split(' — ',1); t=a+'<em> — '+b+'</em>'
+    return f'<div class="te"><span class="tn">{lab}</span><span class="tt">{t}</span><span class="pn" data-target="{cid}"></span></div>'
 idx=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 4'][0]
 colA=''.join(entry(*t) for t in toc[:idx]); colB=''.join(entry(*t) for t in toc[idx:])
-newtoc=('<section class="chapter toc-page" data-break="1" data-fill="1">\n<div class="ch-no">CONTENTS</div>\n<h1 class="ch">차례</h1>\n'
-        '<div class="toc2" data-stretch="1"><div class="tc">'+colA+'</div><div class="tc">'+colB+'</div></div>\n</section>')
+newtoc=('<section class="chapter toc-page" data-break="1">\n<div class="ch-no">CONTENTS</div>\n<h1 class="ch">차례</h1>\n'
+        '<div class="toc1">'+colA+'</div>\n</section>\n'
+        '<section class="chapter toc-page toc-cont" data-break="1">\n<div class="toc1">'+colB+'</div>\n</section>')
 S=S.replace(toc_sec,newtoc)
 # PART 0 starts a new page
 S=S.replace('<section class="part" id="part-0" style="break-before:page;margin-top:0">','<section class="part" id="part-0" data-break="1">')

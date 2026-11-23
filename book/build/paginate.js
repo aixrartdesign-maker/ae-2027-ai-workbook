@@ -108,15 +108,17 @@
       var n = pr.children.length, gap = px(getComputedStyle(pr).columnGap) || 4 * MM;
       return (pr.clientWidth - gap * (n - 1)) / n - pad - 1;
     }
-    return f.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    var w0 = f.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    return f.classList.contains('narrow') ? w0 * 0.8 : w0;
   }
   function baseMaxH(m) {
     var f = m.closest('figure');
     if (m.tagName !== 'IMG') return 1e6;
     if (f.parentNode.classList.contains('pair')) return 60 * MM;
     if (f.classList.contains('half')) return 54 * MM;
-    if (f.classList.contains('wide')) return 112 * MM;
-    return 84 * MM;
+    var k = f.classList.contains('narrow') ? 0.8 : 1;
+    if (f.classList.contains('wide')) return 112 * MM * k;
+    return 84 * MM * k;
   }
   function setH(m, h) {
     var a = aspect(m), W = availW(m);
@@ -157,6 +159,7 @@
       mediaOf(f).forEach(function (m) {
         var a = aspect(m), W = availW(m);
         var cap = Math.min(W / a, m._h * MAX_GROW, 125 * MM);
+        if (f.classList.contains('narrow')) cap = Math.min(cap, m._base || m._h);
         if (m.tagName === 'IMG') cap = Math.min(cap, m.naturalHeight * 1.25);
         if (cap - m._h > 1) ms.push({ m: m, room: cap - m._h });
       });
