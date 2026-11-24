@@ -42,3 +42,34 @@ def apply(S):
     if t in S:
         S = S.replace(t, '<tr><td>화면이 컬러 바, 이름이 기울어짐</td><td>원본 파일 이름이 바뀌거나 옮겨짐. 우클릭 → Replace Footage → File(2-4)</td></tr>\n<tr><td>블렌딩 모드가 안 먹음</td><td>맨 아래 레이어이거나 프리컴포즈 안쪽에 준 경우(4-8)</td></tr>\n' + t, 1)
     return S
+
+CREDITS = '''
+<h2><span class="tag t2">왜 그럴까</span> 23-3 어도비 생성 크레딧 — 얼마나, 어떻게 쓰이나</h2>
+<p>AI Assistant, Generative Fill, 영상 생성처럼 어도비의 생성형 AI 기능은 <b>생성 크레딧(generative credits)</b>으로 값을 치릅니다. 크레딧은 <b>어도비 계정(Adobe ID)</b>에 붙어 있어서 포토샵·프리미어·애펙·Firefly 어디서 쓰든 같은 통에서 빠집니다. 힉스필드 크레딧과는 전혀 별개입니다.</p>
+<table>
+<tr><th style="width:26%">항목</th><th>내용 (2026년 11월 기준)</th></tr>
+<tr><td>지급 방식</td><td>플랜마다 매달 정해진 양을 받습니다. 결제를 시작한 날을 기준으로 매달 다시 채워지고, <b>남은 크레딧은 다음 달로 넘어가지 않습니다</b>. 플랜이 둘이면 각 플랜의 결제일에 따로 채워집니다.</td></tr>
+<tr><td>플랜별 양</td><td>애펙 단일 앱(2025년 6월 17일 이후 가입) 월 25 · Creative Cloud Standard 월 25 · Creative Cloud Pro 월 4,000(표준 기능은 무제한)</td></tr>
+<tr><td>표준 기능</td><td>Generative Fill 같은 이미지 기능. 보통 한 번에 1크레딧이고, Creative Cloud Pro·Firefly 플랜은 무제한입니다.</td></tr>
+<tr><td>프리미엄 기능</td><td>영상·소리 생성과 파트너 모델. Firefly 영상 생성은 720p 초당 50, 1080p 초당 100크레딧입니다. 파트너 모델은 모델마다 다릅니다(예: Veo 3.1 초당 50, GPT Image 2 고해상도 한 장 80, Nano Banana 2 1K 한 장 20 — 일부는 한시 요율).</td></tr>
+<tr><td>모자랄 때</td><td>다음 달까지 기다리거나 Firefly 플랜을 더합니다. 미국 기준 Standard 월 $9.99(2,000) · Pro $19.99(4,000) · Pro Plus $49.99(10,000) · Premium $199.99(50,000). 2,000크레딧은 5초 영상 약 20편 분량입니다.</td></tr>
+</table>
+<h3>AI Assistant 베타의 크레딧 정책</h3>
+<ul>
+<li>공개 베타 초기에는 Firefly 생성까지 무료였고, 2026년 11월 6일부터 After Effects (beta)에서 크레딧 차감이 시작되었습니다.</li>
+<li>어도비는 지금 요율이 <b>“도입 요율이며 바뀔 수 있다”</b>고 밝힙니다. 동작마다 드는 양이 다르고, 동작이 끝난 뒤 크레딧 아이콘에 마우스를 올리면 실제로 쓴 양이 보입니다.</li>
+<li>애펙 단일 앱의 월 25크레딧은 생성 동작 한두 번이면 끝납니다. 이미지·영상 생성까지 자주 쓰려면 Creative Cloud Pro나 Firefly 플랜이 필요합니다.</li>
+</ul>
+<h3>어떤 엔진으로 돌아가나</h3>
+<p>AI Assistant는 어도비의 크리에이티브 에이전트가 요청을 해석해 애펙 안의 동작으로 바꾸고, 이미지·영상은 <b>Firefly 모델</b>과 <b>파트너 모델</b>(Google Gemini·Nano Banana·Veo, OpenAI GPT Image, FLUX, Runway, Luma, ElevenLabs 등)로 만듭니다. 모델을 지정하지 않으면 Assistant가 고릅니다. 대화를 맡는 언어 모델의 회사는 공개되지 않았습니다. Firefly 결과물은 상업적 사용에 안전하다고 어도비가 밝히지만 파트너 모델 결과물은 사용자가 판단해야 하고, 생성물은 레이어가 아닌 파일로 들어옵니다. 사용자 콘텐츠는 모델 학습에 쓰이지 않습니다.</p>
+
+<p class="src">출처: Adobe 도움말 「Generative credits FAQ」「Partner models in Adobe products」「After Effects AI Assistant (beta) FAQ」, Adobe 커뮤니티 공지(2026.11), adobe.com Firefly 요금 페이지. 2026년 11월 24일 확인. 요금과 요율은 자주 바뀌므로 쓰기 전에 다시 확인하세요.</p>
+'''
+
+def apply2(S):
+    a = '<div class="note"><b>어도비 생성 크레딧</b>AI Assistant의 AI 동작 대부분은 어도비 계정의 생성 크레딧(generative credits)을 씁니다. 남은 양은 어도비 계정 페이지에서 확인하세요. 힉스필드 크레딧과는 별개입니다.</div>'
+    assert a in S
+    S = S.replace(a, a.replace('힉스필드 크레딧과는 별개입니다.', '힉스필드 크레딧과는 별개입니다. 자세한 정책은 23-3에 정리했습니다.'), 1)
+    i = S.index('<h2>23-2 Object Matte')
+    j = S.index('<h2>이 장 점검</h2>', i)
+    return S[:j] + CREDITS.strip() + '\n\n' + S[j:]

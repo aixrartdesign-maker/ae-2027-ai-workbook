@@ -118,3 +118,7 @@ li { margin-bottom:.7mm; line-height:1.55; }
 
 .shot.narrow { margin:7mm 0 8mm; }
 .shot.narrow figcaption { max-width:80%; margin-left:auto; margin-right:auto; }
+
+p { margin:0 0 1.7mm; }
+h2 { margin:9mm 0 2.3mm; }
+.shot { margin:3.8mm 0 4.6mm; }

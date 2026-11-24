@@ -223,6 +223,62 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 .cover.back .author { bottom:72mm; }
 .cover.back .draft { bottom:72mm; }
 
+.cover.back .bgh { padding-right:34mm; min-height:24mm; }
+.cover.back .bqr { position:absolute; right:4mm; top:50%; transform:translateY(-50%); width:24mm; height:24mm; }
+.cover.back .bgh em { display:block; font-style:normal; font-size:7.6pt; font-weight:500; color:#5a5f70; margin-top:2mm; letter-spacing:0; }
+.cover.back .bgh { font-size:9.6pt; white-space:nowrap; }
+
+/* ===== rhythm v2: tight inside a block, open between blocks, size by hierarchy ===== */
+body { line-height:1.62; }
+p { margin:0 0 1.9mm; }
+h1.ch { font-size:20pt; margin:2mm 0 2.6mm; }
+.lead { font-size:10pt; line-height:1.62; margin:0 0 6.5mm; padding-bottom:5mm; }
+h2 { font-size:12.6pt; line-height:1.35; margin:9.5mm 0 2.4mm; }
+h3 { font-size:10.4pt; line-height:1.4; margin:5.5mm 0 1.4mm; color:#1c1c46; }
+h2 + h3 { margin-top:2.5mm; }
+.step { margin:1.3mm 0; line-height:1.58; }
+p + .step, .shot + .step, table + .step, .why + .step, .prompt + .step { margin-top:3mm; }
+.step + p, .step + h3 { margin-top:3.2mm; }
+.tip, .warn, .note, .why, .stuck { line-height:1.55; padding:2.7mm 4mm; margin:4mm 0 4.6mm; }
+.tip b:first-child, .warn b:first-child, .note b:first-child { margin-bottom:.6mm; }
+.prompt { line-height:1.55; padding:3mm 4.2mm; margin:3mm 0 4.6mm; }
+.step + .prompt { margin-top:1.6mm; }
+.howto { line-height:1.6; margin:0 0 4.6mm; }
+.layer3 { margin:4.6mm 0; line-height:1.55; }
+table { line-height:1.45; margin:3.5mm 0 4.6mm; }
+td { padding:1.5mm 2.4mm; }
+th { padding:1.7mm 2.4mm; font-size:8.3pt; }
+.shot { margin:4mm 0 5mm; }
+.shot figcaption { line-height:1.48; margin-top:1.8mm; }
+.pair { margin:4mm 0 5mm; }
+ul, ol { margin:0 0 3mm; }
+li { margin-bottom:.7mm; line-height:1.55; }
+.role .rh { font-size:10.4pt; }
+
+.pg.memo .memo-h { font-size:8pt; font-weight:800; letter-spacing:.3em; color:#6b63e6; padding-bottom:3mm; border-bottom:.35mm solid #cfcbff; }
+.pg.memo .memo-lines { height:205mm; background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 8.7mm, #e6e5f2 8.7mm, #e6e5f2 9mm); }
+
+/* TOC v3: one column, one line per entry */
+.toc1 { margin-top:7mm; }
+.toc-cont .toc1 { margin-top:0; }
+.toc1 .tp { display:flex; align-items:baseline; gap:4mm; margin:8mm 0 2.4mm; padding-bottom:2mm; border-bottom:.35mm solid #cfcbff; }
+.toc1 .tp:first-child { margin-top:0; }
+.toc1 .tpn { flex:0 0 16mm; font-size:7.6pt; font-weight:800; letter-spacing:.18em; color:#6b63e6; }
+.toc1 .tpt { flex:1; font-size:11pt; font-weight:800; color:#14143a; letter-spacing:-.01em; }
+.toc1 .tp .pn { font-size:9pt; font-weight:800; color:#6b63e6; }
+.toc1 .te { display:flex; align-items:baseline; gap:4mm; padding:1.5mm 0; font-size:9.3pt; line-height:1.4; }
+.toc1 .tn { flex:0 0 16mm; font-size:8pt; font-weight:700; color:#9a9cb0; font-variant-numeric:tabular-nums; }
+.toc1 .tt { flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#1c1c46; }
+.toc1 .tt em { font-style:normal; color:#8a8e9c; font-size:8.6pt; }
+.toc1 .pn { flex:0 0 10mm; text-align:right; font-size:8.6pt; color:#5d6169; font-variant-numeric:tabular-nums; }
+
+.shot.narrow { margin:7mm 0 8mm; }
+.shot.narrow figcaption { max-width:80%; margin-left:auto; margin-right:auto; }
+
+p { margin:0 0 1.7mm; }
+h2 { margin:9mm 0 2.3mm; }
+.shot { margin:3.8mm 0 4.6mm; }
+
 </style></head><body><section class="cover">
   <div class="band"></div>
   <div class="tag">AFTER EFFECTS × AI WORKBOOK · 2027 EDITION</div>
@@ -280,10 +336,13 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 </section>
 
 
-<section class="chapter toc-page" data-break="1" data-fill="1">
+<section class="chapter toc-page" data-break="1">
 <div class="ch-no">CONTENTS</div>
 <h1 class="ch">차례</h1>
-<div class="toc2" data-stretch="1"><div class="tc"><div class="tp"><span>PART 0 · 이해하기</span><span class="pn" data-target="part-0"></span></div><div class="te"><span class="tn">00 · ①</span><span class="tt">어도비와 애프터이펙트, 30년의 흐름</span><span class="pn" data-target="ch-00a"></span></div><div class="te"><span class="tn">00 · ②</span><span class="tt">왜 지금 AI인가 — 힉스필드, Claude, MCP</span><span class="pn" data-target="ch-00b"></span></div><div class="te"><span class="tn">00 · ③</span><span class="tt">시작 전에 — 비용, 가입, 로그인, 크레딧</span><span class="pn" data-target="ch-00c"></span></div><div class="tp"><span>PART 1 · 애펙 기본기</span><span class="pn" data-target="part-1"></span></div><div class="te"><span class="tn">01</span><span class="tt">처음 30분 — 글자 하나 움직여 영상으로 저장하기</span><span class="pn" data-target="ch-01"></span></div><div class="te"><span class="tn">02</span><span class="tt">화면, 시간, 아이콘 읽기</span><span class="pn" data-target="ch-02"></span></div><div class="te"><span class="tn">03</span><span class="tt">움직임의 품질 — 키프레임과 그래프</span><span class="pn" data-target="ch-03"></span></div><div class="te"><span class="tn">04</span><span class="tt">구조 만들기 — 부모, 프리컴포즈, 마스크, 매트</span><span class="pn" data-target="ch-04"></span></div><div class="tp"><span>PART 2 · 모션그래픽</span><span class="pn" data-target="part-2"></span></div><div class="te"><span class="tn">05</span><span class="tt">셰이프와 모션그래픽 기법 — 선, 효과, 퍼펫, 파티클</span><span class="pn" data-target="ch-05"></span></div><div class="te"><span class="tn">06</span><span class="tt">텍스트 애니메이션과 타이포그래피</span><span class="pn" data-target="ch-06"></span></div><div class="te"><span class="tn">07</span><span class="tt">익스프레션 완전 정리</span><span class="pn" data-target="ch-07"></span></div><div class="tp"><span>PART 3 · 합성과 VFX</span><span class="pn" data-target="part-3"></span></div><div class="te"><span class="tn">08</span><span class="tt">크로마키 — 그린스크린과 블루스크린</span><span class="pn" data-target="ch-08"></span></div><div class="te"><span class="tn">09</span><span class="tt">트래킹 — 움직이는 화면에 붙이기</span><span class="pn" data-target="ch-09"></span></div><div class="te"><span class="tn">10</span><span class="tt">3D 카메라 트래커와 하늘 바꾸기</span><span class="pn" data-target="ch-10"></span></div><div class="te"><span class="tn">11</span><span class="tt">Object Matte와 Content-Aware Fill</span><span class="pn" data-target="ch-11"></span></div><div class="te"><span class="tn">12</span><span class="tt">색 보정과 룩</span><span class="pn" data-target="ch-12"></span></div></div><div class="tc"><div class="tp"><span>PART 4 · 3D와 실무</span><span class="pn" data-target="part-4"></span></div><div class="te"><span class="tn">13</span><span class="tt">3D 레이어, 카메라, 라이트</span><span class="pn" data-target="ch-13"></span></div><div class="te"><span class="tn">14</span><span class="tt">렌더링, 출력, 다른 프로그램과 연결</span><span class="pn" data-target="ch-14"></span></div><div class="te"><span class="tn">15</span><span class="tt">함께 쓰는 도구, 비교할 도구</span><span class="pn" data-target="ch-15"></span></div><div class="te"><span class="tn">16</span><span class="tt">직업별 실전 팁</span><span class="pn" data-target="ch-16"></span></div><div class="tp"><span>PART 5 · AI 연결 준비</span><span class="pn" data-target="part-5"></span></div><div class="te"><span class="tn">17</span><span class="tt">연결하기 — 영문 전환, 플러그인, 브리지</span><span class="pn" data-target="ch-17"></span></div><div class="tp"><span>PART 6 · 힉스필드 패널</span><span class="pn" data-target="part-6"></span></div><div class="te"><span class="tn">18</span><span class="tt">패널 ① 편집 — 배경 제거·리프레임·타투 지우기</span><span class="pn" data-target="ch-18"></span></div><div class="te"><span class="tn">19</span><span class="tt">패널 ② 장면 — 날씨·시간대·조명·동작</span><span class="pn" data-target="ch-19"></span></div><div class="te"><span class="tn">20</span><span class="tt">패널 ③ 오디오 — 빈 구간·번역·목소리</span><span class="pn" data-target="ch-20"></span></div><div class="tp"><span>PART 7 · Claude와 애펙 자체 AI</span><span class="pn" data-target="part-7"></span></div><div class="te"><span class="tn">21</span><span class="tt">Claude ① 타이틀 만들고 고치기</span><span class="pn" data-target="ch-21"></span></div><div class="te"><span class="tn">22</span><span class="tt">Claude ② 로고 리빌·하단 자막·전환·유리 효과</span><span class="pn" data-target="ch-22"></span></div><div class="te"><span class="tn">23</span><span class="tt">애펙 자체 AI — AI Assistant와 Object Matte</span><span class="pn" data-target="ch-23"></span></div><div class="tp"><span>PART 8 · 완성과 정리</span><span class="pn" data-target="part-8"></span></div><div class="te"><span class="tn">24</span><span class="tt">통합 프로젝트 — 30초 홍보영상 기획</span><span class="pn" data-target="ch-24"></span></div><div class="te"><span class="tn">25</span><span class="tt">크레딧·저작권·검수 (실제 기록표)</span><span class="pn" data-target="ch-25"></span></div><div class="te"><span class="tn">26</span><span class="tt">앞으로 — 발전 방향, 배움, 도전</span><span class="pn" data-target="ch-26"></span></div><div class="te"><span class="tn">부록</span><span class="tt">단축키 · 이펙트 30선 · 플러그인 · 용어 · 저장소 · 작업 기록 · 문제 해결 · 참고 자료</span><span class="pn" data-target="ch-app"></span></div><div class="te"><span class="tn"></span><span class="tt">지은이</span><span class="pn" data-target="ch-bio"></span></div></div></div>
+<div class="toc1"><div class="tp"><span class="tpn">PART 0</span><span class="tpt">이해하기</span><span class="pn" data-target="part-0"></span></div><div class="te"><span class="tn">00-1</span><span class="tt">어도비와 애프터이펙트, 30년의 흐름</span><span class="pn" data-target="ch-00a"></span></div><div class="te"><span class="tn">00-2</span><span class="tt">왜 지금 AI인가<em> — 힉스필드, Claude, MCP</em></span><span class="pn" data-target="ch-00b"></span></div><div class="te"><span class="tn">00-3</span><span class="tt">시작 전에<em> — 비용, 가입, 로그인, 크레딧</em></span><span class="pn" data-target="ch-00c"></span></div><div class="tp"><span class="tpn">PART 1</span><span class="tpt">애펙 기본기</span><span class="pn" data-target="part-1"></span></div><div class="te"><span class="tn">01</span><span class="tt">처음 30분<em> — 글자 하나 움직여 영상으로 저장하기</em></span><span class="pn" data-target="ch-01"></span></div><div class="te"><span class="tn">02</span><span class="tt">화면, 시간, 아이콘 읽기</span><span class="pn" data-target="ch-02"></span></div><div class="te"><span class="tn">03</span><span class="tt">움직임의 품질<em> — 키프레임과 그래프</em></span><span class="pn" data-target="ch-03"></span></div><div class="te"><span class="tn">04</span><span class="tt">구조 만들기<em> — 부모, 프리컴포즈, 마스크, 매트</em></span><span class="pn" data-target="ch-04"></span></div><div class="tp"><span class="tpn">PART 2</span><span class="tpt">모션그래픽</span><span class="pn" data-target="part-2"></span></div><div class="te"><span class="tn">05</span><span class="tt">셰이프와 모션그래픽 기법<em> — 선, 효과, 퍼펫, 파티클</em></span><span class="pn" data-target="ch-05"></span></div><div class="te"><span class="tn">06</span><span class="tt">텍스트 애니메이션과 타이포그래피</span><span class="pn" data-target="ch-06"></span></div><div class="te"><span class="tn">07</span><span class="tt">익스프레션 완전 정리</span><span class="pn" data-target="ch-07"></span></div><div class="tp"><span class="tpn">PART 3</span><span class="tpt">합성과 VFX</span><span class="pn" data-target="part-3"></span></div><div class="te"><span class="tn">08</span><span class="tt">크로마키<em> — 그린스크린과 블루스크린</em></span><span class="pn" data-target="ch-08"></span></div><div class="te"><span class="tn">09</span><span class="tt">트래킹<em> — 움직이는 화면에 붙이기</em></span><span class="pn" data-target="ch-09"></span></div><div class="te"><span class="tn">10</span><span class="tt">3D 카메라 트래커와 하늘 바꾸기</span><span class="pn" data-target="ch-10"></span></div><div class="te"><span class="tn">11</span><span class="tt">Object Matte와 Content-Aware Fill</span><span class="pn" data-target="ch-11"></span></div><div class="te"><span class="tn">12</span><span class="tt">색 보정과 룩</span><span class="pn" data-target="ch-12"></span></div></div>
+</section>
+<section class="chapter toc-page toc-cont" data-break="1">
+<div class="toc1"><div class="tp"><span class="tpn">PART 4</span><span class="tpt">3D와 실무</span><span class="pn" data-target="part-4"></span></div><div class="te"><span class="tn">13</span><span class="tt">3D 레이어, 카메라, 라이트</span><span class="pn" data-target="ch-13"></span></div><div class="te"><span class="tn">14</span><span class="tt">렌더링, 출력, 다른 프로그램과 연결</span><span class="pn" data-target="ch-14"></span></div><div class="te"><span class="tn">15</span><span class="tt">함께 쓰는 도구, 비교할 도구</span><span class="pn" data-target="ch-15"></span></div><div class="te"><span class="tn">16</span><span class="tt">직업별 실전 팁</span><span class="pn" data-target="ch-16"></span></div><div class="tp"><span class="tpn">PART 5</span><span class="tpt">AI 연결 준비</span><span class="pn" data-target="part-5"></span></div><div class="te"><span class="tn">17</span><span class="tt">연결하기<em> — 영문 전환, 플러그인, 브리지</em></span><span class="pn" data-target="ch-17"></span></div><div class="tp"><span class="tpn">PART 6</span><span class="tpt">힉스필드 패널</span><span class="pn" data-target="part-6"></span></div><div class="te"><span class="tn">18</span><span class="tt">패널 ① 편집<em> — 배경 제거·리프레임·타투 지우기</em></span><span class="pn" data-target="ch-18"></span></div><div class="te"><span class="tn">19</span><span class="tt">패널 ② 장면<em> — 날씨·시간대·조명·동작</em></span><span class="pn" data-target="ch-19"></span></div><div class="te"><span class="tn">20</span><span class="tt">패널 ③ 오디오<em> — 빈 구간·번역·목소리</em></span><span class="pn" data-target="ch-20"></span></div><div class="tp"><span class="tpn">PART 7</span><span class="tpt">Claude와 애펙 자체 AI</span><span class="pn" data-target="part-7"></span></div><div class="te"><span class="tn">21</span><span class="tt">Claude ① 타이틀 만들고 고치기</span><span class="pn" data-target="ch-21"></span></div><div class="te"><span class="tn">22</span><span class="tt">Claude ② 로고 리빌·하단 자막·전환·유리 효과</span><span class="pn" data-target="ch-22"></span></div><div class="te"><span class="tn">23</span><span class="tt">애펙 자체 AI<em> — AI Assistant와 Object Matte</em></span><span class="pn" data-target="ch-23"></span></div><div class="tp"><span class="tpn">PART 8</span><span class="tpt">완성과 정리</span><span class="pn" data-target="part-8"></span></div><div class="te"><span class="tn">24</span><span class="tt">통합 프로젝트<em> — 30초 홍보영상 기획</em></span><span class="pn" data-target="ch-24"></span></div><div class="te"><span class="tn">25</span><span class="tt">크레딧·저작권·검수 (실제 기록표)</span><span class="pn" data-target="ch-25"></span></div><div class="te"><span class="tn">26</span><span class="tt">앞으로<em> — 발전 방향, 배움, 도전</em></span><span class="pn" data-target="ch-26"></span></div><div class="te"><span class="tn">부록</span><span class="tt">단축키 · 이펙트 30선 · 용어 · 문제 해결 · 참고 자료</span><span class="pn" data-target="ch-app"></span></div><div class="te"><span class="tn"></span><span class="tt">지은이</span><span class="pn" data-target="ch-bio"></span></div></div>
 </section>
 <section class="part" id="part-0" data-break="1"><div class="no">PART 0</div><h1>이해하기</h1><p>도구를 누르기 전에, 이 도구가 어디서 왔고 왜 지금 AI와 만나는지부터 짚습니다. 배경을 알면 같은 버튼도 다르게 보입니다.</p></section>
 
@@ -502,8 +561,17 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <tr><td>필름 한 칸</td><td>Footage(영상)</td><td>불러온 영상·음악</td></tr>
 <tr><td>종이 한 장</td><td>Still(이미지)</td><td>PNG·JPG·PSD 등</td></tr>
 <tr><td>노란 폴더</td><td>Folder</td><td>정리용. Solids 폴더는 자동으로 생김</td></tr>
-<tr><td>이름이 기울어진 글자</td><td>Missing</td><td>원본을 찾지 못함 — 우클릭 → Replace Footage</td></tr>
+<tr><td>이름이 기울어진 글자</td><td>Missing</td><td>원본을 찾지 못함 — 아래 “다시 연결하기”</td></tr>
 </table>
+<h3>원본 파일 이름을 바꾸거나 옮겼을 때 — 다시 연결하기</h3>
+<p>애펙 프로젝트(.aep)는 영상·이미지를 파일 안에 담지 않고 <b>원본 파일이 있는 자리(경로)</b>만 기억합니다. 그래서 작업 중에 소스 파일의 이름을 바꾸거나, 다른 폴더로 옮기거나, 지우면 다음에 프로젝트를 열 때 “files are missing” 경고가 뜹니다. 그 레이어는 화면에 <b>컬러 바(색 막대)</b>로 나오고, 프로젝트 패널의 이름은 기울어진 글자로 바뀝니다.</p>
+<div class="step"><div class="n">1</div><div class="b">프로젝트 패널에서 기울어진 이름의 항목을 우클릭 → <b>Replace Footage → File</b>(<span class="k">Ctrl+H</span>).</div></div>
+<div class="step"><div class="n">2</div><div class="b">옮긴 곳의 파일, 또는 이름을 바꾼 파일을 골라 <b>Import</b>합니다. 같은 폴더에 빠진 파일이 더 있으면 애펙이 나머지도 한꺼번에 찾아 연결합니다.</div></div>
+<div class="step"><div class="n">3</div><div class="b">이미지 시퀀스(001.png, 002.png …)라면 첫 파일을 고르고 <b>Sequence</b> 체크를 켭니다.</div></div>
+<div class="step"><div class="n">4</div><div class="b">빠진 파일이 많으면 <b>File → Dependencies → Find Missing Footage</b>로 빠진 항목만 모아 보고 하나씩 연결합니다.</div></div>
+<div class="tip"><b>Replace Footage의 다른 쓰임</b>효과·키프레임·마스크는 그대로 두고 원본만 바꿉니다. 480p 연습 영상으로 작업한 뒤 업스케일한 최종본(18-5)으로 바꿔 끼울 때도 같은 방법을 씁니다. 지운 파일은 다시 연결할 수 없으니 휴지통에서 되살리거나 같은 내용의 파일로 바꿔 끼웁니다.</div>
+<div class="layer3"><div class="lh"><span class="tag t4">현장의 기준</span> 경로가 깨지지 않게</div><ul><li>프로젝트 폴더 안에 <span class="mono">footage</span>·<span class="mono">render</span> 폴더를 먼저 만들고, 소스를 넣은 뒤 불러옵니다. 바탕화면·다운로드 폴더에서 바로 불러오지 않습니다.</li><li>불러온 뒤에는 파일 이름을 바꾸지 않습니다. 바꿔야 한다면 애펙을 닫기 전에 Replace Footage까지 끝냅니다.</li><li>다른 컴퓨터로 옮기거나 제출할 때는 <b>File → Dependencies → Collect Files</b>(14-6)로 소스까지 한 폴더에 모읍니다.</li></ul></div>
+
 
 <h2><span class="tag t2">왜 그럴까</span> 2-5 레이어의 종류</h2>
 <table>
@@ -619,69 +687,65 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <figure class="shot"><img src="img/S07_parent.jpg"><figcaption><b>그림 4-2</b>① Parent &amp; Link 칸 ② 부모로 고를 수 있는 레이어 목록.</figcaption></figure>
 <div class="ok"><b>성공하면</b>부모를 움직이면 자식이 따라갑니다. 자식만 움직이면 부모는 그대로입니다.</div>
 
-<h2><span class="tag t1">따라 하기</span> 4-3 사람 몸 움직이기 — 관절에 부모 걸기</h2>
-<p>종이 인형처럼 몸을 마디별 레이어로 나누고, 마디마다 <b>기준점(Anchor Point)</b>을 관절로 옮긴 뒤, <b>몸에 가까운 쪽을 부모</b>로 잇습니다. 그러면 어깨만 돌려도 팔 전체가, 허리만 움직여도 윗몸 전체가 따라옵니다. 이렇게 짠 뼈대를 <b>리그(rig)</b>라고 합니다. 실습 파일 <span class="mono">04-3_캐릭터리그</span>의 캐릭터는 힉스필드 GPT Image로 그린 <b>부품 시트</b> 한 장을 잘라 만들었습니다.</p>
-<div class="why"><b>세 가지 규칙</b>① <b>나누기</b> — 레이어 하나는 관절과 관절 사이 한 마디입니다. 위팔과 아래팔을 한 장에 그리면 팔꿈치가 굽혀지지 않습니다. ② <b>기준점</b> — 기준점은 그 마디의 <b>몸 쪽 관절</b>에 둡니다. 위팔은 어깨, 아래팔은 팔꿈치, 손은 손목입니다. ③ <b>부모</b> — 몸 쪽 마디가 부모입니다. 손 → 아래팔 → 위팔 → 몸통 → 전체_조종(널) 순서로 겁니다.</div>
-<figure class="shot wide"><img src="img/R_rigfig.jpg"><figcaption><b>그림 4-3</b>왼쪽: 힉스필드 GPT Image로 만든 정면 부품 시트(배경 제거). 빨간 점이 각 부품의 기준점입니다. 오른쪽: 부모 관계. 들여 쓴 레이어가 바로 위 레이어의 자식입니다.</figcaption></figure>
+<h2><span class="tag t1">따라 하기</span> 4-3 로봇 몸 움직이기 — 관절에 부모 걸기</h2>
+<p>종이 인형처럼 몸을 마디별 레이어로 나누고, 마디마다 <b>기준점(Anchor Point)</b>을 관절로 옮긴 뒤, <b>몸에 가까운 쪽을 부모</b>로 잇습니다. 그러면 어깨만 돌려도 팔 전체가, 허리만 움직여도 윗몸 전체가 따라옵니다. 이렇게 짠 뼈대를 <b>리그(rig)</b>라고 합니다. 실습 파일 <span class="mono">04-3_로봇리그</span>의 흰 로봇은 힉스필드 GPT Image로 그린 <b>부품 시트</b> 한 장을 잘라 만들었습니다.</p>
+<div class="why"><b>세 가지 규칙</b>① <b>나누기</b> — 레이어 하나는 관절과 관절 사이 한 마디입니다. 위팔과 아래팔을 한 장에 그리면 팔꿈치가 굽혀지지 않습니다. ② <b>기준점</b> — 기준점은 그 마디의 <b>몸 쪽 관절</b>에 둡니다. 위팔은 어깨, 아래팔은 팔꿈치, 손은 손목입니다. ③ <b>부모</b> — 몸 쪽 마디가 부모입니다. 손 → 아래팔 → 위팔 → 몸통 → 골반 → 전체_조종(널) 순서로 겁니다.</div>
+<figure class="shot narrow wide"><img src="img/R_rigfig.jpg"><figcaption><b>그림 4-3</b>왼쪽: 힉스필드 GPT Image로 만든 정면 부품 시트. 마디마다 위쪽 끝에 회색 공 관절이 있고, 빨간 점이 기준점입니다. 오른쪽: 부모 관계. 들여 쓴 레이어가 바로 위 레이어의 자식입니다.</figcaption></figure>
 <table><tr><th>레이어</th><th>기준점 위치</th><th>부모</th><th>주로 움직이는 속성</th></tr>
-<tr><td>전체_조종 (널)</td><td>골반 높이 가운데</td><td>없음</td><td>Position — 화면 이동, 걸을 때 위아래</td></tr>
-<tr><td>몸통 (상의·치마)</td><td>허리(벨트 가운데)</td><td>전체_조종</td><td>Rotation — 숙이기 · Scale Y — 숨쉬기</td></tr>
-<tr><td>머리 (머리카락·목 포함)</td><td>목 아래</td><td>몸통</td><td>Rotation — 끄덕임, 갸웃</td></tr>
-<tr><td>위팔 (좌우)</td><td>어깨</td><td>몸통</td><td>Rotation</td></tr>
-<tr><td>아래팔 (좌우)</td><td>팔꿈치</td><td>위팔</td><td>Rotation</td></tr>
-<tr><td>손 (좌우)</td><td>손목</td><td>아래팔</td><td>Rotation</td></tr>
-<tr><td>허벅지 (좌우)</td><td>엉덩이 관절</td><td>전체_조종</td><td>Rotation</td></tr>
-<tr><td>정강이 (좌우)</td><td>무릎</td><td>허벅지</td><td>Rotation</td></tr>
-<tr><td>발 (좌우)</td><td>발목</td><td>정강이</td><td>Rotation</td></tr>
-<tr><td>그림자</td><td>가운데</td><td>없음</td><td>몸이 뛰어도 땅에 남도록 부모를 걸지 않습니다</td></tr>
+<tr><td>전체_조종 (널)</td><td>널 가운데</td><td>없음</td><td>Position — 화면 이동, 걸을 때 위아래 · Scale — 크기는 여기서만</td></tr>
+<tr><td>골반</td><td>허리 연결부(위쪽 가운데)</td><td>전체_조종</td><td>Rotation — 엉덩이 흔들기</td></tr>
+<tr><td>몸통 (가슴·어깨)</td><td>허리 공 관절</td><td>골반</td><td>Rotation — 숙이기·기울이기</td></tr>
+<tr><td>머리</td><td>목 공 관절</td><td>몸통</td><td>Rotation — 끄덕임, 갸웃</td></tr>
+<tr><td>위팔_L · 위팔_R</td><td>어깨 공 관절</td><td>몸통</td><td>Rotation</td></tr>
+<tr><td>아래팔_L · 아래팔_R</td><td>팔꿈치 공 관절</td><td>위팔</td><td>Rotation</td></tr>
+<tr><td>손_L · 손_R</td><td>손목</td><td>아래팔</td><td>Rotation (손가락이 아래로 오게 180°에서 시작)</td></tr>
+<tr><td>허벅지_L · 허벅지_R</td><td>엉덩이 공 관절</td><td>골반</td><td>Rotation</td></tr>
+<tr><td>정강이_L · 정강이_R</td><td>무릎 공 관절</td><td>허벅지</td><td>Rotation</td></tr>
+<tr><td>발_L · 발_R</td><td>발목(신발 입구)</td><td>정강이</td><td>Rotation</td></tr>
 </table>
-<div class="step"><div class="n">1</div><div class="b"><b>부품 시트 만들기.</b> 힉스필드에서 캐릭터 정면·옆모습을 한 장 만든 뒤, 그 그림을 참조로 넣고 아래처럼 <b>부품 시트</b>를 요청합니다. 결과는 Remove Background로 배경을 지워 PNG로 받습니다. 직접 그린다면 일러스트레이터·포토샵에서 부품마다 레이어를 나눠 저장합니다.</div></div>
-<div class="prompt"><span class="lbl">PROMPT · 힉스필드 GPT Image (참조 이미지 1장)</span>2D cut-out animation puppet parts sheet of the same character in the reference. Flat even colors on limbs. Plain light gray background, every piece separated by wide gaps, no text. Each limb piece straight and vertical with a round ball-joint circle at both ends: head with neck, upper body, separate skirt, upper arm, forearm, hand, thigh, lower leg, boot.</div>
-<div class="step"><div class="n">2</div><div class="b"><b>한 장을 부품 수만큼 자르기.</b> 같은 PNG를 부품 수만큼 컴포지션에 놓고, 레이어마다 사각형 마스크로 부품 하나만 남깁니다. 레이어 이름은 <span class="mono">위팔_왼</span>처럼 부위와 방향을 함께 씁니다.</div></div>
-<div class="step"><div class="n">3</div><div class="b"><b>기준점을 관절로.</b> <b>Pan Behind(Anchor Point) 도구</b>(<span class="k">Y</span>)로 기준점을 관절, 즉 둥근 끝의 중심까지 끕니다. 이 도구는 그림은 그대로 두고 기준점만 옮깁니다. 그다음 Position을 움직여 각 부품을 몸에 맞게 조립합니다.</div></div>
-<div class="step"><div class="n">4</div><div class="b"><b>부모 걸기와 쌓는 순서.</b> 끝에서 몸 쪽으로 Pick Whip을 끌어 겁니다(손 → 아래팔 → 위팔 → 몸통). 부모와 쌓는 순서는 따로입니다. 관절에서는 <b>몸 쪽 마디를 위에</b> 쌓아 둥근 끝이 아래 마디를 덮게 합니다. 정면에서는 팔을 몸통 위에, 다리는 몸통 아래에 둡니다.</div></div>
-<div class="step"><div class="n">5</div><div class="b"><b>Rotation만 움직이기.</b> 이제 각 마디는 Rotation 하나면 됩니다. 어깨를 먼저 돌리고, 팔꿈치·손목은 2~4프레임 늦게 따라가게 하면 채찍처럼 자연스럽습니다. 이것을 <b>오버랩(follow-through)</b>이라고 합니다.</div></div>
-<figure class="shot"><img src="img/R_parent.jpg"><figcaption><b>그림 4-4</b>실제 Parent &amp; Link 칸. 손_오 → 3번 아래팔_오 → 4번 위팔_오 → 8번 몸통 → 1번 널(전체_조종)로 이어집니다. 머리는 8번 몸통, 허벅지는 1번 널에 걸려 있고, 16번 그림자만 부모가 없습니다.</figcaption></figure>
-<figure class="shot wide"><img src="img/R_poses.jpg"><figcaption><b>그림 4-5</b>Rotation만 바꾼 손 흔들기. 어깨가 먼저 올라가고, 팔꿈치와 손목이 조금씩 늦게 따라옵니다.</figcaption></figure>
-<div class="prompt"><span class="lbl">EXPRESSION · 실습 파일의 반복 동작</span>// 위팔_오 Rotation — 팔을 들고 작게 흔들기<br>-140 + Math.sin(time*Math.PI*4)*6;<br>// 아래팔_오 Rotation — 0.5만큼 늦게 따라감 = 오버랩<br>-30 + Math.sin(time*Math.PI*4 - 0.5)*25;<br>// 머리 Rotation — 고개를 살짝 갸웃<br>Math.sin(time*Math.PI*2 + 1)*5;</div>
+<div class="step"><div class="n">1</div><div class="b"><b>부품 시트 만들기.</b> 힉스필드에서 캐릭터 원화(정면·옆모습)를 한 장 만든 뒤, 그 그림을 참조로 넣고 아래처럼 <b>부품 시트</b>를 요청합니다. 결과는 Remove Background로 배경을 지워 PNG로 받습니다. 직접 그린다면 일러스트레이터·포토샵에서 부품마다 레이어를 나눠 저장합니다.</div></div>
+<div class="prompt"><span class="lbl">PROMPT · 힉스필드 GPT Image (참조 이미지 1장)</span>Character rig parts sheet of this exact robot (FRONT VIEW), same colors and style. Lay out every body part separated with generous empty space, all upright, on a plain pure white background: head, torso with shoulders, pelvis, upper arms, forearms, open five-finger hands, thighs, shins, boots. Each limb part has a full round gray ball joint at its TOP end so parts can overlap and rotate seamlessly. No part touches another. No text, no shadows.</div>
+<div class="step"><div class="n">2</div><div class="b"><b>한 장을 부품 수만큼 자르기.</b> 같은 PNG를 부품 수만큼 컴포지션에 놓고, 레이어마다 사각형 마스크로 부품 하나만 남깁니다. 레이어 이름은 <span class="mono">위팔_L</span>처럼 부위와 방향을 함께 씁니다. 실습 파일은 15개 부품에 널 1개, 모두 16개 레이어입니다.</div></div>
+<div class="step"><div class="n">3</div><div class="b"><b>기준점을 관절로.</b> <b>Pan Behind(Anchor Point) 도구</b>(<span class="k">Y</span>)로 기준점을 공 관절의 중심까지 끕니다. 이 도구는 그림은 그대로 두고 기준점만 옮깁니다. 그다음 Position을 움직여 각 부품을 몸에 맞게 조립합니다.</div></div>
+<div class="step"><div class="n">4</div><div class="b"><b>부모 걸기와 쌓는 순서.</b> 끝에서 몸 쪽으로 Pick Whip을 끌어 겁니다(손 → 아래팔 → 위팔 → 몸통 → 골반 → 전체_조종). 부모와 쌓는 순서는 따로입니다. 이 로봇은 공 관절이 마디 <b>위쪽 끝</b>에 있으므로 <b>아래 마디를 위에</b> 쌓아 공이 윗마디 끝을 덮게 합니다(손 위에 아래팔이 아니라, 아래팔 위에 손). 다만 위팔과 허벅지는 몸통·골반 <b>아래</b>에 두어 어깨 덮개와 골반 껍데기가 관절 윗부분을 감추게 합니다.</div></div>
+<div class="step"><div class="n">5</div><div class="b"><b>Rotation만 움직이기.</b> 이제 각 마디는 Rotation 하나면 됩니다. 몸 쪽 마디를 먼저 돌리고, 끝 마디는 2~4프레임 늦게 따라가게 하면 채찍처럼 자연스럽습니다. 이것을 <b>오버랩(follow-through)</b>이라고 합니다. 이 리그로 4-4에서 걷기를 만듭니다.</div></div>
+<figure class="shot"><img src="img/R_parent.jpg"><figcaption><b>그림 4-4</b>실제 Parent &amp; Link 칸. 손_R → 6번 아래팔_R → 9번 위팔_R → 7번 몸통 → 10번 골반 → 1번 널(전체_조종)로 이어집니다. 머리는 7번 몸통, 허벅지는 10번 골반에 걸려 있습니다.</figcaption></figure>
 <table><tr><th>동작</th><th>어디에 무엇을 거나</th></tr>
 <tr><td>걷기</td><td>전체_조종 Position X로 앞으로, Y로 한 걸음마다 위아래. 허벅지·정강이 Rotation은 좌우 반대로, 팔은 같은 쪽 다리와 반대로 흔듭니다. 옆모습 걷기는 4-4에서 자세히 다룹니다.</td></tr>
-<tr><td>손 흔들기</td><td>위팔 Rotation으로 팔을 든 채 고정, 아래팔과 손 Rotation만 반복합니다.</td></tr>
-<tr><td>고개 끄덕 · 갸웃</td><td>머리 Rotation. 기준점이 목에 있어야 목을 축으로 움직입니다.</td></tr>
-<tr><td>숨쉬기</td><td>몸통 Scale Y 100 → 102%. 기준점이 허리라서 위로만 부풉니다.</td></tr>
-<tr><td>점프</td><td>전체_조종 Position Y로 뛰고, 착지 순간 몸통 Scale Y를 98%로 살짝 눌러 줍니다.</td></tr>
+<tr><td>고개 끄덕 · 갸웃</td><td>머리 Rotation. 기준점이 목 공 관절에 있어야 목을 축으로 움직입니다.</td></tr>
+<tr><td>엉덩이 흔들기</td><td>골반 Rotation ±3°. 골반이 몸통과 두 다리의 부모라서 위아래가 함께 흔들립니다.</td></tr>
+<tr><td>점프</td><td>전체_조종 Position Y로 뛰고, 착지 순간 정강이를 −15°쯤 굽혀 무릎으로 받습니다.</td></tr>
 </table>
-<div class="why"><b>애니메이션 전문가 체크 — 이음매가 보이지 않게</b>① 관절 끝은 <b>둥근 원(볼 조인트)</b>으로 그립니다. 원의 중심이 기준점이면 몇 도를 굽혀도 두 부품이 겹쳐 틈이 생기지 않습니다. ② 3D 렌더처럼 명암이 강하면 겹친 자리에 경계선이 드러납니다. 팔다리는 <b>평평한 채색</b>이 이음매를 감춥니다. ③ 치마·소매처럼 관절을 덮는 옷은 <b>따로 한 장</b>으로 만들어, 다리가 움직여도 옷이 자연스럽게 가려 줍니다. ④ 부품을 처음부터 곧게 펴진 자세(차렷)로 그려야 회전값 0이 기본자세가 됩니다.</div>
-<div class="stuck"><b>막혔을 때</b>엉뚱한 곳을 중심으로 돈다 → 기준점이 가운데 있습니다. <span class="k">Y</span> 도구로 관절에 옮기세요. 부모를 걸자 부위가 튀어 간다 → <span class="k">Shift</span>를 누른 채 Pick Whip하면 자식이 부모 위치로 옮겨집니다. 그냥 끌면 제자리에 있습니다. 자식 크기가 같이 변한다 → 부모의 Scale을 바꾼 탓입니다. 크기는 전체_조종에서만 바꿉니다. 관절에 틈이 벌어진다 → 기준점이 둥근 끝의 중심에서 벗어났습니다.</div>
+<div class="why"><b>애니메이션 전문가 체크 — 이음매가 보이지 않게</b>① 관절은 <b>둥근 공(볼 조인트)</b>으로 그립니다. 공의 중심이 기준점이면 몇 도를 굽혀도 두 부품이 겹쳐 틈이 생기지 않습니다. ② 관절 공을 몸과 <b>다른 색(회색)</b>으로 만들면 명암이 있는 그림이라도 겹친 자리가 '부품 이음'으로 자연스럽게 읽힙니다. ③ 어깨 덮개·골반처럼 관절을 감싸는 껍데기를 위에 쌓으면 공의 윗부분이 가려져 실제 관절처럼 보입니다. ④ 부품을 처음부터 곧게 편 자세(차렷)로 그려야 회전값 0이 기본자세가 됩니다. ⑤ 사람보다 로봇·동물·마스코트처럼 형태가 단순한 캐릭터가 컷아웃 리그에 잘 맞습니다.</div>
+<div class="stuck"><b>막혔을 때</b>엉뚱한 곳을 중심으로 돈다 → 기준점이 가운데 있습니다. <span class="k">Y</span> 도구로 공 관절 중심에 옮기세요. 부모를 걸자 부위가 튀어 간다 → <span class="k">Shift</span>를 누른 채 Pick Whip하면 자식이 부모 위치로 옮겨집니다. 그냥 끌면 제자리에 있습니다. 자식 크기가 같이 변한다 → 부모의 Scale을 바꾼 탓입니다. 크기는 전체_조종에서만 바꿉니다. 관절에 틈이 벌어진다 → 기준점이 공 중심에서 벗어났거나 쌓는 순서가 바뀌었습니다.</div>
 <div class="tip"><b>더 나아가기</b>관절이 많은 캐릭터는 무료 스크립트 <b>Duik</b>이 IK(손끝을 끌면 팔 전체가 따라 굽는 방식)를 만들어 줍니다. 팔다리를 고무처럼 휘게 하려면 한 장짜리 팔에 5-6의 퍼펫 핀을 꽂습니다.</div>
 
 <h2><span class="tag t1">따라 하기</span> 4-4 옆에서 본 걷기 — 네 자세로 만드는 한 사이클</h2>
-<p>걷기는 <b>네 자세의 반복</b>입니다. 발이 땅에 닿고(닿기), 무게를 받아 내려앉고(내려앉기), 다른 발이 몸 옆을 지나가고(지나가기), 발끝으로 밀어 올라섭니다(올라서기). 30fps에서 한 걸음은 15프레임, 왼발·오른발 두 걸음 30프레임(1초)이 한 사이클입니다. 네 자세만 키프레임으로 주면 사이는 애펙이 채우고, 끝에 <span class="mono">loopOut()</span>을 걸면 계속 걷습니다. 컴포지션 <span class="mono">04-4_옆모습걷기</span>.</p>
-<figure class="shot dia-fig"><img src="img/P_sheet_side.jpg"><figcaption><b>그림 4-6</b>옆모습 걷기용 부품 시트. 팔다리 양 끝이 둥근 원(볼 조인트)이고, 빨간 점이 기준점입니다. 위 마디의 아래 원과 아래 마디의 위 원이 같은 자리에 겹치도록 조립합니다. 치마는 다리와 따로 한 장입니다.</figcaption></figure>
-<figure class="shot wide"><img src="img/W_poses.jpg"><figcaption><b>그림 4-7</b>실습 파일의 네 자세. 캐릭터는 왼쪽을 봅니다. 밝은 쪽이 보는 쪽(앞) 팔다리, 어두운 쪽이 먼 쪽(뒤) 팔다리입니다. 15프레임부터는 앞뒤 다리가 바뀌어 같은 네 자세를 한 번 더 합니다.</figcaption></figure>
-<div class="why"><b>옆모습 리그가 다른 점</b>① 팔다리를 <b>앞(보는 쪽)·뒤(먼 쪽) 두 벌</b> 만들고 이름 끝에 _앞, _뒤를 붙입니다. 같은 부품을 두 번 불러오면 됩니다. ② 뒤쪽은 Exposure 효과를 −0.7 정도 넣어 어둡게 하고 레이어를 몸통 아래로 내립니다. 쌓는 순서는 위에서부터 앞팔 → 몸통 → 머리 → 치마 → 앞다리 → 뒷다리 → 뒷팔입니다. ③ 한 팔·한 다리 안에서는 위 마디(위팔, 허벅지)를 위에 쌓아 둥근 끝이 아래 마디를 덮게 합니다. ④ 왼쪽을 보는 캐릭터에서 Rotation <b>+</b> 값은 다리를 앞(왼쪽)으로, <b>−</b> 값은 뒤로 보냅니다.</div>
+<p>걷기는 <b>네 자세의 반복</b>입니다. 발이 땅에 닿고(닿기), 무게를 받아 내려앉고(내려앉기), 다른 발이 몸 옆을 지나가고(지나가기), 발끝으로 밀어 올라섭니다(올라서기). 30fps에서 한 걸음은 15프레임, 두 걸음 30프레임(1초)이 한 사이클입니다. 네 자세만 키프레임으로 주면 사이는 애펙이 채우고, 끝에 <span class="mono">loopOut()</span>을 걸면 계속 걷습니다. 컴포지션 <span class="mono">04-4_로봇걷기</span>.</p>
+<figure class="shot narrow dia-fig"><img src="img/P_sheet_side.jpg"><figcaption><b>그림 4-5</b>옆모습 걷기용 부품 시트(왼쪽을 봄). 팔다리 마디마다 위쪽 끝에 공 관절이 있고, 빨간 점이 기준점입니다. 팔·다리 부품은 한 벌만 그리고 두 번 불러와 앞·뒤로 씁니다.</figcaption></figure>
+<figure class="shot narrow wide"><img src="img/W_poses.jpg"><figcaption><b>그림 4-6</b>실습 파일의 네 자세. 로봇은 왼쪽을 봅니다. 밝은 쪽이 보는 쪽(앞) 팔다리, 어두운 쪽이 먼 쪽(뒤) 팔다리입니다. 15프레임부터는 앞뒤 다리가 바뀌어 같은 네 자세를 한 번 더 합니다.</figcaption></figure>
+<div class="why"><b>옆모습 리그가 다른 점</b>① 팔다리를 <b>앞(보는 쪽)·뒤(먼 쪽) 두 벌</b> 만들고 이름 끝에 _앞, _뒤를 붙입니다. 같은 부품을 두 번 불러오면 됩니다. ② 뒤쪽은 Exposure 효과를 −0.7 정도 넣어 어둡게 하고 레이어를 맨 아래로 내립니다. 쌓는 순서는 위에서부터 앞팔(손·아래팔·위팔) → 머리 → 몸통 → 골반 → 앞다리(발·정강이·허벅지) → 뒷다리 → 뒷팔입니다. ③ 한 팔·한 다리 안에서는 아래 마디를 위에 쌓아 공 관절이 윗마디 끝을 덮게 합니다. ④ 왼쪽을 보는 캐릭터에서 Rotation <b>+</b> 값은 다리를 앞(왼쪽)으로, <b>−</b> 값은 뒤로 보냅니다. 정강이는 늘 − 쪽으로만 굽습니다(무릎이 뒤로 꺾이지 않게).</div>
 <table><tr><th>자세</th><th>앞다리 허벅지 / 정강이 / 발</th><th>뒷다리 허벅지 / 정강이 / 발</th><th>몸 높이 (전체_조종 Y)</th><th>앞팔 위팔</th></tr>
-<tr><td>① 닿기 0f</td><td>20 / −2 / −6 — 뒤꿈치로 착지</td><td>−18 / −18 / 18 — 발끝으로 밂</td><td>485 (보폭이 가장 넓어 낮음)</td><td>−18 (뒤로)</td></tr>
-<tr><td>② 내려앉기 4f</td><td>13 / −15 / 0 — 무릎 굽혀 무게 받음</td><td>−11 / −40 / 8 — 발을 뗌</td><td>471</td><td>−9</td></tr>
-<tr><td>③ 지나가기 8f</td><td>0 / −4 / 3 — 곧게 서서 몸 받침</td><td>7 / −55 / 20 — 무릎 들고 앞으로</td><td>469</td><td>0 (몸 옆)</td></tr>
-<tr><td>④ 올라서기 11f</td><td>−9 / −6 / −6 — 뒤꿈치 듦</td><td>22 / −20 / 10 — 앞으로 뻗음</td><td>452 (가장 높음)</td><td>8</td></tr>
-<tr><td>⑤ 닿기 15f</td><td colspan="2">①의 값을 앞다리 ↔ 뒷다리 바꿔 넣음. 19f·23f·26f도 ②~④를 바꿔 넣음</td><td>485</td><td>18 (앞으로)</td></tr>
+<tr><td>① 닿기 0f</td><td>25 / −5 / 15 — 뒤꿈치로 착지, 발끝 들림</td><td>−22 / −10 / −20 — 발끝으로 밂</td><td>488.5</td><td>−20 (뒤로)</td></tr>
+<tr><td>② 내려앉기 4f</td><td>15 / −25 / 0 — 무릎 굽혀 무게 받음</td><td>−15 / −45 / −20 — 발을 뗌</td><td>489.9 (가장 낮음)</td><td>−10</td></tr>
+<tr><td>③ 지나가기 8f</td><td>−2 / −5 / 0 — 곧게 서서 몸 받침</td><td>10 / −60 / −5 — 무릎 들고 앞으로</td><td>488.1</td><td>0 (몸 옆)</td></tr>
+<tr><td>④ 올라서기 11f</td><td>−15 / −5 / −10 — 뒤꿈치 듦</td><td>25 / −30 / 5 — 앞으로 뻗음</td><td>474.2 (가장 높음)</td><td>9</td></tr>
+<tr><td>⑤ 닿기 15f</td><td colspan="2">①의 값을 앞다리 ↔ 뒷다리 바꿔 넣음. 19f·23f·26f도 ②~④를 바꿔 넣음</td><td>488.5</td><td>22 (앞으로)</td></tr>
 <tr><td>30f</td><td colspan="4">0f와 같은 값. 이 키가 있어야 반복이 끊기지 않습니다</td></tr>
 </table>
 <div class="step"><div class="n">1</div><div class="b"><b>앞다리부터.</b> 허벅지_앞, 정강이_앞, 발_앞의 Rotation에 0·4·8·11·15·19·23·26·30프레임 키를 표대로 넣습니다. 15f 이후 값은 표의 ①~④에서 뒷다리 쪽 값을 씁니다.</div></div>
 <div class="step"><div class="n">2</div><div class="b"><b>뒷다리는 반 박자 늦게.</b> 앞다리 키를 모두 골라 복사(<span class="k">Ctrl</span>+<span class="k">C</span>)하고, 뒷다리 레이어를 고른 뒤 15f에서 붙여 넣습니다(<span class="k">Ctrl</span>+<span class="k">V</span>). 30f를 넘어간 키는 30프레임 앞으로 옮겨 0~30f 안에 둡니다.</div></div>
-<div class="step"><div class="n">3</div><div class="b"><b>팔은 다리와 반대로.</b> 앞다리가 앞으로 나갈 때 앞팔은 뒤로 갑니다. 위팔 −18 → 0 → 18 → 0 → −18. 아래팔은 2프레임, 손은 3프레임 늦게 따라가게 하면(오버랩) 팔이 막대기처럼 보이지 않습니다.</div></div>
-<div class="step"><div class="n">4</div><div class="b"><b>몸 높이 맞추기.</b> 전체_조종 Position Y를 자세마다 바꿔 <b>바닥에 닿은 발이 땅선에 딱 붙게</b> 합니다. 발이 땅을 뚫으면 Y를 줄이고, 뜨면 늘립니다. 몸통은 −2 ~ −5°로 살짝 앞으로 기울이고, 머리는 반대로 1 ~ 3° 들어 시선을 앞에 둡니다.</div></div>
-<div class="step"><div class="n">5</div><div class="b"><b>치마는 따라오게.</b> 치마는 전체_조종의 자식으로 두고, 두 허벅지 각도를 조금 늦게 받아 반대로 흔들리게 합니다(아래 익스프레션). 이렇게 '따라 움직이는 부분'을 <b>2차 동작</b>이라고 합니다.</div></div>
-<div class="step"><div class="n">6</div><div class="b"><b>반복과 이동.</b> 키가 있는 모든 속성에 <span class="mono">loopOut("cycle")</span>을 넣습니다. 제자리걸음을 앞으로 걸어가게 하려면 전체_조종 Position X를 1초에 보폭 두 배만큼 옮깁니다. 땅에 닿은 발이 화면에서 멈춰 보이는 속도가 맞는 값입니다.</div></div>
-<div class="prompt"><span class="lbl">EXPRESSION · 걷기 반복, 치마, 이동</span>// 키가 있는 Rotation, Position 모두 — 0~1초를 계속 반복<br>loopOut("cycle");<br>// 치마 Rotation — 두 다리를 0.06초 늦게 따라 반대로 흔들림<br>-(thisComp.layer("허벅지_앞").transform.rotation.valueAtTime(time-0.06)<br>&nbsp;&nbsp;+ thisComp.layer("허벅지_뒤").transform.rotation.valueAtTime(time-0.06)) * 0.15;<br>// 전체_조종 Position — 반복하면서 왼쪽으로 걸어감 (숫자는 보폭에 맞게)<br>loopOut("cycle") + [-time*400, 0];</div>
-<div class="stuck"><b>막혔을 때</b>발이 미끄러지듯 보인다 → 이동 속도가 보폭과 안 맞습니다. 400을 조금씩 바꿔 땅에 닿은 발이 멈춰 보이는 값을 찾습니다. 반복할 때 툭 끊긴다 → 0f와 30f 키 값이 다릅니다. 다리가 꼬여 보인다 → 뒷다리가 앞다리와 같은 밝기이거나 레이어 순서가 바뀌었습니다. 무릎에 틈이 보인다 → 허벅지를 정강이 위에 쌓았는지, 두 원의 중심이 기준점에 맞는지 봅니다. 걸음이 로봇 같다 → 키를 모두 골라 <span class="k">F9</span>(Easy Ease)를 주고, 아래팔·손의 오버랩을 늘립니다.</div>
+<div class="step"><div class="n">3</div><div class="b"><b>팔은 다리와 반대로.</b> 앞다리가 앞으로 나갈 때 앞팔은 뒤로 갑니다. 위팔 −20 → 0 → 22 → 0 → −20(0·8·15·23·30f). 아래팔은 2프레임, 손은 3프레임 늦게 따라가게 하면(오버랩) 팔이 막대기처럼 보이지 않습니다.</div></div>
+<div class="step"><div class="n">4</div><div class="b"><b>몸 높이 맞추기.</b> 전체_조종 Position Y를 자세마다 바꿔 <b>바닥에 닿은 발이 땅선에 딱 붙게</b> 합니다. 발이 땅을 뚫으면 Y를 줄이고, 뜨면 늘립니다. 표의 Y는 전체_조종 Scale 85%, 땅선 980px 기준입니다. 몸통은 −4°로 살짝 앞으로 기울이고, 머리는 반대로 3° 들어 시선을 앞에 둡니다.</div></div>
+<div class="step"><div class="n">5</div><div class="b"><b>반복과 이동.</b> 키가 있는 모든 속성에 <span class="mono">loopOut("cycle")</span>을 넣습니다. 제자리걸음을 앞으로 걸어가게 하려면 전체_조종 Position X를 1초에 보폭 두 배만큼 옮깁니다. 땅에 닿은 발이 화면에서 멈춰 보이는 속도가 맞는 값입니다.</div></div>
+<div class="prompt"><span class="lbl">EXPRESSION · 걷기 반복과 이동</span>// 키가 있는 Rotation, Position 모두 — 0~1초를 계속 반복<br>loopOut("cycle");<br>// 머리 Rotation — 걸음에 맞춰 살짝 끄덕 (한 걸음 0.5초)<br>3 + Math.sin(time*Math.PI*4)*1.5;<br>// 전체_조종 Position — 반복하면서 왼쪽으로 걸어감 (숫자는 보폭에 맞게)<br>loopOut("cycle") + [-time*300, 0];</div>
+<div class="stuck"><b>막혔을 때</b>발이 미끄러지듯 보인다 → 이동 속도가 보폭과 안 맞습니다. 300을 조금씩 바꿔 땅에 닿은 발이 멈춰 보이는 값을 찾습니다. 반복할 때 툭 끊긴다 → 0f와 30f 키 값이 다릅니다. 다리가 꼬여 보인다 → 뒷다리가 앞다리와 같은 밝기이거나 레이어 순서가 바뀌었습니다. 무릎에 틈이 보인다 → 정강이를 허벅지 위에 쌓았는지, 공 중심이 기준점에 맞는지 봅니다. 걸음이 딱딱하다 → 키를 모두 골라 <span class="k">F9</span>(Easy Ease)를 주고, 아래팔·손의 오버랩을 늘립니다.</div>
 <div class="tip"><b>프레임 수 바꾸기</b>24fps라면 한 걸음 12프레임으로 0·3·6·9·12f에 같은 네 자세를 둡니다. 느긋한 걸음은 한 걸음 18~20프레임, 뛰기는 8프레임 안팎이며 두 발이 모두 뜨는 순간이 생깁니다.</div>
 
 <h2><span class="tag t1">따라 하기</span> 4-5 묶기(프리컴포즈)</h2>
 <div class="step"><div class="n">1</div><div class="b">묶을 레이어를 고르고 <span class="k">Ctrl+Shift+C</span>.</div></div>
 <div class="step"><div class="n">2</div><div class="b">① 이름을 쓰고 ② <b>Move all attributes</b>를 고른 뒤 ③ OK.</div></div>
-<figure class="shot half"><img src="img/S08_precomp.jpg"><figcaption><b>그림 4-8</b>프리컴포즈 창. 여러 레이어를 묶을 때는 Move all attributes만 고를 수 있습니다.</figcaption></figure>
+<figure class="shot half"><img src="img/S08_precomp.jpg"><figcaption><b>그림 4-7</b>프리컴포즈 창. 여러 레이어를 묶을 때는 Move all attributes만 고를 수 있습니다.</figcaption></figure>
 <div class="layer3"><div class="lh"><span class="tag t3">한 걸음 더</span> 두 가지 선택의 차이</div><table>
 <tr><th style="width:36%">선택</th><th>뜻</th></tr>
 <tr><td>Leave all attributes</td><td>레이어 하나만. 효과·변형은 밖에 남음</td></tr>
@@ -699,7 +763,7 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 </table>
 
 <h2><span class="tag t2">왜 그럴까</span> 4-7 트랙 매트</h2>
-<figure class="shot dia-fig"><svg viewBox="0 0 640 130" xmlns="http://www.w3.org/2000/svg" class="dia" font-family="Noto Sans CJK KR, sans-serif"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5B54D6"/></marker></defs><rect x="0" y="20" width="170" height="100" rx="4" fill="#cfe7ff" stroke="none" stroke-width="1.5"/><text x="85" y="75" font-size="12" fill="#33363c" font-weight="400" text-anchor="middle">영상(채울 것)</text><text x="200" y="75" font-size="26" fill="#5B54D6" font-weight="700" text-anchor="middle">+</text><rect x="230" y="20" width="170" height="100" rx="4" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><text x="315" y="85" font-size="38" fill="#00005B" font-weight="900" text-anchor="middle">SEOUL</text><text x="430" y="75" font-size="26" fill="#5B54D6" font-weight="700" text-anchor="middle">=</text><rect x="460" y="20" width="170" height="100" rx="4" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><defs><clipPath id="cl"><text x="545" y="85" font-size="38" font-weight="900" text-anchor="middle">SEOUL</text></clipPath></defs><rect x="460" y="20" width="170" height="100" fill="url(#gr)" clip-path="url(#cl)"/><defs><linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="#5aa9ff"/><stop offset="1" stop-color="#9999FF"/></linearGradient></defs><text x="85" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">아래 레이어</text><text x="315" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">매트 레이어(글자)</text><text x="545" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">Alpha Matte 결과</text></svg><figcaption><b>그림 4-9</b>매트 레이어(글자)의 모양 안에만 아래 영상이 보입니다.</figcaption></figure>
+<figure class="shot dia-fig"><svg viewBox="0 0 640 130" xmlns="http://www.w3.org/2000/svg" class="dia" font-family="Noto Sans CJK KR, sans-serif"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5B54D6"/></marker></defs><rect x="0" y="20" width="170" height="100" rx="4" fill="#cfe7ff" stroke="none" stroke-width="1.5"/><text x="85" y="75" font-size="12" fill="#33363c" font-weight="400" text-anchor="middle">영상(채울 것)</text><text x="200" y="75" font-size="26" fill="#5B54D6" font-weight="700" text-anchor="middle">+</text><rect x="230" y="20" width="170" height="100" rx="4" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><text x="315" y="85" font-size="38" fill="#00005B" font-weight="900" text-anchor="middle">SEOUL</text><text x="430" y="75" font-size="26" fill="#5B54D6" font-weight="700" text-anchor="middle">=</text><rect x="460" y="20" width="170" height="100" rx="4" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><defs><clipPath id="cl"><text x="545" y="85" font-size="38" font-weight="900" text-anchor="middle">SEOUL</text></clipPath></defs><rect x="460" y="20" width="170" height="100" fill="url(#gr)" clip-path="url(#cl)"/><defs><linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="#5aa9ff"/><stop offset="1" stop-color="#9999FF"/></linearGradient></defs><text x="85" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">아래 레이어</text><text x="315" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">매트 레이어(글자)</text><text x="545" y="14" font-size="11" fill="#7a7e88" font-weight="400" text-anchor="middle">Alpha Matte 결과</text></svg><figcaption><b>그림 4-8</b>매트 레이어(글자)의 모양 안에만 아래 영상이 보입니다.</figcaption></figure>
 
 <table>
 <tr><th style="width:26%">종류</th><th>보이는 곳</th><th style="width:34%">예</th></tr>
@@ -711,13 +775,23 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <p>2022년(23.0)부터는 Track Matte 칸에서 아무 레이어나 고를 수 있고, 위아래로 붙어 있지 않아도 됩니다(그림 2장의 Modes 화면 ②).</p>
 
 <h2><span class="tag t2">왜 그럴까</span> 4-8 블렌딩 모드</h2>
+<p>블렌딩 모드는 위 레이어의 색을 아래 레이어들과 <b>어떤 계산으로 섞을지</b> 정합니다. 30개 가까이 되지만 일곱 묶음으로 나누면 쉽습니다. 묶음 안의 모드는 세기만 다릅니다.</p>
 <table>
-<tr><th style="width:24%">모드</th><th>효과</th><th style="width:34%">자주 쓰는 곳</th></tr>
-<tr><td>Screen</td><td>검은색이 사라지고 밝게</td><td>빛 번짐, 불꽃 소스</td></tr>
-<tr><td>Multiply</td><td>흰색이 사라지고 어둡게</td><td>종이 질감, 그림자</td></tr>
-<tr><td>Add</td><td>밝기를 더해 강하게</td><td>네온, 광선</td></tr>
-<tr><td>Overlay / Soft Light</td><td>대비와 색감 입히기</td><td>질감, 색 보정</td></tr>
+<tr><th style="width:22%">모드 묶음</th><th style="width:34%">대표 모드</th><th>이렇게 섞입니다</th></tr>
+<tr><td>기본</td><td>Normal, Dissolve</td><td>위 레이어가 그대로 덮음. Dissolve는 불투명도를 점으로 흩뿌림</td></tr>
+<tr><td>어둡게</td><td>Darken, Multiply, Color Burn, Linear Burn</td><td>흰색은 사라지고 어두운 곳만 남음 — 종이 질감, 그림자, 잉크</td></tr>
+<tr><td>밝게</td><td>Lighten, Screen, Add, Color Dodge</td><td>검은색은 사라지고 밝은 곳만 남음 — 빛, 불꽃, 렌즈 플레어</td></tr>
+<tr><td>대비</td><td>Overlay, Soft Light, Hard Light, Vivid Light</td><td>중간 회색은 사라지고 대비가 커짐 — 질감 입히기, 색 보정</td></tr>
+<tr><td>차이</td><td>Difference, Exclusion, Subtract</td><td>두 레이어의 차이를 보여 줌 — 정렬 확인, 반전 효과</td></tr>
+<tr><td>색</td><td>Hue, Saturation, Color, Luminosity</td><td>색상·채도·밝기 중 하나만 가져옴 — 흑백 영상에 색 입히기</td></tr>
+<tr><td>투명</td><td>Stencil Alpha, Silhouette Alpha</td><td>이 레이어 모양으로 아래 레이어 전체를 뚫거나 남김</td></tr>
 </table>
+<h3>타임라인에서 모드 칸 쓰기</h3>
+<div class="step"><div class="n">1</div><div class="b">타임라인 아래 <b>Toggle Switches / Modes</b> 버튼(<span class="k">F4</span>)을 누르면 스위치 칸과 <b>Mode</b> 칸이 번갈아 나옵니다(그림 2-4).</div></div>
+<div class="step"><div class="n">2</div><div class="b">레이어 줄의 Mode 칸(처음엔 Normal)을 눌러 모드를 고릅니다. 레이어를 고른 채 <span class="k">Shift</span>+<span class="k">=</span> / <span class="k">Shift</span>+<span class="k">-</span>를 누르면 모드를 하나씩 넘겨 보며 바로 비교할 수 있습니다.</div></div>
+<div class="step"><div class="n">3</div><div class="b">칸 제목 줄을 우클릭 → <b>Columns</b>에서 Modes, Parent &amp; Link, Stretch(속도) 같은 칸을 늘 보이게 켤 수 있습니다. 스위치와 모드를 동시에 보고 싶을 때 씁니다.</div></div>
+<div class="tip"><b>모드가 안 먹는 것 같을 때</b>블렌딩 모드는 바로 <b>아래 레이어들</b>과 섞입니다. 맨 아래 레이어에 모드를 주면 섞을 대상이 없어 변화가 없습니다. 프리컴포즈 안에서 준 모드는 그 컴포지션 안에서만 섞이니, 바깥과 섞으려면 프리컴포즈 레이어에 모드를 줍니다.</div>
+
 <div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div><ul><li>“SEOUL” 글자 안에만 도시 영상이 보이고, 3초 동안 글자가 120%→100%로 줄어드는 타이틀(트랙 매트 + 부모 + 이징).</li><li>심화: 글자 뒤에 Screen 모드 빛 번짐을 넣고, 전체를 프리컴포즈해 Mask Feather로 화면 가장자리를 어둡게.</li></ul></div>
 
 <h2>이 장 점검</h2>
@@ -1827,11 +1901,32 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <div class="pair"><figure class="shot half"><img src="img/CAPTURE_7-1_AIAssistant_home.jpg"><figcaption><b>그림 23-2</b> AI Assistant 첫 화면과 샘플 프롬프트</figcaption></figure>
 <figure class="shot half"><img src="img/CAPTURE_7-2_AIAssistant_approve.jpg"><figcaption><b>그림 23-3</b> 동작 승인 요청</figcaption></figure></div>
 <figure class="shot"><img src="img/CAPTURE_7-3_AIAssistant_report.jpg"><figcaption><b>그림 23-4</b> 약 1분 뒤 보고서. 중복 버전(v1·v2), 꺼진 유리 레이어, 로고 컴포지션의 빈 구간, 비어 있는 렌더 대기열을 찾아냈습니다. 힉스필드 크레딧은 들지 않았습니다.</figcaption></figure>
-<div class="note"><b>어도비 생성 크레딧</b>AI Assistant의 AI 동작 대부분은 어도비 계정의 생성 크레딧(generative credits)을 씁니다. 남은 양은 어도비 계정 페이지에서 확인하세요. 힉스필드 크레딧과는 별개입니다.</div>
+<div class="note"><b>어도비 생성 크레딧</b>AI Assistant의 AI 동작 대부분은 어도비 계정의 생성 크레딧(generative credits)을 씁니다. 남은 양은 어도비 계정 페이지에서 확인하세요. 힉스필드 크레딧과는 별개입니다. 자세한 정책은 23-3에 정리했습니다.</div>
 <div class="tip"><b>Claude와 나눠 쓰기</b>Claude 브리지는 "만들기"에, AI Assistant는 애펙 안에서 "점검하고 정리하기"에 강했습니다. 납품 전에 AI Assistant로 한 번 훑는 순서를 권합니다.</div>
 <h2>23-2 Object Matte — 직접 해 보기</h2>
 <p>Remove BG와 같은 걷는 영상에 Object Matte를 써서 결과를 비교해 보세요. Layer 패널에서 Object Matte Tool(<span class="k">Alt+W</span>)로 인물을 한 번 클릭하고, Refine Edge로 머리카락 경계를 다듬습니다. 기기 안에서 처리되어 크레딧이 들지 않습니다.</p>
 <p>어도비는 2026년 11월 10일 MAX에서 외부 AI 에이전트가 포토샵·일러스트레이터·프리미어·애펙을 직접 다루는 <b>로컬 MCP 연동</b>을 미리 보여 주었고, 2027년 초 비공개 베타를 예고했습니다. 정식으로 나오면 이 장의 실습을 다시 해 볼 만합니다.</p>
+
+<h2><span class="tag t2">왜 그럴까</span> 23-3 어도비 생성 크레딧 — 얼마나, 어떻게 쓰이나</h2>
+<p>AI Assistant, Generative Fill, 영상 생성처럼 어도비의 생성형 AI 기능은 <b>생성 크레딧(generative credits)</b>으로 값을 치릅니다. 크레딧은 <b>어도비 계정(Adobe ID)</b>에 붙어 있어서 포토샵·프리미어·애펙·Firefly 어디서 쓰든 같은 통에서 빠집니다. 힉스필드 크레딧과는 전혀 별개입니다.</p>
+<table>
+<tr><th style="width:26%">항목</th><th>내용 (2026년 11월 기준)</th></tr>
+<tr><td>지급 방식</td><td>플랜마다 매달 정해진 양을 받습니다. 결제를 시작한 날을 기준으로 매달 다시 채워지고, <b>남은 크레딧은 다음 달로 넘어가지 않습니다</b>. 플랜이 둘이면 각 플랜의 결제일에 따로 채워집니다.</td></tr>
+<tr><td>플랜별 양</td><td>애펙 단일 앱(2025년 6월 17일 이후 가입) 월 25 · Creative Cloud Standard 월 25 · Creative Cloud Pro 월 4,000(표준 기능은 무제한)</td></tr>
+<tr><td>표준 기능</td><td>Generative Fill 같은 이미지 기능. 보통 한 번에 1크레딧이고, Creative Cloud Pro·Firefly 플랜은 무제한입니다.</td></tr>
+<tr><td>프리미엄 기능</td><td>영상·소리 생성과 파트너 모델. Firefly 영상 생성은 720p 초당 50, 1080p 초당 100크레딧입니다. 파트너 모델은 모델마다 다릅니다(예: Veo 3.1 초당 50, GPT Image 2 고해상도 한 장 80, Nano Banana 2 1K 한 장 20 — 일부는 한시 요율).</td></tr>
+<tr><td>모자랄 때</td><td>다음 달까지 기다리거나 Firefly 플랜을 더합니다. 미국 기준 Standard 월 $9.99(2,000) · Pro $19.99(4,000) · Pro Plus $49.99(10,000) · Premium $199.99(50,000). 2,000크레딧은 5초 영상 약 20편 분량입니다.</td></tr>
+</table>
+<h3>AI Assistant 베타의 크레딧 정책</h3>
+<ul>
+<li>공개 베타 초기에는 Firefly 생성까지 무료였고, 2026년 11월 6일부터 After Effects (beta)에서 크레딧 차감이 시작되었습니다.</li>
+<li>어도비는 지금 요율이 <b>“도입 요율이며 바뀔 수 있다”</b>고 밝힙니다. 동작마다 드는 양이 다르고, 동작이 끝난 뒤 크레딧 아이콘에 마우스를 올리면 실제로 쓴 양이 보입니다.</li>
+<li>애펙 단일 앱의 월 25크레딧은 생성 동작 한두 번이면 끝납니다. 이미지·영상 생성까지 자주 쓰려면 Creative Cloud Pro나 Firefly 플랜이 필요합니다.</li>
+</ul>
+<h3>어떤 엔진으로 돌아가나</h3>
+<p>AI Assistant는 어도비의 크리에이티브 에이전트가 요청을 해석해 애펙 안의 동작으로 바꾸고, 이미지·영상은 <b>Firefly 모델</b>과 <b>파트너 모델</b>(Google Gemini·Nano Banana·Veo, OpenAI GPT Image, FLUX, Runway, Luma, ElevenLabs 등)로 만듭니다. 모델을 지정하지 않으면 Assistant가 고릅니다. 대화를 맡는 언어 모델의 회사는 공개되지 않았습니다. Firefly 결과물은 상업적 사용에 안전하다고 어도비가 밝히지만 파트너 모델 결과물은 사용자가 판단해야 하고, 생성물은 레이어가 아닌 파일로 들어옵니다. 사용자 콘텐츠는 모델 학습에 쓰이지 않습니다.</p>
+
+<p class="src">출처: Adobe 도움말 「Generative credits FAQ」「Partner models in Adobe products」「After Effects AI Assistant (beta) FAQ」, Adobe 커뮤니티 공지(2026.11), adobe.com Firefly 요금 페이지. 2026년 11월 24일 확인. 요금과 요율은 자주 바뀌므로 쓰기 전에 다시 확인하세요.</p>
 
 <h2>이 장 점검</h2>
 <div class="ok"><b>성공하면</b>AI Assistant의 답대로 메뉴를 따라가 원하는 기능을 찾았습니다.</div>
@@ -2078,6 +2173,8 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <tr><td>패널 입력칸에 글자가 안 들어감</td><td>입력칸을 두 번 클릭한 뒤 입력</td></tr>
 <tr><td>패널이 화면을 다 가림</td><td>패널 제목 막대를 끌어 옆으로 옮김</td></tr>
 <tr><td>애펙이 한글판으로 돌아옴</td><td>문서와 OneDrive\문서 두 곳에 ae_force_english.txt가 있는지 확인</td></tr>
+<tr><td>화면이 컬러 바, 이름이 기울어짐</td><td>원본 파일 이름이 바뀌거나 옮겨짐. 우클릭 → Replace Footage → File(2-4)</td></tr>
+<tr><td>블렌딩 모드가 안 먹음</td><td>맨 아래 레이어이거나 프리컴포즈 안쪽에 준 경우(4-8)</td></tr>
 <tr><td>생성이 오래 걸림</td><td>Queued → Generating 순서로 진행. 4~8분은 정상</td></tr>
 </table>
 <h2>H. 참고 자료 (2026년 11월 확인)</h2>
@@ -2106,7 +2203,7 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
 <p>성남시청 공보관실 이미지디자이너와 ㈜도쉼 대표를 지냈고, 지은 책으로 『UX란 무엇인가?』, 『ChatGPT 수업활용 code &amp; play』 등이 있습니다.</p>
 <h2>이 책을 만든 과정</h2>
 <p>이 책의 실습과 화면은 2026년 11월 22일과 23일 이틀 동안, 저자의 지시에 따라 Claude가 Windows PC의 애프터이펙트를 직접 조작해 만들었습니다. 컴포지션과 레이어는 힉스필드 브리지로, 메뉴 선택과 화면 캡처는 Claude의 컴퓨터 사용 기능으로, 실습 영상과 도판 사진은 힉스필드의 생성 모델로 만들었습니다. 로그인과 결제, 무엇을 넣고 뺄지의 판단, 마지막 검수는 사람이 했습니다.</p>
-<table><tr><th style="width:36%">항목</th><th>기록</th></tr><tr><td>화면 캡처와 도판</td><td>106점 (실제 캡처, 직접 그린 도식, 생성 이미지에 표기를 더한 사진)</td></tr><tr><td>애펙 프로젝트</td><td>컴포지션 34개 — 저장소 project 폴더의 .aep 한 파일</td></tr><tr><td>힉스필드 크레딧</td><td>약 238 (25장의 기록표)</td></tr><tr><td>조판</td><td>HTML과 CSS로 짜고 PDF로 출력 (182 × 257mm)</td></tr></table>
+<table><tr><th style="width:36%">항목</th><th>기록</th></tr><tr><td>화면 캡처와 도판</td><td>105점 (실제 캡처, 직접 그린 도식, 생성 이미지에 표기를 더한 사진)</td></tr><tr><td>애펙 프로젝트</td><td>컴포지션 34개 — 저장소 project 폴더의 .aep 한 파일</td></tr><tr><td>힉스필드 크레딧</td><td>약 238 (25장의 기록표)</td></tr><tr><td>조판</td><td>HTML과 CSS로 짜고 PDF로 출력 (182 × 257mm)</td></tr></table>
 <h2>책 정보</h2>
 <table><tr><th style="width:36%">항목</th><th>내용</th></tr><tr><td>책 이름</td><td>애프터이펙트 2027 완전 실습 — 기본기부터 AI 협업까지</td></tr><tr><td>지은이 · 펴낸 날</td><td>안지아 · 2026년 11월 23일 (2027 EDITION, 1판)</td></tr><tr><td>기준 버전</td><td>Adobe After Effects 27.0 · Higgsfield Plugin v1.0.64</td></tr><tr><td>실습 자료</td><td>깃허브 저장소 (주소는 뒤표지)</td></tr><tr><td>글꼴</td><td>본문 Noto Sans CJK KR, 도판 나눔고딕 (SIL Open Font License)</td></tr></table>
 <p class="src">화면 캡처와 도판은 저자가 직접 만들었습니다. Adobe, After Effects, Premiere는 Adobe Inc.의, Higgsfield는 Higgsfield AI의, Claude는 Anthropic의 상표입니다. 이 책은 각 회사의 공식 출판물이 아닙니다.</p>
@@ -2114,7 +2211,7 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
   <div class="bband"></div>
   <div class="bq">애펙 한 가지 프로그램을 처음부터 끝까지.<br>손으로 먼저 익히고, AI와 함께 완성합니다.</div>
   <ul class="bl"><li>기본기 · 모션그래픽 · 익스프레션 · 합성 · 3D</li><li>힉스필드 플러그인 패널 · Claude 브리지 · 애펙 AI Assistant</li><li>실제 화면 캡처와 실제 크레딧 기록</li></ul>
-  <div class="bgh"><span>실습 자료 · 프로젝트 파일</span>github.com/aixrartdesign-maker/ae-2027-ai-workbook</div>
+  <div class="bgh"><img class="bqr" src="img/qr_github.svg"><span>실습 자료 · 프로젝트 파일</span>github.com/aixrartdesign-maker/ae-2027-ai-workbook<em>QR을 찍으면 저장소로 바로 갑니다.</em></div>
   <div class="author">안지아 지음</div>
   <div class="draft">2027 EDITION · 2026.11</div>
 </section>
@@ -2229,15 +2326,17 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
       var n = pr.children.length, gap = px(getComputedStyle(pr).columnGap) || 4 * MM;
       return (pr.clientWidth - gap * (n - 1)) / n - pad - 1;
     }
-    return f.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    var w0 = f.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    return f.classList.contains('narrow') ? w0 * 0.8 : w0;
   }
   function baseMaxH(m) {
     var f = m.closest('figure');
     if (m.tagName !== 'IMG') return 1e6;
     if (f.parentNode.classList.contains('pair')) return 60 * MM;
     if (f.classList.contains('half')) return 54 * MM;
-    if (f.classList.contains('wide')) return 112 * MM;
-    return 84 * MM;
+    var k = f.classList.contains('narrow') ? 0.8 : 1;
+    if (f.classList.contains('wide')) return 112 * MM * k;
+    return 84 * MM * k;
   }
   function setH(m, h) {
     var a = aspect(m), W = availW(m);
@@ -2278,6 +2377,7 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
       mediaOf(f).forEach(function (m) {
         var a = aspect(m), W = availW(m);
         var cap = Math.min(W / a, m._h * MAX_GROW, 125 * MM);
+        if (f.classList.contains('narrow')) cap = Math.min(cap, m._base || m._h);
         if (m.tagName === 'IMG') cap = Math.min(cap, m.naturalHeight * 1.25);
         if (cap - m._h > 1) ms.push({ m: m, room: cap - m._h });
       });
@@ -2676,6 +2776,15 @@ table.syl td:nth-child(2) { border-right:.25mm solid #e2e4e8; }
       if (kidsBottom + ch + 10 * MM > PAGE_H) { var NP = newPage(); NP.items.push({ part: lastP.items[0].part, chap: lastP.items[0].chap }); NP.body.appendChild(colo); NP.last = true; NP.left = 0; }
     }
 
+    // pad interior to a multiple of 8 with MEMO pages, kept before the final (colophon) page
+    var need = (8 - pages.length % 8) % 8;
+    var lastPg = pages[pages.length - 1];
+    for (var mi = 0; mi < need; mi++) {
+      var mp = document.createElement('div'); mp.className = 'pg memo';
+      mp.innerHTML = '<div class="pg-head"><span class="hl"></span><span class="hr"></span></div><div class="pg-body"><div class="memo-h">MEMO</div><div class="memo-lines"></div></div><div class="pg-foot"></div>';
+      document.body.insertBefore(mp, document.getElementById('backcover'));
+      pages.push({ pg: mp, body: mp.querySelector('.pg-body'), items: [{ part: '', chap: '' }] });
+    }
     // running heads + page numbers (cover = page 1)
     var title = '애프터이펙트 2027 완전 실습';
     pages.forEach(function (Pg, i) {

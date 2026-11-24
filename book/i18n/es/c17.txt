@@ -1,0 +1,21 @@
+[2103] <b>Créditos generativos de Adobe</b>La mayoría de las acciones de IA del AI Assistant gastan créditos generativos de tu cuenta de Adobe. Consulta el saldo en la página de tu cuenta de Adobe. Son independientes de los créditos de Higgsfield. La política completa está en la sección 23-3.
+[2104] <span class="tag t2">¿Por qué?</span> 23-3 Créditos generativos de Adobe: cuántos y cómo se gastan
+[2105] Las funciones de IA generativa de Adobe —AI Assistant, Generative Fill, generación de vídeo y más— se pagan con <b>créditos generativos</b>. Los créditos pertenecen a tu <b>cuenta de Adobe (Adobe ID)</b>, así que en Photoshop, Premiere, After Effects o Firefly salen de la misma bolsa. No tienen nada que ver con los créditos de Higgsfield.
+[2106] Detalle (a noviembre de 2026)
+[2107] Cómo se reciben
+[2108] Cada plan otorga una cantidad fija al mes. Se recargan cada mes en la fecha de facturación y <b>los créditos no usados no pasan al mes siguiente</b>. Si tienes dos planes, cada uno se recarga en su propia fecha.
+[2109] Cantidad por plan
+[2110] After Effects como app única (alta después del 17 de junio de 2025): 25/mes · Creative Cloud Standard: 25/mes · Creative Cloud Pro: 4.000/mes (funciones estándar ilimitadas)
+[2111] Funciones estándar
+[2112] Funciones de imagen como Generative Fill. Normalmente 1 crédito por uso; ilimitadas en Creative Cloud Pro y en los planes de Firefly.
+[2113] Funciones premium
+[2114] Generación de vídeo y audio y modelos de socios. El vídeo de Firefly cuesta 50 créditos por segundo en 720p y 100 por segundo en 1080p. Los modelos de socios varían (p. ej., Veo 3.1 50/s, GPT Image 2 alta calidad 80 por imagen, Nano Banana 2 1K 20 por imagen; algunas tarifas son temporales).
+[2115] Si se acaban
+[2116] Espera al mes siguiente o añade un plan de Firefly. Precios en EE. UU.: Standard 9,99 $/mes (2.000) · Pro 19,99 $ (4.000) · Pro Plus 49,99 $ (10.000) · Premium 199,99 $ (50.000). 2.000 créditos equivalen a unos veinte vídeos de 5 segundos.
+[2117] Política de créditos de la beta del AI Assistant
+[2118] Al principio de la beta pública incluso la generación con Firefly era gratuita; el cobro de créditos en After Effects (beta) empezó el 6 de noviembre de 2026.
+[2119] Adobe indica que las tarifas actuales son <b>«introductorias y pueden cambiar»</b>. Cada acción cuesta distinto; al terminar una acción, pasa el ratón sobre el icono de créditos para ver cuánto gastó realmente.
+[2120] Los 25 créditos mensuales de la app única se agotan tras una o dos acciones generativas. Para generar imágenes o vídeo con frecuencia necesitas Creative Cloud Pro o un plan de Firefly.
+[2121] ¿Con qué motores funciona?
+[2122] En el AI Assistant, el agente creativo de Adobe interpreta tu petición y la convierte en acciones dentro de After Effects, mientras que las imágenes y el vídeo los crean <b>modelos de Firefly</b> y <b>modelos de socios</b> (Google Gemini, Nano Banana y Veo, OpenAI GPT Image, FLUX, Runway, Luma, ElevenLabs y otros). Si no eliges modelo, lo elige el Assistant. Adobe no ha revelado de qué empresa es el modelo de lenguaje que lleva la conversación. Adobe afirma que los resultados de Firefly son seguros para uso comercial, pero los de modelos de socios debes valorarlos tú, y lo generado llega como archivos, no como capas. Tu contenido no se usa para entrenar los modelos.
+[2123] Fuentes: Ayuda de Adobe «Generative credits FAQ», «Partner models in Adobe products», «After Effects AI Assistant (beta) FAQ»; anuncio en la comunidad de Adobe (nov. 2026); página de precios de Firefly en adobe.com. Consultado el 24 de noviembre de 2026. Los precios y tarifas cambian a menudo; compruébalos antes de usarlos.
