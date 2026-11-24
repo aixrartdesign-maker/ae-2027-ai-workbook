@@ -1,0 +1,132 @@
+[113] <span class="tn">Apén.</span><span class="tt">Atajos · 30 efectos · Glosario · Problemas · Referencias</span><span class="pn" data-target="ch-app"></span>
+[114] <span class="tn"></span><span class="tt">Sobre la autora</span><span class="pn" data-target="ch-bio"></span>
+[115] Antes de pulsar botones, veamos de dónde viene esta herramienta y por qué se encuentra ahora con la IA. Con el contexto, el mismo botón se ve distinto.
+[116] Adobe y After Effects: 30 años <span class="lv">●○○</span>
+[117] After Effects nació en 1993 en una pequeña empresa y se convirtió en el estándar de la animación gráfica en cine, televisión y publicidad. En 2026 llegó a su tercer punto de inflexión: la IA entró como «un colega con quien trabajar».
+[118] 0-1 Una empresa llamada Adobe
+[119] Adobe fue fundada en 1982 por John Warnock y Charles Geschke. Empezó con PostScript, un lenguaje de descripción de páginas para imprenta, y con Photoshop en 1990 y Premiere en 1991 pasó de ser una «empresa editorial» a una «empresa de imagen y vídeo». En 2013 dejó la caja de Creative Suite (CS) por la suscripción mensual Creative Cloud (CC), y en 2023 lanzó la IA generativa Firefly.
+[120] <b>Por qué importa</b>Las aplicaciones de Adobe están conectadas. Lo que haces en AE lo envías a Premiere, y las capas de Photoshop se importan tal cual. La IA llega igual: empezando por «conectar las aplicaciones».
+[121] 0-2 El nacimiento de After Effects
+[122] After Effects lo creó CoSA (The Company of Science and Art), una empresa estadounidense fundada en 1990. La versión 1.0 salió en enero de 1993; para lo que hay hoy era muy simple: sin panel de línea de tiempo y con un solo efecto por capa. En julio de ese año Aldus compró CoSA y, cuando Aldus se fusionó con Adobe en 1994, AE pasó a ser un producto de Adobe. La primera versión con el nombre de Adobe fue la 3.0, en 1995, y solo funcionó en Mac hasta que la 3.1 añadió Windows en 1997.
+[123] Hasta entonces, los efectos visuales del cine los hacían grandes estudios con equipos caros y programas propios. Con AE, que apila y compone capas en un ordenador personal, los equipos pequeños pudieron hacer cabeceras de televisión y efectos publicitarios. En 2019 recibió por ello un Premio Científico y Técnico de la Academia.
+[124] 0-3 Historia por versiones
+[125] Época
+[126] Versión
+[127] Qué cambió y qué significa
+[128] Nace la composición por capas. Sin línea de tiempo, un efecto por capa
+[129] Primera versión con el nombre de Adobe. Windows desde la 3.1 en 1997
+[130] Entra en Creative Suite junto a Photoshop y Premiere
+[131] 3D Camera Tracker, Global Performance Cache: empieza el «AE rápido»
+[132] Paso a la suscripción. Cinema 4D Lite y Cineware llevan el 3D dentro de AE
+[133] Content-Aware Fill (borrar objetos del vídeo). Premio Científico y Técnico de la Academia
+[134] Roto Brush 2: seguimiento automático del contorno de personas con IA (Adobe Sensei)
+[135] Multi-Frame Rendering: usa todos los núcleos para previsualizar y renderizar más rápido. Composition Profiler
+[136] Salida H.264 directa desde la cola de render, Track Matte desde cualquier capa, importación de modelos 3D y panel Properties en beta
+[137] Lanzamiento del renderizador Advanced 3D y de la importación de modelos 3D, iluminación basada en imagen (luz de entorno)
+[138] Scripts para dar estilo a cada carácter (per-character styling)
+[139] Reproducción de previsualización de alto rendimiento, vista previa HDR, Animated Environment Lights con vídeo como fuente de luz, importación FBX
+[140] Importación y exportación HDR, botón Info de los efectos, ajustes de cámara por defecto
+[141] Mallas 3D paramétricas, materiales Substance 3D, importación SVG, fuentes variables, sombras de luces Spot y Parallel, ejecución en un idioma distinto del sistema
+[142] <b>Object Matte</b>: un mate con IA que selecciona una persona o un coche con un clic y lo sigue hasta el final. Quick Apply
+[143] Profundidad de campo (Depth of Field) en el renderizador Advanced 3D
+[144] Nuevas guías, caché en disco de Object Matte, etiquetas de color de efectos, nuevo Effect Controls, ACES 2.0
+[145] Panel <b>AI Assistant</b> (ordenar proyectos, escribir y corregir expresiones, generar imágenes y vídeo), capas como materiales 3D, panel Adobe Stock. Ese mismo día se presentó en vista previa el <b>MCP local</b>, que permite a una IA externa controlar la aplicación directamente
+[146] Fuentes: archivos de CoSA, Computer Graphics World (2013), notas de versión de Adobe (What’s new, 2022–2026), anuncios de Adobe MAX 2026 (10/11/2026). Entre paréntesis, el nombre por año de cada versión. Desde la 22.0 (octubre de 2021) el número de versión coincide con el año (22.0 = 2022).
+[147] 0-4 Tres puntos de inflexión
+[148] Al ordenador personal
+[149] La composición y la animación gráfica se pudieron hacer en un escritorio, sin equipos de estudio.
+[150] A la suscripción y la conexión
+[151] Actualizaciones mensuales y conexión con el 3D, la nube y otras aplicaciones.
+[152] Con un colega de IA
+[153] Lo describes con palabras y la IA crea capas y fotogramas clave; las personas se encargan de la dirección y la revisión.
+[154] Por qué la IA ahora — Higgsfield, Claude, MCP <span class="lv">●○○</span>
+[155] Este libro trata tres formas de usar la IA dentro de AE. Cada una destaca en algo distinto, así que primero trazamos un mapa.
+[156] 0-5 Dónde se va el tiempo en AE
+[157] La mayor parte del tiempo en animación gráfica no se va en «ideas», sino en tareas repetitivas: rotoscopiar a una persona fotograma a fotograma, hacer versiones para cada proporción, corregir el mismo rótulo decenas de veces o volver a rodar por falta de material. Ahí, en esa repetición y en esos huecos, es donde entra la IA.
+[158] Cómo se hacía antes
+[159] Cómo ayuda la IA ahora
+[160] Capítulo del libro
+[161] Rotoscopia fotograma a fotograma
+[162] Un clic crea y sigue un mate
+[163] Cap. 18 Remove BG, cap. 11 Object Matte
+[164] Volver a rodar y montar para vídeo vertical
+[165] Pintar las zonas vacías para cambiar la proporción
+[166] Cap. 18 Reframe
+[167] Volver a rodar de noche una escena de día
+[168] Generar un clip nuevo con otra hora del día o clima
+[169] Cap. 19 Scene
+[170] Volver a grabar la locución, doblaje para otros países
+[171] Cambio de voz, doblaje traducido
+[172] Cap. 20 Audio
+[173] Fotogramas clave a mano para títulos y rótulos
+[174] Lo describes con palabras y se crean capas y fotogramas clave
+[175] Cap. 21–22 Claude
+[176] Revisar el proyecto antes de entregar
+[177] La IA encuentra e informa de huecos y capas apagadas
+[178] Cap. 23 AI Assistant
+[179] 0-6 Tres caminos
+[180] Camino ①
+[181] Con botones dentro de AE creas o cambias <u>vídeo nuevo</u>. Se procesa en la nube y gasta créditos.
+[182] Camino ②
+[183] Claude + puente
+[184] Controlas <u>el propio AE</u> conversando: crea composiciones, capas, fotogramas clave y expresiones. No gasta créditos.
+[185] Camino ③
+[186] IA integrada de AE
+[187] AI Assistant y Object Matte. Son funciones de Adobe, así que no hace falta registrarse aparte.
+[188] 0-7 Qué es Higgsfield
+[189] Higgsfield es una plataforma de IA generativa que reúne en un solo lugar modelos de generación de vídeo, imagen y voz de varias empresas. Eliges modelos como Seedance, Kling, Veo o Nano Banana y pagas con los mismos créditos. El 27 de mayo de 2026 lanzó un plugin para Adobe, con el que generar, quitar fondos, reencuadrar y escalar se hace en la línea de tiempo sin ir al navegador. En julio añadió una función para que una IA como Claude controle AE directamente mediante MCP. Un solo instalador lo añade a AE y a Premiere.
+[190] 0-8 Qué es MCP y por qué importa
+[191] MCP (Model Context Protocol) es un estándar común que permite a una IA usar las funciones de otros programas. Anthropic lo publicó en 2024 y en 2026 ya era el estándar de facto para conectar la IA con herramientas creativas. Piensa en él como un <b>puerto USB para la IA</b>: como el conector es el mismo, IA como Claude o ChatGPT se enchufan igual a AE, Blender o DaVinci Resolve.
+[192] Conexión
+[193] Dirección
+[194] Qué hace
+[195] Generar vídeo, imágenes y voz desde Claude
+[196] Pasa las instrucciones de Claude al plugin de AE para manejar composiciones y capas
+[197] Ninguna de las dos conexiones necesita clave API. Basta con añadir la dirección en los conectores de Claude e iniciar sesión con tu cuenta de Higgsfield (17-5). El resultado es un archivo .aep normal, y la gran ventaja es que una persona siempre puede corregir a mano las capas que hizo la IA.
+[198] <b>Adobe va por el mismo camino</b>En MAX 2026 (inaugurado el 10 de noviembre de 2026) Adobe presentó en vista previa el <b>MCP local</b> para Photoshop, Illustrator, Premiere y AE. Agentes de IA externos editarán directamente los archivos originales de tu ordenador manteniéndolos editables; está prevista una beta privada a principios de 2027. Las prácticas con el puente de Claude de este libro te permiten probar ese futuro por adelantado.
+[199] Antes de empezar — costes, registro, inicio de sesión, créditos <span class="lv">●○○</span>
+[200] Para las prácticas necesitas tres cuentas: Adobe, Higgsfield y Claude. Primero, veamos cuánto cuesta cada cosa.
+[201] 0-9 Costes de Adobe y descuento para estudiantes
+[202] Plan
+[203] Precio (Corea, IVA incl.)
+[204] Notas
+[205] After Effects (una aplicación)
+[206] ₩30.800/mes
+[207] Plan anual con pago mensual. 7 días de prueba gratis
+[208] Creative Cloud Todas las aplicaciones (individual)
+[209] ₩78.100–87.900/mes
+[210] Más de 20 aplicaciones + créditos generativos. El precio cambia entre la página de planes y la de promociones; compruébalo al pagar. Precio de Black Friday ₩34.800
+[211] Todas las aplicaciones — estudiantes y docentes
+[212] ₩26.400/mes (66 % de descuento)
+[213] Precio del primer año. En Black Friday (13–27/11) ₩21.000/mes (76 % de descuento)
+[214] Consultado en adobe.com/kr el 23 de noviembre de 2026. Los descuentos y plazos cambian según la temporada (vuelta a clase, Black Friday…), así que consulta la página oficial antes de comprar. Los precios varían según el país.
+[215] <b>Quién puede tener descuento</b>: estudiantes y docentes a partir de 13 años, verificados con correo de su centro o certificado de matrícula. El descuento solo vale el primer año y cancelar un plan anual antes de tiempo puede tener penalización.
+[216] <b>Licencia del centro</b>: si tu universidad tiene licencia institucional, puedes usarlo gratis con tu cuenta del centro. Pregunta primero en la secretaría o en el servicio de informática.
+[217] <b>Si solo necesitas AE</b>: la aplicación sola es más barata, pero si también usas Premiere y Photoshop, sale mejor el precio de estudiante de «Todas las aplicaciones».
+[218] 0-10 Registro e inicio de sesión en Adobe
+[219] En adobe.com elige <b>Sign in → Create an account</b>. Puedes registrarte con correo, Google o Apple.
+[220] Instala la <b>aplicación de escritorio de Creative Cloud</b> e inicia sesión con la misma cuenta. Desde aquí se instala y actualiza AE.
+[221] Elige la versión de AE en <b>⋯ → Other versions</b> de la lista de aplicaciones. Este libro usa la 2027 (presentada en MAX 2026).
+[222] 0-11 Planes y créditos de Higgsfield
+[223] Precio mensual (pago mensual)
+[224] Créditos al mes
+[225] Características
+[226] Ninguno (uso limitado)
+[227] Para explorar, sin uso comercial
+[228] Algunos modelos
+[229] $59 ($47 con pago anual)
+[230] Todos los modelos
+[231] $129 ($99 con pago anual)
+[232] El crédito más barato, muchas generaciones a la vez
+[233] Consultado en la página de precios de higgsfield.ai (EE. UU.) en noviembre de 2026. Los precios y créditos cambian según el país y el momento; consúltalos en higgsfield.ai/pricing antes de pagar. Las prácticas del libro se hicieron con el plan Ultra.
+[234] <b>Qué son los créditos</b>: puntos que se descuentan cada vez que generas. El coste depende del modelo, la resolución y la duración. En este libro, un vídeo de práctica de 5 s a 480p costó 2,5 créditos y un escalado unos 19 créditos (cap. 25).
+[235] <b>Dónde mirarlo</b>: en tu perfil, arriba a la derecha en higgsfield.ai, o pregúntale a Claude: «¿Cuántos créditos me quedan?»
+[236] <b>Si te faltan</b>: compra un paquete de créditos o activa la recarga automática en Plus o Ultra.
+[237] 0-12 Registro en Higgsfield e inicio de sesión en el plugin
+[238] Regístrate (<b>Sign up</b>) en higgsfield.ai con una cuenta de Google o con tu correo.
+[239] Tras instalar el plugin, pulsa <b>Continue in browser</b> en el panel de AE y se abrirá el navegador. Inicia sesión, concede el acceso y volverás al panel.
+[240] En Claude, ve a <b>Customize → Connectors → + Add → Add custom connector</b>, escribe la dirección e inicia sesión en Higgsfield en la ventana que se abre (17-5). Nunca tienes que darle tu contraseña a Claude.
+[241] <b>Seguridad de la cuenta</b>Inicia sesión y paga siempre tú. No dejes que la IA escriba tu contraseña ni tu número de tarjeta. Al escribir este libro, todos los inicios de sesión los hizo una persona.
+[242] Los archivos que hace la IA también son, al final, capas y fotogramas clave. Si entiendes esto, podrás corregir sus resultados y darle instrucciones precisas.
+[243] Los primeros 30 minutos — animar una palabra y exportar un vídeo <span class="lv">●○○</span>
+[244] Antes de explicar nada, hagámoslo una vez de principio a fin. En 30 minutos tendrás un vídeo de 5 segundos en el que «HELLO» se desliza de izquierda a derecha.

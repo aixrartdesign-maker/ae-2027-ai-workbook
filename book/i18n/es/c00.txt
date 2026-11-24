@@ -1,0 +1,113 @@
+[0] After Effects 2027: práctica completa<br/>De los fundamentos a la colaboración con IA
+[1] De los fundamentos, la animación gráfica, las expresiones, la composición y el 3D al trabajo con IA mediante Higgsfield y Claude<br/>Basado en After Effects 2027 · Higgsfield Plugin v1.0.64
+[2] Ji-A Ahn
+[3] Cómo usar este libro
+[4] Este libro trata un solo programa, After Effects (en adelante, AE), de principio a fin. La primera mitad cubre los fundamentos, la animación gráfica, la composición y el 3D; la segunda, tres formas de añadir IA encima: el panel del plugin Higgsfield, el puente de Claude y la IA propia de AE.
+[5] Entender
+[6] Historia · IA · Costes
+[7] Fundamentos de AE
+[8] Cap. 01–04
+[9] Animación gráfica
+[10] Cap. 05–07
+[11] Composición y VFX
+[12] Cap. 08–12
+[13] 3D y producción
+[14] Cap. 13–16
+[15] Preparar la IA
+[16] Cap. 17
+[17] Panel de Higgsfield
+[18] Cap. 18–20
+[19] Claude · IA integrada
+[20] Cap. 21–23
+[21] Cierre
+[22] Cap. 24–26 · Apéndice
+[23] Para aprender solo AE, lee las PARTES 1–4; para practicar solo con IA, puedes empezar por las PARTES 5–8.
+[24] El recorrido del libro. El número de ● indica el nivel (●○○ inicio · ●●○ con algo de práctica · ●●● avanzado).
+[25] Qué tiene de especial este libro
+[26] <b>Todas las pantallas son reales.</b> Los días 22 y 23 de noviembre de 2026, en un solo PC con Windows, instalamos AE 2027 (en inglés) y el plugin Higgsfield v1.0.64, y Claude fue pulsando los menús y capturando cada pantalla.
+[27] <b>Se registran los créditos reales.</b> En cada práctica anotamos cuántos créditos se gastaron y cuántos minutos llevó (capítulo 25).
+[28] <b>También se anota lo que no funciona.</b> Los pasos que la IA no pudo hacer y tuvo que hacer una persona aparecen como «Tu turno».
+[29] <b>Primero la práctica.</b> Primero lo haces a mano y después se resumen los principios. Los archivos de práctica y los proyectos de AE están en el repositorio de GitHub (apéndice E).
+[30] Convenciones
+[31] Convención
+[32] Significado
+[33] <b>Window → Extensions</b>
+[34] Los menús se nombran según la versión en inglés. Todas las pantallas son de la versión en inglés (17-2)
+[35] <span class="tag t1">Paso a paso</span><span class="tag t2">¿Por qué?</span><span class="tag t3">Un paso más</span>
+[36] Etiquetas antes de los títulos de sección: práctica · principio · avanzado
+[37] <span class="tag t4">Estándar profesional</span><span class="tag t5">Reto</span>
+[38] Cifras y hábitos que funcionan en el trabajo real · tareas para hacer por tu cuenta
+[39] Nivel ●○○ · ●●○ · ●●●
+[40] Arriba a la derecha del título del capítulo. Puedes saltarte al principio los capítulos ●●●
+[41] Recuadros lavanda PROMPT · EXPRESSION
+[42] Instrucciones y código que puedes pegar tal cual
+[43] <b>①②③</b> en las capturas
+[44] Haz clic en el orden de los números morados. Coinciden con los números del texto
+[45] Si funcionó · Si te atascas
+[46] Recuadro de repaso al final del capítulo: comprobar el resultado y resolver los atascos más comunes
+[47] Los atajos son de Windows. En Mac, Ctrl → Cmd, Alt → Option
+[48] Qué necesitas
+[49] After Effects 2024 o posterior (este libro usa la 2027; algunas funciones solo aparecen a partir de la 26.x)
+[50] Un plan de pago de Higgsfield, una cuenta de Claude y la aplicación de escritorio (para las PARTES 5–8)
+[51] Windows 10/11 de 64 bits o macOS, conexión a internet
+[52] Archivos de práctica y de proyecto (descárgalos del repositorio de GitHub, apéndice E)
+[53] Ejemplo de calendario de 15 semanas — clase y autoaprendizaje
+[54] Semana
+[55] Contenido (capítulos)
+[56] Historia, mapa de la IA, instalación (00, 17-2)
+[57] Croma, corrección de color (08, 12)
+[58] Los primeros 30 minutos, leer la pantalla (01–02)
+[59] Tracking, rastreador 3D, eliminar objetos (09–11)
+[60] Fotogramas clave y gráficos (03)
+[61] 3D, render y salida, consejos por profesión (13–16)
+[62] Emparentado, máscaras, mates (04)
+[63] Conectar la IA, panel ① Edición (17–18)
+[64] Formas y técnicas de animación gráfica (05)
+[65] Paneles ②③, títulos con Claude (19–22)
+[66] Animación de texto (06)
+[67] IA integrada, proyecto integrado, revisión (23–25)
+[68] Expresiones ① vocabulario básico (07)
+[69] Presentación final: vídeo promocional de 30 s (24, 26)
+[70] Expresiones ②, trabajo de mitad de curso (07)
+[71] Autoaprendizaje
+[72] Un capítulo al día durante 4–5 semanas
+[73] <b>¿Poco tiempo?</b>Asienta la base con los capítulos 01 → 03 → 04 y luego prueba la conexión con IA y la práctica con 17 → 18 → 21. Lee los demás capítulos cuando necesites una función. Cada capítulo se puede seguir solo con los archivos del repositorio, sin los resultados de capítulos anteriores.
+[74] Índice
+[75] <span class="tpn">PART 0</span><span class="tpt">Entender</span><span class="pn" data-target="part-0"></span>
+[76] <span class="tn">00-1</span><span class="tt">Adobe y After Effects: 30 años</span><span class="pn" data-target="ch-00a"></span>
+[77] <span class="tn">00-2</span><span class="tt">Por qué la IA ahora<em> — Higgsfield, Claude, MCP</em></span><span class="pn" data-target="ch-00b"></span>
+[78] <span class="tn">00-3</span><span class="tt">Antes de empezar<em> — costes, registro, inicio de sesión, créditos</em></span><span class="pn" data-target="ch-00c"></span>
+[79] <span class="tpn">PART 1</span><span class="tpt">Fundamentos de AE</span><span class="pn" data-target="part-1"></span>
+[80] <span class="tn">01</span><span class="tt">Los primeros 30 minutos<em> — animar una palabra y exportar un vídeo</em></span><span class="pn" data-target="ch-01"></span>
+[81] <span class="tn">02</span><span class="tt">Leer la pantalla, el tiempo y los iconos</span><span class="pn" data-target="ch-02"></span>
+[82] <span class="tn">03</span><span class="tt">La calidad del movimiento<em> — fotogramas clave y gráficos</em></span><span class="pn" data-target="ch-03"></span>
+[83] <span class="tn">04</span><span class="tt">Construir la estructura<em> — Parent, Pre-compose, máscaras, mates</em></span><span class="pn" data-target="ch-04"></span>
+[84] <span class="tpn">PART 2</span><span class="tpt">Animación gráfica</span><span class="pn" data-target="part-2"></span>
+[85] <span class="tn">05</span><span class="tt">Formas y animación gráfica<em> — líneas, efectos, Puppet, partículas</em></span><span class="pn" data-target="ch-05"></span>
+[86] <span class="tn">06</span><span class="tt">Animación de texto y tipografía</span><span class="pn" data-target="ch-06"></span>
+[87] <span class="tn">07</span><span class="tt">Expresiones a fondo</span><span class="pn" data-target="ch-07"></span>
+[88] <span class="tpn">PART 3</span><span class="tpt">Composición y VFX</span><span class="pn" data-target="part-3"></span>
+[89] <span class="tn">08</span><span class="tt">Croma<em> — pantalla verde y azul</em></span><span class="pn" data-target="ch-08"></span>
+[90] <span class="tn">09</span><span class="tt">Tracking<em> — pegar elementos a una toma en movimiento</em></span><span class="pn" data-target="ch-09"></span>
+[91] <span class="tn">10</span><span class="tt">3D Camera Tracker y cambio de cielo</span><span class="pn" data-target="ch-10"></span>
+[92] <span class="tn">11</span><span class="tt">Object Matte y Content-Aware Fill</span><span class="pn" data-target="ch-11"></span>
+[93] <span class="tn">12</span><span class="tt">Corrección de color y looks</span><span class="pn" data-target="ch-12"></span>
+[94] <span class="tpn">PART 4</span><span class="tpt">3D y producción</span><span class="pn" data-target="part-4"></span>
+[95] <span class="tn">13</span><span class="tt">Capas 3D, cámaras y luces</span><span class="pn" data-target="ch-13"></span>
+[96] <span class="tn">14</span><span class="tt">Render, salida y otros programas</span><span class="pn" data-target="ch-14"></span>
+[97] <span class="tn">15</span><span class="tt">Herramientas complementarias y alternativas</span><span class="pn" data-target="ch-15"></span>
+[98] <span class="tn">16</span><span class="tt">Consejos prácticos por profesión</span><span class="pn" data-target="ch-16"></span>
+[99] <span class="tpn">PART 5</span><span class="tpt">Preparar la IA</span><span class="pn" data-target="part-5"></span>
+[100] <span class="tn">17</span><span class="tt">Conectar<em> — interfaz en inglés, plugin, puente</em></span><span class="pn" data-target="ch-17"></span>
+[101] <span class="tpn">PART 6</span><span class="tpt">Panel de Higgsfield</span><span class="pn" data-target="part-6"></span>
+[102] <span class="tn">18</span><span class="tt">Panel ① Edición<em> — quitar fondo · reencuadre · borrar tatuajes</em></span><span class="pn" data-target="ch-18"></span>
+[103] <span class="tn">19</span><span class="tt">Panel ② Escena<em> — clima · hora del día · luz · acción</em></span><span class="pn" data-target="ch-19"></span>
+[104] <span class="tn">20</span><span class="tt">Panel ③ Audio<em> — silencios · traducción · voz</em></span><span class="pn" data-target="ch-20"></span>
+[105] <span class="tpn">PART 7</span><span class="tpt">Claude y la IA integrada de AE</span><span class="pn" data-target="part-7"></span>
+[106] <span class="tn">21</span><span class="tt">Claude ① crear y corregir títulos</span><span class="pn" data-target="ch-21"></span>
+[107] <span class="tn">22</span><span class="tt">Claude ② logo reveal · rótulo inferior · transición · cristal</span><span class="pn" data-target="ch-22"></span>
+[108] <span class="tn">23</span><span class="tt">IA integrada de AE<em> — AI Assistant y Object Matte</em></span><span class="pn" data-target="ch-23"></span>
+[109] <span class="tpn">PART 8</span><span class="tpt">Cierre</span><span class="pn" data-target="part-8"></span>
+[110] <span class="tn">24</span><span class="tt">Proyecto integrado<em> — planificar un promo de 30 s</em></span><span class="pn" data-target="ch-24"></span>
+[111] <span class="tn">25</span><span class="tt">Créditos · derechos de autor · revisión (registros reales)</span><span class="pn" data-target="ch-25"></span>
+[112] <span class="tn">26</span><span class="tt">Lo que viene<em> — rumbo, aprendizaje, retos</em></span><span class="pn" data-target="ch-26"></span>

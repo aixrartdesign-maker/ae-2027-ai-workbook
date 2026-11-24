@@ -1,0 +1,123 @@
+[1620] <span class="lbl">PROMPT · To Claude</span>Keep the original and work on a duplicate: make the subtitle "Hands-On Workbook" bounce slightly as it appears, and make the title float gently up and down.
+[1621] <b>Bounce</b>: Claude added four scale keys: 85% at 3.0 s → 108% at 3.4 s → 97% at 3.7 s → 100% at 4.0 s.
+[1622] <b>Float</b>: an expression was added to the title’s position. The existing keyframes still work.
+[1623] <span class="lbl">EXPRESSION · Title › Position</span>// the title floats gently up and down<br/>var amp = 6;  // height of movement (px)<br/>var speed = 2; // speed<br/>value + [0, Math.sin(time * speed) * amp];
+[1624] <b>Fixing by hand</b>: the speed at which the subtitle appears letter by letter is set by the <b>Range Selector → Offset</b> keys of the text animator. These keys couldn’t be moved through the bridge, so we dragged the end key on the timeline from 5.5 s to 7 s to slow it down.
+[1625] <b>Figure 21-2</b> ① Offset end key moved to 7 s for a slower entrance ② the four scale keys Claude added ③ red value = position with an expression
+[1626] 21-3 Polishing into a Broadcast Channel ID
+[1627] We removed the decorative lines and purple and tidied it into charcoal and cool gray. The title resolves from blur 30 → 0 and scale 112 → 100%, and a CC Light Sweep passes once between 2 and 3.2 s. The background is a radial Ramp, the light bloom is a Ramp layer in Screen mode, and motion blur is on.
+[1628] <b>Figure 21-3</b> Channel ID v3 for broadcast (6 s)
+[1629] 21-4 What Claude Can’t Do, and What People Must Do
+[1630] <b>Try it yourself: number count-up</b>Alt+click the stopwatch on Text layer › Text › Source Text and paste the line below.<br/><span class="k">Math.round(linear(time, 0, 3, 0, 2026)).toLocaleString()</span>
+[1631] What Claude did through the bridge
+[1632] What a person had to do
+[1633] Create composition, text and shape layers<br/>Position, scale, rotation and opacity keyframes<br/>Expressions on transform properties such as position<br/>Import video, export frames
+[1634] Move text animator (Range Selector) keys<br/>Text content (Source Text) expressions, e.g. a 0 → 2,026 count-up<br/>Choose the folder for the project’s first save<br/>Log in to accounts and grant permission
+[1635] <b>If it worked</b>The layers Claude made have meaningful names, and nothing breaks when you fix keyframes by hand.
+[1636] <b>If you are stuck</b>If you don’t like the result, instead of “make it again”, say what to fix with numbers, like “make only the title text 20% smaller and delay the entrance by 0.3 s”.
+[1637] Revise the same title three times in words, and record on which instruction you got the result you wanted and what that instruction was.
+[1638] Claude ② Logo Reveal · Lower Third · Transition · Glass <span class="lv">●●○</span>
+[1639] The bridge includes tools that make common motion graphics in one request. You can use this chapter’s prompts as they are.
+[1640] 22-1 One-Shot Tools — Lower Thirds and Glass
+[1641] What to make
+[1642] Example prompt
+[1643] Logo reveal
+[1644] Make a 3-second logo reveal with the logo in this composition. The outline draws first, the fill comes in, then it bounces slightly and stops.
+[1645] Lower third
+[1646] Make a lower third for an interview. Title "Adobe After Effects", subtitle "After Effects · AI Practice", with a dark gray bar sliding out from the left.
+[1647] Title card
+[1648] Make a title card for 9:16 Shorts: one big title line and a small subtitle, 2-second entrance.
+[1649] Scene transition
+[1650] Put a 0.5-second light-flash transition between the two shots.
+[1651] Liquid glass
+[1652] Put a glass-textured round button and menu bar over the background video.
+[1653] Check
+[1654] Show this composition as a contact sheet at 1-second intervals and check whether any text goes off screen.
+[1655] <b>Figure 22-1</b> Lower third “Adobe After Effects” (dark gray bar) and a liquid glass badge “AI Practice LIVE” at the top right. Every layer is separate and live, so you can fix it by hand.
+[1656] 22-2 Logo Reveal and Scene Transition
+[1657] <span class="lbl">PROMPT · To Claude</span>Make a 5-second composition "22장_로고리빌·전환" with a light gray background, and have the text logo "AE AI LAB" grow in over 3 seconds. Bold font, wide tracking, dark charcoal. At the end, add a 1-second wipe to the left.
+[1658] <b>Figure 22-2</b> Logo reveal (scale method). There are only three layers — Transition, Logo, Background — so it is easy to fix.
+[1659] <b>Figure 22-3</b> The transition (wipe_left) was first placed at 0 s, so we dragged the bar to 3.5 s on the timeline by hand. The bridge’s transition tool has no value for setting the start time.
+[1660] <b>Let AI check too</b>Chapter 23’s AI Assistant looked at this composition and pointed out that “there are empty stretches showing only the background at 3–3.5 s and 4.5–5 s”. Extending the end of the logo layer to 5 s fixes it.
+[1661] <b>If it worked</b>The logo reveal and the lower third are organized as separate compositions you can reuse in other videos.
+[1662] <b>If you are stuck</b>If an expression error bar appears, check whether you deleted a layer that another layer references, as in the glass rig. If so, delete the referencing layer too.
+[1663] AE’s Built-in AI — AI Assistant and Object Matte <span class="lv">●○○</span>
+[1664] AE 2027 has two AIs built in by Adobe: <b>AI Assistant</b>, which you give work to by conversation, and <b>Object Matte</b>, which cuts out a subject with one click.
+[1665] The Window menu contains <b>AI Assistant (beta)</b>. Added in 27.0, the panel takes on project tidying, writing and fixing expressions, and generating images and video through conversation. <b>Object Matte</b>, which replaced Roto Brush in April 2026 (26.2), selects subjects with four tools: Object Matte Tool, Quick Selection, Selection Brush and Refine Edge (Ch. 11).
+[1666] <b>Figure 23-1</b>The Window menu in AE 2027. AI Assistant (beta), Adobe Stock, Content-Aware Fill, Essential Graphics and Frame.io V4 are gathered here.
+[1667] Task
+[1668] Separating the background
+[1669] Remove BG (cloud, credits)
+[1670] Object Matte (on device, free)
+[1671] Instructions by conversation
+[1672] Claude bridge, Supercomputer
+[1673] Making new images
+[1674] Strong (30-odd generative models)
+[1675] Firefly integration
+[1676] 23-1 Checking a Project with AI Assistant
+[1677] <b>When to use it</b>When you take over someone else’s project, for a last check before delivery, or when there are dozens of layers and the structure isn’t clear. Before changing anything, it is safest to say “don’t change anything, just explain”.
+[1678] Open <b>Window → AI Assistant (beta)</b>. It loads for a few seconds the first time.
+[1679] Click the sample prompt <b>Inspect the open After Effects project</b> and a long instruction fills the input box. It includes the sentence “don’t change anything yet”. Send it with ↑.
+[1680] For each action it asks <b>Deny / Always proceed / Proceed</b>. This is a read-only check, so click Proceed.
+[1681] <b>Figure 23-2</b> The first AI Assistant screen and sample prompts
+[1682] <b>Figure 23-3</b> Request to approve an action
+[1683] <b>Figure 23-4</b> The report after about 1 minute. It found duplicate versions (v1, v2), a switched-off glass layer, empty stretches in the logo composition, and an empty Render Queue. No Higgsfield credits were used.
+[1684] <b>Adobe generative credits</b>Most AI actions in AI Assistant use your Adobe account’s generative credits. Check how many are left on your Adobe account page. They are separate from Higgsfield credits.
+[1685] <b>Sharing work with Claude</b>The Claude bridge was strong at “making”, and AI Assistant at “checking and tidying” inside AE. We recommend a pass with AI Assistant before delivery.
+[1686] 23-2 Object Matte — Try It Yourself
+[1687] Use Object Matte on the same walking video you used with Remove BG and compare the results. In the Layer panel, click the person once with the Object Matte Tool (<span class="k">Alt+W</span>) and refine the hair edges with Refine Edge. It runs on your device and uses no credits.
+[1688] At MAX on 10 November 2026, Adobe previewed <b>local MCP integration</b> that lets outside AI agents work directly in Photoshop, Illustrator, Premiere and AE, and announced a private beta for early 2027. When it is released, this chapter’s exercises are worth trying again.
+[1689] <b>If it worked</b>Following AI Assistant’s answer through the menus, you found the feature you wanted.
+[1690] <b>If you are stuck</b>If the answer differs from the actual menus, it may be a version difference. Check the version in Help → About and ask again including the version.
+[1691] Bring everything you learned together to finish a 30-second video, and sort out costs and responsibilities.
+[1692] Integrated Project — Planning a 30-Second Promo <span class="lv">●●○</span>
+[1693] Plan a 30-second promo (16:9) for “Ongi”, an imaginary neighborhood café. The key point of this chapter is to lock the storyboard before generating video so no credits are wasted.
+[1694] 24-1 A 5-Shot Storyboard with Claude
+[1695] <span class="lbl">PROMPT · To Claude</span>Split a 30-second promo for the neighborhood café "Ongi" into 5 shots (6 s each). Time passes from afternoon to evening, and the last shot is an end card with the logo. For each shot, make a table with the picture description, caption, and the AE and Higgsfield features to use.
+[1696] Shot
+[1697] Picture
+[1698] Caption
+[1699] Features used (chapter)
+[1700] Shop exterior, afternoon sun
+[1701] At the end of the alley, a little warmth
+[1702] Video generation · practice method in Ch. 18
+[1703] Latte art close-up
+[1704] Care poured into every cup
+[1705] Delivery quality with Upscale (18-5)
+[1706] A customer reading by the window
+[1707] A seat you want to stay in
+[1708] Lower third (22-1)
+[1709] Evening exterior, window light
+[1710] Even at the end of the day
+[1711] A cup and the logo
+[1712] Café Ongi
+[1713] Logo reveal and transition (22-2), Shorts with Reframe (18-3)
+[1714] 24-2 Making Cheap Storyboard Frames and Placing Them in AE
+[1715] Storyboard frames are made as images, not video. At first we made watercolor-style frames with the cheapest Z Image (0.15 credits each), but illustrations made it hard to predict the tone of the real video, so we remade photoreal stills with <b>Nano Banana 2</b>: <b>1.5 credits</b> each, 7.5 credits for 21 frames. To keep the same shop from afternoon to evening, the prompt included “the same small Korean cafe”. Through the bridge, Claude made a "24장_스토리보드" composition, placed the frames at 27.5% scale and added shot numbers and times.
+[1716] <b>Figure 24-1</b> The 5-shot photoreal storyboard finished inside AE (24장_스토리보드_v2). Each frame is its own layer, so changing a shot means swapping only that layer.
+[1717] <b>Capture tip</b>Hover over the Composition panel and press <b>`</b> (the tilde key) to fill the screen with it. Clear selection outlines with <b>Ctrl+Shift+A</b> before capturing.
+[1718] 24-3 Finishing It as a Student Project
+[1719] Step
+[1720] Estimated credits (480p practice)
+[1721] Generate shots 1–3 as video (Seedance 2.0 mini, 5 s)
+[1722] Duplicate shot 1 and make shot 4 with Change Time of Day
+[1723] About 22.5
+[1724] Give captions, logo reveal and transitions to Claude
+[1725] Check gaps and switched-off layers with AI Assistant (23-1)
+[1726] Upscale only the final shots; Reframe for Shorts
+[1727] About 19 + 18
+[1728] <b>Do we need to remake the video?</b>Not at the planning stage. Regenerating a video once costs 2.5–30 credits, but 21 photoreal stills cost 7.5 credits. Once the stills are locked, use each image as the first frame to turn it into video (image-to-video) and the tone carries over. Changing things in the storyboard is the cheapest fix.
+[1729] Assessment criteria (for class)
+[1730] Points
+[1731] What we look at
+[1732] Planning
+[1733] Do the target and message show in the storyboard?
+[1734] Appropriate use of AI
+[1735] Did you split well what to give AI and what to do by hand?
+[1736] Motion quality
+[1737] Rhythm, caption legibility, shot transitions
+[1738] Did you find and fix what AI invented (hands, text, clothes)?
+[1739] Work log and costs
+[1740] Did you record prompts and credits?
+[1741] <b>If it worked</b>One folder holds the files for each step: plan → source generation → AE compositing → output.
+[1742] <b>If you are stuck</b>If the whole thing feels overwhelming, split the 30 seconds into six 5-second shots and fill in just three columns for each: “sources needed / how to make them / estimated credits”.

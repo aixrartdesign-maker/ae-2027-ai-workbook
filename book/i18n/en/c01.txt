@@ -1,0 +1,132 @@
+[113] <span class="tn">App.</span><span class="tt">Shortcuts · 30 Effects · Glossary · Troubleshooting · References</span><span class="pn" data-target="ch-app"></span>
+[114] <span class="tn"></span><span class="tt">About the Author</span><span class="pn" data-target="ch-bio"></span>
+[115] Before pressing any buttons, we look at where this tool came from and why it is meeting AI now. Knowing the background makes the same button look different.
+[116] Adobe and After Effects: 30 Years <span class="lv">●○○</span>
+[117] After Effects began at a small company in 1993 and became the standard for motion graphics in film, broadcast and advertising. In 2026 it reached a third turning point, as AI arrived as a “colleague you work with”.
+[118] 0-1 A Company Called Adobe
+[119] Adobe was founded in 1982 by John Warnock and Charles Geschke. It started with PostScript, a page description language for printing, and with Photoshop in 1990 and Premiere in 1991 it grew from a “publishing company” into an “image and video company”. In 2013 it ended the boxed Creative Suite (CS) and moved to the monthly subscription Creative Cloud (CC), and in 2023 it launched the generative AI Firefly.
+[120] <b>Why it matters</b>Adobe apps are connected. You send what you make in AE to Premiere and import Photoshop layers as they are. AI is arriving the same way, starting with “connecting the apps”.
+[121] 0-2 The Birth of After Effects
+[122] After Effects was made by CoSA (The Company of Science and Art), an American company founded in 1990. Version 1.0 came out in January 1993; by today’s standards it was very simple, with no Timeline panel and only one effect per layer. In July that year CoSA was bought by Aldus, and when Aldus merged with Adobe in 1994, AE became an Adobe product. The first version under the Adobe name was 3.0 in 1995, and it ran only on the Mac until 3.1 added Windows support in 1997.
+[123] Until then, film visual effects were made by big studios with expensive hardware and in-house software. With AE, which layers and composites on a personal computer, small teams could make broadcast titles and commercial effects. In 2019 it received a Scientific and Technical Academy Award for this contribution.
+[124] 0-3 A History in Versions
+[125] Period
+[126] Version
+[127] What changed and why it matters
+[128] The start of layer-based compositing. No timeline, one effect per layer
+[129] First release under the Adobe name. Windows support from 3.1 in 1997
+[130] Joined Creative Suite, bundled with Photoshop and Premiere
+[131] 3D Camera Tracker, Global Performance Cache — the start of a “fast AE”
+[132] Move to subscription. Cinema 4D Lite and Cineware bring 3D into AE
+[133] Content-Aware Fill (removing objects from video). Scientific and Technical Academy Award
+[134] Roto Brush 2 — automatic tracking of people’s outlines with AI (Adobe Sensei)
+[135] Multi-Frame Rendering — uses all CPU cores for faster previews and renders. Composition Profiler
+[136] Direct H.264 output from the Render Queue, Track Matte from any layer, 3D model import and Properties panel beta
+[137] Advanced 3D renderer and 3D model import released, image-based lighting (environment light)
+[138] Scripting to style each character (per-character styling)
+[139] High-performance preview playback, HDR preview, Animated Environment Lights using video as a light source, FBX import
+[140] HDR import and export, effect Info button, default camera settings
+[141] Parametric 3D meshes, Substance 3D materials, SVG import, variable fonts, shadows for Spot and Parallel lights, running in a language different from the OS
+[142] <b>Object Matte</b> — an AI matte that selects a person or car with one click and follows it to the end. Quick Apply
+[143] Depth of Field in the Advanced 3D renderer
+[144] New guides, Object Matte disk cache, effect color labels, new Effect Controls, ACES 2.0
+[145] <b>AI Assistant</b> panel (tidying projects, writing and fixing expressions, generating images and video), layers as 3D materials, Adobe Stock panel. On the same day a preview of <b>local MCP</b>, which lets outside AI control the app directly, was announced
+[146] Sources: CoSA records, Computer Graphics World (2013), Adobe release notes (What’s new, 2022–2026), Adobe MAX 2026 announcements (10 Nov 2026). Year names are in brackets. From 22.0 in October 2021, version numbers match year names (22.0 = 2022).
+[147] 0-4 Three Turning Points
+[148] To the personal computer
+[149] Compositing and motion graphics could be made on a desk, without studio equipment.
+[150] To subscription and connection
+[151] Monthly updates, with links to 3D, the cloud and other apps.
+[152] With an AI colleague
+[153] You describe it in words and AI builds layers and keyframes; people take care of direction and review.
+[154] Why AI Now — Higgsfield, Claude, MCP <span class="lv">●○○</span>
+[155] This book covers three ways to use AI inside AE. Each is good at different things, so we draw a map first.
+[156] 0-5 Where the Time Goes in AE Work
+[157] Most of the time in motion graphics goes into repetitive work rather than “ideas”: rotoscoping a person frame by frame, making versions for each aspect ratio, fixing the same caption dozens of times, and reshooting because footage is missing. This repetition and these gaps are exactly where AI comes in.
+[158] How it used to be done
+[159] How AI helps now
+[160] Chapter in this book
+[161] Rotoscoping frame by frame
+[162] One click creates and tracks a matte
+[163] Ch. 18 Remove BG, Ch. 11 Object Matte
+[164] Reshooting and re-editing for vertical video
+[165] Painting in the empty areas to change the ratio
+[166] Ch. 18 Reframe
+[167] Reshooting a day scene at night
+[168] Generating a new clip with a different time of day or weather
+[169] Ch. 19 Scene
+[170] Re-recording narration, dubbing for other countries
+[171] Replacing voices, translated dubbing
+[172] Ch. 20 Audio
+[173] Keyframing titles and captions by hand
+[174] Describe in words and layers and keyframes are created
+[175] Ch. 21–22 Claude
+[176] Checking the project before delivery
+[177] AI finds and reports gaps and switched-off layers
+[178] Ch. 23 AI Assistant
+[179] 0-6 Three Paths
+[180] Path ①
+[181] Buttons inside AE make or change <u>new video</u>. Processing happens in the cloud and uses credits.
+[182] Path ②
+[183] Claude + Bridge
+[184] You control <u>AE itself</u> through conversation: it makes compositions, layers, keyframes and expressions. No credits needed.
+[185] Path ③
+[186] AE’s built-in AI
+[187] AI Assistant and Object Matte. These are Adobe features, so no extra sign-up is needed.
+[188] 0-7 What Is Higgsfield?
+[189] Higgsfield is a generative AI platform that lets you use video, image and voice generation models from many companies in one place. You choose models such as Seedance, Kling, Veo and Nano Banana and pay with the same credits. On 27 May 2026 it released a plugin for Adobe, so you can generate, remove backgrounds, reframe and upscale on the timeline without switching to a browser. In July, a feature was added that lets AI such as Claude control AE directly through MCP. One installer adds it to both AE and Premiere.
+[190] 0-8 What Is MCP and Why Does It Matter?
+[191] MCP (Model Context Protocol) is a common standard that lets AI call features of other programs. Anthropic released it in 2024, and by 2026 it had become the de facto standard for connecting AI and creative tools. Think of it as a <b>USB port for AI</b>. Because the port shape is the same, AI such as Claude or ChatGPT plugs into AE, Blender or DaVinci Resolve in the same way.
+[192] Connection
+[193] Address
+[194] What it does
+[195] Generating video, images and voice from Claude
+[196] Passes Claude’s instructions to the AE plugin to control compositions and layers
+[197] Neither connection needs an API key. Add the address in Claude’s connector settings and log in with your Higgsfield account (17-5). The result is an ordinary .aep file, so the biggest advantage is that a person can always fix the layers AI made by hand.
+[198] <b>Adobe is heading the same way</b>At MAX 2026 (opened 10 November 2026) Adobe previewed <b>local MCP</b> for Photoshop, Illustrator, Premiere and AE. Outside AI agents will edit the original files on your computer directly while keeping them editable; a private beta is planned for early 2027. The Claude bridge exercises in this book let you try that future early.
+[199] Before You Start — Costs, Sign-up, Log-in, Credits <span class="lv">●○○</span>
+[200] You need three accounts for the exercises: Adobe, Higgsfield and Claude. First, check what costs how much.
+[201] 0-9 Adobe Costs and Student Discounts
+[202] Plan
+[203] Price (Korea, VAT incl.)
+[204] Notes
+[205] After Effects single app
+[206] ₩30,800/month
+[207] Annual plan, billed monthly. 7-day free trial
+[208] Creative Cloud All Apps (individual)
+[209] ₩78,100–87,900/month
+[210] 20+ apps + generative credits. List prices differ between the plans page and promotion pages, so check at checkout. Black Friday price ₩34,800
+[211] All Apps — students and teachers
+[212] ₩26,400/month (66% off)
+[213] First-year price. On Black Friday (11/13–11/27) ₩21,000/month (76% off)
+[214] Checked on adobe.com/kr on 23 November 2026. Discounts and periods change by season (back to school, Black Friday, etc.), so check the official page before buying. Prices differ by country.
+[215] <b>Student eligibility</b>: students and teachers aged 13 or over, verified by school email or proof of enrolment. The discount applies only in the first year, and cancelling an annual plan early may incur a fee.
+[216] <b>School licences</b>: if your university has an institutional licence, you can use it free with your school account. Ask your department office or IT centre first.
+[217] <b>If you only need AE</b>: the single app is cheaper, but if you also use Premiere and Photoshop, the All Apps student price is better value.
+[218] 0-10 Adobe Sign-up and Log-in
+[219] On adobe.com choose <b>Sign in → Create an account</b>. You can sign up with email, Google or Apple.
+[220] Install the <b>Creative Cloud desktop app</b> and sign in with the same account. You install and update AE from here.
+[221] Choose the AE version under <b>⋯ → Other versions</b> in the app list. This book uses 2027 (released at MAX 2026).
+[222] 0-11 Higgsfield Plans and Credits
+[223] Monthly price (billed monthly)
+[224] Monthly credits
+[225] Features
+[226] None (limited use)
+[227] For exploring, no commercial use
+[228] Some models
+[229] $59 ($47 billed annually)
+[230] All models
+[231] $129 ($99 billed annually)
+[232] Cheapest per credit, many simultaneous generations
+[233] Checked on the higgsfield.ai pricing page (US) in November 2026. Prices and credits vary by country and time, so check higgsfield.ai/pricing before paying. The exercises in this book used the Ultra plan.
+[234] <b>What are credits?</b>: points deducted each time you generate. The cost depends on model, resolution and length. In this book a 5-second 480p practice video cost 2.5 credits and an upscale about 19 credits (Ch. 25).
+[235] <b>Where to check</b>: your profile at the top right of higgsfield.ai, or just ask Claude, “How many credits do I have left?”
+[236] <b>If you run short</b>: buy a credit pack, or turn on auto top-up on Plus or Ultra.
+[237] 0-12 Higgsfield Sign-up and Plugin Log-in
+[238] <b>Sign up</b> at higgsfield.ai with a Google account or email.
+[239] After installing the plugin, click <b>Continue in browser</b> in the AE panel and a browser opens. Log in and allow access, and you return to the panel.
+[240] In Claude, go to <b>Customize → Connectors → + Add → Add custom connector</b>, enter the address, and log in to Higgsfield in the window that opens (17-5). You never need to give Claude your password.
+[241] <b>Account safety</b>Always log in and pay yourself. Never let AI type your password or card number. While writing this book, every log-in step was done by a person.
+[242] Files made by AI are still layers and keyframes in the end. Once you know this part, you can fix AI’s results and give AI precise instructions.
+[243] The First 30 Minutes — Animate One Word and Export a Video <span class="lv">●○○</span>
+[244] Let’s go all the way through once before any explanation. In 30 minutes you will have a 5-second video file of “HELLO” sliding from left to right.

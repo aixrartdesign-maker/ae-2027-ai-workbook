@@ -1,0 +1,137 @@
+[447] La pelota va más rápida en el suelo y casi a 0 en lo alto. Por eso las claves del suelo tienen Influence 10 % y las de arriba 70 %.
+[448] Cuanto más estiras el asa amarilla, más larga es la desaceleración.
+[449] Atajo de suavizado
+[450] Sensación
+[451] Suave al entrar y al salir
+[452] Suave solo al llegar
+[453] Suave solo al salir
+[454] Hold: se queda hasta la siguiente clave (parpadeo, corte)
+[455] <span class="tag t4">Estándar profesional</span> Cinco de los 12 principios de la animación que siempre usarás
+[456] Principio
+[457] En AE
+[458] Estirar y encoger
+[459] Invertir Scale en el impacto
+[460] Anticipación
+[461] Un pequeño movimiento al revés antes de salir disparado
+[462] Easy Ease y Graph Editor
+[463] Arcos
+[464] Curvar la trayectoria (tirar de las asas)
+[465] Acción continuada
+[466] Pasarse y volver al detenerse: expresión inertial bounce
+[467] En el trabajo real se sigue el orden Timing (cuándo) → Spacing (a qué velocidad) → Polish (pulido). No se mete detalle desde el principio.
+[468] Haz la misma pelota de tres formas: <b>bola de bolos</b> (pesada), <b>pelota de ping-pong</b> (ligera) y <b>pelota enfadada</b> (carácter). Mismas posiciones de clave; solo cambian los gráficos.
+[469] Evaluación: ¿el peso se explica por la forma del gráfico? ¿Es exacto el fotograma del impacto?
+[470] <b>Si funcionó</b>Al renderizar el mismo movimiento con Linear y con Easy Ease y compararlos, se ve la diferencia.
+[471] <b>Si te atascas</b>Si el gráfico se ve plano, revisa el botón Value Graph / Speed Graph y pulsa el icono «ajustar todos los gráficos» bajo el área del gráfico.
+[472] Construir la estructura — Parent, Pre-compose, máscaras, mates <span class="lv">●●○</span>
+[473] Cuando hay muchas capas, se mueven en grupo en lugar de una a una.
+[474] <span class="tag t2">¿Por qué?</span> 4-1 Orden de capas y padres
+[475] Orden de capas = delante y detrás
+[476] 1. Texto
+[477] 2. Logo
+[478] 3. Persona (con croma)
+[479] 4. Vídeo de fondo
+[480] La capa de arriba (n.º 1) se ve delante
+[481] Emparentar = seguir al padre
+[482] Null (padre)
+[483] Logo
+[484] Texto
+[485] Icono
+[486] Gira el null y los hijos giran con él
+[487] <b>Figura 4-1</b>Izquierda: la capa de arriba está delante. Derecha: mueves el padre y los hijos le siguen.
+[488] <span class="tag t1">Paso a paso</span> 4-2 Asignar un padre (Parenting)
+[489] Pulsa la casilla <b>Parent &amp; Link</b> (None) en la fila de la capa que será hija.
+[490] Elige la capa padre en la lista. O arrastra el icono de espiral (pick whip) hasta la capa padre.
+[491] <b>Figura 4-2</b>① Casilla Parent &amp; Link ② lista de capas que se pueden elegir como padre.
+[492] <b>Si funcionó</b>Mueves el padre y el hijo le sigue. Si mueves solo el hijo, el padre se queda.
+[493] <span class="tag t1">Paso a paso</span> 4-3 Mover el cuerpo de un robot — padres en las articulaciones
+[494] Como un muñeco de papel, divide el cuerpo en capas por segmentos, lleva el <b>punto de anclaje (Anchor Point)</b> de cada segmento a su articulación y únelo <b>al segmento más cercano al cuerpo como padre</b>. Así, con girar solo el hombro se mueve todo el brazo, y con mover solo la cintura, todo el torso. Un esqueleto así se llama <b>rig</b>. El robot blanco del archivo de práctica <span class="mono">04-3_로봇리그</span> se recortó de una sola <b>hoja de piezas</b> dibujada con Higgsfield GPT Image.
+[495] <b>Tres reglas</b>① <b>Dividir</b>: una capa es un segmento entre dos articulaciones. Si brazo y antebrazo están en una sola imagen, el codo no se dobla. ② <b>Punto de anclaje</b>: en la <b>articulación del lado del cuerpo</b>: hombro para el brazo, codo para el antebrazo, muñeca para la mano. ③ <b>Padre</b>: el segmento más cercano al cuerpo. Se encadena mano → antebrazo → brazo → torso → pelvis → Master_Control (null).
+[496] <b>Figura 4-3</b>Izquierda: hoja de piezas frontal hecha con Higgsfield GPT Image. Cada segmento tiene una rótula gris en su extremo superior y el punto rojo es el anclaje. Derecha: relaciones de parentesco. Una capa sangrada es hija de la capa de justo encima.
+[497] Punto de anclaje
+[498] Padre
+[499] Propiedad que más se anima
+[500] Master_Control (null)
+[501] Centro del null
+[502] Ninguno
+[503] Position: moverse por la pantalla, subir y bajar al andar · Scale: el tamaño solo se cambia aquí
+[504] Pelvis
+[505] Unión de la cintura (centro superior)
+[506] Master_Control
+[507] Rotation: balanceo de cadera
+[508] Torso (pecho, hombros)
+[509] Rótula de la cintura
+[510] Rotation: inclinarse, ladearse
+[511] Cabeza
+[512] Rótula del cuello
+[513] Torso
+[514] Rotation: asentir, ladear
+[515] UpperArm_L · UpperArm_R
+[516] Rótula del hombro
+[517] Forearm_L · Forearm_R
+[518] Rótula del codo
+[519] Brazo
+[520] Hand_L · Hand_R
+[521] Muñeca
+[522] Antebrazo
+[523] Rotation (empieza en 180° para que los dedos miren abajo)
+[524] Thigh_L · Thigh_R
+[525] Rótula de la cadera
+[526] Shin_L · Shin_R
+[527] Rótula de la rodilla
+[528] Muslo
+[529] Foot_L · Foot_R
+[530] Tobillo (boca de la bota)
+[531] Espinilla
+[532] <b>Hacer la hoja de piezas.</b> En Higgsfield, crea primero una ilustración del personaje (frente y perfil), añádela como referencia y pide una <b>hoja de piezas</b> como la de abajo. Quita el fondo con Remove Background y descarga un PNG. Si lo dibujas tú, guarda cada pieza en su capa en Illustrator o Photoshop.
+[533] <span class="lbl">PROMPT · Higgsfield GPT Image (1 imagen de referencia)</span>Character rig parts sheet of this exact robot (FRONT VIEW), same colors and style. Lay out every body part separated with generous empty space, all upright, on a plain pure white background: head, torso with shoulders, pelvis, upper arms, forearms, open five-finger hands, thighs, shins, boots. Each limb part has a full round gray ball joint at its TOP end so parts can overlap and rotate seamlessly. No part touches another. No text, no shadows.
+[534] <b>Recortar una imagen en tantas piezas como haga falta.</b> Coloca el mismo PNG en la composición una vez por pieza y, en cada capa, deja solo una pieza con una máscara rectangular. Nombra las capas por pieza y lado, como <span class="mono">UpperArm_L</span>. El archivo de práctica tiene 15 piezas y 1 null: 16 capas en total.
+[535] <b>Anclajes a las articulaciones.</b> Con la <b>herramienta Pan Behind (Anchor Point)</b> (<span class="k">Y</span>), arrastra el anclaje al centro de la rótula. Esta herramienta mueve solo el anclaje y deja la imagen donde está. Luego mueve Position para montar cada pieza en el cuerpo.
+[536] <b>Emparentar y orden de apilado.</b> Arrastra el pick whip desde el extremo hacia el cuerpo (mano → antebrazo → brazo → torso → pelvis → Master_Control). El parentesco y el orden de apilado son cosas distintas. En este robot la rótula está en el <b>extremo superior</b> de cada segmento, así que se apila <b>el segmento inferior encima</b> para que la bola tape el extremo del de arriba (la mano sobre el antebrazo, no al revés). En cambio, brazos y muslos van <b>debajo</b> del torso y la pelvis para que las hombreras y la carcasa de la pelvis oculten la parte alta de las rótulas.
+[537] <b>Animar solo Rotation.</b> Ahora cada segmento solo necesita Rotation. Gira primero el segmento cercano al cuerpo y deja que el del extremo le siga 2–4 fotogramas después: queda natural, como un látigo. Esto se llama <b>solapamiento (follow-through)</b>. En 4-4 usamos este rig para hacer un ciclo de andar.
+[538] <b>Figura 4-4</b>La columna Parent &amp; Link real. Hand_R → 6 Forearm_R → 9 UpperArm_R → 7 Torso → 10 Pelvis → 1 null (Master_Control). La cabeza cuelga de 7 Torso y los muslos de 10 Pelvis.
+[539] Acción
+[540] Qué animar y dónde
+[541] Andar
+[542] Position X de Master_Control para avanzar, Y para subir y bajar en cada paso. La Rotation de muslos y espinillas va en oposición izquierda-derecha, y los brazos se balancean al contrario que la pierna del mismo lado. El andar de perfil se ve a fondo en 4-4.
+[543] Asentir · ladear
+[544] Rotation de la cabeza. El anclaje debe estar en la rótula del cuello para que gire alrededor del cuello.
+[545] Balanceo de cadera
+[546] Rotation de la pelvis ±3°. La pelvis es padre del torso y de las dos piernas, así que arriba y abajo se balancean juntos.
+[547] Salto
+[548] Salta con Position Y de Master_Control y, al aterrizar, dobla las espinillas unos −15° para amortiguar con las rodillas.
+[549] <b>Revisión de animador: que no se vean las juntas</b>① Dibuja las articulaciones como <b>bolas redondas (rótulas)</b>. Si el centro de la bola es el anclaje, las dos piezas se solapan sin huecos por mucho que se doblen. ② Haz las rótulas de <b>otro color (gris)</b> que el cuerpo: aunque haya sombreado, el solapamiento se lee con naturalidad como «unión de piezas». ③ Apilar encima carcasas que envuelvan la articulación, como hombreras o pelvis, oculta la parte alta de la bola y parece una articulación real. ④ Dibuja las piezas desde el principio en pose recta («firmes») para que la rotación 0 sea la pose base. ⑤ Los personajes de formas sencillas —robots, animales, mascotas— se prestan mejor al rig recortable que las personas.
+[550] <b>Si te atascas</b>Gira alrededor de un punto raro → el anclaje está en el centro. Llévalo al centro de la rótula con la herramienta <span class="k">Y</span>. Una pieza salta al emparentarla → si mantienes <span class="k">Shift</span> al usar el pick whip, el hijo se lleva a la posición del padre; arrastrando sin más, se queda donde está. El hijo también cambia de tamaño → has cambiado la Scale del padre. El tamaño solo se cambia en Master_Control. Se abre un hueco en una articulación → el anclaje se ha salido del centro de la bola o ha cambiado el orden de apilado.
+[551] <b>Para ir más lejos</b>Para personajes con muchas articulaciones, el script gratuito <b>Duik</b> crea IK (tiras de la punta de los dedos y todo el brazo se dobla). Para doblar extremidades como goma, pon pines de Puppet (5-6) en un brazo de una sola pieza.
+[552] <span class="tag t1">Paso a paso</span> 4-4 Andar de perfil — un ciclo con cuatro poses
+[553] Andar es <b>repetir cuatro poses</b>. El pie toca el suelo (contacto), recibe el peso y baja (bajada), el otro pie pasa junto al cuerpo (paso) y se empuja con la punta para subir (subida). A 30 fps un paso son 15 fotogramas, y dos pasos —30 fotogramas (1 segundo)— forman un ciclo. Basta con poner claves en las cuatro poses; AE rellena el resto y, con <span class="mono">loopOut()</span> al final, sigue andando. Composición <span class="mono">04-4_로봇걷기</span>.
+[554] <b>Figura 4-5</b>Hoja de piezas para andar de perfil (mira a la izquierda). Cada segmento de las extremidades tiene una rótula arriba y el punto rojo es el anclaje. Brazos y piernas se dibujan una vez y se importan dos veces, para delante y detrás.
+[555] <b>Figura 4-6</b>Las cuatro poses del archivo de práctica. El robot mira a la izquierda. Las extremidades claras son las del lado cercano (delante) y las oscuras, las del lado lejano (detrás). Desde el fotograma 15 las piernas se intercambian y se repiten las mismas cuatro poses.
+[556] <b>En qué cambia el rig de perfil</b>① Haz <b>dos juegos</b> de extremidades, <b>delante (lado cercano) y detrás (lado lejano)</b>, y añade _Front y _Back a los nombres. Basta con importar las piezas dos veces. ② Oscurece el juego de atrás con un efecto Exposure de unos −0,7 y baja esas capas al fondo. Orden de apilado desde arriba: brazo delantero (mano, antebrazo, brazo) → cabeza → torso → pelvis → pierna delantera (pie, espinilla, muslo) → pierna trasera → brazo trasero. ③ Dentro de un brazo o una pierna, apila el segmento inferior encima para que la rótula tape el extremo del de arriba. ④ En un personaje que mira a la izquierda, la Rotation <b>+</b> lleva la pierna hacia delante (izquierda) y la <b>−</b>, hacia atrás. La espinilla solo se dobla hacia − (para que la rodilla nunca se doble al revés).
+[557] Pose
+[558] Pierna delantera muslo / espinilla / pie
+[559] Pierna trasera muslo / espinilla / pie
+[560] Altura del cuerpo (Master_Control Y)
+[561] Brazo delantero
+[562] ① Contacto 0f
+[563] 25 / −5 / 15 — apoya el talón, punta arriba
+[564] −22 / −10 / −20 — empuja con la punta
+[565] −20 (atrás)
+[566] ② Bajada 4f
+[567] 15 / −25 / 0 — dobla la rodilla para recibir el peso
+[568] −15 / −45 / −20 — despega el pie
+[569] 489,9 (lo más bajo)
+[570] ③ Paso 8f
+[571] −2 / −5 / 0 — recta, sostiene el cuerpo
+[572] 10 / −60 / −5 — rodilla arriba, avanza
+[573] 0 (junto al cuerpo)
+[574] ④ Subida 11f
+[575] −15 / −5 / −10 — levanta el talón
+[576] 25 / −30 / 5 — se estira hacia delante
+[577] 474,2 (lo más alto)
+[578] ⑤ Contacto 15f
+[579] Valores de ① con las piernas delantera y trasera intercambiadas. Igual con ②–④ en 19f, 23f y 26f
+[580] 22 (delante)
+[581] Mismos valores que en 0f. Esta clave evita que el bucle se corte
+[582] <b>Primero la pierna delantera.</b> Pon claves de Rotation en Thigh_Front, Shin_Front y Foot_Front en los fotogramas 0, 4, 8, 11, 15, 19, 23, 26 y 30 según la tabla. Desde 15f usa los valores de la pierna trasera de ①–④.
+[583] <b>La pierna trasera, medio tiempo después.</b> Selecciona todas las claves de la pierna delantera y copia (<span class="k">Ctrl</span>+<span class="k">C</span>); selecciona la capa de la pierna trasera y pega en 15f (<span class="k">Ctrl</span>+<span class="k">V</span>). Las claves que pasen de 30f, muévelas 30 fotogramas atrás para que queden entre 0 y 30f.

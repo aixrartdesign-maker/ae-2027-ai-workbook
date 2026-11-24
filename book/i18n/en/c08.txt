@@ -1,0 +1,119 @@
+[993] Keylight value
+[994] Role
+[995] Removal strength. Too high and the person becomes transparent too
+[996] How green is judged. Usually adjusted around 50
+[997] Makes the matte’s black and white definite
+[998] Moves the matte edge inward or outward
+[999] Softens the edge
+[1000] <b>Compared with AI</b>Higgsfield Remove BG (Ch. 18) extracts people without green cloth, and AE’s Object Matte (Ch. 11) also makes a matte with one click. Broadcast and film still use chroma key because it can extract even semi-transparent parts — a single hair, a glass, smoke — precisely. As of 2026, AI mattes are fast but still fall short of chroma key in edge quality and frame-to-frame consistency.
+[1001] 8-5 Chroma Key in Film and What Comes Next
+[1002] Work
+[1003] Method and significance
+[1004] <i>Superman</i> (1978)
+[1005] Flying scenes with blue screen and front projection. Famous for the tagline “You’ll believe a man can fly”
+[1006] <i>Jurassic Park</i> (1993)
+[1007] Compositing practical models with CG dinosaurs. It opened the era of digital compositing in the year AE was born
+[1008] Almost every scene shot on blue/green-screen sets with backgrounds composited like paintings
+[1009] Marvel films (2008–)
+[1010] Large green-screen sets and digital backgrounds became the norm
+[1011] <i>Gravity</i> (2013)
+[1012] Actors filmed inside a “light box” surrounded by LEDs, casting the light of space onto their faces
+[1013] <i>The Mandalorian</i> (2019–)
+[1014] Virtual production showing real-time 3D backgrounds on huge LED walls instead of green cloth. Background light falls naturally on the actors’ faces
+[1015] <b>Will virtual production replace chroma key?</b>LED volumes have no spill and actors can see the background as they perform, but the equipment is very expensive. So most commercials, YouTube and educational videos still use green screen. LED volume stages are growing at broadcasters and large studios.
+[1016] 8-6 Motion Capture — Extracting Only the Movement
+[1017] If chroma key separates “a person’s appearance”, motion capture separates only “a person’s movement” and applies it to a digital character.
+[1018] Method
+[1019] Principle
+[1020] Where it’s used
+[1021] Optical (markers)
+[1022] Reflective markers on the body tracked by several infrared cameras
+[1023] Big-budget films and games
+[1024] Inertial (suit)
+[1025] A suit with sensors records joint angles. Few location limits
+[1026] Virtual YouTubers, on-location shoots
+[1027] Performance capture
+[1028] Records facial expressions and eyes as well as the body
+[1029] Gollum in <i>The Lord of the Rings</i>, <i>Avatar</i>, the <i>Planet of the Apes</i> series
+[1030] AI markerless
+[1031] AI estimates the joints from a single ordinary video
+[1032] Independent creators, quick drafts
+[1033] Higgsfield’s <b>Motion Control</b> (19-4) is an application of the AI markerless method. It extracts the motion from a reference video and applies it to another person’s image. In AE, the character video made this way is cut out with Keylight or Remove BG and composited with a background.
+[1034] <b>Likeness and movement</b>Copying someone else’s dance or performance also involves the rights of the creator and performer. In class, use movements you filmed yourself as reference videos.
+[1035] Key the S01 footage, then match the person to the light direction and color of the background photo (Lumetri, add a shadow).
+[1036] Shoot your own: with a phone and green cloth, film one shot that follows the 8-3 lighting principles and one that breaks them, and compare the Screen Mattes.
+[1037] <b>If it worked</b>In the Screen Matte view, the person is cleanly white and the background black.
+[1038] <b>If you are stuck</b>If hair breaks up, adjust Screen Gain before lowering Clip White. Remove a green fringe with Spill Suppression or Advanced Spill Suppressor.
+[1039] Tracking — Sticking to a Moving Shot <span class="lv">●●○</span>
+[1040] A technique that keeps text or images stuck to the picture even when the camera or subject moves. Replacing a phone screen, replacing a sign, and a name tag next to a walking person are all tracking.
+[1041] 9-1 Three Trackers
+[1042] Tracker
+[1043] Track Motion (1 or 2 points)
+[1044] Follows one point (position) or two (position, rotation, scale)
+[1045] A speech bubble next to a moving person
+[1046] Follows four corners, matching perspective too
+[1047] Replacing phone or monitor screens
+[1048] Reconstructs the camera’s own movement from many points in the shot
+[1049] Standing text on the ground (Ch. 10)
+[1050] Mocha AE (bundled plugin)
+[1051] Tracks a “plane” instead of points. Robust to blur and occlusion
+[1052] Precise screen replacement, roto
+[1053] 9-2 Practice — Replacing a Hand-held Screen
+[1054] S02 hand holding a device with a green screen (720p 5 s) + I13 weather app screen image.
+[1055] <b>Figure 9-1</b>Track Camera, Track in Boris FX Mocha, Warp Stabilizer VFX and Track Motion in the Animation menu.
+[1056] <b>Figure 9-2</b>Click Track Motion and the Layer panel with Track Points opens on the right and the Tracker panel below.
+[1057] Select the video layer, click <b>Track Motion</b> in the <b>Window → Tracker</b> panel, and set Track Type to <b>Perspective corner pin</b>.
+[1058] Place the four tracking boxes on the white dots at the four corners of the screen. The inner box is the pattern to follow; the outer box is the search area.
+[1059] <b>Analyze forward</b> (▶). If a box slips partway, stop, fix it on that frame and analyze again.
+[1060] In <b>Edit Target</b> choose the app image layer and click <b>Apply</b>. A Corner Pin effect is added to the image and its four corners follow the screen.
+[1061] Duplicate the original footage, put it on top and key out only the green with Keylight, and shots where fingers pass over the screen look natural too. Finish by adding slight blur and reflection to the image.
+[1062] <b>The trap of AI footage</b>We asked for “a hand holding a device with the green screen visible”, but the generated video showed the back of the device. Generated video does not follow instructions 100%, so check practice footage right after generating and remake it if needed.
+[1063] <b>Shooting tip</b>Tracking works much better if you stick high-contrast dots (white crosses, small stickers) on the screen corners. The footage for this book was also made with “white tracking dots on the corners” in the prompt.
+[1064] <b>A copyright refusal</b>When we first generated a video of “a hand holding a smartphone”, Higgsfield refused it on copyright grounds, because it could resemble a specific product design. Changing it to “an unbranded black device” worked. Make a habit of keeping real products and logos out.
+[1065] <b>If it worked</b>The attached text doesn’t slip off the target during playback.
+[1066] <b>If you are stuck</b>If a track point jumps, move it to a high-contrast corner, widen the Search area and analyze again from the frame where it jumped.
+[1067] Attach to the same clip with Point (1 point), Perspective Corner Pin (4 points) and the 3D Camera Tracker, and make a table of which method suits which situation.
+[1068] 3D Camera Tracker and Sky Replacement <span class="lv">●●●</span>
+[1069] From footage shot with a moving camera, AE retraces the camera’s path and places 3D text or objects in that space.
+[1070] 10-1 3D Camera Tracker
+[1071] S05 camera moving forward along a sidewalk (720p 5 s).
+[1072] Right-click the video layer → <b>Track and Stabilize → Track Camera</b>. When the analysis finishes, small colored dots (track points) appear on screen.
+[1073] <b>Figure 10-1</b>Error on the first attempt: “layer must be the same size as the composition with default transforms”. It was because the video had been scaled to 150%.
+[1074] <b>Figure 10-2</b>Fix: precompose the video (Move all attributes) and analyze again. After about 1 minute 30 seconds, track points (small colored dots) appeared.
+[1075] Move the mouse slowly between the dots on the ground and a red target appears (you can also drag to select three or more dots). If the target lies flat on the ground, that plane has been recognized. If no target appears, click the <b>3D Camera Tracker</b> name in Effect Controls once to select the effect and try moving again.
+[1076] Right-click the target → <b>Create Text and Camera</b>. A 3D text layer and a camera are created, and the text sticks to the ground and passes by with it.
+[1077] <b>Figure 10-3</b>① Right-click the target that appears on the ground ② Create Text and Camera. The same menu can also create a solid, a null or a shadow catcher.
+[1078] The created text lies flat on the ground and is very large. In this book we reduced Scale from 3000% to 600% and added 90 to the X Orientation (242° → 332°) to stand it up like a sign. For a shadow, use <b>Create Shadow Catcher, Camera and Light</b> in the same menu.
+[1079] <b>Figure 10-4</b>The result. As the camera moves forward, the text grows with the perspective and stays in place. Text: Nanum Gothic ExtraBold 90 px. Composition <span class="mono">10-1_3D트래커</span>.
+[1080] <b>What makes footage work</b>The camera moves sideways or forward (dolly) so there is parallax, the ground has texture, and there is little shake or blur. Footage that only pans in place makes depth hard to calculate.
+[1081] 10-2 Sky Replacement
+[1082] S06 rooftop with a white sky (720p 5 s) + I11 sunset sky image.
+[1083] On the rooftop video layer, make only the white sky transparent with Object Matte, <b>Linear Color Key</b> or <b>Extract</b> (removes bright areas).
+[1084] Put the sunset image below, and if the video shakes, apply 1-point tracking to the sky layer.
+[1085] Match the light. For a sunset, add an orange tint (Temperature in Lumetri) and a little contrast to the whole rooftop video so it looks like the same time of day.
+[1086] <b>Doing it with AI</b>Higgsfield Change Time of Day (19-2) changes not only the sky but also the light on the buildings. By hand only the sky changes and you match the light yourself, but you keep full control of the original quality and the result.
+[1087] <b>If it worked</b>The text created on the target sticks to the ground and follows the perspective as the camera moves.
+[1088] <b>If you are stuck</b>If you get the warning that “the layer must be the same size as the composition”, precompose the clip (Move all attributes) and analyze again.
+[1089] After replacing the sky, match the foreground color temperature to the new sky with Lumetri and compare before and after side by side.
+[1090] Object Matte and Content-Aware Fill <span class="lv">●●○</span>
+[1091] Two AI tools: one separates people (Object Matte) and one removes unwanted objects (Content-Aware Fill). Both run inside AE and use no credits.
+[1092] 11-1 From Roto Brush to Object Matte
+[1093] AE’s former <b>Roto Brush</b> (Roto Brush 2 in 2020) was a tool where a person painted with a brush and AI followed frame by frame. From April 2026 (26.2) it became the <b>Object Matte</b> tool set, and Roto Brush was renamed <b>Quick Selection</b> and placed inside it.
+[1094] Tool
+[1095] Select a person or car with one click (or drag) and follow it to the end. <span class="k">Alt+W</span>
+[1096] The old Roto Brush. Paint to add, Alt to subtract
+[1097] A brush for fine-tuning the matte
+[1098] Refines edges such as hair and fur
+[1099] 11-2 Practice — Separating a Walking Person
+[1100] S03 man in a red hoodie walking in a park (720p 5 s).
+[1101] Double-click the video layer to open the <b>Layer panel</b>. Click the person with the Object Matte Tool.
+[1102] Spread the matte to earlier and later frames with the play button (Propagate). Fix frames that drift with the Selection Brush.
+[1103] Refine the hair and clothing edges with Refine Edge and click <b>Freeze</b> to lock the result for fast playback. From 26.5 the result is saved to disk and remains when you reopen the project.
+[1104] Duplicate the original and put it on top to make a layer sandwich like “text in front of the person, text behind the person”.
+[1105] 11-3 Content-Aware Fill — Removing Objects
+[1106] S04 alley with an orange traffic cone in the middle of the road (720p 5 s).
+[1107] On the video layer, draw a mask generously around the cone with the pen tool and set Mode to <b>Subtract</b>. If the object moves, make the mask follow with keyframes (or mask tracking).
+[1108] <b>Figure 11-1</b>An ellipse mask drawn around the cone in Subtract mode. Content-Aware Fill fills the black empty area with the surrounding road.
+[1109] <b>Window → Content-Aware Fill</b>. Choose a Fill Method: <b>Object</b> (moving objects), <b>Surface</b> (graffiti on a still wall), <b>Edge Blend</b> (surfaces with little texture).
+[1110] <b>Generate Fill Layer</b>. AE looks at the frames before and after and the surroundings, makes a new image sequence filling the gap, and places it above the video as a layer named like <span class="mono">Fill [000-149].png</span>.
+[1111] <b>Figure 11-2</b>① The area emptied by the mask ② Fill Method: Object ③ Generate Fill Layer. Analysis and generation for 5 seconds (150 frames) took about 1 minute.

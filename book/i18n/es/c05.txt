@@ -1,0 +1,82 @@
+[712] <b>Partícula</b> significa un trocito. En lugar de poner claves uno a uno a cientos o miles de trocitos —copos de nieve, chispas, polvo, humo, cristales rotos—, solo defines las <b>reglas</b> y los mueves todos a la vez. Las reglas se resumen en cuatro: dónde nacen (Producer, emisor), cuántas y cuánto viven (Birth Rate · Longevity), qué fuerzas reciben (Velocity · Gravity · Resistance) y qué aspecto tienen (Particle Type · tamaño · color).
+[713] <b>Figura 5-3</b>Seis tipos de partículas hechos solo con efectos nativos de AE. Composiciones <span class="mono">05-4~05-8_파티클_…</span>. En ③, con Particle Type en Line, sale lluvia.
+[714] Aspecto
+[715] Efecto
+[716] Valores de partida y trucos
+[717] ① Polvo · destellos
+[718] Particle Type Faded Sphere, Birth Size 0,1, Death Size 0,02. Fusión Add + un Glow
+[719] ② Chispas
+[720] Particle Type Line, Birth Rate 0,6, Velocity 1,2, Gravity 0,8, Longevity 0,7 s. Color amarillo → naranja. Con desenfoque de movimiento aparecen colas
+[721] ③ Nieve · polvo
+[722] CC Particle World (Producer ancho)
+[723] Producer Position Y −0,45, Radius X 1,2, Y 0,02 para que caigan de toda la parte superior. Faded Sphere, Birth Size 0,12, Size Variation 80 %, Velocity 0,05, Gravity 0,05, Birth Rate 1,5. Dos capas de distinto tamaño superpuestas dan profundidad
+[724] ④ Humo · niebla
+[725] CC Particle World + Fast Box Blur, o Noise &amp; Grain → Fractal Noise
+[726] Para niebla en todo el cuadro, Fractal Noise (Contrast 140, Brightness −55, Scale 320, <span class="mono">time*60</span> en Evolution) en modo Screen. Para humo que sube, partículas Faded Sphere, Birth Size 1,5, Gravity −0,1 (hacia arriba) y desenfoque 40
+[727] ⑤ Rotura
+[728] Pon View en Rendered y coloca la Position de Force 1 donde debe romperse (patrón Bricks por defecto, en el fotograma 6). Cambia Shape → Pattern a Glass para que se rompa como cristal. Corta la capa y pon delante la escena intacta
+[729] ⑥ Texto que se dispersa
+[730] Simulation → CC Pixel Polly, CC Ball Action o la familia Dissolve
+[731] CC Pixel Polly: Force 80, Gravity 0,5, Grid Spacing 6. Se rompe desde 0 s, así que haz coincidir el inicio de la capa con el momento de dispersarse. Mueve Force Center para cambiar el centro de dispersión
+[732] La práctica de abajo hace ① polvo con CC Particle World.
+[733] Crea un sólido del tamaño de la composición (<span class="k">Ctrl+Y</span>) y añade <b>Effect → Simulation → CC Particle World</b>. Al reproducir, salen líneas del centro como una fuente. Son los valores por defecto (Birth Rate 2,0, Longevity 1,00).
+[734] En Effect Controls, pon los valores de la tabla de abajo. Las líneas disparadas se convierten en granos de luz que flotan despacio.
+[735] Para ponerlo sobre un vídeo de fondo, cambia el modo de fusión de la capa a <b>Add</b> o <b>Screen</b>. El fondo negro desaparece y solo queda la luz (4-8).
+[736] <b>Figura 5-4</b>El mismo efecto con valores por defecto (izquierda) y cambiados (derecha, en 2 s). Composición <span class="mono">05-3_파티클_입자</span>.
+[737] <b>Figura 5-5</b>CC Particle World en Effect Controls. ① Gravity en Physics ② forma y tamaño en Particle. Cambia los números de uno en uno y mira cómo cambia la imagen.
+[738] Cuántas nacen a la vez. Pocas para nieve y polvo, muchas para fuegos artificiales
+[739] Cuánto vive cada partícula
+[740] Velocidad de salida
+[741] Fuerza hacia abajo. 0 es ingravidez; negativo, flotan hacia arriba
+[742] Forma de la partícula. Line va bien para chispas; Faded Sphere, para humo y bokeh
+[743] Tamaño al nacer y al morir. Aquí se encogen al desaparecer
+[744] Amarillo / rojo
+[745] Color que cambia con la vida (Color Map: Birth to Death)
+[746] <b>Si necesitas más</b>CC Particle World no hace que las partículas choquen ni que formen letras. Para esos planos usa plugins como Trapcode Particular o Stardust (apéndice C), o es más rápido generar fuego o humo sobre negro en Higgsfield y ponerlo encima en modo Add.
+[747] <span class="tag t1">Paso a paso</span> 5-8 Gráficos que reaccionan al sonido
+[748] Barras que saltan con la música o un logo que late con el ritmo: basta un paso, convertir el sonido en números.
+[749] Selecciona la capa de audio y elige <b>Animation → Keyframe Assistant → Convert Audio to Keyframes</b>.
+[750] <b>Figura 5-6</b>① Keyframe Assistant en el menú Animation ② Convert Audio to Keyframes.
+[751] Arriba aparece una capa null llamada <b>Audio Amplitude</b>. En Effect Controls tiene los deslizadores Left Channel, Right Channel y Both Channels, con el volumen registrado como clave en cada fotograma.
+[752] Pon una expresión en la propiedad que quieres mover para que lea el valor Slider de Both Channels. Con <span class="mono">linear()</span> pasas el rango de volumen (0–85) a la altura de la barra (8–100 %) (7-6).
+[753] <span class="lbl">EXPRESSION · Altura de barra según el volumen (Scale)</span>d = (index - 3) * 0.03; // cada barra reacciona 0,03 s más tarde<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider").valueAtTime(time - d);<br/>[100, linear(a, 0, 85, 8, 100)];
+[754] <b>Figura 5-7</b>① Los tres deslizadores de la capa Audio Amplitude creada automáticamente ② siete barras cuya altura sigue al volumen ③ claves en cada fotograma. El valor en 1 s 13 f es 26. Composición <span class="mono">05-9_소리반응</span>.
+[755] <b>Ajustar el rango</b>El volumen máximo cambia en cada canción. Pulsa <span class="k">U</span> en la capa Audio Amplitude, mira el valor más alto en el Graph Editor y ajusta a ese rango el segundo y tercer número de linear(). Para reaccionar solo a los graves, duplica el audio, deja solo los graves con <b>Effect → Audio → High-Low Pass</b>, precompón y luego convierte.
+[756] <b>Si funcionó</b>La marca se dibuja en 0,6 s con Trim Paths y puedes encender y apagar Glow y Echo. La barra se curva con pines de Puppet y las barras se mueven con el volumen.
+[757] <b>Si te atascas</b>Si el menú Add está gris, has dibujado una máscara y no una capa de forma. Deselecciona las capas (Ctrl+Shift+A) y vuelve a dibujar.
+[758] Animación de texto y tipografía <span class="lv">●●○</span>
+[759] El texto es la mitad de la animación gráfica. AE puede mover el texto letra a letra, palabra a palabra o línea a línea.
+[760] 6-1 Ajustes de texto — paneles Character y Paragraph
+[761] Define fuente, tamaño, tracking, interlineado (Leading) y desplazamiento de línea base. Los títulos en negrita se ven más sólidos cerrando el tracking a unos −20 a −40, y los rótulos en mayúsculas lucen más abriéndolo a +100 a +200. Las fuentes de Adobe Fonts admiten uso comercial; en las demás, revisa la licencia.
+[762] 6-2 Cómo funciona el animador de texto
+[763] Si añades una propiedad (posición, escala, opacidad, desenfoque…) con el botón <b>Animate</b> de una capa de texto, se crea un «animador». Tiene dos partes.
+[764] <b>Propiedades</b>: cuánto cambian las letras. Ejemplo: Opacity 0 %, Position 0, 40
+[765] <b>Range Selector (selector de rango)</b>: a qué letras se aplica. Mueve Start, End y Offset y el rango afectado recorre el texto.
+[766] Opción Advanced
+[767] Significado
+[768] Por carácter / carácter sin espacios / palabra / línea
+[769] Cuadrado, rampa, triángulo… — la forma del borde del rango
+[770] Suavidad del borde del rango
+[771] Mezcla el orden para que aparezcan al azar
+[772] <b>Figura 6-1</b>Tres líneas con animadores distintos, en 1 s. De arriba abajo: entrar deslizando (Position), aparecer creciendo (Scale), máquina de escribir (Opacity). ① Con Add ▸ se añaden propiedades y selectores ② dos claves del Range Selector mueven el rango ③ la propiedad que cambia este animador, Opacity 0 %. Composición <span class="mono">06_텍스트애니메이터</span>.
+[773] Si en lugar de Range Selector añades un <b>Wiggly Selector</b>, cada letra se agita por su cuenta; con un <b>Expression Selector</b> puedes dar a cada letra un valor distinto mediante expresiones (cap. 7).
+[774] <b>El límite del puente</b>Como se ve en el capítulo 21, el puente de Claude actual no pudo mover las claves del Range Selector. Un reparto realista es dejar a la IA el esqueleto del animador y ajustar el ritmo a mano.
+[775] 6-3 Más rápido con preajustes
+[776] En <b>Effects &amp; Presets → Animation Presets → Text</b> hay cientos de animaciones de texto. Selecciona la capa, pon el indicador de tiempo en el punto de entrada y haz doble clic para aplicar. Puedes previsualizarlas con <b>Browse Presets</b>.
+[777] 6-4 Tipografía cinética
+[778] Vídeos en los que las palabras saltan y crecen al ritmo de la voz. Despliega la capa de audio para ver la forma de onda (<span class="k">LL</span>), pon marcadores (<span class="k">*</span> del teclado numérico) donde empieza cada palabra y coloca las capas de palabras en los marcadores. También puedes leer la posición de los marcadores con una expresión para que salten solas (7-9).
+[779] Pon el audio en la línea de tiempo y despliega la forma de onda con <span class="k">LL</span>. Mientras se reproduce, pulsa <span class="k">*</span> del teclado numérico cada vez que empieza una palabra para poner un marcador.
+[780] Crea una capa de texto por palabra y alinea el inicio de la capa con su marcador (pon el indicador en el marcador y pulsa <span class="k">[</span>).
+[781] Cada entrada debe terminar en 0,2 s. Hazla saltar con Scale 0 → 110 → 100 % o súbela letra a letra con Position y Opacity de un animador. Cambia tamaño y color solo en las palabras que quieras destacar.
+[782] Deja tres o cuatro palabras en pantalla. Empuja hacia arriba o atenúa las que ya pasaron para que la mirada vaya a la palabra que suena ahora.
+[783] <b>Sincronizar con el sonido</b>Si el texto aparece antes que la voz, chirría. Si entra 2–3 fotogramas después del marcador, parece sincronizado. Con música de ritmo claro, también puedes enlazar el tamaño al volumen con el método de 5-8.
+[784] 6-5 Subtítulos — Captions
+[785] Importa en AE un archivo de subtítulos (.srt) hecho con la transcripción automática de Premiere (Speech to Text), o diseña un estilo de subtítulo con capas de texto de AE y expórtalo como <b>MOGRT</b> (cap. 14) para cambiar solo el texto en Premiere.
+[786] <b>Si funcionó</b>Las letras aparecen una a una en orden, y controlas la velocidad cambiando solo los valores Start/End del Range Selector.
+[787] <b>Si te atascas</b>Si al añadir un animador no cambia nada, comprueba si Start y End del Range Selector son ambos 0 o ambos 100. Si las letras salen como cuadros, elige una fuente que tenga esos caracteres, como Noto Sans.
+[788] Haz la misma frase de tres formas —«máquina de escribir», «salta desde abajo» y «de desenfocado a nítido»— y escribe cuál encaja en noticias, publicidad y documental, y por qué.
+[789] <span class="tag t5">Reto</span> Avanzado
+[790] Tipografía cinética para la voz de una entrevista de 30 segundos. Marcador al inicio de cada palabra; las palabras acentuadas, destacadas con tamaño y color.
+[791] Avanzado: da a cada letra un retardo distinto con un Expression Selector.
+[792] Expresiones a fondo <span class="lv">●●●</span>
+[793] Una expresión es un trozo corto de JavaScript pegado a una propiedad. En vez de poner decenas de fotogramas clave, escribes una línea de «regla» y AE la calcula en cada fotograma. Este capítulo reúne casi todas las expresiones que se usan en el trabajo real. El mismo código está en archivos en la carpeta <span class="mono">expressions/</span> del repositorio de GitHub.

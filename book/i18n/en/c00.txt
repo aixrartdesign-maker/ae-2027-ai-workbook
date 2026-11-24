@@ -1,0 +1,113 @@
+[0] After Effects 2027 Complete Hands-On<br/>From Fundamentals to AI Collaboration
+[1] From fundamentals, motion graphics, expressions, compositing and 3D to AI work with Higgsfield and Claude<br/>Based on After Effects 2027 · Higgsfield Plugin v1.0.64
+[2] Ji-A Ahn
+[3] How to Use This Book
+[4] This book covers one program, After Effects (AE for short), from start to finish. The first half is fundamentals, motion graphics, compositing and 3D; the second half shows three ways to add AI on top: the Higgsfield plugin panel, the Claude bridge, and AE's own AI.
+[5] Understanding
+[6] History · AI · Costs
+[7] AE Fundamentals
+[8] Ch. 01–04
+[9] Motion Graphics
+[10] Ch. 05–07
+[11] Compositing &amp; VFX
+[12] Ch. 08–12
+[13] 3D &amp; Production
+[14] Ch. 13–16
+[15] Getting Ready for AI
+[16] Ch. 17
+[17] Higgsfield Panel
+[18] Ch. 18–20
+[19] Claude · Built-in AI
+[20] Ch. 21–23
+[21] Finishing Up
+[22] Ch. 24–26 · Appendix
+[23] To learn only AE, read PARTs 1–4; to practise only with AI, you can start from PARTs 5–8.
+[24] The path through this book. The number of ● shows the level (●○○ first steps · ●●○ once familiar · ●●● advanced).
+[25] What Makes This Book Different
+[26] <b>Every screen is real.</b> On 22–23 November 2026, on a single Windows PC, we installed AE 2027 (English) and Higgsfield plugin v1.0.64, and Claude clicked through the menus and captured each screen.
+[27] <b>Real credits are recorded.</b> For every exercise we wrote down how many credits it used and how many minutes it took (Chapter 25).
+[28] <b>What does not work is written down too.</b> Steps that AI could not do and a person had to do are marked “Your turn”.
+[29] <b>Practice comes first.</b> You try it by hand first and the principles are summed up afterwards. Practice files and AE project files are in the GitHub repository (Appendix E).
+[30] Notation
+[31] Notation
+[32] Meaning
+[33] <b>Window → Extensions</b>
+[34] Menu names follow the English version. All screens are from the English version (17-2)
+[35] <span class="tag t1">Follow Along</span><span class="tag t2">Why?</span><span class="tag t3">One Step Further</span>
+[36] Tags before section titles: practice · principle · advanced
+[37] <span class="tag t4">Industry Standard</span><span class="tag t5">Challenge</span>
+[38] Numbers and habits that work in real jobs · tasks to try on your own
+[39] Level ●○○ · ●●○ · ●●●
+[40] Top right of chapter titles. You may skip ●●● chapters at first
+[41] Lavender boxes PROMPT · EXPRESSION
+[42] Prompts and code you can paste as they are
+[43] <b>①②③</b> in screenshots
+[44] Click in the order of the purple numbers. They match the numbers in the text below
+[45] If it worked · If you are stuck
+[46] Check box at the end of a chapter: confirm the result and fix the most common problems
+[47] Shortcuts are for Windows. On Mac, Ctrl → Cmd, Alt → Option
+[48] What You Need
+[49] After Effects 2024 or later (this book uses 2027; some features appear only in 26.x or later)
+[50] A paid Higgsfield plan, a Claude account and the desktop app (for PARTs 5–8)
+[51] Windows 10/11 64-bit or macOS, internet connection
+[52] Practice files and project files (download from the GitHub repository, Appendix E)
+[53] Sample 15-Week Schedule — Class and Self-Study
+[54] Week
+[55] Content (chapters)
+[56] History, map of AI, installation (00, 17-2)
+[57] Chroma key, color correction (08, 12)
+[58] The first 30 minutes, reading the screen (01–02)
+[59] Tracking, 3D tracker, removal (09–11)
+[60] Keyframes and graphs (03)
+[61] 3D, rendering and output, tips by job (13–16)
+[62] Parenting, masks, mattes (04)
+[63] Connecting AI, Panel ① Edit (17–18)
+[64] Shapes and motion graphics techniques (05)
+[65] Panels ②③, Claude titles (19–22)
+[66] Text animation (06)
+[67] Built-in AI, integrated planning, review (23–25)
+[68] Expressions ① basic vocabulary (07)
+[69] Final presentation: 30-second promo video (24, 26)
+[70] Expressions ②, midterm project (07)
+[71] Self-study
+[72] One chapter a day for 4–5 weeks
+[73] <b>Short on time?</b>Build the basics with Chapters 01 → 03 → 04, then try AI connection and practice with 17 → 18 → 21. Read the other chapters when you need a feature. Each chapter can be followed with the repository files alone, without results from earlier chapters.
+[74] Contents
+[75] <span class="tpn">PART 0</span><span class="tpt">Understanding</span><span class="pn" data-target="part-0"></span>
+[76] <span class="tn">00-1</span><span class="tt">Adobe and After Effects: 30 Years</span><span class="pn" data-target="ch-00a"></span>
+[77] <span class="tn">00-2</span><span class="tt">Why AI Now<em> — Higgsfield, Claude, MCP</em></span><span class="pn" data-target="ch-00b"></span>
+[78] <span class="tn">00-3</span><span class="tt">Before You Start<em> — Costs, Sign-up, Log-in, Credits</em></span><span class="pn" data-target="ch-00c"></span>
+[79] <span class="tpn">PART 1</span><span class="tpt">AE Fundamentals</span><span class="pn" data-target="part-1"></span>
+[80] <span class="tn">01</span><span class="tt">The First 30 Minutes<em> — Animate One Word and Export a Video</em></span><span class="pn" data-target="ch-01"></span>
+[81] <span class="tn">02</span><span class="tt">Reading the Screen, Time and Icons</span><span class="pn" data-target="ch-02"></span>
+[82] <span class="tn">03</span><span class="tt">Quality of Motion<em> — Keyframes and Graphs</em></span><span class="pn" data-target="ch-03"></span>
+[83] <span class="tn">04</span><span class="tt">Building Structure<em> — Parenting, Precompose, Masks, Mattes</em></span><span class="pn" data-target="ch-04"></span>
+[84] <span class="tpn">PART 2</span><span class="tpt">Motion Graphics</span><span class="pn" data-target="part-2"></span>
+[85] <span class="tn">05</span><span class="tt">Shapes and Motion Graphics<em> — Lines, Effects, Puppet, Particles</em></span><span class="pn" data-target="ch-05"></span>
+[86] <span class="tn">06</span><span class="tt">Text Animation and Typography</span><span class="pn" data-target="ch-06"></span>
+[87] <span class="tn">07</span><span class="tt">Expressions, Fully Explained</span><span class="pn" data-target="ch-07"></span>
+[88] <span class="tpn">PART 3</span><span class="tpt">Compositing &amp; VFX</span><span class="pn" data-target="part-3"></span>
+[89] <span class="tn">08</span><span class="tt">Chroma Key<em> — Green Screen and Blue Screen</em></span><span class="pn" data-target="ch-08"></span>
+[90] <span class="tn">09</span><span class="tt">Tracking<em> — Sticking to a Moving Shot</em></span><span class="pn" data-target="ch-09"></span>
+[91] <span class="tn">10</span><span class="tt">3D Camera Tracker and Sky Replacement</span><span class="pn" data-target="ch-10"></span>
+[92] <span class="tn">11</span><span class="tt">Object Matte and Content-Aware Fill</span><span class="pn" data-target="ch-11"></span>
+[93] <span class="tn">12</span><span class="tt">Color Correction and Looks</span><span class="pn" data-target="ch-12"></span>
+[94] <span class="tpn">PART 4</span><span class="tpt">3D &amp; Production</span><span class="pn" data-target="part-4"></span>
+[95] <span class="tn">13</span><span class="tt">3D Layers, Cameras, Lights</span><span class="pn" data-target="ch-13"></span>
+[96] <span class="tn">14</span><span class="tt">Rendering, Output, Working with Other Apps</span><span class="pn" data-target="ch-14"></span>
+[97] <span class="tn">15</span><span class="tt">Companion Tools and Alternatives</span><span class="pn" data-target="ch-15"></span>
+[98] <span class="tn">16</span><span class="tt">Practical Tips by Job</span><span class="pn" data-target="ch-16"></span>
+[99] <span class="tpn">PART 5</span><span class="tpt">Getting Ready for AI</span><span class="pn" data-target="part-5"></span>
+[100] <span class="tn">17</span><span class="tt">Connecting<em> — English UI, Plugin, Bridge</em></span><span class="pn" data-target="ch-17"></span>
+[101] <span class="tpn">PART 6</span><span class="tpt">Higgsfield Panel</span><span class="pn" data-target="part-6"></span>
+[102] <span class="tn">18</span><span class="tt">Panel ① Edit<em> — Background Removal · Reframe · Tattoo Removal</em></span><span class="pn" data-target="ch-18"></span>
+[103] <span class="tn">19</span><span class="tt">Panel ② Scene<em> — Weather · Time of Day · Lighting · Action</em></span><span class="pn" data-target="ch-19"></span>
+[104] <span class="tn">20</span><span class="tt">Panel ③ Audio<em> — Gaps · Translation · Voice</em></span><span class="pn" data-target="ch-20"></span>
+[105] <span class="tpn">PART 7</span><span class="tpt">Claude and AE's Built-in AI</span><span class="pn" data-target="part-7"></span>
+[106] <span class="tn">21</span><span class="tt">Claude ① Making and Fixing Titles</span><span class="pn" data-target="ch-21"></span>
+[107] <span class="tn">22</span><span class="tt">Claude ② Logo Reveal · Lower Third · Transition · Glass</span><span class="pn" data-target="ch-22"></span>
+[108] <span class="tn">23</span><span class="tt">AE's Built-in AI<em> — AI Assistant and Object Matte</em></span><span class="pn" data-target="ch-23"></span>
+[109] <span class="tpn">PART 8</span><span class="tpt">Finishing Up</span><span class="pn" data-target="part-8"></span>
+[110] <span class="tn">24</span><span class="tt">Integrated Project<em> — Planning a 30-Second Promo</em></span><span class="pn" data-target="ch-24"></span>
+[111] <span class="tn">25</span><span class="tt">Credits · Copyright · Review (Real Records)</span><span class="pn" data-target="ch-25"></span>
+[112] <span class="tn">26</span><span class="tt">What's Next<em> — Directions, Learning, Challenges</em></span><span class="pn" data-target="ch-26"></span>

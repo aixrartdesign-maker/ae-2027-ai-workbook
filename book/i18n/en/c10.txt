@@ -1,0 +1,143 @@
+[1230] <span class="tag t2">Why?</span> 13-7 3D File Formats You Can Bring In
+[1231] Extension
+[1232] In AE
+[1233] Notes
+[1234] Imports directly (Advanced 3D)
+[1235] Recommended. Materials, textures and animation in one file. Blender and Higgsfield 3D generation output this format
+[1236] Imports directly
+[1237] Shape and basic material (.mtl) only. No animation
+[1238] Imports directly (from 25.2)
+[1239] Maya and motion-capture data often come in this format. If the skeletal animation is complex, clean it up into GLB in Blender first
+[1240] Linked as a Cineware layer
+[1241] Renders the Cinema 4D scene as is. Edit it in C4D
+[1242] Not directly
+[1243] A film pipeline format. Convert to GLB, or render externally and composite
+[1244] Environment Light image
+[1245] For ambient light and reflections. 2K–4K is enough
+[1246] <b>Size guide</b>For smooth work in AE, keep one GLB under 500,000 polygons and textures at 2K (2048 px) or less. If heavier, reduce it with Decimate in Blender.
+[1247] <span class="tag t1">Follow Along</span> 13-8 Adjusting Materials and Textures
+[1248] Flat layers and 3D models handle materials in different places.
+[1249] <b>Flat 3D layers</b>: expand the layer to <b>Material Options</b>. Change Diffuse (brightness under light), Specular Intensity (strength of shine), Specular Shininess (how tight and sharp the shine is) and Metal (how much the layer color mixes into reflections).
+[1250] <b>3D models, 3D text and shapes</b>: select the layer in Advanced 3D and <b>Material Assignment</b> appears in the Properties panel and timeline. The default material properties are Base Color, Roughness, Metallic, Emission Color and Intensity, and Ambient Response. PBR values from the model file come in as they are.
+[1251] <b>Substance 3D materials (.sbsar)</b>: from 26.0 they can be applied to models and parametric meshes, and from 27.0 to 3D text and shapes too. In 27.0 you can also use a video or composition layer as the source of a material.
+[1252] To change the texture image itself, edit it in Blender or Substance, export the GLB again, and swap it with right-click → <b>Replace Footage → File</b> (<span class="k">Ctrl+H</span>) in the Project panel.
+[1253] Material sample
+[1254] Material Options (flat)
+[1255] Default material (3D models, text)
+[1256] Matte paper
+[1257] Plastic
+[1258] Glossy glass sheet
+[1259] Metallic 0, Roughness 0.05, layer Opacity 30–40%
+[1260] Metal logo
+[1261] Metallic 1, Roughness 0.25 + Environment Light required
+[1262] Neon sign
+[1263] Accepts Lights Off + Glow effect
+[1264] Set Emission Color, Emission Intensity 2–5
+[1265] <span class="tag t1">Follow Along</span> 13-9 Orbiting the Camera on a Null
+[1266] Keyframing a camera directly makes circular moves hard. Instead, put a null at the center of the subject and make the camera its child, and <b>just rotating the null makes the camera circle</b>. It is the same principle as rotating a shoulder to make the hand draw a circle (4-3). Composition <span class="mono">13-4_카메라널궤도</span>.
+[1267] Animated property
+[1268] Eye
+[1269] Orbit_Null
+[1270] Usually fixed. Position <span class="mono">0, 0, −2667</span>, Point of Interest <span class="mono">0, 0, 0</span>
+[1271] Orbit_Null (3D)
+[1272] Rotation axis
+[1273] Crane_Null
+[1274] Y Rotation = turning left and right, X Rotation = looking over from above
+[1275] Crane_Null (3D)
+[1276] Height and position
+[1277] Position Y = crane up, Position X = sideways move (truck)
+[1278] Make <b>Layer → New → Null Object</b> twice and rename them <span class="mono">Orbit_Null</span> and <span class="mono">Crane_Null</span>. Turn on the <b>3D switch</b> (cube column) for both. If it is off, you only see one Rotation and no Y Rotation.
+[1279] Put both nulls’ Position at the center you want to orbit, usually the middle of the subject (e.g. <span class="mono">960, 540, 0</span>). Parent Orbit_Null to Crane_Null.
+[1280] Parent the camera to Orbit_Null. Then select the camera and set <span class="k">A</span> (Point of Interest) to <span class="mono">0, 0, 0</span> and <span class="k">P</span> (Position) to <span class="mono">0, 0, −2667</span>. A child’s values are relative to its parent, so the camera looks at the null from 2667 px in front of it. 2667 is this camera’s Zoom value; at this distance, layers at z=0 appear at their original size.
+[1281] Select Orbit_Null, press <span class="k">R</span>, and keyframe <b>Y Rotation</b> (0° at 0 s, 0x+360° at 4 s), or add the expression below.
+[1282] Decrease Crane_Null’s Position Y (upward) and the camera rises and looks down. Because orbiting and rising are on separate nulls, you can adjust them independently.
+[1283] <b>Figure 13-9</b>The timeline of the practice file. ① Orbit_Null’s parent is 2 Crane_Null, with an expression on Y Rotation ② an up-and-down expression on Crane_Null Position ③ Camera 1’s parent is 1 Orbit_Null.
+[1284] <b>Figure 13-10</b>The result of rotating only the null and leaving the camera alone. The same scene from the front, upper right and left. The depth difference between the two cards is visible.
+[1285] <span class="lbl">EXPRESSION · Moving the Camera with Nulls</span>// Orbit_Null Y Rotation — one turn in 4 s<br/>time * 90;<br/>// Orbit_Null Y Rotation — swing 35° left and right (practice file)<br/>Math.sin(time*Math.PI/2) * 35;<br/>// Crane_Null Position — rise 300 px and come down over 2 s<br/>value + [0, -Math.sin(time*Math.PI/4)*300, 0];
+[1286] Camera move
+[1287] Where to animate
+[1288] Orbit (arc)
+[1289] Orbit_Null Y Rotation
+[1290] Tilt over
+[1291] Orbit_Null X Rotation
+[1292] Crane
+[1293] Crane_Null Position Y
+[1294] Truck
+[1295] Crane_Null Position X
+[1296] Dolly (moving in)
+[1297] Camera Position Z (relative to the parent, so one number sets the distance)
+[1298] Roll
+[1299] Camera Z Rotation
+[1300] Zoom
+[1301] Camera Zoom. It changes the field of view and perspective, so it differs from a dolly.
+[1302] <b>If you are stuck</b>The picture changes a lot when you parent → the camera Position is now read relative to the parent. Enter <span class="mono">0, 0, −distance</span> again as in step 3. The camera looks somewhere odd → check that Point of Interest is <span class="mono">0, 0, 0</span>. After a full turn you see the edge of the background or the back of a card → the background is a single flat plane. Keep it to a left-right swing as in the practice file, or fill all sides with 3D models and an Environment Light.
+[1303] <b>If it worked</b>When you move the camera and lights in 4 Views, the perspective and shadows in the Active Camera view change with them.
+[1304] <b>If you are stuck</b>If you can’t see shadows, check three places: the light’s Casts Shadows, Material Options → Casts Shadows on the layer casting the shadow, and Accepts Shadows on the layer receiving it. Ambient lights alone make no shadows.
+[1305] Render the same GLB model twice, with Roughness 0.1 and 0.8, and compare them side by side. Then switch the Environment Light HDR from indoor to outdoor and note how the scenery reflected in the metal surface changes.
+[1306] Rendering, Output, Working with Other Apps <span class="lv">●○○</span>
+[1307] However well you make it, exporting it wrong breaks the quality or makes the file far too big. This chapter covers the last step of delivery.
+[1308] Planning · storyboard
+[1309] Sources
+[1310] Shooting · Higgsfield
+[1311] AE work
+[1312] Layers · keyframes
+[1313] Review
+[1314] Output
+[1315] Render Queue · AME
+[1316] Delivery
+[1317] Broadcast · social · LED screens
+[1318] <b>Figure 14-1</b>How a video gets out the door. Each part of this book covers one step of this flow.
+[1319] 14-1 Two Output Paths
+[1320] Path
+[1321] Render directly in AE. Suited to lossless and transparent master files
+[1322] Render in the background while you keep working in AE. Suited to compressed files such as H.264 and YouTube presets
+[1323] 14-2 Output Settings by Use
+[1324] Format · codec
+[1325] YouTube and social uploads
+[1326] The YouTube preset in Media Encoder
+[1327] Master for editing
+[1328] Almost no quality loss, large files
+[1329] Transparent background (captions, logos)
+[1330] Graphics to place over Premiere footage
+[1331] Broadcast delivery
+[1332] The broadcaster’s spec sheet (codec, loudness, safe areas)
+[1333] Check standards such as loudness −24 LKFS
+[1334] The venue’s resolution, a high bitrate
+[1335] A codec the venue’s player can read
+[1336] Web animation
+[1337] Extensions such as Bodymovin
+[1338] 14-3 Going Back and Forth with Premiere — Dynamic Link
+[1339] In Premiere, right-click a clip and choose <b>Replace With After Effects Composition</b>, and an AE composition is created; changes in AE appear in Premiere without rendering. You can also drag an AE composition into Premiere’s Project panel.
+[1340] 14-4 MOGRT — Templates Edited in Premiere
+[1341] <b>Window → Essential Graphics</b>. Choose the composition under Primary and drag the properties you want editable (text, color, size sliders) into the panel. You can also right-click a property in the timeline and choose <b>Add Property to Essential Graphics</b>.
+[1342] <b>Figure 14-2</b>① Right-click Source Text in the timeline → Add Property to Essential Graphics.
+[1343] <b>Figure 14-3</b>The Essential Graphics panel. ① Primary: the composition to make into a template ② registered property (text content) ③ Export Motion Graphics Template. Composition <span class="mono">07-3_익스프레션_글자</span>.
+[1344] Save a .mogrt file with <b>Export Motion Graphics Template</b>.
+[1345] Load it in Premiere’s Essential Graphics, and editors change only the text and colors without AE. Use this to share lower thirds and channel IDs with a team.
+[1346] <b>Linking to Chapter 7</b>Include expression controls (7-16) and an auto-sizing box (7-12), and you get a MOGRT whose box grows by itself even when an editor types a long name.
+[1347] 14-5 Photoshop and Illustrator Files
+[1348] Import PSD or AI files as <b>Composition - Retain Layer Sizes</b> and you get a composition with live layers. Edit and save the original file and AE updates too.
+[1349] 14-6 Tidying and Backup
+[1350] <b>File → Dependencies → Collect Files</b>: gathers the project and the footage it uses into one folder. Essential when moving to another computer or submitting an assignment.
+[1351] <b>Reduce Project</b>: removes items not used in the selected compositions.
+[1352] <b>Increment and Save</b> (<span class="k">Ctrl+Alt+Shift+S</span>): saves a new file with the number at the end of the name raised. It leaves a history you can go back to.
+[1353] <b>Frame.io</b>: upload results with the Frame.io V4 panel inside AE (Window menu) and receive the client’s frame-by-frame comments.
+[1354] 14-7 When Rendering Is Slow
+[1355] Method
+[1356] Preview resolution Half / Quarter
+[1357] Faster response while working
+[1358] Calculate only part of the frame
+[1359] Pre-render and replace
+[1360] Turn a heavy precomp into a video file
+[1361] Clear the cache when it gets confused
+[1362] Reduce the memory reserved for other apps
+[1363] <b>If it worked</b>An H.264 MP4 is created in Media Encoder or the Render Queue and plays on a phone too.
+[1364] <b>If you are stuck</b>If rendering is too slow, turn on Composition → Preview → Cache Work Area in Background, and choose ProRes 4444 / Alpha only when you need a transparent background.
+[1365] Export the same 10-second video in three specs: YouTube (16:9), Shorts (9:16) and broadcast (check the 1920×1080 59.94i standard).
+[1366] Companion Tools and Alternatives <span class="lv">●○○</span>
+[1367] AE doesn’t do everything alone. Knowing what to use with it, and which tools to compare it with, cuts working time a lot.
+[1368] 15-1 Tools That Work Well Alongside
+[1369] Work shared with AE
+[1370] How to connect
+[1371] Premiere (formerly Premiere Pro)
+[1372] Cut editing, captions, sound. AE handles graphics and compositing

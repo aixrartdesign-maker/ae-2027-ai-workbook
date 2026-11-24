@@ -1,0 +1,106 @@
+[1514] Model
+[1515] Resolution
+[1516] Length
+[1517] Cost (measured estimate)
+[1518] 5 s
+[1519] <span class="lbl">PROMPT · To Claude</span>Make a practice video with Seedance 2.0 mini, 480p, 5 seconds, 16:9: a woman in a white short-sleeved T-shirt with a small flower tattoo on her arm walks slowly toward the camera along a brick wall. Then create a "18_패널_걷는인물" composition in AE and put this video in it.
+[1520] Through the bridge, Claude made a 1920×1080, 5-second composition and fitted the video to the frame. The tattoo was added on purpose for the 18-4 exercise.
+[1521] 18-2 Remove BG — Removing the Background
+[1522] <b>When to use it</b>When compositing a person onto another background, putting captions behind a person, or needing a cutout for a thumbnail. Work once done by rotoscoping frame by frame comes back as a black-and-white matte in a minute.
+[1523] Select the video layer on the timeline.
+[1524] Click <b>Enhance → Remove BG</b> in the panel and the selected layer is loaded automatically.
+[1525] Type what to keep in English in the box below. Example: <span class="k">woman</span>
+[1526] Click <b>Generate</b>. AE auto-saves → renders the range → uploads → processes; a 5-second clip took about 1 minute.
+[1527] <b>Figure 18-1</b> ① Select layer ② preview ③ what to keep ④ Generate
+[1528] <b>Figure 18-2</b> The result is a black-and-white matte. White is kept; black is the background to remove. Download with ↓ at the top left. Actual cost <b>about 5 credits</b>.
+[1529] <b>If the input box doesn’t respond</b>The panel’s input boxes <b>didn’t respond to one click — it took a double-click</b> to type. If you start typing right after the first click, the keys may go to AE as shortcuts, so be careful.
+[1530] <b>Limits of low resolution</b>With a 480p original, outlines are rough and stepped. Practise at 480p and deliver from originals of 720p or higher. The cost shown as “1” increases with the number of frames.
+[1531] 18-3 Reframe — Landscape to Vertical Shorts
+[1532] <b>When to use it</b>When you need to turn 16:9 footage into Shorts/Reels (9:16) or feed posts (4:5). A simple crop cuts off people, but Reframe paints new content into the empty top and bottom. Always check the parts AI made up.
+[1533] Click <b>Reframe</b> in the panel and choose <b>9:16</b> as the ratio.
+[1534] Click <b>Generate</b> (<b>18 credits</b> in this book). Waiting and generating took about 4 minutes.
+[1535] <b>Figure 18-3</b> ① Vertical preview — top and bottom are empty ② 9:16 ③ Generate
+[1536] <b>Figure 18-4</b> Instead of cropping, AI painted in the empty parts: ① sky and trees above ② jeans that weren’t in the original.
+[1537] <b>Teaching point</b>Reframe isn’t “cropping” but “extending by painting”. Clothes and background that weren’t in the original appear, which makes it a good example of why you must check what AI invented before using it.
+[1538] 18-4 Draw to Edit — Removing a Tattoo
+[1539] <b>When to use it</b>Removing tattoos, logos or blemishes from an ad model, or changing a single prop. It fixes only the marked area, not the whole frame, so the rest of the original is preserved as much as possible.
+[1540] Open <b>Draw to Edit</b> in the panel.
+[1541] Shrink the brush size slider to the left and mark the tattoo with an <b>X</b>.
+[1542] Type the instruction in the input box (double-click) and send with ↑. Cost <b>18 credits</b>, about 8 minutes.
+[1543] <b>Figure 18-5</b> ① Mark on the tattoo ② brush size ③ instruction input
+[1544] <b>Figure 18-6</b> Before (red circle: tattoo) and after. The flower tattoo on the arm is gone and only skin remains.
+[1545] <b>Figure 18-7</b> The result screen. The instruction, method (Draw To Video), resolution and length are recorded below the result.
+[1546] 18-5 Upscale — Raising the Quality
+[1547] <b>When to use it</b>When you scale up for delivery after locking a draft at 480p, or use old low-quality material. “Practise cheaply and upscale only the chosen shots” is the basic order for saving credits.
+[1548] Open the composition, select the video layer and open <b>Upscale</b> on the top row of the panel.
+[1549] Choose <b>1k</b> or <b>4K</b>. The number on the button first shows “--” and the price appears a few seconds later.
+[1550] <b>Figure 18-8</b> 480p practice video · 1k selected · the button showed <b>3 credits</b>, but about <b>19 credits</b> were actually deducted. It took about 1 minute 40 seconds.
+[1551] <b>Figure 18-9</b> The result. The brick joints and hair strands are sharper, but detail that wasn’t in the original isn’t created.
+[1552] <b>Edit video</b>A tool that changes existing video as you describe. Use it to fix the problem in Chapter 19’s rain scene where the person isn’t wet (e.g. her hair and t-shirt are wet from rain).
+[1553] How it works
+[1554] Measured in this book
+[1555] Creates a black-and-white matte that keeps only the person
+[1556] About 5 credits · 1 min
+[1557] Paints in empty areas while changing the ratio
+[1558] 18 credits · 4 min
+[1559] Changes only the marked area as instructed
+[1560] About 18 credits · 8 min
+[1561] Raises resolution to 1k or 4K
+[1562] Shown 3 / actual about 19 · 2 min
+[1563] You can keep using AE while all three tools are processing. In class, teach “set the generation running and move on to the next task” as well.
+[1564] <b>If it worked</b>The result clip comes into the Project panel as new footage, and the original stays as it was.
+[1565] <b>If you are stuck</b>If you get a message that credits are insufficient, lower the resolution to 720p or shorten the length to 5 seconds and request again.
+[1566] Panel ② Scene — Weather · Time of Day · Lighting · Action <span class="lv">●○○</span>
+[1567] From the one walking video in Chapter 18, make “sunny afternoon → rainy day → night”.
+[1568] <b>Scene tools use drag and drop</b>Weather, Time of Day and Lighting don’t load the selected layer automatically. You have to <b>drag</b> the video from the Project panel into the empty box in the tool.
+[1569] 19-1 Change Weather — Making It Rain
+[1570] <b>When to use it</b>When the weather on the shoot day was wrong, or making season and weather versions of the same location. It saves reshoot costs and schedules.
+[1571] <b>Figure 19-1</b> The Change Weather settings. The button showed 68 credits, but <b>22.5 credits</b> were actually deducted.
+[1572] <b>Figure 19-2</b> Sunny → rain. The ground got wet and the sky cloudy, but the person’s clothes and hair didn’t get wet.
+[1573] <b>Limits and fixes</b>The result comes back at 1:1, 720p (Seedance 2.0). To make the person wet too, give a separate instruction in Edit video such as “her hair and t-shirt are wet from rain”, or put rain particles (CC Rainfall) in front in AE.
+[1574] 19-2 Change Time of Day — Turning It to Night
+[1575] <b>When to use it</b>When a scene shot in daytime must cut together with evening or night scenes. Like cut 4 of the café video in Chapter 24, you can show a day passing in one location.
+[1576] <b>Figure 19-3</b> Time of Day settings. Again shown as 68, actual <b>22.5 credits</b>.
+[1577] <b>Figure 19-4</b> Day → night, before and after
+[1578] 19-3 Change Lighting — Changing Only the Light (settings screen)
+[1579] <b>When to use it</b>Fixing backlight or shadows on a face, or matching the light direction across shots. It changes only the light and keeps the weather and time.
+[1580] <b>Figure 19-5</b> Lighting settings. Describe the direction and mood of the light in words.
+[1581] 19-4 Motion Control — Transferring Movement (settings screen)
+[1582] <b>When to use it</b>Applying a dance or gesture to another person as it is. You need only a reference motion video and a person image. Don’t use photos of real people without consent.
+[1583] <b>Figure 19-6</b> Fill the two boxes, Motion (reference movement) and Character (person image), and Generate.
+[1584] <b>Order tip</b>Don’t change weather and time of day at once; changing one at a time makes it easier for students to see which tool changed what.
+[1585] <b>If it worked</b>You get day and night versions of the same scene and can compare them side by side with the original.
+[1586] <b>If you are stuck</b>If the person’s face changes, add “keep the person unchanged” to the prompt and lower the strength.
+[1587] Make rain, snow and sunset versions from one clip, and record in a table which is most natural and how many credits each cost.
+[1588] Panel ③ Audio — Gaps · Translation · Voice <span class="lv">●○○</span>
+[1589] For a 10-second video of a person talking, ① find the gaps, ② translate it, and ③ change the voice.
+[1590] 20-1 Making a Talking Practice Video
+[1591] Seedance 2.0 mini (5 credits) gave awkward eye lines and voice, so we remade it with Seedance 2.5, 480p, 10 seconds with audio (30 credits). A 2-second pause was added in the middle on purpose.
+[1592] <b>Figure 20-1</b> Panel home → <b>Audio</b> tab. Remove Silences · Translate · Change Voice
+[1593] 20-2 Remove Silences — Cutting Out Gaps (free)
+[1594] <b>When to use it</b>First-pass editing of interviews and lectures. It finds the “um…” pauses, so a 30-minute original can be tidied in minutes. It runs on your device and uses no credits.
+[1595] Open the composition, select the video layer on the timeline (Ctrl+A) and open the tool. If another composition is open, the wrong layer comes in.
+[1596] Choose Tightness (loose ↔ tight) and click <b>Remove Silences</b>.
+[1597] <b>Figure 20-2</b> “4 silences, 3 s to be removed”. Click Cut and the timeline clip is cut in place.
+[1598] <b>Figure 20-3</b> In this book’s setup (AE 2027 + plugin v1.0.64), Cut gave the error “Function ranges.filter is undefined”.
+[1599] <b>Cutting by hand when there’s an error</b>Using the detection as a guide, split at the start and end of each gap with <b>Ctrl+Shift+D</b> (Split Layer), delete the middle piece, and pull the later piece forward. Try again after updating the plugin.
+[1600] 20-3 Translate — Translating into Another Language
+[1601] <b>When to use it</b>Versions for promotion abroad, and lecture videos for international students. It changes the voice, not just the captions. Get the original speaker’s consent and disclose that it is an AI voice.
+[1602] <b>Figure 20-4</b> Target language: English. A 10-second clip cost <b>30 credits</b>, about 1 minute 40 seconds.
+[1603] <b>Figure 20-5</b> The result appears on the panel’s generation screen. Download with ↓ at the top left and put it in the composition.
+[1604] 20-4 Change Voice — Changing the Voice
+[1605] <b>When to use it</b>Hearing a draft narration in several voices, or replacing a poorly recorded voice.
+[1606] <b>Figure 20-6</b> Choose a voice from the Voice list (default Grady). <b>2 credits</b>, about 1 minute.
+[1607] <b>Voice and likeness</b>Get the person’s consent when changing to someone else’s voice or translating. Disclose in the result that it is an AI voice.
+[1608] <b>If it worked</b>The generated sound comes onto the timeline as an audio layer and matches the video’s length.
+[1609] <b>If you are stuck</b>If the voice breaks up, first reduce noise in the original audio (e.g. Adobe Enhance Speech), then split the text into shorter sentences and request again.
+[1610] Claude and AE’s Built-in AI
+[1611] Describe it in words and Claude, through the bridge, makes compositions, layers, keyframes and expressions inside AE. The result is an AE file you can always fix by hand.
+[1612] Claude ① Making and Fixing Titles <span class="lv">●●○</span>
+[1613] Have Claude make a 10-second opening title, then fix it once through conversation and once by hand.
+[1614] 21-1 Making an Opening Title
+[1615] <b>Why give it to Claude</b>One sentence replaces the repetitive work of setting dozens of keyframes. The result is ordinary layers and keyframes, so a person can fix it directly if it isn’t right. It uses no credits either.
+[1616] <span class="lbl">PROMPT · To Claude</span>/use-after-effects<br/> Create a 1920×1080, 10-second, 30 fps composition in the open AE.<br/> · 0–3 s: on a black background, the text "Claude × Higgsfield × Adobe" appears, growing slightly<br/> · 3–7 s: below it, the text "Hands-On Workbook" rises in one character at a time<br/> · 7–10 s: both move up and fade out<br/> Colors purple (#9B5CFF) and white. Give the layers clear names and leave the keyframes editable.
+[1617] <b>Figure 21-1</b> The result Claude made. ① Composition “Claude × Higgsfield × Adobe Intro” ② named layers (Background, Title, Subtitle — shown in Korean in the screenshot) ③ range selector and position/opacity keyframes. No credits used.
+[1618] 21-2 Fixing It — by Conversation, Then by Hand
+[1619] To protect the original, first duplicate the composition (<b>_v2 edit</b>) and make changes in the copy.

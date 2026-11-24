@@ -1,0 +1,118 @@
+[1112] <b>Figura 11-3</b>Antes de rellenar (izquierda) y después (derecha). Donde estaba el cono continúa la calzada. Composición <span class="mono">11_물체지우기</span>.
+[1113] Si el resultado queda borroso, usa <b>Create Reference Frame</b> para limpiar un fotograma en Photoshop y vuelve a rellenar tomándolo como referencia.
+[1114] <b>Comparado con Higgsfield Draw to Edit</b>Content-Aware Fill conserva la calidad original y es gratis, pero deja huellas en fondos complejos. Draw to Edit (18-4) vuelve a pintar con naturalidad, pero gasta créditos y puede cambiar la resolución. Para objetos sencillos, AE; para escenas complejas, generación con IA.
+[1115] <b>Si funcionó</b>El fondo se rellena con naturalidad donde estaba el objeto y no tiemblan manchas al reproducir.
+[1116] <b>Si te atascas</b>Si el resultado se emborrona, haz la máscara 10–20 px mayor que el objeto (Mask Expansion) y prueba a cambiar Fill Method de Object a Surface. En los fotogramas difíciles, crea un Reference Frame.
+[1117] Borra tres cosas —cables de la luz, letras de un cartel y un transeúnte— y anota cuál fue la más difícil.
+[1118] Corrección de color y looks <span class="lv">●●○</span>
+[1119] El último paso de la composición es el color. Material de distintos sitios parece una sola escena si el color y el contraste coinciden.
+[1120] <b>Effect → Color Correction → Lumetri Color</b>. Es la misma herramienta que en Premiere: la aprendes una vez y sirve en ambos. Para dar el mismo color a varias capas, aplícala en una capa de ajuste.
+[1121] Sección
+[1122] Balance de blancos (Temperature, Tint), exposición, contraste, altas luces y sombras, saturación
+[1123] Aplicar LUT (look), Faded Film, viñeta, tono de altas luces y sombras
+[1124] Curvas RGB, curvas de tono-saturación y tono-tono
+[1125] Color distinto para sombras, medios tonos y altas luces
+[1126] Cambiar solo un color concreto (solo el cielo más azul)
+[1127] 12-2 Práctica — dar vida a un vídeo plano
+[1128] S07 paseo marítimo bajo un cielo gris, con colores lavados como en una grabación log (720p 5 s).
+[1129] En Basic Correction, recupera contraste y color con Contrast +30 y Saturation 120.
+[1130] En Curves, haz una curva en S: baja un poco las sombras y sube un poco las luces.
+[1131] En Color Wheels, lleva un poco las Shadows al verde azulado y las Highlights al naranja: el look «teal and orange» tan común en el cine.
+[1132] Mira la forma de onda en Window → Lumetri Scopes para comprobar que no haya zonas quemadas (por encima de 100).
+[1133] <b>Figura 12-1</b>Antes de corregir. Cielo gris y poco contraste: el típico original log.
+[1134] <b>Figura 12-2</b>Lumetri Basic Correction: Temperature 25, Saturation 170, Contrast 70, Whites 25, Blacks −25. Los valores se introdujeron con el puente de Claude (0 créditos).
+[1135] <b>ACES 2.0</b>Desde la 26.5, AE admite la gestión de color ACES 2.0. En proyectos que mezclan varias cámaras y CG, el color se mantiene coherente. Para trabajos de clase basta con los ajustes por defecto.
+[1136] <b>Si funcionó</b>En los scopes (Lumetri Scopes), los blancos quedan en torno a 90–95 y los negros en torno a 5–10.
+[1137] <b>Si te atascas</b>Si la imagen se ve sucia, separa antes Whites y Blacks que tocar Contrast. Si la piel sale roja o verde, ajústala a la línea de piel (Skin line) del vectorscopio.
+[1138] Haz tres looks con el mismo clip —«anuncio cálido», «documental frío» y «recuerdo desvaído»— y guarda cada uno en una capa de ajuste.
+[1139] Haz tres looks con el mismo vídeo: «recuerdos cálidos», «thriller frío» y «limpio como un anuncio». Entrega capturas de Lumetri Scopes junto con ellos.
+[1140] Salir del plano para crear espacio y exportar bien el trabajo terminado para compartirlo con otros programas y personas.
+[1141] Capas 3D, cámaras y luces <span class="lv">●●●</span>
+[1142] Cualquier capa de AE se vuelve 3D con un icono de cubo. Piensa en tarjetas de papel colocadas en el espacio y filmadas con una cámara.
+[1143] 13-1 Activar las capas 3D
+[1144] Coordenadas 3D de AE
+[1145] Arriba a la izquierda es 0,0; la Y crece hacia abajo
+[1146] X (derecha +)
+[1147] Y (abajo +)
+[1148] Z (más lejos +)
+[1149] Cámara y capas 3D
+[1150] Capas a distinta profundidad Z = paralaje
+[1151] <b>Figura 13-1</b>El espacio 3D de AE. La Y crece hacia abajo y la Z con la distancia. Cuando la cámara pasa junto a capas a distinta profundidad, aparece el paralaje.
+[1152] Activa el interruptor <b>3D Layer</b> (cubo) en la línea de tiempo: Position y Anchor Point ganan un valor z y aparecen Orientation y X, Y, Z Rotation. Cuanto mayor es z, más lejos. Desde la 26.x puedes girar varias capas 3D a la vez con el <b>3D Gizmo</b>.
+[1153] Renderizador
+[1154] Ligero y rápido. Animación gráfica basada en tarjetas planas
+[1155] Extrusión de texto y formas, biseles
+[1156] Modelos 3D (GLB, OBJ), iluminación basada en imagen, sombras, profundidad de campo desde la 26.3. Desde la 26.0, mallas paramétricas (esfera, caja, cilindro) creadas en AE
+[1157] El renderizador se elige arriba a la derecha del panel Composition o en <b>Composition Settings → 3D Renderer</b>.
+[1158] 13-2 Cámaras
+[1159] <b>Layer → New → Camera</b>. Para empezar, una cámara <b>One-Node</b> con el preajuste de 35 mm.
+[1160] Prueba órbita, paneo y travelling con la herramienta de cámara (<span class="k">C</span>) y registra el movimiento que quieras con claves de Position.
+[1161] Emparenta la cámara con un null y, solo con girar el null, tendrás una órbita suave (13-9).
+[1162] Activa Depth of Field y pon Focus Distance en la capa protagonista: delante y detrás se desenfocan y aparece la profundidad.
+[1163] <b>Figura 13-2</b>Ventana Camera Settings (Ctrl+Alt+Shift+C). ① Type: One-Node se mueve libre, Two-Node mira a un Point of Interest ② Preset: objetivo en mm, 35–50 mm resulta natural ③ Film Size y Angle of View: ángulo de visión ④ Enable Depth of Field: desenfoque del fondo ⑤ Create Camera From Current View.
+[1164] Objetivo
+[1165] Sensación
+[1166] Uso
+[1167] Amplio y exagerado; lo cercano, enorme
+[1168] Presentar un espacio, títulos dinámicos
+[1169] Parecido al ojo humano
+[1170] Casi toda la animación gráfica
+[1171] Fondo comprimido, más plano
+[1172] Destacar productos o personas, fondo desenfocado
+[1173] 13-3 Luces y sombras
+[1174] Bombilla: en todas direcciones
+[1175] Foco de escenario: un cono
+[1176] Luz solar: una dirección
+[1177] Uniforme, sin sombras
+[1178] Luz ambiental y reflejos con una imagen HDR
+[1179] <b>Figura 13-3</b>Cinco luces. Los mismos principios que la iluminación de rodaje real.
+[1180] En todas direcciones, como una bombilla
+[1181] En cono, como un foco de escenario
+[1182] En una dirección, como la luz del sol
+[1183] Ilumina todo por igual (sin sombras)
+[1184] Luz ambiental y reflejos a partir de una imagen HDR (Advanced 3D)
+[1185] Para ver sombras, activa Casts Shadows en la luz, <b>Material Options → Casts Shadows</b> en la capa que proyecta la sombra y <b>Accepts Shadows</b> en el suelo que la recibe.
+[1186] 13-4 Importar modelos 3D
+[1187] Importa sin más archivos GLB, GLTF, OBJ o FBX y ponlos en una composición: se muestran en Advanced 3D. La animación dentro del modelo también se reproduce. Puedes traer modelos hechos con la generación 3D de Higgsfield o con Blender, filmarlos con una cámara de AE y componerlos con texto. Cinema 4D Lite es un programa 3D que se instala con AE y, mediante Cineware, trae escenas de C4D como capas.
+[1188] <b>IA y 3D</b>El puente de Higgsfield también controla Blender (bl_*) y Cinema 4D (c4d_*). Empiezan a ser posibles instrucciones que cruzan programas: «extruye el logo en Blender, exporta un GLB, impórtalo en AE y da una vuelta con la cámara».
+[1189] <span class="tag t1">Paso a paso</span> 13-5 Ver el espacio con 4 vistas
+[1190] En 3D es fácil equivocarse con las distancias mirando una sola vista. Si miras a la vez desde arriba, de frente y de lado, como en un plano de arquitectura, ves enseguida dónde está cada capa.
+[1191] En el menú <b>Select View Layout</b> bajo el panel Composition elige <b>4 Views</b> (también <b>View → Switch View Layout → 4 Views</b>).
+[1192] Haz clic en cada recuadro y elige su vista en el <b>3D View Popup</b> de abajo. Por defecto: Top · Front · Right · Active Camera.
+[1193] Arrastrar una capa en Top mueve solo la profundidad (z); en Front, solo la altura (y). La imagen final se revisa siempre en Active Camera.
+[1194] <b>Si funcionó</b>Los cuatro recuadros muestran la misma escena desde direcciones distintas y una capa movida en uno se mueve también en los demás.
+[1195] <b>Si te atascas</b>Si los cuatro recuadros muestran lo mismo, el interruptor 3D de la capa está apagado. Si va muy lento, deja solo Active Camera en Full y los demás en Quarter.
+[1196] <b>Figura 13-4</b>La pantalla real de 4 Views (View → Switch View Layout → 4 Views). La misma escena desde cuatro direcciones. En Top se ve la diferencia de profundidad entre dos tarjetas; en Right, la posición de la cámara (líneas rosas).
+[1197] <b>Figura 13-5</b>4 Views tras añadir una luz Spot. Las líneas en cono son el alcance de la luz (Cone Angle) y en Active Camera se ve cómo se oscurece hacia los bordes (Cone Feather).
+[1198] Vista
+[1199] Dirección
+[1200] Para qué
+[1201] El ojo de la cámara actual
+[1202] La imagen final, igual que el render
+[1203] De frente o de espaldas, sin perspectiva
+[1204] Alinear en altura y a lo ancho
+[1205] Desde arriba o desde abajo
+[1206] Situar la profundidad, dibujar el recorrido de cámara
+[1207] De lado
+[1208] Comprobar la distancia entre cámara y capas
+[1209] Punto de vista libre (no es una cámara)
+[1210] Mirar alrededor. No sale en el render
+[1211] <b>Atajos</b>Las vistas más usadas están en <span class="k">F10</span>, <span class="k">F11</span> y <span class="k">F12</span>. <span class="k">Esc</span> vuelve a la vista anterior. Las vistas ortogonales como Top y Front no tienen perspectiva, así que «lo lejos que parece» se juzga solo en Active Camera.
+[1212] <span class="tag t4">Estándar profesional</span>
+[1213] En VFX de cine y publicidad, primero se dibuja el recorrido de cámara en la vista Top, se elige el objetivo (mm) y luego se ponen las claves. 35 mm da una imagen natural, parecida al ojo; 15–24 mm amplía y exagera el espacio; 85–200 mm comprime el fondo y destaca a las personas.
+[1214] <span class="tag t2">¿Por qué?</span> 13-6 Cada tipo de luz
+[1215] Cada tipo de luz tiene propiedades distintas. Empieza por los números de abajo y ajusta a ojo (1920×1080, Classic 3D).
+[1216] Propiedades clave
+[1217] Valores de partida
+[1218] Intensity 100 %, Falloff Smooth, Radius 400, Falloff Distance 800. Bombillas, velas
+[1219] Cone Angle 60°, Feather 50 %. Un foco estrecho: 25° / 20 %
+[1220] Dirección (posición → punto de interés), Intensity
+[1221] Intensity 90 %, en diagonal desde arriba (y −600, z −800). Luz solar
+[1222] 20–30 %. Solo para que las sombras no sean negras del todo
+[1223] Imagen HDR, Intensity
+[1224] Solo Advanced 3D. Empieza en Intensity 100 %; imprescindible en modelos 3D con reflejos
+[1225] <b>Figura 13-6</b>Ventana Light Settings (Ctrl+Alt+Shift+L). ① Light Type ② Color ③ Intensity ④ Cone Angle y Cone Feather (solo Spot) ⑤ Falloff: con None, el brillo es igual a cualquier distancia.
+[1226] <b>Figura 13-7</b>El papel de cada luz comparado en fotos (generadas con Higgsfield GPT Image). La principal da la forma; el relleno, la profundidad de las sombras; el contraluz, la separación del fondo. Las luces 3D de AE siguen el mismo principio: Key = Spot, Fill = Point (baja intensidad), Rim = Spot desde detrás.
+[1227] <b>Figura 13-8</b>La misma persona y escena cambian de género según la iluminación (generado con Higgsfield GPT Image). Para imitarlo en AE: ① un Spot, Ambient 0 % ② 2–3 Point con poco contraste + Ambient 40 % ③ Parallel frontal + Ambient 30 % ④ contraluz con un Spot cálido detrás y relleno con un Point delante al 30 % ⑤ varios Point de color, Falloff Smooth ⑥ un Point naranja mezclado con un Parallel azul.
+[1228] <b>Ejemplo de iluminación de tres puntos</b> (logo de producto): Key = Spot 120 %, 45° arriba a la izquierda · Fill = Point 40 %, a la derecha · Back (Rim) = Spot 90 %, detrás y arriba · Ambient 15 %. Para las sombras, empieza con Casts Shadows On solo en la Key, Shadow Darkness 60 %, Shadow Diffusion 20 px.
+[1229] <b>Si te atascas</b>Es normal que la pantalla se oscurezca al añadir una luz. Con una sola luz, AE calcula usando solo esa luz. Añade un Ambient al 20 % o pon en Off Material Options → Accepts Lights de esa capa.

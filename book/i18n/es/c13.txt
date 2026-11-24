@@ -1,0 +1,123 @@
+[1620] <span class="lbl">PROMPT · Para Claude</span>Deja el original y trabaja en un duplicado: haz que el subtítulo "Manual práctico" dé un pequeño salto al aparecer y que el título flote suavemente arriba y abajo.
+[1621] <b>Salto</b>: Claude puso cuatro claves de escala: 85 % en 3,0 s → 108 % en 3,4 s → 97 % en 3,7 s → 100 % en 4,0 s.
+[1622] <b>Flotación</b>: se añadió una expresión a la posición del título. Las claves que había siguen funcionando.
+[1623] <span class="lbl">EXPRESSION · Título › Position</span>// el título flota suavemente arriba y abajo<br/>var amp = 6;  // altura del movimiento (px)<br/>var speed = 2; // velocidad<br/>value + [0, Math.sin(time * speed) * amp];
+[1624] <b>Corregir a mano</b>: la velocidad a la que aparece el subtítulo letra a letra la marcan las claves <b>Range Selector → Offset</b> del animador de texto. Esas claves no se podían mover con el puente, así que arrastramos a mano en la línea de tiempo la clave final de 5,5 s a 7 s.
+[1625] <b>Figura 21-2</b> ① Clave final de Offset movida a 7 s para una entrada más lenta ② las cuatro claves de escala de Claude ③ valor rojo = posición con expresión
+[1626] 21-3 Pulirlo como identificador de canal para TV
+[1627] Quitamos las líneas decorativas y el morado y lo dejamos en carbón y gris frío. El título aparece pasando de desenfoque 30 → 0 y de escala 112 → 100 %, y entre 2 y 3,2 s pasa una vez un CC Light Sweep. El fondo es un Ramp radial, el halo de luz es una capa Ramp en modo Screen y el desenfoque de movimiento está activado.
+[1628] <b>Figura 21-3</b> Identificador de canal v3 para emisión (6 s)
+[1629] 21-4 Lo que Claude no puede hacer y lo que hace la persona
+[1630] <b>Pruébalo: contador de números</b>Haz Alt+clic en el cronómetro de Capa de texto › Text › Source Text y pega la línea de abajo.<br/><span class="k">Math.round(linear(time, 0, 3, 0, 2026)).toLocaleString()</span>
+[1631] Lo que hizo Claude con el puente
+[1632] Lo que tuvo que hacer una persona
+[1633] Crear composiciones, capas de texto y de forma<br/>Claves de posición, escala, rotación y opacidad<br/>Expresiones en propiedades de transformación como la posición<br/>Importar vídeo, exportar fotogramas
+[1634] Mover las claves del animador de texto (Range Selector)<br/>Expresiones del contenido del texto (Source Text), p. ej. un contador 0 → 2,026<br/>Elegir la carpeta del primer guardado del proyecto<br/>Iniciar sesión en las cuentas y dar permisos
+[1635] <b>Si funcionó</b>Las capas que creó Claude tienen nombres con sentido y nada se rompe al corregir las claves a mano.
+[1636] <b>Si te atascas</b>Si no te gusta el resultado, en lugar de «hazlo otra vez» di qué cambiar y con números, como «haz solo el texto del título un 20 % más pequeño y retrasa la entrada 0,3 s».
+[1637] Corrige el mismo título tres veces con palabras y anota en qué instrucción obtuviste lo que querías y cuál fue.
+[1638] Claude ② logo reveal · rótulo inferior · transición · cristal <span class="lv">●●○</span>
+[1639] El puente trae herramientas que crean animaciones gráficas habituales con una sola petición. Puedes usar tal cual las instrucciones de este capítulo.
+[1640] 22-1 Herramientas de una sola petición — rótulo inferior y cristal
+[1641] Qué crear
+[1642] Instrucción de ejemplo
+[1643] Logo reveal
+[1644] Haz un logo reveal de 3 segundos con el logo de esta composición. Primero se dibuja el contorno, luego entra el relleno, da un pequeño salto y se para.
+[1645] Rótulo inferior (Lower Third)
+[1646] Haz un rótulo inferior para una entrevista. Título "Adobe After Effects", subtítulo "After Effects · práctica con IA", con una barra gris oscuro que sale desde la izquierda.
+[1647] Tarjeta de título
+[1648] Haz una tarjeta de título para Shorts 9:16: una línea grande de título y un subtítulo pequeño, entrada de 2 segundos.
+[1649] Transición de escena
+[1650] Pon entre los dos planos una transición de destello de luz de 0,5 segundos.
+[1651] Cristal líquido
+[1652] Pon sobre el vídeo de fondo un botón redondo y una barra de menú con textura de cristal.
+[1653] Revisión
+[1654] Muéstrame esta composición como hoja de contactos cada 1 segundo y comprueba si algún texto se sale de pantalla.
+[1655] <b>Figura 22-1</b> Rótulo inferior «Adobe After Effects» (barra gris oscuro) y una insignia de cristal líquido «AI Practice LIVE» arriba a la derecha. Todas las capas están separadas y vivas, así que puedes corregirlas a mano.
+[1656] 22-2 Logo reveal y transición de escena
+[1657] <span class="lbl">PROMPT · Para Claude</span>Crea una composición de 5 segundos "22장_로고리빌·전환" con fondo gris claro y haz que el logo de texto "AE AI LAB" aparezca creciendo durante 3 segundos. Fuente gruesa, tracking amplio, gris carbón oscuro. Al final, añade una cortinilla de 1 segundo hacia la izquierda.
+[1658] <b>Figura 22-2</b> Logo reveal (por escala). Solo hay tres capas —Transition, Logo y fondo—, así que es fácil de corregir.
+[1659] <b>Figura 22-3</b> La transición (wipe_left) quedó al principio en 0 s, así que arrastramos a mano la barra a 3,5 s en la línea de tiempo. La herramienta de transiciones del puente no tiene un valor para fijar el inicio.
+[1660] <b>La revisión, también a la IA</b>El AI Assistant del capítulo 23 miró esta composición y señaló que «entre 3 y 3,5 s y entre 4,5 y 5 s hay tramos vacíos en los que solo se ve el fondo». Basta con alargar el final de la capa del logo hasta 5 s.
+[1661] <b>Si funcionó</b>El logo reveal y el rótulo inferior quedan como composiciones separadas que puedes reutilizar en otros vídeos.
+[1662] <b>Si te atascas</b>Si aparece la franja de error de expresión, comprueba si has borrado una capa a la que hace referencia otra, como en el rig del cristal. Si es así, borra también la capa que la referenciaba.
+[1663] La IA integrada de AE — AI Assistant y Object Matte <span class="lv">●○○</span>
+[1664] AE 2027 trae dos IA integradas por la propia Adobe: <b>AI Assistant</b>, al que le encargas trabajo conversando, y <b>Object Matte</b>, que recorta un sujeto con un clic.
+[1665] En el menú Window está <b>AI Assistant (beta)</b>. Es un panel añadido en la 27.0 que se encarga de ordenar el proyecto, escribir y corregir expresiones y generar imágenes y vídeo conversando. <b>Object Matte</b>, que sustituyó a Roto Brush en abril de 2026 (26.2), selecciona sujetos con cuatro herramientas: Object Matte Tool, Quick Selection, Selection Brush y Refine Edge (cap. 11).
+[1666] <b>Figura 23-1</b>El menú Window de AE 2027. Aquí se reúnen AI Assistant (beta), Adobe Stock, Content-Aware Fill, Essential Graphics y Frame.io V4.
+[1667] Tarea
+[1668] Separar el fondo
+[1669] Remove BG (nube, créditos)
+[1670] Object Matte (en el equipo, gratis)
+[1671] Instrucciones conversando
+[1672] Puente de Claude, Supercomputer
+[1673] Crear imágenes nuevas
+[1674] Fuerte (unos 30 modelos generativos)
+[1675] Integración con Firefly
+[1676] 23-1 Revisar un proyecto con AI Assistant
+[1677] <b>Cuándo usarlo</b>Cuando heredas el proyecto de otra persona, para la última revisión antes de entregar o cuando hay decenas de capas y no se ve la estructura. Antes de cambiar nada, lo más seguro es pedir «no cambies nada, solo explica».
+[1678] Abre <b>Window → AI Assistant (beta)</b>. La primera vez tarda unos segundos en cargar.
+[1679] Pulsa la instrucción de ejemplo <b>Inspect the open After Effects project</b> y la casilla se llena con una instrucción larga en inglés. Incluye la frase «no cambies nada todavía». Envíala con ↑.
+[1680] En cada acción pregunta <b>Deny / Always proceed / Proceed</b>. Es una revisión de solo lectura, así que pulsa Proceed.
+[1681] <b>Figura 23-2</b> Primera pantalla de AI Assistant e instrucciones de ejemplo
+[1682] <b>Figura 23-3</b> Petición para aprobar una acción
+[1683] <b>Figura 23-4</b> El informe, al cabo de un minuto. Encontró versiones duplicadas (v1, v2), una capa de cristal apagada, tramos vacíos en la composición del logo y una Render Queue vacía. No gastó créditos de Higgsfield.
+[1684] <b>Créditos generativos de Adobe</b>La mayoría de acciones de IA de AI Assistant gastan los créditos generativos (generative credits) de tu cuenta de Adobe. Consulta los que te quedan en la página de tu cuenta de Adobe. No tienen nada que ver con los de Higgsfield.
+[1685] <b>Repartir el trabajo con Claude</b>El puente de Claude destacó en «crear», y AI Assistant en «revisar y ordenar» dentro de AE. Recomendamos pasar AI Assistant antes de entregar.
+[1686] 23-2 Object Matte — pruébalo tú
+[1687] Usa Object Matte con el mismo vídeo de la persona caminando que usaste con Remove BG y compara los resultados. En el panel Layer, haz clic una vez en la persona con Object Matte Tool (<span class="k">Alt+W</span>) y afina el borde del pelo con Refine Edge. Funciona en tu equipo y no gasta créditos.
+[1688] En MAX, el 10 de noviembre de 2026, Adobe mostró la <b>integración MCP local</b>, que permite a agentes de IA externos trabajar directamente en Photoshop, Illustrator, Premiere y AE, y anunció una beta privada para principios de 2027. Cuando salga, vale la pena repetir las prácticas de este capítulo.
+[1689] <b>Si funcionó</b>Siguiendo por los menús la respuesta de AI Assistant, encontraste la función que buscabas.
+[1690] <b>Si te atascas</b>Si la respuesta no coincide con los menús reales, puede ser por la versión. Mírala en Help → About y vuelve a preguntar indicándola.
+[1691] Juntamos todo lo aprendido para terminar un vídeo de 30 segundos y aclaramos costes y responsabilidades.
+[1692] Proyecto integrado — planificar un promo de 30 segundos <span class="lv">●●○</span>
+[1693] Planificamos un promo de 30 segundos (16:9) para «Ongi» («Calidez»), una cafetería de barrio imaginaria. La clave de este capítulo es cerrar el guion gráfico antes de generar vídeo para no malgastar créditos.
+[1694] 24-1 Guion gráfico de 5 planos con Claude
+[1695] <span class="lbl">PROMPT · Para Claude</span>Divide un promo de 30 segundos para la cafetería de barrio "Ongi" en 5 planos (de 6 s). El tiempo pasa de la tarde a la noche y el último plano es una tarjeta final con el logo. Para cada plano, haz una tabla con la descripción de la imagen, el rótulo y las funciones de AE y Higgsfield.
+[1696] Plano
+[1697] Imagen
+[1698] Rótulo
+[1699] Funciones (capítulo)
+[1700] Fachada del local, sol de tarde
+[1701] Al final del callejón, un poco de calidez
+[1702] Video generation · método de práctica del cap. 18
+[1703] Primer plano de arte latte
+[1704] Cariño en cada taza
+[1705] Calidad de entrega con Upscale (18-5)
+[1706] Un cliente lee junto a la ventana
+[1707] Un sitio donde quedarse
+[1708] Rótulo inferior (22-1)
+[1709] Fachada de noche, luz en las ventanas
+[1710] También al final del día
+[1711] Una taza y el logo
+[1712] Café Ongi
+[1713] Logo reveal y transición (22-2), Shorts con Reframe (18-3)
+[1714] 24-2 Fotogramas del guion gráfico baratos y colocados en AE
+[1715] Los fotogramas del guion gráfico se hacen como imágenes, no como vídeo. Al principio hicimos fotogramas tipo acuarela con el Z Image más barato (0,15 créditos cada uno), pero con ilustraciones costaba prever el tono del vídeo real, así que los rehicimos fotorrealistas con <b>Nano Banana 2</b>: <b>1,5 créditos</b> cada uno, 7,5 créditos por 21 fotogramas. Para que fuera el mismo local de la tarde a la noche, la instrucción incluía «the same small Korean cafe». Con el puente, Claude creó una composición "24장_스토리보드", colocó los fotogramas al 27,5 % y añadió el número de plano y el tiempo.
+[1716] <b>Figura 24-1</b> Guion gráfico fotorrealista de 5 planos terminado dentro de AE (24장_스토리보드_v2). Cada fotograma es una capa, así que cambiar un plano es sustituir solo esa capa.
+[1717] <b>Truco para capturar</b>Pon el ratón sobre el panel Composition y pulsa <b>`</b> (la tecla de la tilde): el panel ocupa toda la pantalla. Quita los contornos de selección con <b>Ctrl+Shift+A</b> antes de capturar.
+[1718] 24-3 Terminarlo como trabajo de clase
+[1719] Paso
+[1720] Créditos estimados (práctica a 480p)
+[1721] Generar en vídeo los planos 1–3 (Seedance 2.0 mini, 5 s)
+[1722] Duplicar el plano 1 y hacer el plano 4 con Change Time of Day
+[1723] Unos 22,5
+[1724] Encargar a Claude rótulos, logo reveal y transiciones
+[1725] Revisar huecos y capas apagadas con AI Assistant (23-1)
+[1726] Upscale solo de los planos finales; Reframe para Shorts
+[1727] Unos 19 + 18
+[1728] <b>¿Hay que rehacer el vídeo?</b>En la fase de planificación, no. Volver a generar un vídeo cuesta 2,5–30 créditos, pero 21 fotogramas fotorrealistas cuestan 7,5. Cuando estén cerrados, usa cada imagen como primer fotograma para convertirla en vídeo (image-to-video) y el tono se mantiene. Cambiar cosas en el guion gráfico es la corrección más barata.
+[1729] Criterios de evaluación (para clase)
+[1730] Puntos
+[1731] Qué se mira
+[1732] Planificación
+[1733] ¿Se ven el público y el mensaje en el guion gráfico?
+[1734] Uso adecuado de la IA
+[1735] ¿Se repartió bien qué dar a la IA y qué hacer a mano?
+[1736] Calidad de la animación
+[1737] Ritmo, legibilidad de los rótulos, enlace entre planos
+[1738] ¿Se encontró y corrigió lo que inventó la IA (manos, texto, ropa)?
+[1739] Registro de trabajo y costes
+[1740] ¿Se anotaron instrucciones y créditos?
+[1741] <b>Si funcionó</b>En una carpeta quedan los archivos de cada paso: plan → generación de material → composición en AE → salida.
+[1742] <b>Si te atascas</b>Si todo te abruma, divide los 30 segundos en seis planos de 5 y rellena solo tres columnas por plano: «material necesario / cómo hacerlo / créditos estimados».

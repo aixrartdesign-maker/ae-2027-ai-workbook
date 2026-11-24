@@ -1,0 +1,118 @@
+[1112] <b>Figure 11-3</b>Before filling (left) and after (right). The surrounding road continues where the cone was. Composition <span class="mono">11_물체지우기</span>.
+[1113] If the result is blurry, use <b>Create Reference Frame</b> to clean up one frame in Photoshop and fill again using it as the reference.
+[1114] <b>Compared with Higgsfield Draw to Edit</b>Content-Aware Fill keeps the original quality and is free, but leaves traces on complex backgrounds. Draw to Edit (18-4) repaints for a natural look, but costs credits and may change the resolution. Use AE for simple objects and AI generation for complex scenes.
+[1115] <b>If it worked</b>The background fills in naturally where the object was, and no blotches flicker during playback.
+[1116] <b>If you are stuck</b>If the result smears, make the mask 10–20 px larger than the object (Mask Expansion) and try switching Fill Method from Object to Surface. Make Reference Frames for difficult frames.
+[1117] Remove three things — power lines, sign lettering and a passer-by — and note which was hardest.
+[1118] Color Correction and Looks <span class="lv">●●○</span>
+[1119] The last step of compositing is color. Footage from different places looks like one scene when the color and contrast match.
+[1120] <b>Effect → Color Correction → Lumetri Color</b>. It is the same tool as in Premiere, so learn it once and use both. To color several layers the same way, apply it to an adjustment layer.
+[1121] Section
+[1122] White balance (Temperature, Tint), exposure, contrast, highlights and shadows, saturation
+[1123] Apply a LUT (look), Faded Film, vignette, highlight and shadow tint
+[1124] RGB curves, hue-saturation and hue-hue curves
+[1125] Color the shadows, midtones and highlights separately
+[1126] Change only a specific color (make just the sky bluer)
+[1127] 12-2 Practice — Bringing Flat Footage to Life
+[1128] S07 seaside promenade under a gray sky, with washed-out color like log footage (720p 5 s).
+[1129] In Basic Correction, restore the basic contrast and color with Contrast +30 and Saturation 120.
+[1130] In Curves, make an S-curve: lower the darks a little and raise the brights a little.
+[1131] In Color Wheels, push Shadows slightly to teal and Highlights to orange — the “teal and orange” look common in film.
+[1132] Check the waveform in Window → Lumetri Scopes to make sure nothing is blown out (above 100).
+[1133] <b>Figure 12-1</b>Before correction. Gray sky, low contrast — typical of a log original.
+[1134] <b>Figure 12-2</b>Lumetri Basic Correction: Temperature 25, Saturation 170, Contrast 70, Whites 25, Blacks −25. The values were entered through the Claude bridge (0 credits).
+[1135] <b>ACES 2.0</b>From 26.5, AE supports ACES 2.0 color management. Color stays consistent in projects that mix several cameras and CG. For class assignments, the default settings are enough.
+[1136] <b>If it worked</b>In the scopes (Lumetri Scopes), whites sit around 90–95 and blacks around 5–10.
+[1137] <b>If you are stuck</b>If the image looks muddy, spread Whites and Blacks before touching Contrast. If skin looks red or green, align it to the skin line on the Vectorscope.
+[1138] Make three looks from the same clip — “warm commercial”, “cold documentary” and “faded memory” — and save each on an adjustment layer.
+[1139] Make three looks from the same video: “warm memories”, “cold thriller” and “clean like an ad”. Submit Lumetri Scopes captures with them.
+[1140] Going beyond the flat plane to build space, and properly exporting finished work to exchange it with other programs and people.
+[1141] 3D Layers, Cameras, Lights <span class="lv">●●●</span>
+[1142] Any AE layer becomes 3D with one cube icon. Think of standing paper cards in space and filming them with a camera.
+[1143] 13-1 Turning On 3D Layers
+[1144] AE’s 3D coordinates
+[1145] Top left is 0,0 — Y grows downward
+[1146] X (right +)
+[1147] Y (down +)
+[1148] Z (further +)
+[1149] Camera and 3D layers
+[1150] Layers at different Z depths = parallax
+[1151] <b>Figure 13-1</b>AE’s 3D space. Y grows downward and Z grows with distance. When the camera passes layers at different depths, parallax appears.
+[1152] Turn on the <b>3D Layer</b> switch (cube) on the timeline, and Position and Anchor Point get a z value, and Orientation and X, Y, Z Rotation appear. The larger z is, the further away. From 26.x you can use the <b>3D Gizmo</b> to rotate several 3D layers at once.
+[1153] Renderer
+[1154] Light and fast. Motion graphics mostly with flat cards
+[1155] Extruding text and shapes, bevels
+[1156] 3D models (GLB, OBJ), image-based lighting, shadows, depth of field from 26.3. From 26.0, parametric meshes (sphere, box, cylinder) are created directly in AE
+[1157] Choose the renderer at the top right of the Composition panel or in <b>Composition Settings → 3D Renderer</b>.
+[1158] 13-2 Cameras
+[1159] <b>Layer → New → Camera</b>. A <b>One-Node</b> camera with the 35mm preset is a safe start.
+[1160] Try orbit, pan and dolly with the camera tool (<span class="k">C</span>), and record the moves you want with Position keyframes.
+[1161] Parent the camera to a null and simply rotating the null gives a smooth orbit shot (13-9).
+[1162] Turn on Depth of Field and set Focus Distance to the main layer, and the foreground and background blur for a sense of depth.
+[1163] <b>Figure 13-2</b>The Camera Settings window (Ctrl+Alt+Shift+C). ① Type: One-Node moves freely, Two-Node looks at a Point of Interest ② Preset: lens in mm — 35–50 mm looks natural ③ Film Size and Angle of View: field of view ④ Enable Depth of Field: background blur ⑤ Create Camera From Current View.
+[1164] Lens
+[1165] Look
+[1166] Use
+[1167] Wide and exaggerated; near things look big
+[1168] Establishing space, dynamic titles
+[1169] Similar to the human eye
+[1170] Most motion graphics
+[1171] Background compressed, flatter
+[1172] Emphasizing products or people, blurred backgrounds
+[1173] 13-3 Lights and Shadows
+[1174] Bulb — in all directions
+[1175] Stage light — a cone
+[1176] Sunlight — one direction
+[1177] Even overall, no shadows
+[1178] Ambient light and reflections from an HDR image
+[1179] <b>Figure 13-3</b>Five lights. The same principles as real film lighting.
+[1180] In all directions, like a bulb
+[1181] In a cone, like a stage light
+[1182] In one direction, like sunlight
+[1183] Lights everything evenly (no shadows)
+[1184] Ambient light and reflections from an HDR image (Advanced 3D)
+[1185] To see shadows, turn on Casts Shadows on the light, <b>Material Options → Casts Shadows</b> on the layer that casts the shadow, and <b>Accepts Shadows</b> on the floor that receives it.
+[1186] 13-4 Importing 3D Models
+[1187] Just import GLB, GLTF, OBJ or FBX files and place them in a composition, and they display in Advanced 3D. Animation inside the model plays too. You can bring in models made with Higgsfield’s 3D generation or Blender, film them with an AE camera and composite them with text. Cinema 4D Lite is a 3D program installed with AE, and through Cineware it brings C4D scenes in like layers.
+[1188] <b>AI and 3D</b>The Higgsfield bridge also controls Blender (bl_*) and Cinema 4D (c4d_*). Instructions that cross programs — “extrude the logo in Blender, export a GLB, import it into AE and orbit the camera around it once” — are becoming possible.
+[1189] <span class="tag t1">Follow Along</span> 13-5 Seeing Space with 4 Camera Views
+[1190] In 3D it is easy to misjudge distance from one view. Looking from the top, front and side at once, like architectural drawings, shows where each layer is right away.
+[1191] Choose <b>4 Views</b> from the <b>Select View Layout</b> menu below the Composition panel (or <b>View → Switch View Layout → 4 Views</b>).
+[1192] Click each pane and choose its view from the <b>3D View Popup</b> below. The defaults are Top · Front · Right · Active Camera.
+[1193] Dragging a layer in the Top pane moves only depth (z); in the Front pane, only height (y). Always check the final picture in the Active Camera pane.
+[1194] <b>If it worked</b>The four panes show the same scene from different directions, and a layer moved in one pane moves in the others too.
+[1195] <b>If you are stuck</b>If all four panes show the same picture, the layer’s 3D switch is off. If it is too slow, keep only the Active Camera pane at Full resolution and the others at Quarter.
+[1196] <b>Figure 13-4</b>The actual 4 Views screen (View → Switch View Layout → 4 Views). The same scene from four directions. The Top pane shows the depth difference between two cards; the Right pane shows the camera position (pink lines).
+[1197] <b>Figure 13-5</b>4 Views after adding a Spot light. The cone-shaped lines are the reach of the light (Cone Angle), and the Active Camera pane shows the Cone Feather getting darker toward the edges.
+[1198] View
+[1199] Viewing direction
+[1200] Main use
+[1201] The eye of the current camera
+[1202] The final picture, same as the render
+[1203] From front or back, no perspective
+[1204] Height and left-right alignment
+[1205] Looking down from above or up from below
+[1206] Placing depth, drawing camera paths
+[1207] From the side
+[1208] Checking distance between camera and layers
+[1209] Free viewpoint (not a camera)
+[1210] Looking around. Not in the render
+[1211] <b>Shortcuts</b>Frequently used views are assigned to <span class="k">F10</span>, <span class="k">F11</span> and <span class="k">F12</span>. <span class="k">Esc</span> returns to the previous view. Orthographic views such as Top and Front have no perspective, so judge “how far it looks” only in Active Camera.
+[1212] <span class="tag t4">Industry Standard</span>
+[1213] In film and commercial VFX, the camera path is drawn first in the Top view, the lens (mm) is chosen, and then keyframes are added. 35 mm gives a natural picture close to the human eye, 15–24 mm makes space wide and exaggerated, and 85–200 mm compresses the background so people stand out.
+[1214] <span class="tag t2">Why?</span> 13-6 Handling Each Type of Light
+[1215] Each light type has different properties. Start from the numbers below and adjust by eye (1920×1080, Classic 3D).
+[1216] Key properties
+[1217] Example starting values
+[1218] Intensity 100%, Falloff Smooth, Radius 400, Falloff Distance 800. Bulbs, candles
+[1219] Cone Angle 60°, Feather 50%. A narrow pin light is 25° / 20%
+[1220] Direction (position → point of interest), Intensity
+[1221] Intensity 90%, diagonally from above (y −600, z −800). Sunlight
+[1222] 20–30%. Just so shadows aren’t completely black
+[1223] HDR image, Intensity
+[1224] Advanced 3D only. Start at Intensity 100%; essential for reflective 3D models
+[1225] <b>Figure 13-6</b>The Light Settings window (Ctrl+Alt+Shift+L). ① Light Type ② Color ③ Intensity ④ Cone Angle and Cone Feather (Spot only) ⑤ Falloff — with None, brightness is the same regardless of distance.
+[1226] <b>Figure 13-7</b>The roles of light compared in photos (generated with Higgsfield GPT Image). Key gives form, fill the depth of shadow, rim separation from the background. AE 3D lights follow the same principle: Key = Spot, Fill = Point (low intensity), Rim = Spot from behind.
+[1227] <b>Figure 13-8</b>The same person and scene change genre with the lighting design (generated with Higgsfield GPT Image). To imitate in AE: ① one Spot, Ambient 0% ② 2–3 Points with low contrast + Ambient 40% ③ frontal Parallel + Ambient 30% ④ rim from a warm Spot behind, fill from a Point in front at 30% ⑤ several colored Points, Falloff Smooth ⑥ an orange Point mixed with a blue Parallel.
+[1228] <b>Three-point lighting example</b> (product logo): Key = Spot 120%, 45° top left · Fill = Point 40%, right · Back (Rim) = Spot 90%, above and behind · Ambient 15%. For shadows, start with Casts Shadows On only for the Key, Shadow Darkness 60%, Shadow Diffusion 20 px.
+[1229] <b>If you are stuck</b>It is normal for the screen to go dark as soon as you add a light. With even one light, AE calculates using only that light. Add an Ambient at 20%, or set that layer’s Material Options → Accepts Lights to Off.

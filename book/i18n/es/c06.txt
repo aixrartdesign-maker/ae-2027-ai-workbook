@@ -1,0 +1,93 @@
+[794] <b>Si empiezas</b>Puedes saltarte este capítulo y volver más tarde. Con los anteriores ya puedes hacer vídeos.
+[795] 7-1 Añadir y quitar expresiones
+[796] Haz <b>Alt+clic</b> en el cronómetro a la izquierda del nombre de la propiedad para abrir el campo. Pega el código y haz clic fuera.
+[797] Si el valor se vuelve rojo, la expresión está aplicada. Si hay un error, el motivo aparece en una franja naranja bajo la composición.
+[798] Para desactivarla, pulsa el interruptor =; para borrarla, otra vez Alt+clic. <span class="k">EE</span> muestra solo las propiedades con expresión.
+[799] <b>Pick Whip (espiral)</b>Arrastra el icono de espiral junto al campo hasta otra propiedad y el código de enlace se escribe solo. Sin saber programar, puedes «enlazar este valor con aquel».
+[800] Temblor aleatorio
+[801] Flotar arriba y abajo: una ola regular
+[802] Pasarse y volver al pararse
+[803] Repetir desde el principio
+[804] Ida y vuelta
+[805] Seguir acumulando
+[806] 0 → 100 entre 1 y 3 s
+[807] Suave 0 → 100
+[808] Desfase por capa
+[809] <b>Figura 7-1</b>Expresiones en gráfico: horizontal es el tiempo, vertical el valor. La forma del movimiento que crea una sola línea de código.
+[810] <b>Figura 7-2</b>La pantalla real de AE (1 s 18 f). El círculo oscuro es la posición actual; los claros, posiciones cada 0,07 s anteriores. La estela se hace con una línea: <span class="mono">thisComp.layer("M1").transform.position.valueAtTime(time-0.07)</span>. La composición <span class="mono">07-1_익스프레션_움직임</span> está en el proyecto de GitHub.
+[811] Muestra
+[812] Código
+[813] Si cambias los números
+[814] Temblor
+[815] 2 = 2 veces por segundo, 120 = hasta 120 px. Cámara en mano (1,8), pantalla averiada (15,40)
+[816] Flotar
+[817] Sube 3 para ir más rápido y baja 120 para menos amplitud. Logo flotante: (time*2)*6
+[818] Órbita circular
+[819] 150 = radio. Radios distintos para cos y sin dan una elipse
+[820] Ida y vuelta
+[821] Con fotogramas clave, una línea <span class="mono">loopOut("pingpong")</span> hace lo mismo
+[822] Rebote amortiguado
+[823] 9 = número de botes, 3 = rapidez con que se para, 260 = primera altura
+[824] Rotación continua
+[825] 180° por segundo. El segundero de un reloj es time*6
+[826] 7-2 Vocabulario básico
+[827] Palabra
+[828] El valor propio de la propiedad (valor de las claves). La base al combinar expresiones y claves
+[829] Tiempo actual (segundos)
+[830] Número de capa (1, 2, 3… desde arriba)
+[831] Composición actual / capa actual
+[832] thisComp.layer("Nombre")
+[833] Llamar a otra capa
+[834] Llamar al valor de un efecto
+[835] Propiedades con dos valores como posición y escala (matrices). x es [0], y es [1]
+[836] 7-3 Temblor — wiggle
+[837] <span class="lbl">EXPRESSION · Básico</span>wiggle(3, 30); // tiembla 3 veces por segundo en un rango de 30 px
+[838] <span class="lbl">EXPRESSION · Un solo eje (Position)</span>w = wiggle(2, 40);<br/>[value[0], w[1]]; // x igual, solo tiembla y
+[839] <span class="lbl">EXPRESSION · Temblor de cámara suave</span>wiggle(0.8, 12, 3, 0.5); // frecuencia, amplitud, octavas (detalle), multiplicador
+[840] <span class="lbl">EXPRESSION · Temblor en bucle (para loops, ciclo de 5 s)</span>freq = 2; amp = 30; loopTime = 5;<br/>t = time % loopTime;<br/>w1 = wiggle(freq, amp, 1, 0.5, t);<br/>w2 = wiggle(freq, amp, 1, 0.5, t - loopTime);<br/>linear(t, 0, loopTime, w1, w2);
+[841] <span class="lbl">EXPRESSION · Temblor controlado con deslizadores</span>wiggle(effect("Freq")("Slider"), effect("Amp")("Slider"));
+[842] 7-4 Mover con el tiempo — time
+[843] <span class="lbl">EXPRESSION · Rotación continua (Rotation)</span>time * 90; // 90 grados por segundo
+[844] <span class="lbl">EXPRESSION · Flotar arriba y abajo (Position)</span>amp = 6; speed = 2;<br/>value + [0, Math.sin(time * speed) * amp];
+[845] <span class="lbl">EXPRESSION · Órbita circular (Position)</span>r = 200; speed = 1.5;<br/>c = [thisComp.width/2, thisComp.height/2];<br/>c + [Math.cos(time*speed)*r, Math.sin(time*speed)*r];
+[846] <span class="lbl">EXPRESSION · Latido (Scale)</span>s = 100 + Math.sin(time * 6) * 5;<br/>[s, s];
+[847] <span class="lbl">EXPRESSION · Parpadeo (Opacity)</span>Math.round(time * 4) % 2 == 0 ? 100 : 0; // parpadea dos veces por segundo
+[848] 7-5 Repetir — loopOut, loopIn
+[849] Tras la última clave, repite desde el principio
+[850] Ida y vuelta
+[851] Continúa desde el valor final acumulando (escaleras, una rueda que no para)
+[852] Sigue a la última velocidad
+[853] Repite también antes de la primera clave
+[854] Repite solo las 2 últimas claves
+[855] Repite solo el último segundo
+[856] <b>Ojo</b>Las expresiones loop necesitan al menos dos fotogramas clave y solo algunas funcionan con propiedades Path.
+[857] 7-6 Convertir valores — linear, ease, clamp
+[858] <span class="lbl">EXPRESSION · 0 → 100 entre 1 y 3 s (Opacity)</span>linear(time, 1, 3, 0, 100);
+[859] <span class="lbl">EXPRESSION · Suave (también existen easeIn y easeOut)</span>ease(time, 0, 2, 0, 360);
+[860] <span class="lbl">EXPRESSION · Escala según la distancia a otra capa (Scale)</span>d = length(thisComp.layer("Cursor").position, position);<br/>s = linear(d, 0, 400, 150, 100); // cerca 150 %, lejos 100 %<br/>[s, s];
+[861] <span class="lbl">EXPRESSION · Limitar el rango</span>clamp(value, 0, 100);
+[862] <b>Figura 7-3</b>La pantalla real de AE (07-2_익스프레션_값, 1 s 15 f). Arriba a la izquierda: con el mismo movimiento de 3 s, linear espacia igual, ease se apiña en los extremos y easeOut solo al final. Arriba a la derecha: estela con valueAtTime. Abajo a la izquierda: giro y escala fijados con seedRandom. Abajo a la derecha: una barra que mira al punto naranja con atan2. Abajo del todo: una barra de progreso que se llena según thisComp.duration.
+[863] 7-7 Rebotar y asentarse — rebote inercial (inertial bounce)
+[864] La «acción continuada» que se pasa un poco y vuelve tras pararse en una clave. Se puede poner en posición, escala o rotación.
+[865] <span class="lbl">EXPRESSION · Pelota que bota en el suelo (Position, 2 claves: inicio de la caída · suelo)</span>e = .7; g = 5000; nMax = 9;<br/>n = 0; if (numKeys &gt; 0){ n = nearestKey(time).index; if (key(n).time &gt; time) n--; }<br/>if (n &gt; 0){<br/>  t = time - key(n).time; v = -velocityAtTime(key(n).time - .001)*e;<br/>  vl = length(v); vu = (vl &gt; 0) ? normalize(v) : [0,0];<br/>  tCur = 0; segDur = 2*vl/g; tNext = segDur; nb = 1;<br/>  while (tNext &lt; t &amp;&amp; nb &lt;= nMax){ vl *= e; segDur *= e; tCur = tNext; tNext += segDur; nb++; }<br/>  if (nb &lt;= nMax){ delta = t - tCur; value + vu*delta*(vl - g*delta/2); } else { value; }<br/>} else value;
+[866] 7-8 Seguir y desfasar — valueAtTime, index
+[867] <span class="lbl">EXPRESSION · Seguir a la capa de arriba con 0,1 s de retraso (Position)</span>delay = 0.1;<br/>thisComp.layer(index - 1).position.valueAtTime(time - delay);
+[868] <span class="lbl">EXPRESSION · Empezar más tarde según el número de capa (los duplicados aparecen en orden)</span>delay = 0.08 * (index - 1);<br/>valueAtTime(time - delay);
+[869] <span class="lbl">EXPRESSION · Colocar en horizontal con cada duplicado (Position)</span>gap = 220;<br/>[100 + (index - 1) * gap, value[1]];
+[870] <span class="lbl">EXPRESSION · Seguimiento suave</span>smooth(0.3, 5); // promedio en 0,3 s con 5 muestras
+[871] 7-9 Mover con marcadores
+[872] <span class="lbl">EXPRESSION · Saltar en cada marcador (Scale)</span>m = thisLayer.marker; n = 0;<br/>if (m.numKeys &gt; 0){ n = m.nearestKey(time).index; if (m.key(n).time &gt; time) n--; }<br/>if (n &gt; 0){ t = time - m.key(n).time; s = 100 + 30*Math.exp(-8*t)*Math.cos(20*t); [s, s]; } else value;
+[873] <b>Figura 7-4</b>① Tres marcadores en la capa (<span class="k">*</span> del teclado numérico) ② la expresión de Scale. Cada vez que el indicador de tiempo pasa un marcador, el círculo crece y se asienta. La muestra usa amplitud 60 y amortiguación 6 para un salto mayor. Composición <span class="mono">07-4_익스프레션_마커</span>.
+[874] <span class="lbl">EXPRESSION · Reaccionar al volumen del audio (Scale) — paso a paso en 5-8</span>// Primero: clic derecho en la capa de audio → Keyframe Assistant → Convert Audio to Keyframes<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider");<br/>s = linear(a, 0, 20, 100, 140);<br/>[s, s];
+[875] 7-10 Azar — random, seedRandom
+[876] <span class="lbl">EXPRESSION · Posición aleatoria fija y distinta para cada capa</span>seedRandom(index, true); // true = fija aunque pase el tiempo<br/>[random(0, thisComp.width), random(0, thisComp.height)];
+[877] <span class="lbl">EXPRESSION · Color aleatorio (Fill Color)</span>seedRandom(index, true);<br/>hslToRgb([random(), 0.6, 0.55, 1]);
+[878] <span class="lbl">EXPRESSION · Temblor entrecortado (8 veces por segundo)</span>posterizeTime(8);<br/>wiggle(8, 20);
+[879] 7-11 Expresiones de texto — Source Text
+[880] <span class="lbl">EXPRESSION · Contador de números</span>n = linear(time, 0, 3, 0, 2026);<br/>Math.round(n).toLocaleString(); // 2,026
+[881] <span class="lbl">EXPRESSION · Porcentaje con un decimal</span>linear(time, 0, 2, 0, 98.6).toFixed(1) + "%";
+[882] <span class="lbl">EXPRESSION · Temporizador 00:00</span>s = Math.floor(time); m = Math.floor(s/60);<br/>("0"+m).slice(-2) + ":" + ("0"+(s%60)).slice(-2);
+[883] <span class="lbl">EXPRESSION · Efecto máquina de escribir</span>txt = value; speed = 15; // 15 caracteres por segundo<br/>txt.substr(0, Math.floor(time * speed));
+[884] <span class="lbl">EXPRESSION · El nombre de la capa como texto</span>thisLayer.name;
+[885] <span class="lbl">EXPRESSION · Cambiar tamaño y color de letra (desde 2020)</span>style.setFontSize(80).setFillColor([0.9, 0.35, 0.2]);
+[886] 7-12 Caja de tamaño automático — sourceRectAtTime

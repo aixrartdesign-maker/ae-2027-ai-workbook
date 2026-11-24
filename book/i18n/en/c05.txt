@@ -1,0 +1,82 @@
+[712] <b>Particle</b> means a tiny piece. Instead of keyframing hundreds or thousands of small bits — snowflakes, sparks, dust, smoke, glass shards — one by one, you set only the <b>rules</b> and move them all at once. The rules come down to four: where they are born (Producer), how many and how long they live (Birth Rate · Longevity), what forces act on them (Velocity · Gravity · Resistance), and what they look like (Particle Type · size · color).
+[713] <b>Figure 5-3</b>Six particle looks made only with AE’s built-in effects. Compositions <span class="mono">05-4~05-8_파티클_…</span>. In ③, set Particle Type to Line for rain.
+[714] Look
+[715] Effect used
+[716] Starting values and tips
+[717] ① Dust · sparkles
+[718] Particle Type Faded Sphere, Birth Size 0.1, Death Size 0.02. Blending Add + one Glow
+[719] ② Fire sparks
+[720] Particle Type Line, Birth Rate 0.6, Velocity 1.2, Gravity 0.8, Longevity 0.7 s. Color yellow → orange. Turn on motion blur for tails
+[721] ③ Snow · dust
+[722] CC Particle World (wide Producer)
+[723] Producer Position Y −0.45, Radius X 1.2, Y 0.02 so they fall from across the top of the frame. Faded Sphere, Birth Size 0.12, Size Variation 80%, Velocity 0.05, Gravity 0.05, Birth Rate 1.5. Two layers of different sizes stacked give depth
+[724] ④ Smoke · fog
+[725] CC Particle World + Fast Box Blur, or Noise &amp; Grain → Fractal Noise
+[726] For full-frame fog, Fractal Noise (Contrast 140, Brightness −55, Scale 320, <span class="mono">time*60</span> on Evolution) in Screen mode. For rising smoke, particles set to Faded Sphere, Birth Size 1.5, Gravity −0.1 (upward), and Blur 40
+[727] ⑤ Shatter
+[728] Set View to Rendered and put the Position of Force 1 where it should break (default Bricks pattern, at frame 6). Change Shape → Pattern to Glass for breaking glass. Cut the layer and place the unbroken scene before it
+[729] ⑥ Scattering text
+[730] Simulation → CC Pixel Polly, CC Ball Action, or the Dissolve family
+[731] CC Pixel Polly: Force 80, Gravity 0.5, Grid Spacing 6. It breaks from 0 s, so align the layer start with the moment it should scatter. Move Force Center to change where it scatters from
+[732] The practice below makes ① dust yourself with CC Particle World.
+[733] Make a composition-size solid (<span class="k">Ctrl+Y</span>) and add <b>Effect → Simulation → CC Particle World</b>. Play it, and lines shoot up from the center like a fountain. These are the defaults (Birth Rate 2.0, Longevity 1.00).
+[734] In Effect Controls, change to the values in the table below. The shooting lines turn into slowly floating specks of light.
+[735] To put it over background footage, change the layer’s blending mode to <b>Add</b> or <b>Screen</b>. The black background disappears and only the light remains (4-8).
+[736] <b>Figure 5-4</b>The same effect with defaults (left) and with changed values (right, at 2 s). Composition <span class="mono">05-3_파티클_입자</span>.
+[737] <b>Figure 5-5</b>CC Particle World in Effect Controls. ① Gravity under Physics ② particle shape and size under Particle. Change the numbers one at a time and watch how the screen changes.
+[738] How many are born at once. Low for snow and dust, high for fireworks
+[739] How long each particle lives
+[740] Speed at which they shoot out
+[741] Force pulling down. 0 is weightless; negative floats upward
+[742] Particle shape. Line suits sparks; Faded Sphere suits smoke and bokeh
+[743] Size at birth and death. Here they shrink as they disappear
+[744] Yellow / Red
+[745] Color changing over life (Color Map: Birth to Death)
+[746] <b>When you need more</b>CC Particle World cannot make particles collide or gather into the shape of letters. For those shots, use plugins such as Trapcode Particular or Stardust (Appendix C), or it is quicker to generate fire or smoke footage on black in Higgsfield and put it on top in Add mode.
+[747] <span class="tag t1">Follow Along</span> 5-8 Audio-Reactive Graphics
+[748] Bars that jump to the music or a logo that thumps bigger with the beat take just one step: turning sound into numbers.
+[749] Select the audio layer and choose <b>Animation → Keyframe Assistant → Convert Audio to Keyframes</b>.
+[750] <b>Figure 5-6</b>① Keyframe Assistant in the Animation menu ② Convert Audio to Keyframes.
+[751] A null layer called <b>Audio Amplitude</b> appears at the top. Effect Controls has Left Channel, Right Channel and Both Channels sliders, with the loudness keyframed on every frame.
+[752] Add an expression to the property you want to move so it reads the Both Channels Slider value. Use <span class="mono">linear()</span> to map the loudness range (0–85) to bar height (8–100%) (7-6).
+[753] <span class="lbl">EXPRESSION · Bar Height from Loudness (Scale)</span>d = (index - 3) * 0.03; // each bar reacts 0.03 s later<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider").valueAtTime(time - d);<br/>[100, linear(a, 0, 85, 8, 100)];
+[754] <b>Figure 5-7</b>① The three sliders of the automatically created Audio Amplitude layer ② seven bars whose height follows the loudness ③ keyframes on every frame. The value at 1 s 13 f is 26. Composition <span class="mono">05-9_소리반응</span>.
+[755] <b>Matching the range</b>The maximum loudness differs for each song. Press <span class="k">U</span> on the Audio Amplitude layer, check the highest value in the Graph Editor, and fit the second and third numbers of linear() to that range. To react only to bass, duplicate the audio, keep only the low end with <b>Effect → Audio → High-Low Pass</b>, precompose, then convert.
+[756] <b>If it worked</b>A check mark draws on within 0.6 s with Trim Paths, and you can switch Glow and Echo on and off. A bar bends with Puppet pins, and bars move with the loudness.
+[757] <b>If you are stuck</b>If the Add menu is gray, you drew a mask, not a shape layer. Deselect all layers (Ctrl+Shift+A) and draw again.
+[758] Text Animation and Typography <span class="lv">●●○</span>
+[759] Text is half of motion graphics. AE can move text one character, one word or one line at a time.
+[760] 6-1 Text Settings — Character and Paragraph Panels
+[761] Set the font, size, tracking, leading and baseline shift. Bold titles look solid with tracking tightened by about −20 to −40, and uppercase labels look premium opened up to +100 to +200. Fonts from Adobe Fonts can be used commercially, but check the licence of other fonts.
+[762] 6-2 How Text Animators Work
+[763] Add a property (position, scale, opacity, blur, etc.) with the <b>Animate</b> button on a text layer and an “animator” is created. An animator has two parts.
+[764] <b>Properties</b>: how much to change the characters. Example: Opacity 0%, Position 0, 40
+[765] <b>Range Selector</b>: which characters to apply it to. Move the Start, End and Offset values and the affected range flows along the text.
+[766] Advanced option
+[767] Meaning
+[768] By character / character excluding spaces / word / line
+[769] Square, ramp, triangle, etc. — the shape of the range edge
+[770] Softness of the range edge
+[771] Shuffle the order so characters appear at random
+[772] <b>Figure 6-1</b>Three lines with different animators, at 1 s. From the top: slide in (Position), grow in (Scale), typewriter (Opacity). ① Add properties and selectors with the Add ▸ button ② two keyframes on the Range Selector move the range ③ the property this animator changes, Opacity 0%. Composition <span class="mono">06_텍스트애니메이터</span>.
+[773] Add a <b>Wiggly Selector</b> instead of a Range Selector and each character wobbles on its own; an <b>Expression Selector</b> lets you give each character a different value with expressions (Ch. 7).
+[774] <b>The bridge’s limit</b>As seen in Chapter 21, the current Claude bridge could not move Range Selector keyframes. A realistic split is to let AI build the animator’s skeleton and adjust the timing by hand.
+[775] 6-3 Faster with Presets
+[776] <b>Effects &amp; Presets → Animation Presets → Text</b> holds hundreds of text animations. Select a layer, put the time indicator at the entrance point and double-click to apply. Preview them with <b>Browse Presets</b>.
+[777] 6-4 Kinetic Typography
+[778] Videos where words pop and grow in time with speech. Expand the audio layer to see the waveform (<span class="k">LL</span>), add markers (numeric keypad <span class="k">*</span>) where each word starts, and place the word layers on the markers. You can also read marker positions with an expression to pop them automatically (7-9).
+[779] Put the audio on the timeline and open the waveform with <span class="k">LL</span>. While it plays, press numeric keypad <span class="k">*</span> each time a word starts to drop a marker.
+[780] Make a text layer for each word and align the layer’s start with its marker (put the time indicator on the marker and press <span class="k">[</span>).
+[781] Finish each entrance within 0.2 s. Pop it with Scale 0 → 110 → 100%, or raise it one character at a time with a text animator’s Position and Opacity. Change the size and color only for words you want to stress.
+[782] Keep three or four words on screen. Push earlier words up or fade them so the eye goes to the word being heard now.
+[783] <b>Syncing with sound</b>Text that appears before the voice feels off. Bringing it in 2–3 frames after the marker looks in sync. With music that has a clear beat, you can also link size to loudness with the method in 5-8.
+[784] 6-5 Captions
+[785] Import a caption file (.srt) made with Premiere’s automatic transcription (Speech to Text) into AE, or design a caption style with AE text layers and export it as a <b>MOGRT</b> (Ch. 14) so you only change the words in Premiere.
+[786] <b>If it worked</b>Characters appear one by one in order, and you can control the speed by changing only the Start/End values of the Range Selector.
+[787] <b>If you are stuck</b>If adding an animator changes nothing, check whether Start and End of the Range Selector are both 0 or both 100. If characters show as boxes, switch to a font that contains them, such as Noto Sans.
+[788] Make the same sentence three ways — “typewriter”, “pop up from below” and “blur to sharp” — and write down which suits news, advertising and documentary, and why.
+[789] <span class="tag t5">Challenge</span> Advanced
+[790] Kinetic typography for a 30-second interview voice. Add a marker at the start of each word and emphasize stressed words with size and color.
+[791] Advanced: give each character a different delay with an Expression Selector.
+[792] Expressions, Fully Explained <span class="lv">●●●</span>
+[793] An expression is a short piece of JavaScript attached to a property. Instead of setting dozens of keyframes, you write one line of “rule” and AE calculates it every frame. This chapter collects almost every expression used in real work. The same code is in files in the <span class="mono">expressions/</span> folder of the GitHub repository.

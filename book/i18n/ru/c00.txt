@@ -1,0 +1,113 @@
+[0] After Effects 2027: полный практикум<br/>От основ до работы с ИИ
+[1] От основ, моушн-графики, выражений, композитинга и 3D до работы с ИИ в Higgsfield и Claude<br/>По версии After Effects 2027 · Higgsfield Plugin v1.0.64
+[2] Джи-А Ан
+[3] Как пользоваться этой книгой
+[4] Книга от начала до конца посвящена одной программе — After Effects (далее AE). Первая половина — основы, моушн-графика, композитинг и 3D; вторая — три способа добавить к ним ИИ: панель плагина Higgsfield, мост Claude и собственный ИИ AE.
+[5] Понимание
+[6] История · ИИ · Затраты
+[7] Основы AE
+[8] Гл. 01–04
+[9] Моушн-графика
+[10] Гл. 05–07
+[11] Композитинг и VFX
+[12] Гл. 08–12
+[13] 3D и производство
+[14] Гл. 13–16
+[15] Подготовка к ИИ
+[16] Гл. 17
+[17] Панель Higgsfield
+[18] Гл. 18–20
+[19] Claude · встроенный ИИ
+[20] Гл. 21–23
+[21] Завершение
+[22] Гл. 24–26 · Приложение
+[23] Чтобы изучить только AE, читайте ЧАСТИ 1–4; чтобы сразу практиковаться с ИИ, можно начать с ЧАСТЕЙ 5–8.
+[24] Маршрут по книге. Число ● — уровень сложности (●○○ первые шаги · ●●○ когда освоитесь · ●●● углублённо).
+[25] Особенности книги
+[26] <b>Все экраны настоящие.</b> 22–23 ноября 2026 года на одном ПК с Windows мы установили AE 2027 (английская версия) и плагин Higgsfield v1.0.64, а Claude сам нажимал меню и делал снимки экрана.
+[27] <b>Записаны реальные кредиты.</b> Для каждого упражнения указано, сколько кредитов оно потратило и сколько минут заняло (глава 25).
+[28] <b>Записано и то, что не работает.</b> Шаги, которые ИИ не смог сделать и которые выполнил человек, отмечены как «Ваш ход».
+[29] <b>Сначала практика.</b> Сначала пробуете руками, а принципы разбираются потом. Учебные файлы и проекты AE лежат в репозитории GitHub (приложение E).
+[30] Условные обозначения
+[31] Обозначение
+[32] Значение
+[33] <b>Window → Extensions</b>
+[34] Названия меню — по английской версии. Все экраны сняты в английской версии (17-2)
+[35] <span class="tag t1">Повторяем</span><span class="tag t2">Почему так</span><span class="tag t3">Ещё шаг</span>
+[36] Метки перед заголовками разделов: практика · принцип · углубление
+[37] <span class="tag t4">Стандарт индустрии</span><span class="tag t5">Задание</span>
+[38] Цифры и привычки, которые работают на практике · задания для самостоятельной работы
+[39] Уровень ●○○ · ●●○ · ●●●
+[40] Справа вверху от заголовка главы. Главы ●●● сначала можно пропустить
+[41] Сиреневые блоки PROMPT · EXPRESSION
+[42] Запросы и код, которые можно вставлять как есть
+[43] <b>①②③</b> на снимках
+[44] Нажимайте в порядке фиолетовых номеров. Они совпадают с номерами в тексте ниже
+[45] Если получилось · Если застряли
+[46] Блок проверки в конце главы: проверка результата и решение самых частых проблем
+[47] Сочетания клавиш даны для Windows. На Mac Ctrl → Cmd, Alt → Option
+[48] Что понадобится
+[49] After Effects 2024 или новее (книга написана по версии 2027; некоторые функции есть только в 26.x и новее)
+[50] Платный тариф Higgsfield, учётная запись Claude и настольное приложение (для ЧАСТЕЙ 5–8)
+[51] Windows 10/11 64-бит или macOS, подключение к интернету
+[52] Учебные файлы и проекты (скачать из репозитория GitHub, приложение E)
+[53] Пример плана на 15 недель — занятия и самостоятельное изучение
+[54] Неделя
+[55] Содержание (главы)
+[56] История, карта ИИ, установка (00, 17-2)
+[57] Хромакей, цветокоррекция (08, 12)
+[58] Первые 30 минут, чтение экрана (01–02)
+[59] Трекинг, 3D-трекер, удаление объектов (09–11)
+[60] Ключевые кадры и графики (03)
+[61] 3D, рендер и вывод, советы по профессиям (13–16)
+[62] Привязка (Parent), маски, матты (04)
+[63] Подключение ИИ, панель ① Правка (17–18)
+[64] Фигуры и приёмы моушн-графики (05)
+[65] Панели ②③, титры с Claude (19–22)
+[66] Анимация текста (06)
+[67] Встроенный ИИ, общий проект, проверка (23–25)
+[68] Выражения ① базовый словарь (07)
+[69] Итоговая защита: 30-секундный промо-ролик (24, 26)
+[70] Выражения ②, промежуточное задание (07)
+[71] Самостоятельно
+[72] По главе в день, 4–5 недель
+[73] <b>Мало времени?</b>Освойте основы по главам 01 → 03 → 04, затем попробуйте подключение ИИ и практику по главам 17 → 18 → 21. Остальные главы читайте, когда понадобится функция. Каждую главу можно пройти только по файлам из репозитория, без результатов предыдущих глав.
+[74] Содержание
+[75] <span class="tpn">PART 0</span><span class="tpt">Понимание</span><span class="pn" data-target="part-0"></span>
+[76] <span class="tn">00-1</span><span class="tt">Adobe и After Effects: 30 лет</span><span class="pn" data-target="ch-00a"></span>
+[77] <span class="tn">00-2</span><span class="tt">Почему ИИ сейчас<em> — Higgsfield, Claude, MCP</em></span><span class="pn" data-target="ch-00b"></span>
+[78] <span class="tn">00-3</span><span class="tt">Перед началом<em> — цены, регистрация, вход, кредиты</em></span><span class="pn" data-target="ch-00c"></span>
+[79] <span class="tpn">PART 1</span><span class="tpt">Основы AE</span><span class="pn" data-target="part-1"></span>
+[80] <span class="tn">01</span><span class="tt">Первые 30 минут<em> — оживить слово и сохранить видео</em></span><span class="pn" data-target="ch-01"></span>
+[81] <span class="tn">02</span><span class="tt">Экран, время и значки</span><span class="pn" data-target="ch-02"></span>
+[82] <span class="tn">03</span><span class="tt">Качество движения<em> — ключи и графики</em></span><span class="pn" data-target="ch-03"></span>
+[83] <span class="tn">04</span><span class="tt">Структура<em> — Parent, Pre-compose, маски, матты</em></span><span class="pn" data-target="ch-04"></span>
+[84] <span class="tpn">PART 2</span><span class="tpt">Моушн-графика</span><span class="pn" data-target="part-2"></span>
+[85] <span class="tn">05</span><span class="tt">Фигуры и моушн-графика<em> — линии, эффекты, Puppet, частицы</em></span><span class="pn" data-target="ch-05"></span>
+[86] <span class="tn">06</span><span class="tt">Анимация текста и типографика</span><span class="pn" data-target="ch-06"></span>
+[87] <span class="tn">07</span><span class="tt">Выражения: полный разбор</span><span class="pn" data-target="ch-07"></span>
+[88] <span class="tpn">PART 3</span><span class="tpt">Композитинг и VFX</span><span class="pn" data-target="part-3"></span>
+[89] <span class="tn">08</span><span class="tt">Хромакей<em> — зелёный и синий фон</em></span><span class="pn" data-target="ch-08"></span>
+[90] <span class="tn">09</span><span class="tt">Трекинг<em> — привязка к движущемуся кадру</em></span><span class="pn" data-target="ch-09"></span>
+[91] <span class="tn">10</span><span class="tt">3D Camera Tracker и замена неба</span><span class="pn" data-target="ch-10"></span>
+[92] <span class="tn">11</span><span class="tt">Object Matte и Content-Aware Fill</span><span class="pn" data-target="ch-11"></span>
+[93] <span class="tn">12</span><span class="tt">Цветокоррекция и лук</span><span class="pn" data-target="ch-12"></span>
+[94] <span class="tpn">PART 4</span><span class="tpt">3D и производство</span><span class="pn" data-target="part-4"></span>
+[95] <span class="tn">13</span><span class="tt">3D-слои, камеры, свет</span><span class="pn" data-target="ch-13"></span>
+[96] <span class="tn">14</span><span class="tt">Рендер, вывод, связь с другими программами</span><span class="pn" data-target="ch-14"></span>
+[97] <span class="tn">15</span><span class="tt">Сопутствующие и альтернативные инструменты</span><span class="pn" data-target="ch-15"></span>
+[98] <span class="tn">16</span><span class="tt">Практические советы по профессиям</span><span class="pn" data-target="ch-16"></span>
+[99] <span class="tpn">PART 5</span><span class="tpt">Подготовка к ИИ</span><span class="pn" data-target="part-5"></span>
+[100] <span class="tn">17</span><span class="tt">Подключение<em> — английский интерфейс, плагин, мост</em></span><span class="pn" data-target="ch-17"></span>
+[101] <span class="tpn">PART 6</span><span class="tpt">Панель Higgsfield</span><span class="pn" data-target="part-6"></span>
+[102] <span class="tn">18</span><span class="tt">Панель ① Правка<em> — удаление фона · рефрейм · удаление тату</em></span><span class="pn" data-target="ch-18"></span>
+[103] <span class="tn">19</span><span class="tt">Панель ② Сцена<em> — погода · время суток · свет · действие</em></span><span class="pn" data-target="ch-19"></span>
+[104] <span class="tn">20</span><span class="tt">Панель ③ Звук<em> — паузы · перевод · голос</em></span><span class="pn" data-target="ch-20"></span>
+[105] <span class="tpn">PART 7</span><span class="tpt">Claude и встроенный ИИ AE</span><span class="pn" data-target="part-7"></span>
+[106] <span class="tn">21</span><span class="tt">Claude ① создаём и правим титры</span><span class="pn" data-target="ch-21"></span>
+[107] <span class="tn">22</span><span class="tt">Claude ② логотип · нижняя плашка · переход · стекло</span><span class="pn" data-target="ch-22"></span>
+[108] <span class="tn">23</span><span class="tt">Встроенный ИИ AE<em> — AI Assistant и Object Matte</em></span><span class="pn" data-target="ch-23"></span>
+[109] <span class="tpn">PART 8</span><span class="tpt">Завершение</span><span class="pn" data-target="part-8"></span>
+[110] <span class="tn">24</span><span class="tt">Общий проект<em> — план 30-секундного промо</em></span><span class="pn" data-target="ch-24"></span>
+[111] <span class="tn">25</span><span class="tt">Кредиты · авторское право · проверка (реальные записи)</span><span class="pn" data-target="ch-25"></span>
+[112] <span class="tn">26</span><span class="tt">Что дальше<em> — направления, учёба, вызовы</em></span><span class="pn" data-target="ch-26"></span>

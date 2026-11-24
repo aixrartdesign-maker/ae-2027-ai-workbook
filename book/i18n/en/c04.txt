@@ -1,0 +1,128 @@
+[584] <b>Arms opposite to legs.</b> When the front leg goes forward, the front arm goes back. Upper arm −20 → 0 → 22 → 0 → −20 (0, 8, 15, 23, 30f). Let the forearm follow 2 frames later and the hand 3 frames later (overlap) so the arm does not look like a stick.
+[585] <b>Set the body height.</b> Change Master_Control Position Y for each pose so <b>the planted foot sits exactly on the ground line</b>. If the foot goes through the ground, reduce Y; if it floats, increase it. The Y values in the table assume Master_Control Scale 85% and a ground line at 980 px. Tilt the torso slightly forward at −4° and lift the head 3° the other way to keep the gaze forward.
+[586] <b>Loop and travel.</b> Add <span class="mono">loopOut("cycle")</span> to every property with keys. To make the walk in place travel, move Master_Control Position X by twice the stride per second. The right value is the speed at which the planted foot looks still on screen.
+[587] <span class="lbl">EXPRESSION · Looping and Travelling</span>// All Rotation and Position with keys — repeat 0–1 s forever<br/>loopOut("cycle");<br/>// Head Rotation — a slight nod with each step (one step = 0.5 s)<br/>3 + Math.sin(time*Math.PI*4)*1.5;<br/>// Master_Control Position — walks left while looping (match the number to the stride)<br/>loopOut("cycle") + [-time*300, 0];
+[588] <b>If you are stuck</b>The feet seem to slide → the travel speed does not match the stride. Change 300 little by little to find the value where the planted foot looks still. It jumps when it loops → the values at 0f and 30f differ. The legs look tangled → the back leg is as bright as the front leg, or the layer order has changed. A gap at the knee → check that the shin is stacked above the thigh and the ball center matches the anchor point. The walk is stiff → select all keys, apply <span class="k">F9</span> (Easy Ease) and increase the overlap on the forearm and hand.
+[589] <b>Changing the frame count</b>At 24 fps one step is 12 frames, with the same four poses at 0, 3, 6, 9 and 12f. A relaxed walk is 18–20 frames per step; a run is around 8 frames, with a moment when both feet are off the ground.
+[590] <span class="tag t1">Follow Along</span> 4-5 Grouping (Precompose)
+[591] Select the layers to group and press <span class="k">Ctrl+Shift+C</span>.
+[592] ① Type a name, ② choose <b>Move all attributes</b>, then ③ OK.
+[593] <b>Figure 4-7</b>The Pre-compose window. When grouping several layers, only Move all attributes is available.
+[594] <span class="tag t3">One Step Further</span> The Two Options
+[595] Option
+[596] One layer only. Effects and transforms stay outside
+[597] Takes effects and transforms inside too
+[598] Features that need “default transform values”, such as the 3D Camera Tracker (Ch. 10), are fixed by precomposing the footage with Move all attributes. This is an error we actually hit while writing this book.
+[599] <span class="tag t2">Why?</span> 4-6 Masks
+[600] With a layer selected, draw with the rectangle, ellipse or pen tool and only that shape is visible (a mask). <span class="k">M</span> reveals the mask path, <span class="k">MM</span> all mask properties.
+[601] Soften the edge — vignettes, soft transitions
+[602] Expand or contract the shape
+[603] Add and subtract several masks
+[604] Mask Path keyframes
+[605] The shape changes — revealing text
+[606] <span class="tag t2">Why?</span> 4-7 Track Mattes
+[607] Video (the fill)
+[608] Lower layer
+[609] Matte layer (text)
+[610] Alpha Matte result
+[611] <b>Figure 4-8</b>The video below shows only inside the shape of the matte layer (text).
+[612] Visible where
+[613] Example
+[614] Where the matte layer is
+[615] Video inside letters
+[616] Where the matte layer isn’t
+[617] Cutting a hole
+[618] Where the matte is bright
+[619] Ink-bleed transition
+[620] Where the matte is dark
+[621] Shadow areas only
+[622] Since 2022 (23.0) you can choose any layer in the Track Matte column, and it does not have to sit right above (the Modes view ② in Chapter 2).
+[623] <span class="tag t2">Why?</span> 4-8 Blending Modes
+[624] Mode
+[625] Effect
+[626] Common use
+[627] Black disappears, brightens
+[628] Light leaks, flame footage
+[629] White disappears, darkens
+[630] Paper textures, shadows
+[631] Adds brightness for intensity
+[632] Neon, light rays
+[633] Adds contrast and color
+[634] Textures, color correction
+[635] A title where city footage shows only inside the word “SEOUL”, and the word shrinks from 120% to 100% over 3 seconds (track matte + parenting + easing).
+[636] Advanced: put a Screen-mode light leak behind the text, precompose everything and darken the frame edges with Mask Feather.
+[637] <b>If you are stuck</b>If the matte works the wrong way round, swap Alpha Matte and Alpha Inverted Matte, and check that the matte layer is right above the target. From 26.x you can pick the matte layer from the drop-down without placing it above.
+[638] Conveying information by moving shapes and text is what AE is used for most. You learn to do it by hand and, alongside, how to ask AI to do the same.
+[639] Shapes and Motion Graphics — Lines, Effects, Puppet, Particles <span class="lv">●●○</span>
+[640] Shape layers are vector shapes drawn inside AE. They never break up however large you scale them, and you can stack “parts that create motion” inside them. Later we continue with glow, trails, Puppet pins, particles and audio-reactive motion, which are used often in motion graphics.
+[641] 5-1 The Structure of a Shape
+[642] Open a shape layer and inside <b>Contents</b> there are groups, each stacked as <b>Path → Stroke → Fill → Transform</b>. Add parts with the <b>Add</b> button on the right. Parts are calculated from top to bottom, so the order changes the result.
+[643] 5-2 Common Parts (Path Operations)
+[644] Part
+[645] Trims the start and end of a line for a “drawing on” effect
+[646] Signatures, check marks, map routes
+[647] Duplicates a shape many times with rotation and movement
+[648] Petals, loading icons, patterns
+[649] Expands and contracts the outline
+[650] Breathing icons
+[651] Rounds the corners
+[652] Buttons, cards
+[653] Jitters the outline for a hand-drawn feel
+[654] Doodle style
+[655] Zig-zag, pucker and bloat, twist
+[656] Abstract backgrounds
+[657] Adds and subtracts shapes
+[658] Combining icons
+[659] 5-3 Practice — A Check Mark That Draws Itself
+[660] With nothing selected, draw a V-shaped line with the pen tool (<span class="k">G</span>). Fill off, Stroke 12 px, Round cap.
+[661] <b>Add → Trim Paths</b>. Keyframe End from 0% at 0 s to 100% at 0.6 s, then <span class="k">F9</span>.
+[662] Put a circle shape underneath and make it pop with Scale 0 → 110 → 100% for a “done” icon.
+[663] <span class="lbl">PROMPT · To Claude</span>Make a 1.5-second “done” icon: a gray circle pops up in the center of a white background, and a dark gray check mark draws on over it in 0.6 seconds. Stroke width 12, round caps.
+[664] 5-4 Importing Illustrator Files
+[665] Import an Illustrator (.ai) file, select the layer and choose <b>Layer → Create → Create Shapes from Vector Layer</b> to turn it into a shape layer. Use this to animate a logo line by line. To import a file layer by layer, choose <b>Composition - Retain Layer Sizes</b> when importing.
+[666] Make three 3-second loading icons using only Trim Paths and Repeater.
+[667] Assessment: is the loop seam invisible (using loopOut)?
+[668] <span class="tag t4">Industry Standard</span> 5-5 Motion Graphics Know-how — Trails, Glow, Paths
+[669] <b>Figure 5-1</b>Left: text with two layers of Glow (edge Radius 14, spread Radius 60). Right: a trail made with Echo (12 copies, Decay 0.82) on a moving circle. Light effects come alive on a dark background.
+[670] Where to apply and starting values
+[671] Know-how
+[672] Glow
+[673] Two Glows look more refined. The first Radius 15 · Intensity 1 (edge), the second Radius 120 · Intensity 0.6 (wide bloom). They only come alive on a dark background
+[674] Trails (Echo)
+[675] Effect → Time → Echo<br/>Echo Time −0.03 s, 12 echoes, Decay 0.82
+[676] Echo Time must be negative to leave trails behind. Nothing happens on a layer without motion, so create the motion first
+[677] Duplicate trails
+[678] Duplicate layers + <span class="mono">valueAtTime(time−0.07×n)</span>
+[679] The method in Figure 7-2. Each trail can have its own color and size, so there is more design freedom than with Echo
+[680] Motion blur
+[681] Layer switch M + M at the top of the timeline<br/>Shutter Angle 180°, Samples 16
+[682] Fast motion needs blur to look cinematic. Use 360° to exaggerate, 90° for clean UI motion
+[683] Drawing lines
+[684] Shape → Add → Trim Paths<br/>End 0 → 100%, 0.6 s, Easy Ease
+[685] Give Offset <span class="mono">time*30</span> and the line keeps flowing. Move Start and End together 0.1 s apart for a “passing light” line
+[686] Following a path
+[687] Draw a mask/path with the pen, copy the Path → paste into the target’s Position
+[688] Turn on Layer → Transform → Auto-Orient → Orient Along Path to rotate in the direction of travel. For text, choose the same path in Text → Path Options
+[689] Stroke light
+[690] Effect → Generate → Stroke, or Saber (free plugin)
+[691] A beam of light along a mask path. Start with Saber Core Size 0.6, Glow Intensity 40%
+[692] Repeating arrays
+[693] Shape → Add → Repeater<br/>Copies 8, Rotation 45°
+[694] Keyframe Offset for a loading icon that opens like a flower
+[695] <b>Remember three things</b>① Add effects after the motion. ② Light effects only show on a dark background. ③ When using several effects, gather them on one Adjustment Layer so they are easy to switch on and off.
+[696] Put two layers of Glow at the end of a line drawn with Trim Paths, and add Echo to a small circle that follows the line. Render with motion blur on and off side by side to compare.
+[697] <b>Fonts in graphics</b>The figures and AE samples in this book use only sans-serif fonts licensed free for commercial use (Nanum Gothic, Noto Sans KR · OFL licence). Check the licence terms of system fonts before distributing video, so Noto Sans is recommended for the practice files too.
+[698] <span class="tag t1">Follow Along</span> 5-6 Puppet Pins — Bending an Image Like a Joint
+[699] Puppet pins are a tool that places pins on an image and bends the area between them like rubber. Use them for gentle motion without a skeleton: a character’s limbs, swaying grass, a curving arrow.
+[700] Select the layer to bend and click the <b>Puppet Position Pin Tool</b> on the right of the toolbar (<span class="k">Ctrl+P</span>).
+[701] Click pins where it should stay fixed and where it should move. The book’s sample has three pins on a vertical bar: top, middle and bottom. Turn on <b>Mesh: Show</b> in the toolbar to see the mesh.
+[702] With the Selection tool (<span class="k">V</span>), drag only the top pin sideways. The other two pins hold, so the bar bends smoothly. Keyframes are set automatically on the pin positions, so dragging at different times becomes animation.
+[703] <b>Figure 5-2</b>① Puppet pin tool and Mesh options (Show, Expansion 3, Density 10) ② the Puppet effect created in Effect Controls ③ three pins (yellow dots) and the mesh. Left is the original; right is the result of moving only the top pin. Composition <span class="mono">05-2_퍼펫핀</span>.
+[704] Setting
+[705] Value in this book
+[706] How far the mesh extends beyond the image. Raise it if edges get cut when bending
+[707] Number of mesh triangles. Higher bends more smoothly but is slower
+[708] The default engine. Less distortion around pins
+[709] How smoothly the mesh turns at the bend. Leave the default
+[710] <b>Pin types</b>Position, Starch (stiffens), Bend (rotation and scale in place), Advanced (position, rotation and scale) and Overlap (front/back when overlapping). Position pins are enough at first. For swaying in the wind, put <span class="mono">wiggle(1, 15)</span> on a pin position (7-3).
+[711] <span class="tag t1">Follow Along</span> 5-7 Particles — Dust, Sparks, Smoke, Shatter

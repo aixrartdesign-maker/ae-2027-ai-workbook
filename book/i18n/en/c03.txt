@@ -1,0 +1,137 @@
+[447] The ball is fastest at the floor and close to 0 at the top. So the floor keys got Influence 10% and the top keys 70%.
+[448] The longer you pull the yellow handle, the longer the deceleration.
+[449] Easing shortcut
+[450] Feel
+[451] Smooth in and out
+[452] Smooth only on arrival
+[453] Smooth only on departure
+[454] Hold — stays until the next key (blinks, cuts)
+[455] <span class="tag t4">Industry Standard</span> Five of the 12 Principles of Animation You Will Always Use
+[456] Principle
+[457] In AE
+[458] Squash and stretch
+[459] Invert Scale at the moment of impact
+[460] Anticipation
+[461] Move slightly the other way before shooting off
+[462] Easy Ease and the Graph Editor
+[463] Arcs
+[464] Curve the motion path (pull the path handles)
+[465] Follow-through
+[466] Overshoot and settle after stopping — the inertial bounce expression
+[467] In production you work in the order Timing (when) → Spacing (how fast) → Polish. Don’t add detail from the start.
+[468] Make the same ball three ways: a <b>bowling ball</b> (heavy), a <b>ping-pong ball</b> (light) and an <b>angry ball</b> (character). Same keyframe positions, only the graphs differ.
+[469] Assessment: is the weight explained by the shape of the graph, and is the floor-impact frame accurate?
+[470] <b>If it worked</b>When you render the same move with Linear and with Easy Ease and compare, the difference is visible.
+[471] <b>If you are stuck</b>If the graph looks flat, check the Value Graph / Speed Graph toggle and click the “Fit all graphs to view” icon below the graph area.
+[472] Building Structure — Parenting, Precompose, Masks, Mattes <span class="lv">●●○</span>
+[473] When there are many layers, you move them as a group instead of one by one.
+[474] <span class="tag t2">Why?</span> 4-1 Layer Order and Parents
+[475] Layer order = front and back
+[476] 1. Text
+[477] 2. Logo
+[478] 3. Person (keyed)
+[479] 4. Background video
+[480] The top layer (no. 1) appears in front
+[481] Parenting = following the parent
+[482] Null (parent)
+[483] Logo
+[484] Text
+[485] Icon
+[486] Rotate the null and the children rotate with it
+[487] <b>Figure 4-1</b>Left: the upper layer is in front. Right: move the parent and the children follow.
+[488] <span class="tag t1">Follow Along</span> 4-2 Setting a Parent (Parenting)
+[489] Click the <b>Parent &amp; Link</b> box (None) on the row of the layer that will be the child.
+[490] Choose the parent layer from the list. Or drag the spiral icon (pick whip) onto the parent layer.
+[491] <b>Figure 4-2</b>① Parent &amp; Link box ② list of layers you can choose as parent.
+[492] <b>If it worked</b>Move the parent and the child follows. Move only the child and the parent stays.
+[493] <span class="tag t1">Follow Along</span> 4-3 Moving a Robot Body — Parenting at the Joints
+[494] Like a paper doll, split the body into layers by segment, move each segment’s <b>Anchor Point</b> to its joint, and link it to <b>the segment closer to the body as parent</b>. Then rotating just the shoulder moves the whole arm, and moving just the waist moves the whole upper body. A skeleton built this way is called a <b>rig</b>. The white robot in the practice file <span class="mono">04-3_로봇리그</span> was cut from one <b>parts sheet</b> drawn with Higgsfield GPT Image.
+[495] <b>Three rules</b>① <b>Split</b> — one layer is one segment between two joints. If the upper arm and forearm are on one image, the elbow cannot bend. ② <b>Anchor point</b> — put it at the segment’s <b>joint nearest the body</b>: shoulder for the upper arm, elbow for the forearm, wrist for the hand. ③ <b>Parent</b> — the segment nearer the body is the parent. Link hand → forearm → upper arm → torso → pelvis → Master_Control (null).
+[496] <b>Figure 4-3</b>Left: front parts sheet made with Higgsfield GPT Image. Each segment has a gray ball joint at its top end, and the red dot is the anchor point. Right: parent relationships. An indented layer is the child of the layer just above.
+[497] Anchor point
+[498] Parent
+[499] Main animated property
+[500] Master_Control (null)
+[501] Center of the null
+[502] None
+[503] Position — moving across the screen, bobbing while walking · Scale — change size only here
+[504] Pelvis
+[505] Waist joint (top center)
+[506] Master_Control
+[507] Rotation — hip sway
+[508] Torso (chest, shoulders)
+[509] Waist ball joint
+[510] Rotation — bending, leaning
+[511] Head
+[512] Neck ball joint
+[513] Torso
+[514] Rotation — nodding, tilting
+[515] UpperArm_L · UpperArm_R
+[516] Shoulder ball joint
+[517] Forearm_L · Forearm_R
+[518] Elbow ball joint
+[519] Upper arm
+[520] Hand_L · Hand_R
+[521] Wrist
+[522] Forearm
+[523] Rotation (start at 180° so the fingers point down)
+[524] Thigh_L · Thigh_R
+[525] Hip ball joint
+[526] Shin_L · Shin_R
+[527] Knee ball joint
+[528] Thigh
+[529] Foot_L · Foot_R
+[530] Ankle (boot opening)
+[531] Shin
+[532] <b>Making the parts sheet.</b> In Higgsfield, first make one piece of character art (front and side), then add it as a reference and request a <b>parts sheet</b> as below. Remove the background with Remove Background and download a PNG. If you draw it yourself, save each part on its own layer in Illustrator or Photoshop.
+[533] <span class="lbl">PROMPT · Higgsfield GPT Image (1 reference image)</span>Character rig parts sheet of this exact robot (FRONT VIEW), same colors and style. Lay out every body part separated with generous empty space, all upright, on a plain pure white background: head, torso with shoulders, pelvis, upper arms, forearms, open five-finger hands, thighs, shins, boots. Each limb part has a full round gray ball joint at its TOP end so parts can overlap and rotate seamlessly. No part touches another. No text, no shadows.
+[534] <b>Cut one image into as many parts as needed.</b> Place the same PNG in the composition once per part and use a rectangle mask on each layer to keep only one part. Name each layer with the part and side, such as <span class="mono">UpperArm_L</span>. The practice file has 15 parts plus 1 null, 16 layers in all.
+[535] <b>Anchor points to the joints.</b> With the <b>Pan Behind (Anchor Point) tool</b> (<span class="k">Y</span>), drag the anchor point to the center of the ball joint. This tool moves only the anchor point and leaves the image where it is. Then move Position to assemble each part onto the body.
+[536] <b>Parenting and stacking order.</b> Drag the pick whip from the end toward the body (hand → forearm → upper arm → torso → pelvis → Master_Control). Parenting and stacking order are separate. On this robot the ball joint is at the <b>top end</b> of each segment, so stack <b>the lower segment on top</b> so the ball covers the end of the segment above (the hand above the forearm, not the forearm above the hand). The upper arms and thighs, however, go <b>under</b> the torso and pelvis so the shoulder caps and pelvis shell hide the tops of the joints.
+[537] <b>Animate Rotation only.</b> Now each segment needs only Rotation. Rotate the segment nearer the body first and let the end segment follow 2–4 frames later for a natural, whip-like motion. This is called <b>overlap (follow-through)</b>. In 4-4 we use this rig to make a walk.
+[538] <b>Figure 4-4</b>The actual Parent &amp; Link column. Hand_R → 6 Forearm_R → 9 UpperArm_R → 7 Torso → 10 Pelvis → 1 null (Master_Control). The head is linked to 7 Torso, and the thighs to 10 Pelvis.
+[539] Action
+[540] What to animate where
+[541] Walking
+[542] Master_Control Position X to move forward, Y to bob with each step. Thigh and shin Rotation swing opposite left and right, and the arms swing opposite to the leg on the same side. The side-view walk is covered in detail in 4-4.
+[543] Nod · tilt
+[544] Head Rotation. The anchor point must be on the neck ball joint so it moves around the neck.
+[545] Hip sway
+[546] Pelvis Rotation ±3°. The pelvis is the parent of the torso and both legs, so the top and bottom sway together.
+[547] Jump
+[548] Jump with Master_Control Position Y, and on landing bend the shins about −15° to absorb it with the knees.
+[549] <b>Animator’s check — hiding the seams</b>① Draw joints as <b>round balls (ball joints)</b>. If the ball’s center is the anchor point, the two parts overlap with no gap however far they bend. ② Make the ball joints <b>a different color (gray)</b> from the body, and even with shading the overlap reads naturally as a “joint between parts”. ③ Stacking shells that wrap the joints, such as shoulder caps and the pelvis, on top hides the upper part of the ball so it looks like a real joint. ④ Draw parts in a straight standing pose from the start so rotation 0 is the default pose. ⑤ Characters with simple shapes — robots, animals, mascots — suit cut-out rigs better than humans.
+[550] <b>If you are stuck</b>It rotates around the wrong point → the anchor point is in the middle. Move it to the ball joint’s center with the <span class="k">Y</span> tool. A part jumps away when you parent it → if you hold <span class="k">Shift</span> while using the pick whip, the child moves to the parent’s position; a plain drag leaves it in place. The child changes size too → you changed the parent’s Scale. Change size only on Master_Control. A gap opens at a joint → the anchor point is off the ball’s center, or the stacking order has changed.
+[551] <b>Going further</b>For characters with many joints, the free script <b>Duik</b> builds IK (drag the fingertip and the whole arm bends to follow). To bend limbs like rubber, put Puppet pins (5-6) on a single-piece arm.
+[552] <span class="tag t1">Follow Along</span> 4-4 A Side-View Walk — One Cycle from Four Poses
+[553] A walk is <b>four poses repeated</b>. The foot touches the ground (contact), takes the weight and sinks (down), the other foot passes the body (passing), and it pushes off the toes and rises (up). At 30 fps one step is 15 frames, and two steps — 30 frames (1 second) — make one cycle. Keyframe only the four poses, AE fills in between, and with <span class="mono">loopOut()</span> at the end it keeps walking. Composition <span class="mono">04-4_로봇걷기</span>.
+[554] <b>Figure 4-5</b>Parts sheet for the side-view walk (facing left). Each limb segment has a ball joint at its top end, and the red dot is the anchor point. Arm and leg parts are drawn once and imported twice for the front and back.
+[555] <b>Figure 4-6</b>The four poses in the practice file. The robot faces left. The light limbs are the near (front) side and the dark limbs are the far (back) side. From frame 15 the front and back legs swap and the same four poses repeat.
+[556] <b>How the side-view rig differs</b>① Make <b>two sets</b> of limbs, <b>front (near side) and back (far side)</b>, and add _Front and _Back to the names. Just import the same parts twice. ② Darken the back set with an Exposure effect of about −0.7 and move those layers to the bottom. Stacking order from the top: front arm (hand, forearm, upper arm) → head → torso → pelvis → front leg (foot, shin, thigh) → back leg → back arm. ③ Within one arm or leg, stack the lower segment on top so the ball joint covers the end of the segment above. ④ For a character facing left, <b>+</b> Rotation sends a leg forward (left) and <b>−</b> sends it back. The shin only ever bends to the − side (so the knee never bends backwards).
+[557] Pose
+[558] Front leg thigh / shin / foot
+[559] Back leg thigh / shin / foot
+[560] Body height (Master_Control Y)
+[561] Front upper arm
+[562] ① Contact 0f
+[563] 25 / −5 / 15 — lands on the heel, toes up
+[564] −22 / −10 / −20 — pushes with the toes
+[565] −20 (back)
+[566] ② Down 4f
+[567] 15 / −25 / 0 — knee bends to take the weight
+[568] −15 / −45 / −20 — foot lifts off
+[569] 489.9 (lowest)
+[570] ③ Passing 8f
+[571] −2 / −5 / 0 — straight, supporting the body
+[572] 10 / −60 / −5 — knee up, moving forward
+[573] 0 (beside the body)
+[574] ④ Up 11f
+[575] −15 / −5 / −10 — heel lifts
+[576] 25 / −30 / 5 — reaching forward
+[577] 474.2 (highest)
+[578] ⑤ Contact 15f
+[579] Use the values of ① with front and back legs swapped. Do the same for ②–④ at 19f, 23f and 26f
+[580] 22 (forward)
+[581] Same values as 0f. This key keeps the loop from breaking
+[582] <b>Front leg first.</b> Add Rotation keys to Thigh_Front, Shin_Front and Foot_Front at frames 0, 4, 8, 11, 15, 19, 23, 26 and 30 as in the table. After 15f use the back-leg values from ①–④ in the table.
+[583] <b>The back leg half a beat later.</b> Select all front-leg keys and copy (<span class="k">Ctrl</span>+<span class="k">C</span>), select the back-leg layer and paste at 15f (<span class="k">Ctrl</span>+<span class="k">V</span>). Move keys that go past 30f back by 30 frames so they stay within 0–30f.

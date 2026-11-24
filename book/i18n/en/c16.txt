@@ -1,0 +1,38 @@
+[2065] Original not found — see “Relinking” below
+[2066] When You Rename or Move Source Files — Relinking
+[2067] An AE project (.aep) doesn’t store video and images inside the file; it only remembers <b>where the original files are (their paths)</b>. So if you rename a source file, move it to another folder or delete it while working, a “files are missing” warning appears the next time you open the project. That layer shows as <b>color bars</b> on screen, and its name in the Project panel turns italic.
+[2068] In the Project panel, right-click the item with the italic name → <b>Replace Footage → File</b> (<span class="k">Ctrl+H</span>).
+[2069] Choose the file in its new location, or the renamed file, and click <b>Import</b>. If other files from the same folder are missing, AE finds and relinks them all at once.
+[2070] For an image sequence (001.png, 002.png …), choose the first file and turn on <b>Sequence</b>.
+[2071] If many files are missing, use <b>File → Dependencies → Find Missing Footage</b> to show only the missing items and relink them one by one.
+[2072] <b>Another use of Replace Footage</b>It swaps only the original and keeps effects, keyframes and masks. Use the same method to swap a 480p practice clip for the upscaled final (18-5). Deleted files can’t be relinked, so restore them from the Recycle Bin or swap in a file with the same content.
+[2073] <span class="tag t4">Industry Standard</span> Keeping Paths Intact
+[2074] Make <span class="mono">footage</span> and <span class="mono">render</span> folders inside the project folder first, put the sources there, then import. Don’t import straight from the Desktop or Downloads.
+[2075] Don’t rename files after importing. If you must, finish the Replace Footage before closing AE.
+[2076] When moving to another computer or submitting, use <b>File → Dependencies → Collect Files</b> (14-6) to gather the sources into one folder too.
+[2077] A blending mode decides <b>how the colors of a layer are calculated</b> against the layers below. There are nearly 30, but they are easy once split into seven groups. Modes in a group differ only in strength.
+[2078] Group
+[2079] Main modes
+[2080] How it blends
+[2081] Basic
+[2082] The upper layer simply covers. Dissolve scatters opacity as dots
+[2083] Darken
+[2084] White disappears and only dark areas remain — paper textures, shadows, ink
+[2085] Lighten
+[2086] Black disappears and only bright areas remain — light, flames, lens flares
+[2087] Contrast
+[2088] Middle gray disappears and contrast increases — adding texture, color correction
+[2089] Difference
+[2090] Shows the difference between two layers — checking alignment, inversion effects
+[2091] Takes only one of hue, saturation or luminance — coloring black-and-white video
+[2092] Transparency
+[2093] Uses this layer’s shape to cut out or keep everything below
+[2094] Using the Mode Column on the Timeline
+[2095] Click <b>Toggle Switches / Modes</b> at the bottom of the timeline (<span class="k">F4</span>) to switch between the switches columns and the <b>Mode</b> column (Figure 2-4).
+[2096] Click the Mode box on a layer’s row (Normal at first) and choose a mode. With the layer selected, press <span class="k">Shift</span>+<span class="k">=</span> / <span class="k">Shift</span>+<span class="k">-</span> to step through the modes one by one and compare them right away.
+[2097] Right-click the column header row → <b>Columns</b> to keep columns such as Modes, Parent &amp; Link and Stretch (speed) always visible. Use this when you want to see switches and modes at the same time.
+[2098] <b>When a mode seems to do nothing</b>A blending mode blends with the <b>layers below</b>. On the bottom layer there is nothing to blend with, so nothing changes. A mode set inside a precomp blends only inside that composition; to blend with what is outside, set the mode on the precomp layer.
+[2099] Screen shows color bars, name is italic
+[2100] The source file was renamed or moved. Right-click → Replace Footage → File (2-4)
+[2101] Blending mode has no effect
+[2102] It is the bottom layer, or the mode was set inside a precomp (4-8)

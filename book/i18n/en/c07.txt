@@ -1,0 +1,106 @@
+[887] Make the background box grow automatically to fit the text, as in a lower third.
+[888] <span class="lbl">EXPRESSION · Rectangle Shape Size</span>r = thisComp.layer("Caption").sourceRectAtTime(time, false);<br/>pad = 40;<br/>[r.width + pad*2, r.height + pad];
+[889] <span class="lbl">EXPRESSION · Rectangle Shape Position (inside the group)</span>r = thisComp.layer("Caption").sourceRectAtTime(time, false);<br/>[r.left + r.width/2, r.top + r.height/2];
+[890] <b>Figure 7-5</b>The actual AE screen (07-3_익스프레션_글자). Typewriter (Text Animator), an auto box with sourceRectAtTime, a rig controlling six bars with one Slider, and a number counter with easeOut on the Numbers effect (counting up to 2027).
+[891] 7-13 Space and Direction
+[892] <span class="lbl">EXPRESSION · Auto-Rotate to the Direction of Travel (Rotation)</span>v = position.velocity;<br/>radiansToDegrees(Math.atan2(v[1], v[0]));
+[893] <span class="lbl">EXPRESSION · Look at Another Layer (Rotation)</span>d = thisComp.layer("Target").position - position;<br/>radiansToDegrees(Math.atan2(d[1], d[0])) + 90;
+[894] <span class="lbl">EXPRESSION · Keep Size When the Parent Scales (Scale)</span>s = []; ps = parent.transform.scale.value;<br/>for (i = 0; i &lt; ps.length; i++) s[i] = value[i] * 100 / ps[i];<br/>s;
+[895] <span class="lbl">EXPRESSION · Screen Position of a 3D Layer (2D layer Position)</span>thisComp.layer("3D Point").toComp([0, 0, 0]);
+[896] <span class="lbl">EXPRESSION · Blur by Distance from the Camera (Blur)</span>d = length(thisComp.activeCamera.toWorld([0,0,0]), toWorld(anchorPoint));<br/>linear(d, 500, 2000, 0, 20);
+[897] 7-14 Fitting to the Composition Length
+[898] <span class="lbl">EXPRESSION · Fade In for the First 0.5 s and Out for the Last 0.5 s (Opacity)</span>f = 0.5;<br/>Math.min(linear(time, inPoint, inPoint+f, 0, 100), linear(time, outPoint-f, outPoint, 100, 0));
+[899] <span class="lbl">EXPRESSION · Progress Bar (Scale x)</span>p = (time - inPoint) / (outPoint - inPoint) * 100;<br/>[p, value[1]];
+[900] <span class="lbl">EXPRESSION · Show the Frame Number (Source Text)</span>timeToFrames(time);
+[901] 7-15 Building Paths — createPath
+[902] <span class="lbl">EXPRESSION · A Line Joining Two Nulls (Path)</span>a = fromComp(thisComp.layer("PointA").toComp([0,0]));<br/>b = fromComp(thisComp.layer("PointB").toComp([0,0]));<br/>createPath([a, b], [], [], false);
+[903] PointA (null)
+[904] PointB (null)
+[905] points = [a, b] · open (false)
+[906] PointA
+[907] PointB
+[908] Move a null and the line follows by itself
+[909] <b>Figure 7-6</b>createPath builds a path from a list of point coordinates. Pass the positions of two nulls as points, and the line is redrawn whenever you move a null. Leave the two tangent arrays empty for a straight line.
+[910] 7-16 Expression Controls — Building a Rig
+[911] Gather Slider, Angle, Checkbox, Color, Point and Layer controls from Effect → Expression Controls on a null and have many layers reference them, and you have a “rig” controlling everything from one place. When exporting a MOGRT (Ch. 14), these controls become the handles in Premiere.
+[912] <span class="lbl">EXPRESSION · On/Off with a Checkbox (Opacity)</span>thisComp.layer("Control").effect("Show")("Checkbox") == 1 ? 100 : 0;
+[913] <span class="lbl">EXPRESSION · Unify the Brand Color with a Color Control (Fill Color)</span>thisComp.layer("Control").effect("BrandColor")("Color");
+[914] 7-17 When There Is an Error
+[915] Example message
+[916] Cause and fix
+[917] Brackets or quotes don’t match
+[918] The layer name changed. Match the name or call it by index
+[919] Effect names differ between language versions. Reconnect effects with the Pick Whip
+[920] A single number given to position or scale. Use [x, y]
+[921] Errors like ranges.filter is undefined
+[922] Legacy ExtendScript engine. Choose the JavaScript engine in File → Project Settings → Expressions
+[923] <b>Ask AI</b>Paste the code with “fix this error” and Claude or AE’s AI Assistant fixes most of them right away. But understanding the result matters — if you can read the tables in this chapter, you can read the code AI gives you.
+[924] <b>If it worked</b>As in Figure 7-2, one circle and three trails follow along with one line of code.
+[925] <b>If you are stuck</b>If an orange error bar appears, check that the layer name in quotes is exact (including spaces) and that the JavaScript engine is selected in Project Settings → Expressions. Once fixed, close the bar with the X on the right.
+[926] Make a rig that controls wiggle’s frequency and amount with one Slider Control, and link the same rig to five other layers with the Pick Whip.
+[927] Make a “lower-third rig” with Slider, Color and Checkbox controls on one null: the box adjusts to the length of the name (sourceRectAtTime), colors change all at once, and the entrance animation can be switched on and off.
+[928] Export it as a MOGRT and check that it works in Premiere.
+[929] Techniques that make filmed footage and created images look like one picture. Film visual effects start here. All practice footage in this part was made with Higgsfield, and the list and prompts are in <span class="mono">sources/</span> in the GitHub repository.
+[930] Chroma Key — Green Screen and Blue Screen <span class="lv">●●○</span>
+[931] You film an actor in front of green or blue cloth, remove only that color, and combine them with another background. AE’s Keylight does the removing, but 80% of the result is decided on set.
+[932] 8-1 Why Green?
+[933] Chroma key picks “a color people hardly have” and removes only that color. Human skin of any ethnicity mixes red and yellow tones, so green and blue, on the opposite side, separate best. Green has become today’s standard for three reasons.
+[934] Reason
+[935] Digital sensors are strong in green
+[936] On most camera sensors (Bayer pattern), 2 of every 4 pixels capture green. Green has the most information and the least noise, so edges key cleanly.
+[937] Bright, so less light is needed
+[938] Under the same light, green records brighter than blue. A large screen is easier to light evenly.
+[939] Rarely clashes with clothing
+[940] Blue clothes such as jeans and suits are common, but fluorescent green clothes are rare.
+[941] 8-2 When Blue Screen Is Still Used
+[942] Situation
+[943] The film era
+[944] On film, the blue-sensitive layer had finer grain, so most films from the 1970s to the 1990s used blue screen. The flying scenes in the 1978 film <i>Superman</i> are a classic example.
+[945] Night scenes and dark backgrounds
+[946] Green is bright, so spill — green light bleeding onto the actor’s edges — is strong. Blue spill is less noticeable and blends well with dark backgrounds.
+[947] Blonde or light hair, green props
+[948] When green reflections show in the hair, or green clothes or plants get removed too.
+[949] Water and sea scenes
+[950] As in <i>Life of Pi</i>, when skies and horizons in large water-tank shoots are handled with a blue background.
+[951] <b>Only one rule</b>Choose a color that the actor and props don’t have. Blue for an actor in green; green for a blue uniform. Occasionally red or magenta backgrounds are used.
+[952] 8-3 Shooting for a Clean Key — Lighting Setup
+[953] <b>Figure 8-1</b>Green-screen lighting layout (seen from above; generated with Higgsfield GPT Image and labeled). Screen lights ①② light only the screen evenly, not the actor; actor lights ③④⑤ are placed so they don’t hit the screen. The actor stands 2–3 m from the screen to avoid green reflections (spill) and shadows.
+[954] <b>Figure 8-2</b>This is how it looks in a real studio (an example made with Higgsfield GPT Image). There are separate lights for the screen and for the person, and the person stands away from the screen.
+[955] Most keying trouble comes from an “uneven screen” and “green light on the actor”. Set up in this order.
+[956] <b>Light the screen and the actor separately.</b> Light the screen evenly, as if painting it, from above and below on both sides with broad soft lights (softboxes, fluorescent banks). Light the actor with separate key and fill lights.
+[957] <b>Keep the actor 2–3 m from the screen.</b> If too close, green reflected light lands on the shoulders and head (spill) and shadows fall on the screen.
+[958] <b>Match the brightness.</b> Keep the brightness difference across the whole screen within 1/3 stop. On the camera’s waveform or false color it should show as one flat line. Slightly darker than, or similar to, the actor’s face is a safe level.
+[959] <b>Add backlight (rim light).</b> Light from above and behind the actor brings out the hair outline and covers green spill. A slightly warm color (amber, light magenta) cancels spill.
+[960] <b>Match the light direction to the background.</b> If the sun is on the left in the background footage, put the actor’s key light on the left too. Even a perfect key looks like a “pasted-in person” if the light direction differs.
+[961] <b>Camera settings</b>: use a fast shutter (1/100 or faster) to reduce motion blur, and record in 4:2:2 or better at a high bitrate if possible. Heavily compressed files break edges into stair steps.
+[962] Common mistake
+[963] Result
+[964] Fix
+[965] Wrinkles and seams in the cloth
+[966] Wrinkle shadows don’t key out
+[967] Stretch the cloth tight; cut wrinkles away with a Garbage Matte
+[968] Actor stands right against the screen
+[969] Green outline, shadow under the feet
+[970] Keep distance; Spill Suppressor
+[971] Shiny props, glasses
+[972] Green reflects and leaves holes
+[973] Matte finish, adjust the angle
+[974] Hair blowing about
+[975] Fine hairs disappear
+[976] Stronger backlight; make a separate soft matte
+[977] The camera moved but there are no reference points
+[978] The background can’t be matched
+[979] Put tracking markers (× marks) on the screen (Ch. 10)
+[980] 8-4 Keying with Keylight — Practice
+[981] Practice footage
+[982] S01 person in front of a green screen (Higgsfield Seedance 2.0 mini, 720p 5 s, 5 credits) + I12 bright studio background (Nano Banana 2, 1.5 credits).
+[983] <b>Figure 8-3</b>The original. The screen edges are dark and blotchy, so it is uneven — exactly the “common mistake” in 8-3.
+[984] <b>Figure 8-4</b>Result after only picking the Screen Colour. Most of it keys out with just this.
+[985] Put the person footage on top and the background image below. Apply <b>Effect → Keying → Keylight (1.2)</b> to the person layer.
+[986] Click the green near the actor with the <b>Screen Colour</b> eyedropper. This alone removes most of it.
+[987] Change <b>View</b> to <b>Screen Matte</b> to see it in black and white. The background must be completely black and the person completely white. Gray patches mean it hasn’t keyed out fully yet.
+[988] Raise <b>Screen Matte → Clip Black</b> to turn gray in the background black, and lower <b>Clip White</b> to turn gray inside the person white. Too much shaves off hair, so go little by little.
+[989] Switch View back to <b>Final Result</b>, and reduce the remaining green edge with <b>Screen Balance</b> and <b>Despill Bias</b>, or add <b>Advanced Spill Suppressor</b>.
+[990] Cut away anything outside the screen (lights, stands) with a pen-tool mask (a garbage matte). Finally, tidy the edges with <b>Key Cleaner</b> and give the person the same color tone as the background (Ch. 12).
+[991] <b>Figure 8-5</b>Screen Matte view. Gray background = still half transparent.
+[992] <b>Figure 8-6</b>After Clip Black 35 and Clip White 85. Background black, person white. The white patches in the four corners are areas the lights didn’t reach, so cut them away with a mask.

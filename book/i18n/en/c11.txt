@@ -1,0 +1,141 @@
+[1373] Background art, matte painting, frame fixes
+[1374] Import PSD layers as they are
+[1375] Vector logos, icons, infographics
+[1376] AI file → shape layer conversion
+[1377] Background rendering, several specs at once
+[1378] 3D modeling, lighting, physics simulation
+[1379] Cineware, GLB import, Higgsfield bridge
+[1380] UI screen design → app motion drafts
+[1381] Layer export plugins
+[1382] Cleaning up voice, matching loudness
+[1383] Client review, frame-by-frame comments
+[1384] Frame.io panel inside AE
+[1385] Generating sources, background removal, reframing
+[1386] Plugin panel, MCP
+[1387] Planning, writing expressions, automating repetitive work
+[1388] 15-2 Tools Worth Comparing
+[1389] Strengths / weaknesses compared with AE
+[1390] Node-based compositing
+[1391] Free version, editing and grading in one program / smaller ecosystem of motion graphics templates
+[1392] Film VFX standard, heavy compositing / expensive and overkill for motion graphics
+[1393] Procedural 2D animation
+[1394] Fast at duplication and data-driven motion / weak at video compositing
+[1395] Layer-based
+[1396] Cheap, works with Final Cut Pro / Mac only, few plugins
+[1397] Integrated 3D
+[1398] Free, strong 3D and simulation / an unfamiliar workflow for 2D motion graphics
+[1399] Rive · Lottie tools
+[1400] Interactive vector
+[1401] Real-time animation for apps and the web / not aimed at video output
+[1402] Real-time 3D
+[1403] Virtual production, broadcast graphics / a lot to learn
+[1404] <b>Nodes and layers</b>AE stacks layers top to bottom; Fusion and Nuke connect boxes (nodes) with lines. Layers are intuitive; nodes make it easier to organize hundreds of compositing steps. Students heading for film VFX should try the node approach at least once.
+[1405] Practical Tips by Job <span class="lv">●●○</span>
+[1406] The same AE has different important features depending on who uses it. Here is advice often heard on the job, grouped by profession.
+[1407] <b>Figure 16-1</b>Scenes of AE in use in different jobs (example scenes made with Higgsfield GPT Image). Same program, different balance of features.
+[1408] Designer <span>graphics · brand</span>
+[1409] Hand over Illustrator files with organized layers (one element per layer), and it is easy to animate them one by one in AE.
+[1410] Gather brand colors in one expression Color Control and you can change all colors at once (7-16).
+[1411] Make MOGRTs with Essential Graphics for editors and you get fewer revision requests.
+[1412] Developer <span>apps · web</span>
+[1413] Export UI motion to Lottie (JSON) with Bodymovin and drop it straight into the app. Avoid unsupported effects (blur, some mattes).
+[1414] Automate repetitive work (renaming layers, batch renders) with ExtendScript/JavaScript scripts — and now AI can do that through MCP.
+[1415] Match easing values (cubic-bezier) with the Graph Editor so the motion in design and code is the same.
+[1416] Editor <span>Premiere-centered</span>
+[1417] Send only complex graphics to AE with Dynamic Link and check them on the Premiere timeline without rendering.
+[1418] Use MOGRTs from AE by changing just the text. Agree on folder and naming rules with the graphics team.
+[1419] Pre-render heavy AE clips in Premiere with Render and Replace to keep playback light.
+[1420] Animator <span>character · motion</span>
+[1421] Work with the Graph Editor open by default. The speed graph is the personality of the motion.
+[1422] Build joints for characters with rigging scripts such as Duik and the Puppet tools, and move the whole body with one null.
+[1423] Refine each shot in the order Timing → Spacing → Polish. Don’t add detail from the start.
+[1424] Filmmaker <span>VFX · titles</span>
+[1425] <b>Splitting compositions</b>: one shot = one master composition. Inside it, split into precomps for background, people, effects and color. Name them scene–shot–version, like “SC012_SH030_comp_v003”.
+[1426] <b>Splitting time</b>: work from locked edit ranges (EDL, XML) with handles (usually 8–12 frames) at both ends. The extra frames let you cope if the edit changes.
+[1427] Keep the frame rate as shot (23.976, etc.), and unify color management with ACES/OCIO.
+[1428] Deliver finals as ProRes 4444 or EXR sequences; use compressed files (H.264) only for review.
+[1429] TV playout <span>broadcast graphics</span>
+[1430] <b>Safe areas</b>: keep text inside the composition’s Title/Action Safe guides (grid icon).
+[1431] <b>Broadcast-legal color</b>: catch colors that are too bright or saturated with the Broadcast Colors effect. Check loudness against the broadcaster’s standard (−24 LKFS in Korea, for example).
+[1432] 29.97 fps, interlaced if needed — get the broadcaster’s delivery spec sheet (codec, bitrate, bars and tone, countdown) first.
+[1433] Hand logo bugs and caption bars to the playout server as ProRes 4444 with alpha.
+[1434] Advertising producer <span>campaigns</span>
+[1435] Deliver 16:9, 9:16, 1:1 and 4:5 at the same time. Put important elements in the center from the start and use 26.x’s Crop Composition to Selected Layers together with Higgsfield Reframe.
+[1436] Manage 6-, 15- and 30-second versions in one project, marking the ranges with markers.
+[1437] Use only the client’s original files for products and logos. Check that no real trademarks appear in AI-generated shots.
+[1438] C4D and 3D link
+[1439] Bring in C4D scenes as layers with Cineware, and regrade in AE with multipass (separated light, shadow and reflection).
+[1440] Extract C4D cameras and nulls to attach AE text and effects precisely to the 3D scene.
+[1441] Render heavy scenes in C4D and receive EXR sequences; AE only composites.
+[1442] News producer <span>news video</span>
+[1443] Deadlines are everything. Keep frequently used maps, graphs and person cards as template projects and only change the content.
+[1444] As a rule, AI-generated shots are not used in news footage. For reenactments or explanations, add an “AI-generated image” label.
+[1445] Check face blurring frame by frame with Object Matte or tracking + a mosaic effect.
+[1446] News graphics <span>graphics · data</span>
+[1447] Graphics whose numbers change — elections, stocks, weather — read CSV or JSON data files with expressions and update automatically (e.g. footage("data.csv").dataValue([1, 0]) — the value in column 2, row 1).
+[1448] Automate number count-ups and % displays with Source Text expressions (7-11).
+[1449] For the broadcaster’s CG system (real-time playout), hand over video with alpha or dedicated templates. Follow the broadcaster’s style guide for lower-third fonts and sizes.
+[1450] YouTubers and educators
+[1451] Make intros, lower thirds and subscribe buttons as MOGRTs and reuse them every time.
+[1452] For Shorts, make a separate 1080×1920 composition and keep text away from the UI areas (buttons, captions) at the top and bottom.
+[1453] For teaching, hand out this book’s GitHub sources as they are; having students reproduce the same result first and then vary it works well.
+[1454] Switch AE to English, install the Higgsfield plugin, and build a bridge between Claude and AE. You only need to do this once.
+[1455] Connecting — English UI, Plugin, Bridge <span class="lv">●○○</span>
+[1456] Today’s Mission
+[1457] Success means Higgsfield appears under AE’s Window → Extensions menu and Claude creates a composition in AE.
+[1458] 17-1 Connection Map
+[1459] Instructions in conversation
+[1460] Higgsfield cloud
+[1461] Video, image and voice generation
+[1462] Panel inside AE
+[1463] Path ① with panel buttons
+[1464] Generate directly
+[1465] (uses credits)
+[1466] Claude instructs generation (uses credits)
+[1467] Path ② Claude controls AE (no credits)
+[1468] Path ③ built-in AI
+[1469] <b>Figure 17-1</b>Connection map. Claude instructs generation through the Higgsfield MCP and controls AE through the bridge. Panel buttons and AI Assistant are used directly inside AE.
+[1470] Claude has two ways into AE. The <b>Higgsfield MCP</b> (<span class="k">mcp.higgsfield.ai/mcp</span>) is the way to <b>make</b> images and video, and the <b>Higgsfield bridge</b> (<span class="k">bridge.higgsfield.ai/mcp</span>) is the way to <b>move</b> layers and keyframes in the open AE. You need to connect both.
+[1471] 17-2 Switching AE to English (Without Reinstalling)
+[1472] Higgsfield’s guides and most online tutorials use English menus, so the English UI is easier to follow. You don’t need to reinstall.
+[1473] Quit AE.
+[1474] In your <b>Documents</b> folder, create an empty text file and rename it <span class="k">ae_force_english.txt</span>. On a PC using OneDrive, put another copy in <b>OneDrive → Documents</b>.
+[1475] Start AE and the menus are in English. After a forced quit, a <b>Crash Repair Options</b> window appears; just click <b>Continue</b>.
+[1476] <b>To undo</b>Delete the file and the original language returns. If file extensions are hidden, the name becomes <span class="k">.txt.txt</span> and won’t work, so turn on File name extensions in the Explorer View menu and check.
+[1477] <b>What we found</b>Changing the default install language in Creative Cloud requires uninstalling and reinstalling the app. This file method takes a minute.
+[1478] 17-3 Installing the Higgsfield Plugin
+[1479] Operating system
+[1480] Steps
+[1481] ① Download the installer from higgsfield.ai/plugins/after-effects (this book: <span class="k">higgsfield-cep-1.0.64</span>). ② Run it <b>with both AE and Premiere closed</b>. The installer finds AE and Premiere and installs into both.
+[1482] Open the .dmg, drag Higgsfield into the Applications folder and run it.
+[1483] Start AE and choose <b>Window → Extensions → Higgsfield</b>. Before installation the Extensions menu is grayed out; afterwards Higgsfield appears to the right.
+[1484] <b>Figure 17-2</b> Hover over ① Window ② Extensions and ③ Higgsfield appears.
+[1485] <b>Figure 17-3</b> The first time you open it, a log-in screen appears. Click <b>Continue in Browser</b> and log in with your Higgsfield account. <i>(Your turn: log in)</i>
+[1486] 17-4 A Tour of the Panel
+[1487] <b>Figure 17-4</b> The first screen after logging in. The <b>MCP</b> badge at the top right means it can connect to Claude.
+[1488] <b>Figure 17-5</b> Five frequently used tools plus Bridge MCP and Video generation (Seedance 2.5).
+[1489] <b>Figure 17-6</b> Scene, Audio and Create tools. Plugins at the bottom shows apps you made with Supercomputer.
+[1490] Group
+[1491] Tools (as seen in v1.0.64)
+[1492] In this book
+[1493] Frequently used
+[1494] Ch. 18
+[1495] New features
+[1496] Ch. 17, 18, 21
+[1497] Ch. 19
+[1498] Ch. 20
+[1499] Ch. 24
+[1500] 17-5 Connecting the Claude Bridge
+[1501] In the left menu of claude.ai (or the desktop app), choose <b>Customize → Connectors → + Add → Add custom connector</b>.
+[1502] Enter the name <span class="k">Higgsfield Bridge</span> and the address <span class="k">https://bridge.higgsfield.ai/mcp</span>, then click <b>Add → Continue</b>.
+[1503] Click <b>Allow</b> in the Higgsfield log-in window. <i>(Your turn)</i>
+[1504] With AE and the Higgsfield panel open, start a new conversation in Claude. Ask “Is AE connected?” and Claude confirms <b>After Effects: connected</b>.
+[1505] <b>If the menu names differ</b>Claude’s layout changes often. If you can’t see the menus above, look for “Connectors” in settings or search “custom connector” on support.claude.com. The number of connectors you can add may depend on your plan.
+[1506] <b>What we found</b>A newly added connector is picked up right away in a new conversation. In a conversation that was already open, it attached automatically a little later.
+[1507] <b>If it worked</b>When you ask Claude to “list the compositions”, the names of AE’s compositions come back as the answer.
+[1508] <b>If you are stuck</b>If it won’t connect, click Connect again in AE’s Higgsfield panel, and switch your keyboard to English input before trying again.
+[1509] With one panel inside AE you remove, extend and change video. It takes only a few clicks, but it costs credits, so practise at low resolution.
+[1510] Panel ① Edit — Background Removal · Reframe · Tattoo Removal <span class="lv">●○○</span>
+[1511] With one 5-second video of a walking person, ① remove the background, ② turn it into a vertical Short, and ③ remove a tattoo from the arm.
+[1512] 18-1 Making Cheap Practice Videos
+[1513] Using high-quality video for every exercise eats credits fast. Make practice clips with the cheapest model at the lowest resolution. For this book we asked Claude to make one as below, and it cost <b>2.5 credits</b>.

@@ -1,0 +1,258 @@
+[1743] Make a 15-second version and a 6-second bumper ad from the same plan. What you had to cut is the heart of the plan.
+[1744] Credits · Copyright · Review (Real Records) <span class="lv">●○○</span>
+[1745] We wrote down the credits and time the exercises in this book actually took. Then we list the copyright and review items to check before releasing AI-made video.
+[1746] 25-1 The Actual Cost of This Book’s Exercises
+[1747] Settings
+[1748] Credits
+[1749] Generating a practice video
+[1750] Seedance 2.0 mini · 480p · 5 s
+[1751] About 1 min
+[1752] woman · 5 s
+[1753] About 5
+[1754] 9:16 · 5 s
+[1755] About 4 min
+[1756] Tattoo removal · 480p · 5 s
+[1757] About 18
+[1758] About 8 min
+[1759] Claude title and edits
+[1760] Bridge work
+[1761] Tens of seconds
+[1762] Rain · 5 s (shown 68)
+[1763] About 5 min
+[1764] Night · 5 s (shown 68)
+[1765] Talking video
+[1766] Seedance 2.0 mini / 2.5 · 480p · 10 s
+[1767] About 2 min
+[1768] Processed on device
+[1769] A few seconds
+[1770] English · 10 s
+[1771] Grady · 10 s
+[1772] 1k · 5 s (shown 3)
+[1773] Storyboard images
+[1774] 21 Z Image + 21 Nano Banana 2
+[1775] AI Assistant · logo reveal
+[1776] Work inside AE
+[1777] Practice footage for fundamentals and compositing
+[1778] 8 × Seedance 2.0 mini 720p 5 s + 3 images
+[1779] About 45
+[1780] About 3 min
+[1781] Images for figures
+[1782] 19 GPT Image (lighting, jobs, studio examples)
+[1783] About 14
+[1784] <b>Total</b>
+[1785] <b>About 238</b>
+[1786] On the Ultra plan, 1,510.04 → 1,272.15 credits (23 Nov 2026). Scene tools deducted less than shown and Upscale more than shown, so always check your balance. Costs may vary by plan and over time.
+[1787] 25-2 How to Save
+[1788] Practise with the cheapest model, 480p and 5 seconds. Ask Claude “show me an estimate with the cheapest option first” and it compares costs by model before generating.
+[1789] The number on the panel’s Generate button can increase with the number of frames.
+[1790] Models on your plan’s unlimited list use no credits in the plugin either.
+[1791] 25-3 Copyright and Review
+[1792] Did you check what Reframe and Draw to Edit painted in (clothes, background, skin)?
+[1793] Are there no frames with broken hands, faces, text or logos?
+[1794] Did you avoid generating real people, trademarks or characters?
+[1795] Did you get consent for voice changes and translations?
+[1796] Did you record the models, prompts, credits and dates you used?
+[1797] Did you tell the client which parts are AI-generated?
+[1798] <b>If it worked</b>The credits, models and prompts used for this job are organized in one table.
+[1799] <b>If you are stuck</b>If a generation is refused, remove words that point to trademarks, real people or logos, replace them with general nouns and request again.
+[1800] What’s Next — Directions, Learning, Challenges <span class="lv">●○○</span>
+[1801] AI tools change every few months. Buttons move, but the ability to judge “what to hand over and what to do yourself” stays. This chapter looks ahead one or two years and introduces ways to prove your skills and get your work out.
+[1802] 26-1 How Things Will Change
+[1803] Trend
+[1804] Now (late 2026)
+[1805] Next stage (outlook)
+[1806] AI inside AE
+[1807] AI Assistant beta: tidying projects, writing and fixing expressions, checking
+[1808] Full release, always-on agents that take on repetitive work automatically
+[1809] Connecting outside AI
+[1810] Connected through plugins such as the Higgsfield bridge
+[1811] Adobe local MCP (private beta 2027) lets Claude and ChatGPT edit original files directly
+[1812] Generation quality
+[1813] Practise at 480p, deliver at 720p–1080p, 4K by upscaling
+[1814] Native 4K, longer lengths, better consistency of people and props
+[1815] The human role
+[1816] Lots of button pushing and keyframe touch-ups
+[1817] Planning, directing, review and copyright judgment — the “director” share grows
+[1818] An outlook based on Adobe MAX 2026 announcements and Higgsfield notices. Release dates and features may change.
+[1819] <b>So what should you practise?</b>① Writing good instructions (what, at which second, with what feel) ② an eye that doubts and fixes AI results ③ AE fundamentals (layers, keyframes, expressions). The third is what lets you finish AI-made files by hand.
+[1820] 26-2 Higgsfield Academy and Certificates
+[1821] Higgsfield Academy (higgsfield.ai/academy) is a collection of video courses inside Higgsfield. Lessons are free to watch; submitting the assignment at the end of each lesson unlocks the next, and finishing a course earns a <b>Certificate of Completion</b>. Assignments need a paid subscription and credits.
+[1822] Example course
+[1823] Content
+[1824] Beginner. An introduction and 7 lessons, about 1 h 42 min. Making your first video, product photos and video ads. Certificate
+[1825] Camera moves and shot design
+[1826] The flow of AI filmmaking from planning to editing
+[1827] Building an ad portfolio and client pipeline with Claude and Higgsfield
+[1828] The process of making 4K results
+[1829] <b>Using it in class</b>Assign the beginner course at the start of the semester and have students submit the certificate, and everyone starts from the same line. Outside sites (Udemy, etc.) also have Higgsfield courses and their own tests, but those differ from the official Higgsfield certificate.
+[1830] 26-3 Adobe Certification
+[1831] Adobe runs the <b>Adobe Certified Professional</b> credential. Pass an app exam (for After Effects, Visual Effects &amp; Motion Graphics) and you receive a digital badge. You can take it at authorized test centers or through your school, so ask your department office or an Adobe education partner. It doesn’t test AI features directly, but it is a good way to prove the fundamentals needed to fix AI-made results by hand.
+[1832] 26-4 Higgsfield Film Festivals and Contests
+[1833] Contest
+[1834] Scale
+[1835] Conditions and schedule
+[1836] Total prize $1,000,000 · 14 winners
+[1837] Opened August 2026, winners announced in early November. Shorts of 3 minutes or more, teams of 1–4. About 5,000 final entries
+[1838] Total prize $1,000,000 · 20 winners
+[1839] Original films of 3–7 minutes. Production period 12–26 Nov 2026, results due 3 December
+[1840] Prize $500,000
+[1841] 8,752 entries from 139 countries
+[1842] <b>Common rules</b>: AI video and images must be made inside Higgsfield and kept in the contest project. Editing can be done in outside programs such as AE or Premiere.
+[1843] <b>Rights</b>: copyright stays with the creator, but Higgsfield gets broad rights to use entries for promotion. Be sure to read the Official Rules before entering.
+[1844] <b>Local contests</b>: AI video categories are growing at local governments, broadcasters and film festivals. Check the entry guidelines for “AI use disclosure” and “generation tool restrictions” first.
+[1845] Sources: higgsfield.ai/community/contests, the official Higgsfield blog (Talent Contest, Academy), Advanced Television (Mar 2026). Checked November 2026.
+[1846] 26-5 What to Do After This Book
+[1847] Finish the café storyboard from Chapter 24 as a real video and add it to your portfolio
+[1848] Earn the Higgsfield Academy beginner certificate
+[1849] Plan a 3-minute short and enter the next contest
+[1850] When Adobe local MCP comes out, redo the same exercises and record the differences
+[1851] Appendix
+[1852] A. Shortcut Summary (Windows · on Mac, Ctrl → Cmd, Alt → Option)
+[1853] Project · composition
+[1854] Making layers
+[1855] Import file
+[1856] Solid
+[1857] New composition
+[1858] Adjustment layer
+[1859] Composition settings
+[1860] Null
+[1861] New project
+[1862] Text
+[1863] Precompose
+[1864] Camera
+[1865] Increment and save
+[1866] Light
+[1867] Revealing properties
+[1868] Anchor point, position, scale, rotation, opacity
+[1869] Hand (pan the view)
+[1870] Shift+P, etc.
+[1871] Several properties together
+[1872] Zoom
+[1873] Keyed / changed properties
+[1874] Rotation
+[1875] Effects / expressions
+[1876] Move anchor point
+[1877] Mask path / all
+[1878] Rectangle and ellipse tools
+[1879] Audio / waveform
+[1880] Pen
+[1881] Mask feather
+[1882] Type
+[1883] Camera tools
+[1884] Puppet pin
+[1885] Cube (3D mesh)
+[1886] Moving in time
+[1887] Editing layers
+[1888] Start / end
+[1889] Duplicate
+[1890] One frame
+[1891] Split
+[1892] Ten frames
+[1893] Move in/out point to current time
+[1894] Previous / next keyframe
+[1895] Trim in/out point
+[1896] Layer in / out point
+[1897] Move up / down one
+[1898] Type a time
+[1899] Time-reverse
+[1900] Work area start / end
+[1901] Keyframes · animation
+[1902] View · preview · output
+[1903] Alt+Shift+P, etc.
+[1904] Add a key at the current time
+[1905] Space / 0 (numeric keypad)
+[1906] Preview
+[1907] Fit to view
+[1908] Zoom in / out
+[1909] Hold key
+[1910] Maximize panel
+[1911] Interpolation settings
+[1912] Grid
+[1913] Graph Editor
+[1914] Safe areas
+[1915] Alt+drag (group of keys)
+[1916] Stretch or squeeze key spacing
+[1917] Render Queue
+[1918] Alt+click (stopwatch)
+[1919] Expression
+[1920] Save frame
+[1921] <b>Check your input language</b>Single-key shortcuts (U, P, S…) only work with the keyboard in English input mode. Check your input language first.
+[1922] B. 30 Frequently Used Effects
+[1923] Effects and uses
+[1924] Blur · sharpen
+[1925] Gaussian Blur (overall blur), Camera Lens Blur (lens blur), Directional Blur (sense of speed), CC Radial Blur (zoom effect), Unsharp Mask (sharpen)
+[1926] Light
+[1927] Glow, Lens Flare, CC Light Rays (beams), CC Light Sweep (a sweep of light)
+[1928] Color
+[1929] Lumetri Color, Curves, Tint, Fill (solid fill), Gradient Ramp (gradient)
+[1930] Distortion
+[1931] Turbulent Displace (rippling), Wave Warp (waves), Mesh Warp, CC Bend It, Displacement Map (refraction)
+[1932] Generate
+[1933] Fractal Noise (smoke, clouds, texture), Grid, Stroke (line along a mask), CC Particle World (particles), Audio Spectrum (music bars)
+[1934] Stylize
+[1935] Drop Shadow, Bevel Alpha, Find Edges, Posterize Time (choppy motion), Echo (trails)
+[1936] Keying · matte
+[1937] Time · stabilize
+[1938] Warp Stabilizer (shake correction), Time Remap (speed control; right-click layer → Time)
+[1939] C. The Plugin Ecosystem
+[1940] Plugin
+[1941] Boris FX Mocha AE (bundled)
+[1942] Planar tracking, screen replacement, precise roto
+[1943] Cinema 4D Lite · Cineware (bundled)
+[1944] 3D scene integration
+[1945] Maxon Red Giant (Trapcode Particular, etc.)
+[1946] Particles, 3D strokes, music reactivity (paid)
+[1947] 3D models, beams and neon (Saber is free)
+[1948] Character rigging (free script)
+[1949] Lottie (JSON) export for the web
+[1950] Higgsfield plugin
+[1951] AI generation and editing panel and Claude bridge (Ch. 17–22 of this book)
+[1952] D. Glossary
+[1953] Term
+[1954] Composition (Comp)
+[1955] The canvas where layers are stacked. A whole video or one of its parts
+[1956] Keyframe
+[1957] A point recording a value at a specific time. AE fills in between two keys (interpolation)
+[1958] Interpolation
+[1959] How values change between keys. Linear, Bezier, Hold
+[1960] Alpha channel
+[1961] Transparency information. Needed for files with transparent backgrounds
+[1962] Matte
+[1963] Black-and-white information deciding what to show and hide
+[1964] Spill
+[1965] Green-screen color bleeding onto the subject
+[1966] Rotoscoping
+[1967] Tracing the subject’s outline frame by frame
+[1968] Tracking
+[1969] Following the movement of points, planes or the camera in footage
+[1970] Grouping layers into a new composition
+[1971] JavaScript rules attached to properties
+[1972] Motion graphics templates editable in Premiere
+[1973] A common standard that lets AI use features of outside programs
+[1974] Higgsfield’s unit of generation cost
+[1975] Frame rate (fps)
+[1976] Number of pictures shown per second
+[1977] A conversion table that changes colors at once (a look)
+[1978] E. The GitHub Repository
+[1979] The practice materials for this book are organized in a GitHub repository. The address is on the back cover. Download the sources to reproduce the same results, then change the prompts to make your own.
+[1980] Folder
+[1981] List of practice videos and images (manifest.csv), generation models, settings, credits and prompts
+[1982] Original Claude and Higgsfield prompts by chapter
+[1983] All expressions from Chapter 7 (.js files with comments)
+[1984] The practice AE project (.aep) and a guide to compositions by chapter
+[1985] Original screen captures before annotation
+[1986] The book’s PDF and HTML manuscript, figures (img/) and typesetting scripts (build/)
+[1987] Python code that made the diagrams (SVG)
+[1988] The actual work log (order of work, errors, credits)
+[1989] <b>Composition names</b>In the repository’s project file, composition names start with the book’s chapter and section numbers, so sorting by name in the Project panel shows them in book order (01_처음움직임, 05-1_글로우·잔상 … 24-2_스토리보드_v2; the names are in Korean). Some tabs in the captures show earlier working names (E_샘플_…, C7–C11, etc.), but they are the same compositions.
+[1990] <b>Using the sources</b>The practice sources were generated by the author on a paid Higgsfield plan and are released for free use in education and non-profit practice. For commercial use, check the terms of each generation model. The prompts were written so as not to imitate real people.
+[1991] F. Work Log of the Exercises (22–23 Nov 2026)
+[1992] Connect the PC with the Claude desktop app, turn on computer use, allow access to Adobe apps
+[1993] Install After Effects 2027 from Creative Cloud (used alongside 2024)
+[1994] ae_force_english.txt in Documents → AE switches to English → Continue in Crash Repair
+[1995] Install the Higgsfield plugin 1.0.64 → Window → Extensions → Higgsfield → log in
+[1996] Claude’s Customize → Connectors → add custom connector: Higgsfield Bridge → allow
+[1997] Claude: create the opening title composition → duplicate _v2 → bounce keys and float expression → move the Offset key by hand
+[1998] Claude: generate a practice video (2.5 credits) → import into the "18_패널_걷는인물" composition
+[1999] Panel: Remove BG (about 5) → Reframe 9:16 (18) → Draw to Edit tattoo removal (about 18)
+[2000] Panel: weather, time of day, translation, voice and upscale exercises; AI Assistant project check

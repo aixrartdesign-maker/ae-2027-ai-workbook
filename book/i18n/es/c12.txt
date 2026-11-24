@@ -1,0 +1,106 @@
+[1514] Modelo
+[1515] Resolución
+[1516] Duración
+[1517] Coste (estimación medida)
+[1518] 5 s
+[1519] <span class="lbl">PROMPT · Para Claude</span>Haz un vídeo de práctica con Seedance 2.0 mini, 480p, 5 segundos, 16:9: una mujer con camiseta blanca de manga corta y un pequeño tatuaje de flor en el brazo camina despacio hacia la cámara junto a una pared de ladrillo. Después crea en AE una composición "18_패널_걷는인물" y mete este vídeo en ella.
+[1520] Con el puente, Claude creó una composición de 1920×1080 y 5 segundos y encajó el vídeo en el cuadro. El tatuaje se puso a propósito para la práctica 18-4.
+[1521] 18-2 Remove BG — quitar el fondo
+[1522] <b>Cuándo usarlo</b>Para componer a una persona sobre otro fondo, poner rótulos detrás de ella o sacar un recorte para una miniatura. Lo que antes era rotoscopia fotograma a fotograma llega en un minuto como un mate en blanco y negro.
+[1523] Selecciona la capa de vídeo en la línea de tiempo.
+[1524] Pulsa <b>Enhance → Remove BG</b> en el panel y la capa seleccionada se carga sola.
+[1525] Escribe en inglés en la casilla de abajo lo que quieres conservar. Ejemplo: <span class="k">woman</span>
+[1526] Pulsa <b>Generate</b>. AE guarda automáticamente → renderiza el tramo → sube → procesa; un vídeo de 5 s tardó un minuto.
+[1527] <b>Figura 18-1</b> ① Seleccionar capa ② vista previa ③ qué conservar ④ Generate
+[1528] <b>Figura 18-2</b> El resultado es un mate en blanco y negro. El blanco se conserva; el negro es el fondo que se borra. Descárgalo con ↓ arriba a la izquierda. Coste real: <b>unos 5 créditos</b>.
+[1529] <b>Si la casilla no responde</b>Las casillas del panel <b>no respondían a un clic: hacía falta doble clic</b> para escribir. Si escribes justo tras el primer clic, las teclas pueden ir a AE como atajos; ten cuidado.
+[1530] <b>Límites de la baja resolución</b>Con un original de 480p, los contornos salen ásperos y escalonados. Practica a 480p y entrega con originales de 720p o más. El coste que aparece como «1» sube con el número de fotogramas.
+[1531] 18-3 Reframe — de horizontal a Short vertical
+[1532] <b>Cuándo usarlo</b>Cuando hay que pasar vídeo 16:9 a Shorts/Reels (9:16) o al feed (4:5). Un recorte simple corta a las personas, pero Reframe pinta lo que falta arriba y abajo. Revisa siempre lo que se ha inventado la IA.
+[1533] Pulsa <b>Reframe</b> en el panel y elige la proporción <b>9:16</b>.
+[1534] Pulsa <b>Generate</b> (<b>18 créditos</b> en este libro). Espera y generación: unos 4 minutos.
+[1535] <b>Figura 18-3</b> ① Vista previa vertical: arriba y abajo vacíos ② 9:16 ③ Generate
+[1536] <b>Figura 18-4</b> En lugar de recortar, la IA pintó lo que faltaba: ① cielo y árboles arriba ② unos vaqueros que no estaban en el original.
+[1537] <b>Para clase</b>Reframe no es «recortar», sino «ampliar pintando». Aparecen ropa y fondo que no estaban en el original: un buen ejemplo de por qué hay que revisar lo que inventa la IA antes de usarlo.
+[1538] 18-4 Draw to Edit — borrar un tatuaje
+[1539] <b>Cuándo usarlo</b>Para borrar tatuajes, logos o imperfecciones de un modelo publicitario o cambiar un solo objeto. Solo corrige la zona marcada, no todo el cuadro, así que conserva el resto del original al máximo.
+[1540] Abre <b>Draw to Edit</b> en el panel.
+[1541] Reduce el pincel moviendo el deslizador a la izquierda y marca el tatuaje con una <b>X</b>.
+[1542] Escribe la instrucción en la casilla (doble clic) y envíala con ↑. Coste: <b>18 créditos</b>, unos 8 minutos.
+[1543] <b>Figura 18-5</b> ① Marca sobre el tatuaje ② tamaño del pincel ③ instrucción
+[1544] <b>Figura 18-6</b> Antes (círculo rojo: tatuaje) y después. El tatuaje de flor desaparece y solo queda piel.
+[1545] <b>Figura 18-7</b> Pantalla del resultado. Bajo el resultado quedan anotados la instrucción, el método (Draw To Video), la resolución y la duración.
+[1546] 18-5 Upscale — subir la calidad
+[1547] <b>Cuándo usarlo</b>Al ampliar para la entrega tras cerrar una prueba a 480p, o al usar material antiguo de baja calidad. «Practicar barato y escalar solo los planos elegidos» es el orden básico para ahorrar créditos.
+[1548] Abre la composición, selecciona la capa de vídeo y abre <b>Upscale</b> en la fila superior del panel.
+[1549] Elige <b>1k</b> o <b>4K</b>. El número del botón primero sale como «--» y a los pocos segundos aparece el precio.
+[1550] <b>Figura 18-8</b> Vídeo de práctica a 480p · 1k elegido · el botón marcaba <b>3 créditos</b>, pero se descontaron unos <b>19 créditos</b>. Tardó 1 minuto 40 segundos.
+[1551] <b>Figura 18-9</b> Resultado. Las juntas de los ladrillos y los mechones del pelo son más nítidos, pero no aparecen detalles que no estuvieran en el original.
+[1552] <b>Edit video</b>Herramienta que modifica un vídeo existente según lo que describas. Sirve para arreglar la escena de lluvia del capítulo 19, en la que la persona no se moja (p. ej., her hair and t-shirt are wet from rain).
+[1553] Cómo funciona
+[1554] Medido en el libro
+[1555] Crea un mate en blanco y negro que solo deja a la persona
+[1556] Unos 5 créditos · 1 min
+[1557] Pinta las zonas vacías al cambiar la proporción
+[1558] 18 créditos · 4 min
+[1559] Cambia solo la zona marcada según la instrucción
+[1560] Unos 18 créditos · 8 min
+[1561] Sube la resolución a 1k o 4K
+[1562] Indicado 3 / real unos 19 · 2 min
+[1563] Mientras las tres herramientas procesan, puedes seguir usando AE. En clase, enseña también a «lanzar la generación y pasar a la siguiente tarea».
+[1564] <b>Si funcionó</b>El clip resultante entra en el panel Project como metraje nuevo y el original queda intacto.
+[1565] <b>Si te atascas</b>Si sale un mensaje de créditos insuficientes, baja la resolución a 720p o acorta a 5 segundos y vuelve a pedirlo.
+[1566] Panel ② Escena — clima · hora del día · luz · acción <span class="lv">●○○</span>
+[1567] Con el mismo vídeo del capítulo 18 de una persona caminando, hacemos «tarde soleada → día de lluvia → noche».
+[1568] <b>Las herramientas de escena van arrastrando</b>Weather, Time of Day y Lighting no cargan solas la capa seleccionada. Hay que <b>arrastrar</b> el vídeo del panel Project a la casilla vacía de la herramienta.
+[1569] 19-1 Change Weather — que llueva
+[1570] <b>Cuándo usarlo</b>Cuando el día del rodaje no hizo el tiempo que querías, o para hacer versiones de estación y clima del mismo lugar. Ahorra el coste y las fechas de volver a rodar.
+[1571] <b>Figura 19-1</b> Ajustes de Change Weather. El botón marcaba 68 créditos, pero se descontaron <b>22,5 créditos</b>.
+[1572] <b>Figura 19-2</b> Soleado → lluvia. El suelo se mojó y el cielo se nubló, pero la ropa y el pelo de la persona siguieron secos.
+[1573] <b>Límites y soluciones</b>El resultado vuelve en 1:1, 720p (Seedance 2.0). Para que también se moje la persona, dale una instrucción aparte en Edit video como «her hair and t-shirt are wet from rain», o pon delante partículas de lluvia (CC Rainfall) en AE.
+[1574] 19-2 Change Time of Day — pasar a noche
+[1575] <b>Cuándo usarlo</b>Cuando una escena rodada de día debe montarse con escenas de tarde o de noche. Como en el plano 4 del vídeo de la cafetería del capítulo 24, puedes mostrar el paso del día en un mismo lugar.
+[1576] <b>Figura 19-3</b> Ajustes de Time of Day. También marcaba 68, real <b>22,5 créditos</b>.
+[1577] <b>Figura 19-4</b> Día → noche, antes y después
+[1578] 19-3 Change Lighting — cambiar solo la luz (pantalla de ajustes)
+[1579] <b>Cuándo usarlo</b>Para corregir un contraluz o sombras en la cara, o igualar la dirección de la luz entre planos. Cambia solo la luz y mantiene el clima y la hora.
+[1580] <b>Figura 19-5</b> Ajustes de Lighting. La dirección y el ambiente de la luz se describen con palabras.
+[1581] 19-4 Motion Control — trasladar un movimiento (pantalla de ajustes)
+[1582] <b>Cuándo usarlo</b>Para aplicar un baile o un gesto tal cual a otra persona. Solo hacen falta un vídeo de referencia del movimiento y una imagen de la persona. No uses fotos de personas reales sin su consentimiento.
+[1583] <b>Figura 19-6</b> Rellena las dos casillas, Motion (movimiento de referencia) y Character (imagen de la persona), y pulsa Generate.
+[1584] <b>Consejo de orden</b>No cambies el clima y la hora a la vez; si cambias una cosa cada vez, los alumnos distinguen mejor qué herramienta cambió qué.
+[1585] <b>Si funcionó</b>Tienes una versión de día y otra de noche de la misma escena y puedes compararlas con el original lado a lado.
+[1586] <b>Si te atascas</b>Si cambia la cara de la persona, añade «keep the person unchanged» a la instrucción y baja la intensidad.
+[1587] Haz con un clip tres versiones —lluvia, nieve y atardecer— y anota en una tabla cuál queda más natural y cuántos créditos costó cada una.
+[1588] Panel ③ Audio — silencios · traducción · voz <span class="lv">●○○</span>
+[1589] En un vídeo de 10 segundos de una persona que habla, ① encontramos los silencios, ② lo traducimos y ③ cambiamos la voz.
+[1590] 20-1 Hacer un vídeo de práctica con voz
+[1591] Con Seedance 2.0 mini (5 créditos) la mirada y la voz quedaban forzadas, así que lo rehicimos con Seedance 2.5, 480p, 10 segundos con audio (30 créditos). Pusimos a propósito una pausa de 2 segundos en medio.
+[1592] <b>Figura 20-1</b> Inicio del panel → pestaña <b>Audio</b>. Remove Silences · Translate · Change Voice
+[1593] 20-2 Remove Silences — cortar los silencios (gratis)
+[1594] <b>Cuándo usarlo</b>Primer montaje de entrevistas y clases. Encuentra las pausas tipo «eh…», así que un original de 30 minutos se ordena en minutos. Funciona en tu equipo y no gasta créditos.
+[1595] Abre la composición, selecciona la capa de vídeo en la línea de tiempo (Ctrl+A) y abre la herramienta. Si hay otra composición abierta, entra la capa equivocada.
+[1596] Elige Tightness (holgado ↔ ajustado) y pulsa <b>Remove Silences</b>.
+[1597] <b>Figura 20-2</b> «4 silencios, se quitarán 3 s». Pulsa Cut y el clip de la línea de tiempo se corta en el sitio.
+[1598] <b>Figura 20-3</b> En el entorno de este libro (AE 2027 + plugin v1.0.64), Cut dio el error «Function ranges.filter is undefined».
+[1599] <b>Cortar a mano si hay error</b>Guiándote por la detección, corta al principio y al final de cada silencio con <b>Ctrl+Shift+D</b> (dividir capa), borra el trozo del medio y adelanta el siguiente. Vuelve a probar tras actualizar el plugin.
+[1600] 20-3 Translate — traducir a otro idioma
+[1601] <b>Cuándo usarlo</b>Versiones para promoción en el extranjero y vídeos de clase para estudiantes internacionales. Cambia no solo los subtítulos, sino también la voz. Pide permiso a quien habla e indica que es una voz de IA.
+[1602] <b>Figura 20-4</b> Target language: English. Un clip de 10 segundos: <b>30 créditos</b>, 1 minuto 40 segundos.
+[1603] <b>Figura 20-5</b> El resultado aparece en la pantalla de generación del panel. Descárgalo con ↓ arriba a la izquierda y ponlo en la composición.
+[1604] 20-4 Change Voice — cambiar la voz
+[1605] <b>Cuándo usarlo</b>Para escuchar una locución de prueba con varias voces o sustituir una voz mal grabada.
+[1606] <b>Figura 20-6</b> Elige una voz de la lista Voice (por defecto, Grady). <b>2 créditos</b>, un minuto.
+[1607] <b>Voz e imagen</b>Al cambiar a la voz de otra persona o traducir, pide su consentimiento. Indica en el resultado que es una voz de IA.
+[1608] <b>Si funcionó</b>El sonido creado entra en la línea de tiempo como capa de audio y coincide en duración con el vídeo.
+[1609] <b>Si te atascas</b>Si la voz se corta, reduce primero el ruido del audio original (p. ej., Adobe Enhance Speech), divide el texto en frases cortas y vuelve a pedirlo.
+[1610] Claude y la IA integrada de AE
+[1611] Lo describes con palabras y Claude, con el puente, crea dentro de AE composiciones, capas, fotogramas clave y expresiones. El resultado es un archivo de AE que siempre puedes corregir a mano.
+[1612] Claude ① crear y corregir títulos <span class="lv">●●○</span>
+[1613] Pedimos a Claude un título de apertura de 10 segundos y luego lo corregimos una vez conversando y otra a mano.
+[1614] 21-1 Crear un título de apertura
+[1615] <b>Por qué dárselo a Claude</b>El trabajo repetitivo de poner decenas de claves se resuelve con una frase. El resultado son capas y claves normales, así que, si no te gusta, una persona puede corregirlo directamente. Tampoco gasta créditos.
+[1616] <span class="lbl">PROMPT · Para Claude</span>/use-after-effects<br/> Crea en el AE abierto una composición de 1920×1080, 10 segundos, 30 fps.<br/> · 0–3 s: sobre fondo negro aparece el texto "Claude × Higgsfield × Adobe", creciendo un poco<br/> · 3–7 s: debajo, el texto "Manual práctico" sube letra a letra<br/> · 7–10 s: los dos salen hacia arriba y se desvanecen<br/> Colores morado (#9B5CFF) y blanco. Pon nombres claros a las capas y deja las claves editables.
+[1617] <b>Figura 21-1</b> El resultado de Claude. ① Composición «Claude × Higgsfield × Adobe Intro» ② capas con nombre (fondo, título, subtítulo; en coreano en la captura) ③ selector de rango y claves de posición y opacidad. No gasta créditos.
+[1618] 21-2 Corregir — conversando y luego a mano
+[1619] Para proteger el original, duplica primero la composición (<b>_v2 edición</b>) y haz los cambios en la copia.

@@ -1,0 +1,128 @@
+[584] <b>Los brazos, al contrario que las piernas.</b> Cuando la pierna delantera avanza, el brazo delantero va atrás. Brazo −20 → 0 → 22 → 0 → −20 (0, 8, 15, 23, 30f). Si el antebrazo sigue 2 fotogramas después y la mano 3 (solapamiento), el brazo no parece un palo.
+[585] <b>Ajustar la altura del cuerpo.</b> Cambia Position Y de Master_Control en cada pose para que <b>el pie apoyado quede justo sobre la línea del suelo</b>. Si el pie atraviesa el suelo, baja Y; si flota, súbela. Los valores Y de la tabla son para Master_Control a Scale 85 % y la línea del suelo en 980 px. Inclina un poco el torso hacia delante (−4°) y levanta la cabeza 3° al revés para que la mirada vaya al frente.
+[586] <b>Bucle y desplazamiento.</b> Añade <span class="mono">loopOut("cycle")</span> a todas las propiedades con claves. Para que el andar en el sitio avance, mueve Position X de Master_Control el doble de la zancada por segundo. El valor correcto es el que hace que el pie apoyado parezca quieto en pantalla.
+[587] <span class="lbl">EXPRESSION · Bucle de andar y avance</span>// Toda Rotation y Position con claves: repite 0–1 s sin fin<br/>loopOut("cycle");<br/>// Rotation de la cabeza: un leve asentimiento con cada paso (un paso = 0,5 s)<br/>3 + Math.sin(time*Math.PI*4)*1.5;<br/>// Position de Master_Control: anda hacia la izquierda mientras repite (ajusta el número a la zancada)<br/>loopOut("cycle") + [-time*300, 0];
+[588] <b>Si te atascas</b>Los pies parecen patinar → la velocidad no encaja con la zancada. Cambia 300 poco a poco hasta que el pie apoyado parezca quieto. Da un salto al repetir → los valores de 0f y 30f son distintos. Las piernas parecen cruzadas → la pierna trasera tiene el mismo brillo que la delantera o ha cambiado el orden de capas. Hay un hueco en la rodilla → comprueba que la espinilla está encima del muslo y que el centro de la bola coincide con el anclaje. El paso es rígido → selecciona todas las claves, aplica <span class="k">F9</span> (Easy Ease) y aumenta el solapamiento de antebrazo y mano.
+[589] <b>Cambiar el número de fotogramas</b>A 24 fps, un paso son 12 fotogramas, con las cuatro poses en 0, 3, 6, 9 y 12f. Un paso tranquilo son 18–20 fotogramas; correr, unos 8, con un momento en que los dos pies están en el aire.
+[590] <span class="tag t1">Paso a paso</span> 4-5 Agrupar (Pre-compose)
+[591] Selecciona las capas que quieres agrupar y pulsa <span class="k">Ctrl+Shift+C</span>.
+[592] ① Escribe un nombre, ② elige <b>Move all attributes</b> y ③ OK.
+[593] <b>Figura 4-7</b>Ventana Pre-compose. Al agrupar varias capas solo se puede elegir Move all attributes.
+[594] <span class="tag t3">Un paso más</span> La diferencia entre las dos opciones
+[595] Opción
+[596] Solo una capa. Efectos y transformaciones se quedan fuera
+[597] Lleva dentro también efectos y transformaciones
+[598] Las funciones que necesitan «valores de transformación por defecto», como el 3D Camera Tracker (cap. 10), se resuelven precomponiendo el vídeo con Move all attributes. Es un error que nos encontramos de verdad al escribir este libro.
+[599] <span class="tag t2">¿Por qué?</span> 4-6 Máscaras
+[600] Con una capa seleccionada, si dibujas con el rectángulo, la elipse o la pluma, solo se ve esa forma (máscara). <span class="k">M</span> muestra el trazado de la máscara y <span class="k">MM</span>, todas sus propiedades.
+[601] Suavizar el borde: viñetas, transiciones suaves
+[602] Ensanchar o estrechar la forma
+[603] Sumar y restar varias máscaras
+[604] Claves de Mask Path
+[605] La forma cambia: revelar texto
+[606] <span class="tag t2">¿Por qué?</span> 4-7 Track Matte
+[607] Vídeo (relleno)
+[608] Capa inferior
+[609] Capa mate (texto)
+[610] Resultado Alpha Matte
+[611] <b>Figura 4-8</b>El vídeo de abajo solo se ve dentro de la forma de la capa mate (texto).
+[612] Se ve donde
+[613] Ejemplo
+[614] hay capa mate
+[615] Vídeo dentro de las letras
+[616] no hay capa mate
+[617] Abrir un agujero
+[618] el mate es claro
+[619] Transición de mancha de tinta
+[620] el mate es oscuro
+[621] Solo zonas de sombra
+[622] Desde 2022 (23.0) puedes elegir cualquier capa en la columna Track Matte y no tiene que estar justo encima (vista Modes ② del capítulo 2).
+[623] <span class="tag t2">¿Por qué?</span> 4-8 Modos de fusión
+[624] Modo
+[625] Efecto
+[626] Uso habitual
+[627] Desaparece el negro, aclara
+[628] Destellos de luz, material de fuego
+[629] Desaparece el blanco, oscurece
+[630] Textura de papel, sombras
+[631] Suma brillo, intensifica
+[632] Neón, rayos de luz
+[633] Añade contraste y color
+[634] Texturas, corrección de color
+[635] Un título en el que un vídeo de ciudad solo se ve dentro de la palabra «SEOUL» y la palabra pasa del 120 % al 100 % en 3 segundos (track matte + padre + suavizado).
+[636] Avanzado: pon detrás del texto un destello en modo Screen, precompón todo y oscurece los bordes del cuadro con Mask Feather.
+[637] <b>Si te atascas</b>Si el mate funciona al revés, cambia entre Alpha Matte y Alpha Inverted Matte y comprueba que la capa mate está justo encima. Desde la 26.x puedes elegir la capa mate en el desplegable sin ponerla encima.
+[638] Transmitir información moviendo formas y texto es para lo que más se usa AE. Aprendemos a hacerlo a mano y, a la vez, a pedírselo a la IA.
+[639] Formas y animación gráfica — líneas, efectos, Puppet, partículas <span class="lv">●●○</span>
+[640] Una capa de forma es una forma vectorial dibujada dentro de AE. No se rompe por mucho que la escales y dentro se pueden apilar «piezas que crean movimiento». Después seguimos con resplandor, estelas, pines de Puppet, partículas y reacción al sonido, recursos habituales en animación gráfica.
+[641] 5-1 Estructura de una forma
+[642] Despliega una capa de forma: dentro de <b>Contents</b> hay grupos y cada uno se apila como <b>Path → Stroke → Fill → Transform</b>. Las piezas se añaden con el botón <b>Add</b> de la derecha. Se calculan de arriba abajo, así que el orden cambia el resultado.
+[643] 5-2 Piezas habituales (Path Operations)
+[644] Pieza
+[645] Recorta el inicio y el final de una línea para que «se dibuje»
+[646] Firmas, marcas de verificación, rutas en mapas
+[647] Duplica una forma muchas veces girando y desplazando
+[648] Pétalos, iconos de carga, patrones
+[649] Ensancha y estrecha el contorno
+[650] Iconos que «respiran»
+[651] Redondea las esquinas
+[652] Botones, tarjetas
+[653] Hace temblar el contorno para un aire dibujado a mano
+[654] Estilo garabato
+[655] Zigzag, fruncir y engordar, retorcer
+[656] Fondos abstractos
+[657] Suma y resta formas
+[658] Combinar iconos
+[659] 5-3 Práctica — una marca que se dibuja sola
+[660] Sin nada seleccionado, dibuja con la pluma (<span class="k">G</span>) una línea en V. Fill desactivado, Stroke de 12 px, extremo Round.
+[661] <b>Add → Trim Paths</b>. Claves de End de 0 % en 0 s a 100 % en 0,6 s y <span class="k">F9</span>.
+[662] Pon debajo una forma circular y hazla saltar con Scale 0 → 110 → 100 %: ya tienes un icono de «hecho».
+[663] <span class="lbl">PROMPT · Para Claude</span>Haz un icono de «hecho» de 1,5 segundos: en el centro de un fondo blanco aparece de golpe un círculo gris y encima se dibuja en 0,6 segundos una marca gris oscuro. Grosor 12, extremos redondeados.
+[664] 5-4 Importar archivos de Illustrator
+[665] Importa un archivo de Illustrator (.ai), selecciona la capa y elige <b>Layer → Create → Create Shapes from Vector Layer</b> para convertirla en capa de forma. Sirve para animar un logo trazo a trazo. Para importar un archivo por capas, elige <b>Composition - Retain Layer Sizes</b> al importar.
+[666] Haz tres iconos de carga de 3 segundos usando solo Trim Paths y Repeater.
+[667] Evaluación: ¿se nota la costura del bucle? (usa loopOut).
+[668] <span class="tag t4">Estándar profesional</span> 5-5 Trucos de animación gráfica — estelas, resplandor, trazados
+[669] <b>Figura 5-1</b>A la izquierda, texto con dos capas de Glow (borde Radius 14, halo Radius 60); a la derecha, estela con Echo (12 copias, Decay 0,82) en un círculo en movimiento. Los efectos de luz cobran vida sobre fondo oscuro.
+[670] Dónde aplicarlo y valores de partida
+[671] Truco
+[672] Resplandor
+[673] Dos Glow superpuestos quedan más elegantes. El primero Radius 15 · Intensity 1 (borde), el segundo Radius 120 · Intensity 0,6 (halo amplio). Solo lucen sobre fondo oscuro
+[674] Estela (Echo)
+[675] Effect → Time → Echo<br/>Echo Time −0,03 s, 12 ecos, Decay 0,82
+[676] Echo Time tiene que ser negativo para que la estela quede detrás. En una capa sin movimiento no cambia nada, así que crea primero el movimiento
+[677] Estela con duplicados
+[678] Duplicar capas + <span class="mono">valueAtTime(time−0.07×n)</span>
+[679] El método de la figura 7-2. Cada copia puede tener su color y tamaño: más libertad de diseño que con Echo
+[680] Desenfoque de movimiento
+[681] Interruptor M de la capa + M arriba en la línea de tiempo<br/>Shutter Angle 180°, Samples 16
+[682] El movimiento rápido necesita desenfoque para parecer de cine. Para exagerar, 360°; para animación de interfaz limpia, 90°
+[683] Dibujar líneas
+[684] Forma → Add → Trim Paths<br/>End 0 → 100 %, 0,6 s, Easy Ease
+[685] Pon <span class="mono">time*30</span> en Offset y la línea fluye sin parar. Mueve Start y End juntos con 0,1 s de diferencia para una línea de «luz que pasa»
+[686] Seguir un trazado
+[687] Dibuja una máscara/trazado con la pluma, copia el Path → pégalo en Position del objeto
+[688] Activa Layer → Transform → Auto-Orient → Orient Along Path para que gire en la dirección del movimiento. Para texto, elige el mismo trazado en Text → Path Options
+[689] Luz de trazo
+[690] Effect → Generate → Stroke o Saber (plugin gratuito)
+[691] Un haz de luz sobre el trazado de una máscara. Empieza con Saber Core Size 0,6, Glow Intensity 40 %
+[692] Repetición en serie
+[693] Forma → Add → Repeater<br/>Copies 8, Rotation 45°
+[694] Pon claves en Offset y tendrás un icono de carga que se abre como una flor
+[695] <b>Recuerda tres cosas</b>① Los efectos van después del movimiento. ② Los efectos de luz solo se ven con fondo oscuro. ③ Si usas varios efectos, reúnelos en una capa de ajuste (Adjustment Layer) para encenderlos y apagarlos con facilidad.
+[696] Pon dos capas de Glow en el extremo de una línea dibujada con Trim Paths y aplica Echo a un círculo pequeño que recorra la línea. Renderiza con y sin desenfoque de movimiento y compáralos lado a lado.
+[697] <b>Fuentes en los gráficos</b>Las figuras y muestras de AE de este libro solo usan fuentes sin serifa de uso comercial gratuito (Nanum Gothic, Noto Sans KR · licencia OFL). Las fuentes del sistema requieren revisar su licencia antes de distribuir vídeo, así que también recomendamos Noto Sans para los archivos de práctica.
+[698] <span class="tag t1">Paso a paso</span> 5-6 Pines de Puppet — doblar una imagen como una articulación
+[699] Los pines de Puppet se clavan en una imagen y la zona entre ellos se dobla como goma. Sirven para movimientos suaves sin esqueleto: extremidades de un personaje, hierba que se mece, una flecha que se curva.
+[700] Selecciona la capa que quieres doblar y pulsa <b>Puppet Position Pin Tool</b> a la derecha de la barra de herramientas (<span class="k">Ctrl+P</span>).
+[701] Clava pines donde quieres fijar y donde quieres mover. La muestra del libro tiene tres pines en una barra vertical: arriba, en medio y abajo. Activa <b>Mesh: Show</b> en la barra para ver la malla.
+[702] Con la herramienta Selección (<span class="k">V</span>), arrastra hacia un lado solo el pin de arriba. Los otros dos aguantan y la barra se curva con suavidad. Las posiciones de los pines se registran automáticamente con claves, así que arrastrar en distintos momentos ya es animación.
+[703] <b>Figura 5-2</b>① Herramienta Puppet y opciones de Mesh (Show, Expansion 3, Density 10) ② efecto Puppet creado en Effect Controls ③ tres pines (puntos amarillos) y la malla. A la izquierda el original; a la derecha, el resultado de mover solo el pin de arriba. Composición <span class="mono">05-2_퍼펫핀</span>.
+[704] Ajuste
+[705] Valor en el libro
+[706] Cuánto se extiende la malla fuera de la imagen. Súbelo si los bordes se cortan al doblar
+[707] Número de triángulos de la malla. Más alto dobla más suave, pero va más lento
+[708] El motor por defecto. Menos deformación alrededor de los pines
+[709] Lo suave que gira la malla en la curva. Déjalo por defecto
+[710] <b>Tipos de pin</b>Position (posición), Starch (endurece), Bend (giro y escala en el sitio), Advanced (posición, giro y escala) y Overlap (delante/detrás al solaparse). Al principio bastan los pines Position. Para que se meza con el viento, pon <span class="mono">wiggle(1, 15)</span> en la posición de un pin (7-3).
+[711] <span class="tag t1">Paso a paso</span> 5-7 Partículas — polvo, chispas, humo, rotura

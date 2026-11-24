@@ -1,0 +1,93 @@
+[794] <b>If you are new</b>You can skip this chapter and come back later. The earlier chapters are enough to make videos.
+[795] 7-1 Adding and Removing Expressions
+[796] <b>Alt+click</b> the stopwatch to the left of a property name to open the input box. Paste the code and click outside.
+[797] When the value turns red, the expression is applied. If there is an error, the reason shows in an orange bar below the composition.
+[798] To turn it off, click the = switch; to delete it, Alt+click again. <span class="k">EE</span> reveals only properties with expressions.
+[799] <b>Pick Whip</b>Drag the spiral icon next to the input box to another property and the link code is written for you. Even without knowing code, you can “link this value to that value”.
+[800] Random shaking
+[801] Floating up and down — a steady wave
+[802] Overshoot and settle after stopping
+[803] Repeat from the start
+[804] Back and forth
+[805] Keep adding on
+[806] 0 → 100 over 1–3 s
+[807] Smoothly 0 → 100
+[808] Offset per layer
+[809] <b>Figure 7-1</b>Expressions as graphs: horizontal is time, vertical is value. The shape of motion made by one line of code.
+[810] <b>Figure 7-2</b>The actual AE screen (1 s 18 f). The dark circle is the current position; the pale circles are positions 0.07 s apart. The trail is made with one line: <span class="mono">thisComp.layer("M1").transform.position.valueAtTime(time-0.07)</span>. Composition <span class="mono">07-1_익스프레션_움직임</span> is in the GitHub project file.
+[811] Sample
+[812] Code
+[813] Change the numbers and
+[814] Wiggle
+[815] 2 = twice per second, 120 = up to 120 px. Handheld shake (1,8), glitchy screen (15,40)
+[816] Float
+[817] Raise 3 to go faster, lower 120 for a smaller amplitude. A floating logo: (time*2)*6
+[818] Circular orbit
+[819] 150 = radius. Different radii for cos and sin make an ellipse
+[820] Back and forth
+[821] With keyframes, one line <span class="mono">loopOut("pingpong")</span> does the same
+[822] Damped bounce
+[823] 9 = number of bounces, 3 = how quickly it stops, 260 = first height
+[824] Continuous rotation
+[825] 180° per second. A clock’s second hand is time*6
+[826] 7-2 Basic Vocabulary
+[827] Word
+[828] The property’s own value (keyframe value). The base when combining expressions and keyframes
+[829] Current time (seconds)
+[830] Layer number (1, 2, 3… from the top)
+[831] Current composition / current layer
+[832] thisComp.layer("Name")
+[833] Calling another layer
+[834] Calling an effect value
+[835] Properties with two values, such as position and scale (arrays). x is [0], y is [1]
+[836] 7-3 Shaking — wiggle
+[837] <span class="lbl">EXPRESSION · Basic</span>wiggle(3, 30); // shake 3 times per second within 30 px
+[838] <span class="lbl">EXPRESSION · One Axis Only (Position)</span>w = wiggle(2, 40);<br/>[value[0], w[1]]; // keep x, shake only y
+[839] <span class="lbl">EXPRESSION · Gentle Camera Shake</span>wiggle(0.8, 12, 3, 0.5); // frequency, amount, octaves (detail), multiplier
+[840] <span class="lbl">EXPRESSION · Looping Wiggle (for loops, 5 s cycle)</span>freq = 2; amp = 30; loopTime = 5;<br/>t = time % loopTime;<br/>w1 = wiggle(freq, amp, 1, 0.5, t);<br/>w2 = wiggle(freq, amp, 1, 0.5, t - loopTime);<br/>linear(t, 0, loopTime, w1, w2);
+[841] <span class="lbl">EXPRESSION · Wiggle Controlled by Sliders</span>wiggle(effect("Freq")("Slider"), effect("Amp")("Slider"));
+[842] 7-4 Moving with Time — time
+[843] <span class="lbl">EXPRESSION · Continuous Rotation (Rotation)</span>time * 90; // 90 degrees per second
+[844] <span class="lbl">EXPRESSION · Floating Up and Down (Position)</span>amp = 6; speed = 2;<br/>value + [0, Math.sin(time * speed) * amp];
+[845] <span class="lbl">EXPRESSION · Circular Orbit (Position)</span>r = 200; speed = 1.5;<br/>c = [thisComp.width/2, thisComp.height/2];<br/>c + [Math.cos(time*speed)*r, Math.sin(time*speed)*r];
+[846] <span class="lbl">EXPRESSION · Pulse (Scale)</span>s = 100 + Math.sin(time * 6) * 5;<br/>[s, s];
+[847] <span class="lbl">EXPRESSION · Blink (Opacity)</span>Math.round(time * 4) % 2 == 0 ? 100 : 0; // blinks twice per second
+[848] 7-5 Repeating — loopOut, loopIn
+[849] Repeat from the start after the last key
+[850] Back and forth
+[851] Continue from the end value and accumulate (stairs, a wheel that keeps turning)
+[852] Keep going at the last speed
+[853] Repeat before the first key too
+[854] Repeat only the last 2 keys
+[855] Repeat only the last 1 second
+[856] <b>Note</b>Loop expressions need at least two keyframes, and only some work on Path properties.
+[857] 7-6 Mapping Values — linear, ease, clamp
+[858] <span class="lbl">EXPRESSION · 0 → 100 between 1 and 3 s (Opacity)</span>linear(time, 1, 3, 0, 100);
+[859] <span class="lbl">EXPRESSION · Smoothly (easeIn and easeOut exist too)</span>ease(time, 0, 2, 0, 360);
+[860] <span class="lbl">EXPRESSION · Scale by Distance to Another Layer (Scale)</span>d = length(thisComp.layer("Cursor").position, position);<br/>s = linear(d, 0, 400, 150, 100); // 150% when close, 100% when far<br/>[s, s];
+[861] <span class="lbl">EXPRESSION · Limit the Range</span>clamp(value, 0, 100);
+[862] <b>Figure 7-3</b>The actual AE screen (07-2_익스프레션_값, 1 s 15 f). Top left: for the same 3-second move, linear spaces evenly, ease is dense at both ends, and easeOut only at the end. Top right: a valueAtTime trail. Bottom left: rotation and scale fixed with seedRandom. Bottom right: a bar facing the orange dot with atan2. Bottom: a progress bar filling to thisComp.duration.
+[863] 7-7 Bounce and Settle — Inertial Bounce
+[864] The “follow-through” that overshoots slightly and comes back after stopping on a keyframe. Attach it to position, scale or rotation.
+[865] <span class="lbl">EXPRESSION · A Ball Bouncing on the Floor (Position, 2 keys: start of fall · floor)</span>e = .7; g = 5000; nMax = 9;<br/>n = 0; if (numKeys &gt; 0){ n = nearestKey(time).index; if (key(n).time &gt; time) n--; }<br/>if (n &gt; 0){<br/>  t = time - key(n).time; v = -velocityAtTime(key(n).time - .001)*e;<br/>  vl = length(v); vu = (vl &gt; 0) ? normalize(v) : [0,0];<br/>  tCur = 0; segDur = 2*vl/g; tNext = segDur; nb = 1;<br/>  while (tNext &lt; t &amp;&amp; nb &lt;= nMax){ vl *= e; segDur *= e; tCur = tNext; tNext += segDur; nb++; }<br/>  if (nb &lt;= nMax){ delta = t - tCur; value + vu*delta*(vl - g*delta/2); } else { value; }<br/>} else value;
+[866] 7-8 Following and Offsets — valueAtTime, index
+[867] <span class="lbl">EXPRESSION · Follow the Layer Above 0.1 s Later (Position)</span>delay = 0.1;<br/>thisComp.layer(index - 1).position.valueAtTime(time - delay);
+[868] <span class="lbl">EXPRESSION · Start Later by Layer Number (duplicates appear in sequence)</span>delay = 0.08 * (index - 1);<br/>valueAtTime(time - delay);
+[869] <span class="lbl">EXPRESSION · Lay Out Horizontally with Each Duplicate (Position)</span>gap = 220;<br/>[100 + (index - 1) * gap, value[1]];
+[870] <span class="lbl">EXPRESSION · Smooth Following</span>smooth(0.3, 5); // average over 0.3 s with 5 samples
+[871] 7-9 Moving with Markers
+[872] <span class="lbl">EXPRESSION · Pop at Each Marker (Scale)</span>m = thisLayer.marker; n = 0;<br/>if (m.numKeys &gt; 0){ n = m.nearestKey(time).index; if (m.key(n).time &gt; time) n--; }<br/>if (n &gt; 0){ t = time - m.key(n).time; s = 100 + 30*Math.exp(-8*t)*Math.cos(20*t); [s, s]; } else value;
+[873] <b>Figure 7-4</b>① Three markers on the layer (numeric keypad <span class="k">*</span>) ② the Scale expression. Each time the time indicator passes a marker, the circle grows and settles. The sample uses amplitude 60 and decay 6 for a bigger pop. Composition <span class="mono">07-4_익스프레션_마커</span>.
+[874] <span class="lbl">EXPRESSION · React to Audio Loudness (Scale) — step by step in 5-8</span>// First: right-click the audio layer → Keyframe Assistant → Convert Audio to Keyframes<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider");<br/>s = linear(a, 0, 20, 100, 140);<br/>[s, s];
+[875] 7-10 Randomness — random, seedRandom
+[876] <span class="lbl">EXPRESSION · A Fixed Random Position Different for Each Layer</span>seedRandom(index, true); // true = stays fixed over time<br/>[random(0, thisComp.width), random(0, thisComp.height)];
+[877] <span class="lbl">EXPRESSION · Random Color (Fill Color)</span>seedRandom(index, true);<br/>hslToRgb([random(), 0.6, 0.55, 1]);
+[878] <span class="lbl">EXPRESSION · Choppy Wiggle (8 times per second)</span>posterizeTime(8);<br/>wiggle(8, 20);
+[879] 7-11 Text Expressions — Source Text
+[880] <span class="lbl">EXPRESSION · Number Count-up</span>n = linear(time, 0, 3, 0, 2026);<br/>Math.round(n).toLocaleString(); // 2,026
+[881] <span class="lbl">EXPRESSION · Percentage with One Decimal</span>linear(time, 0, 2, 0, 98.6).toFixed(1) + "%";
+[882] <span class="lbl">EXPRESSION · Timer 00:00</span>s = Math.floor(time); m = Math.floor(s/60);<br/>("0"+m).slice(-2) + ":" + ("0"+(s%60)).slice(-2);
+[883] <span class="lbl">EXPRESSION · Typewriter Effect</span>txt = value; speed = 15; // 15 characters per second<br/>txt.substr(0, Math.floor(time * speed));
+[884] <span class="lbl">EXPRESSION · Layer Name as Text</span>thisLayer.name;
+[885] <span class="lbl">EXPRESSION · Changing Font Size and Color (2020 and later)</span>style.setFontSize(80).setFillColor([0.9, 0.35, 0.2]);
+[886] 7-12 Auto-Sizing Boxes — sourceRectAtTime

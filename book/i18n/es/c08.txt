@@ -1,0 +1,119 @@
+[993] Valor de Keylight
+[994] Función
+[995] Fuerza de borrado. Demasiado alta y la persona también se vuelve transparente
+[996] Criterio para juzgar el verde. Se suele ajustar en torno a 50
+[997] Define con claridad el negro y el blanco del mate
+[998] Mueve el borde del mate hacia dentro o hacia fuera
+[999] Suaviza el borde
+[1000] <b>Comparado con la IA</b>Higgsfield Remove BG (cap. 18) recorta personas sin tela verde y Object Matte de AE (cap. 11) también crea un mate con un clic. Aun así, la televisión y el cine siguen usando croma porque saca con precisión hasta lo semitransparente: un pelo, un vaso, el humo. En 2026, los mates con IA son rápidos, pero todavía no superan al croma en calidad de borde ni en coherencia entre fotogramas.
+[1001] 8-5 El croma en el cine y lo que viene
+[1002] Obra
+[1003] Método y significado
+[1004] <i>Superman</i> (1978)
+[1005] Escenas de vuelo con pantalla azul y proyección frontal. Famosa por el lema «Creerás que un hombre puede volar» (You’ll believe a man can fly)
+[1006] <i>Parque Jurásico</i> (1993)
+[1007] Composición de maquetas reales y dinosaurios por ordenador. Abrió la era de la composición digital el año en que nació AE
+[1008] Casi todas las escenas rodadas en decorados de pantalla azul o verde, con fondos compuestos como pinturas
+[1009] Películas de Marvel (2008–)
+[1010] Los grandes platós de pantalla verde y los fondos digitales se volvieron la norma
+[1011] <i>Gravity</i> (2013)
+[1012] Se grabó a los actores dentro de una «caja de luz» rodeada de LED para proyectar en sus caras la luz del espacio
+[1013] <i>The Mandalorian</i> (2019–)
+[1014] Producción virtual: en lugar de tela verde, enormes paredes LED con fondos 3D en tiempo real. La luz del fondo cae con naturalidad sobre la cara de los actores
+[1015] <b>¿Acabará la producción virtual con el croma?</b>Un volumen LED no tiene derrame y el actor puede ver el fondo al actuar, pero el equipo es carísimo. Por eso la mayoría de anuncios, vídeos de YouTube y vídeos educativos siguen usando pantalla verde. Los platós de volumen LED crecen en cadenas de televisión y grandes estudios.
+[1016] 8-6 Captura de movimiento — sacar solo el movimiento
+[1017] Si el croma separa «el aspecto de una persona», la captura de movimiento separa solo «su movimiento» y lo aplica a un personaje digital.
+[1018] Método
+[1019] Principio
+[1020] Dónde se usa
+[1021] Óptica (marcadores)
+[1022] Marcadores reflectantes en el cuerpo seguidos por varias cámaras infrarrojas
+[1023] Grandes películas y videojuegos
+[1024] Inercial (traje)
+[1025] Un traje con sensores registra los ángulos de las articulaciones. Pocas limitaciones de lugar
+[1026] VTubers, rodajes en exteriores
+[1027] Captura de interpretación
+[1028] Registra, además del cuerpo, la expresión facial y los ojos
+[1029] Gollum de <i>El señor de los anillos</i>, <i>Avatar</i>, la saga <i>El planeta de los simios</i>
+[1030] IA sin marcadores
+[1031] La IA estima las articulaciones a partir de un vídeo normal
+[1032] Creadores independientes, pruebas rápidas
+[1033] El <b>Motion Control</b> de Higgsfield (19-4) es una aplicación del método sin marcadores con IA. Extrae el movimiento de un vídeo de referencia y lo aplica a la imagen de otra persona. En AE, el vídeo del personaje así creado se recorta con Keylight o Remove BG y se compone con un fondo.
+[1034] <b>Derechos de imagen y movimiento</b>Copiar el baile o la interpretación de otra persona también afecta a los derechos del autor y del intérprete. En clase, usa como referencia movimientos grabados por ti.
+[1035] Haz el croma del material S01 y ajusta a la persona a la dirección de la luz y al color de la foto de fondo (Lumetri, añadir una sombra).
+[1036] Graba tú: con un móvil y tela verde, rueda un plano que siga los principios de luz de 8-3 y otro que no, y compara sus Screen Matte.
+[1037] <b>Si funcionó</b>En la vista Screen Matte, la persona queda blanca y el fondo negro, limpios.
+[1038] <b>Si te atascas</b>Si el pelo se rompe, ajusta antes Screen Gain que bajar Clip White. El borde verde se elimina con Spill Suppression o Advanced Spill Suppressor.
+[1039] Tracking — pegar elementos a una toma en movimiento <span class="lv">●●○</span>
+[1040] Técnica para que un texto o una imagen sigan pegados a la toma aunque se mueva la cámara o el sujeto. Cambiar la pantalla de un móvil, cambiar un cartel o poner un rótulo con el nombre junto a alguien que camina: todo es tracking.
+[1041] 9-1 Tres rastreadores
+[1042] Rastreador
+[1043] Track Motion (1 o 2 puntos)
+[1044] Sigue un punto (posición) o dos (posición, rotación, escala)
+[1045] Un bocadillo junto a una persona que se mueve
+[1046] Sigue las cuatro esquinas, ajustando también la perspectiva
+[1047] Cambiar pantallas de móvil o monitor
+[1048] Reconstruye el movimiento de la propia cámara a partir de muchos puntos
+[1049] Poner texto de pie en el suelo (cap. 10)
+[1050] Mocha AE (plugin incluido)
+[1051] Sigue un «plano» en lugar de puntos. Aguanta desenfoques y oclusiones
+[1052] Cambios de pantalla precisos, rotoscopia
+[1053] 9-2 Práctica — cambiar una pantalla en la mano
+[1054] S02 mano que sostiene un dispositivo con pantalla verde (720p 5 s) + I13 imagen de una app del tiempo.
+[1055] <b>Figura 9-1</b>Track Camera, Track in Boris FX Mocha, Warp Stabilizer VFX y Track Motion en el menú Animation.
+[1056] <b>Figura 9-2</b>Al pulsar Track Motion se abre a la derecha el panel Layer con los Track Point y abajo el panel Tracker.
+[1057] Selecciona la capa de vídeo, pulsa <b>Track Motion</b> en el panel <b>Window → Tracker</b> y pon Track Type en <b>Perspective corner pin</b>.
+[1058] Coloca las cuatro cajas de seguimiento sobre los puntos blancos de las cuatro esquinas de la pantalla. La caja interior es el patrón a seguir; la exterior, la zona de búsqueda.
+[1059] <b>Analyze forward</b> (▶). Si a mitad una caja se desliza, para, corrígela en ese fotograma y vuelve a analizar.
+[1060] En <b>Edit Target</b> elige la capa de la imagen de la app y pulsa <b>Apply</b>. La imagen recibe un efecto Corner Pin y sus cuatro esquinas siguen a la pantalla.
+[1061] Duplica el vídeo original, ponlo encima y borra solo el verde con Keylight: así también quedan naturales los planos en que los dedos pasan sobre la pantalla. Termina añadiendo a la imagen un poco de desenfoque y reflejo.
+[1062] <b>La trampa del material con IA</b>Pedimos «una mano sosteniendo un dispositivo con la pantalla verde visible», pero el vídeo generado mostraba la parte trasera. El vídeo generado no sigue las instrucciones al 100 %, así que revisa el material de práctica nada más generarlo y rehazlo si hace falta.
+[1063] <b>Consejo de rodaje</b>El tracking funciona mucho mejor si pegas puntos de alto contraste (cruces blancas, pegatinas pequeñas) en las esquinas de la pantalla. El material de este libro también se hizo con «white tracking dots on the corners» en la instrucción.
+[1064] <b>Un rechazo por derechos de autor</b>La primera vez que pedimos un vídeo de «una mano con un smartphone», Higgsfield lo rechazó por restricciones de derechos de autor, porque podía parecerse al diseño de un producto concreto. Con «un dispositivo negro sin marca» se generó. Acostúmbrate a que no salgan productos ni logos reales.
+[1065] <b>Si funcionó</b>El texto pegado no se escurre del objeto al reproducir.
+[1066] <b>Si te atascas</b>Si un punto de seguimiento salta, llévalo a una esquina con más contraste, amplía la zona Search y vuelve a analizar desde el fotograma del salto.
+[1067] Pega algo al mismo clip con Point (1 punto), Perspective Corner Pin (4 puntos) y 3D Camera Tracker, y haz una tabla de qué método va con cada situación.
+[1068] 3D Camera Tracker y cambio de cielo <span class="lv">●●●</span>
+[1069] A partir de una toma con la cámara en movimiento, AE reconstruye la trayectoria de la cámara y coloca texto u objetos 3D en ese espacio.
+[1070] 10-1 3D Camera Tracker
+[1071] S05 cámara que avanza por una acera (720p 5 s).
+[1072] Clic derecho en la capa de vídeo → <b>Track and Stabilize → Track Camera</b>. Al terminar el análisis aparecen en pantalla puntitos de color (puntos de seguimiento).
+[1073] <b>Figura 10-1</b>Error en el primer intento: «la capa debe tener el tamaño de la composición y transformaciones por defecto». Era porque el vídeo estaba escalado al 150 %.
+[1074] <b>Figura 10-2</b>Solución: precomponer el vídeo (Move all attributes) y volver a analizar. Tras 1 minuto 30 segundos aparecieron los puntos de seguimiento.
+[1075] Mueve el ratón despacio entre los puntos del suelo y aparecerá una diana roja (también puedes seleccionar tres o más puntos arrastrando). Si la diana está tumbada en el suelo, ese plano se ha reconocido. Si no aparece, haz clic una vez en el nombre <b>3D Camera Tracker</b> de Effect Controls para seleccionar el efecto y vuelve a mover el ratón.
+[1076] Clic derecho en la diana → <b>Create Text and Camera</b>. Se crean un texto 3D y una cámara, y el texto se pega al suelo y pasa con él.
+[1077] <b>Figura 10-3</b>① Clic derecho en la diana que aparece en el suelo ② Create Text and Camera. En el mismo menú se pueden crear un sólido, un null o un receptor de sombras.
+[1078] El texto creado está tumbado en el suelo y es enorme. En este libro bajamos Scale del 3000 % al 600 % y sumamos 90 a la X de Orientation (242° → 332°) para ponerlo de pie como un cartel. Si quieres sombra, usa <b>Create Shadow Catcher, Camera and Light</b> del mismo menú.
+[1079] <b>Figura 10-4</b>Resultado. Al avanzar la cámara, el texto crece según la perspectiva y se queda en su sitio. Fuente Nanum Gothic ExtraBold 90 px. Composición <span class="mono">10-1_3D트래커</span>.
+[1080] <b>Qué toma funciona</b>La cámara se desplaza de lado o hacia delante (travelling) y hay paralaje; el suelo tiene textura; hay poco temblor y desenfoque. Con una toma que solo gira en el sitio cuesta calcular la profundidad.
+[1081] 10-2 Cambio de cielo
+[1082] S06 azotea con cielo blanco (720p 5 s) + I11 imagen de un cielo al atardecer.
+[1083] En la capa de vídeo de la azotea, deja transparente solo el cielo blanco con Object Matte, <b>Linear Color Key</b> o <b>Extract</b> (quita las zonas claras).
+[1084] Pon debajo la imagen del atardecer y, si el vídeo tiembla, aplica tracking de 1 punto a la capa del cielo.
+[1085] Iguala la luz. Para un atardecer, añade a todo el vídeo de la azotea un tono naranja (Temperature en Lumetri) y algo de contraste para que parezca la misma hora.
+[1086] <b>Con IA</b>Change Time of Day de Higgsfield (19-2) cambia no solo el cielo, sino también la luz sobre los edificios. A mano solo cambia el cielo y la luz la ajustas tú, pero controlas por completo la calidad original y el resultado.
+[1087] <b>Si funcionó</b>El texto creado en la diana se pega al suelo y sigue la perspectiva al moverse la cámara.
+[1088] <b>Si te atascas</b>Si sale el aviso de que «la capa debe tener el tamaño de la composición», precompón el clip (Move all attributes) y vuelve a analizar.
+[1089] Tras cambiar el cielo, ajusta con Lumetri la temperatura de color del primer plano al nuevo cielo y compara el antes y el después lado a lado.
+[1090] Object Matte y Content-Aware Fill <span class="lv">●●○</span>
+[1091] Dos herramientas de IA: una separa a las personas (Object Matte) y otra borra objetos que sobran (Content-Aware Fill). Las dos funcionan dentro de AE y no gastan créditos.
+[1092] 11-1 De Roto Brush a Object Matte
+[1093] El antiguo <b>Roto Brush</b> de AE (Roto Brush 2 en 2020) era una herramienta en la que una persona pintaba con un pincel y la IA seguía fotograma a fotograma. Desde abril de 2026 (26.2) se convirtió en el conjunto de herramientas <b>Object Matte</b>, y Roto Brush pasó a llamarse <b>Quick Selection</b> y quedó dentro.
+[1094] Herramienta
+[1095] Selecciona una persona o un coche con un clic (o arrastrando) y la sigue hasta el final. <span class="k">Alt+W</span>
+[1096] El antiguo Roto Brush. Pintar suma; con Alt, resta
+[1097] Un pincel para retocar el mate con detalle
+[1098] Afina bordes como pelo o pelaje
+[1099] 11-2 Práctica — separar a una persona que camina
+[1100] S03 hombre con sudadera roja que camina por un parque (720p 5 s).
+[1101] Haz doble clic en la capa de vídeo para abrir el <b>panel Layer</b>. Haz clic en la persona con la herramienta Object Matte.
+[1102] Con el botón de reproducción, extiende el mate a los fotogramas anteriores y posteriores (Propagate). Corrige los que se desvíen con Selection Brush.
+[1103] Afina los bordes del pelo y la ropa con Refine Edge y pulsa <b>Freeze</b> para fijar el resultado y reproducir rápido. Desde la 26.5 el resultado se guarda en disco y sigue ahí al reabrir el proyecto.
+[1104] Si duplicas el original y lo pones encima, puedes hacer un «sándwich» de capas como «texto delante de la persona, texto detrás de la persona».
+[1105] 11-3 Content-Aware Fill — borrar objetos
+[1106] S04 callejón con un cono naranja en mitad de la calzada (720p 5 s).
+[1107] En la capa de vídeo, dibuja con la pluma una máscara holgada alrededor del cono y pon Mode en <b>Subtract</b>. Si el objeto se mueve, haz que la máscara le siga con claves (o con tracking de máscara).
+[1108] <b>Figura 11-1</b>Máscara elíptica en modo Subtract alrededor del cono. Content-Aware Fill rellena el hueco negro con la calzada de alrededor.
+[1109] <b>Window → Content-Aware Fill</b>. Elige el Fill Method: <b>Object</b> (objetos en movimiento), <b>Surface</b> (pintadas en una pared quieta), <b>Edge Blend</b> (superficies con poca textura).
+[1110] <b>Generate Fill Layer</b>. AE mira los fotogramas anteriores y posteriores y el entorno, crea una nueva secuencia de imágenes con el hueco relleno y la pone sobre el vídeo como una capa llamada, por ejemplo, <span class="mono">Fill [000-149].png</span>.
+[1111] <b>Figura 11-2</b>① El hueco vaciado con la máscara ② Fill Method: Object ③ Generate Fill Layer. Analizar y generar 5 segundos (150 fotogramas) llevó un minuto.

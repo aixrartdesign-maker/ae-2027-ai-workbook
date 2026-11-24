@@ -1,0 +1,64 @@
+[2001] Generados 8 materiales de práctica de fundamentos y composición (Seedance 2.0 mini 720p) → prácticas y capturas de croma, tracking, rastreador de cámara 3D, borrado de objetos y corrección de color
+[2002] Creadas y capturadas las composiciones de ejemplo de expresiones (07-1_익스프레션_움직임, efectos, valores, texto, marcadores, audio)
+[2003] 3D: capturas de Camera 4 Views y Camera/Light Settings / capturas de pines de Puppet, CC Particle World, animadores de texto y Essential Graphics
+[2004] Generadas 19 imágenes para figuras (GPT Image, unos 14 créditos) → rotuladas en AE
+[2005] Verificación de datos (historia de versiones, precios, concursos), fuentes y publicación del repositorio de GitHub
+[2006] G. Solución de problemas
+[2007] Síntoma
+[2008] El menú Extensions está gris
+[2009] Plugin no instalado. Cierra AE y Premiere y ejecuta el instalador
+[2010] Claude no puede manejar AE
+[2011] Comprueba que el conector Higgsfield Bridge está añadido y permitido, y que AE y el panel están abiertos
+[2012] No se puede escribir en la casilla del panel
+[2013] Haz doble clic en la casilla y luego escribe
+[2014] El panel tapa toda la pantalla
+[2015] Arrastra la barra de título del panel a un lado
+[2016] AE ha vuelto a su idioma original
+[2017] Comprueba que ae_force_english.txt esté en Documentos y en OneDrive\Documentos
+[2018] La generación tarda mucho
+[2019] Avanza Queued → Generating. 4–8 minutos es normal
+[2020] H. Referencias (consultadas en noviembre de 2026)
+[2021] Adobe, notas de versión de After Effects (What’s new) 22.0–27.0 — helpx.adobe.com/after-effects
+[2022] Anuncios de Adobe MAX 2026 (10/11/2026): After Effects 27.0, AI Assistant, vista previa del MCP local — blog.adobe.com
+[2023] Blog de Adobe, anuncio de Premiere y After Effects 26.0 (20/01/2026)
+[2024] Planes de Adobe en Corea — adobe.com/kr/products/aftereffects/plans.html; estudiantes y docentes — adobe.com/kr/education
+[2025] Archivo de CoSA — cosa.com / Computer Graphics World, artículo del 20.º aniversario de After Effects (2013)
+[2026] Plugin de Higgsfield para After Effects — higgsfield.ai/plugins/after-effects
+[2027] Higgsfield, guía de inicio de After Effects MCP — higgsfield.ai/mcp/use-after-effects
+[2028] Blog de Higgsfield, «Higgsfield Inside Adobe After Effects» (julio de 2026) — higgsfield.ai/blog/higgsfield-after-effects
+[2029] Concursos de Higgsfield — higgsfield.ai/community/contests, higgsfield.ai/blog/higgsfield-talent-contest
+[2030] Precios de Higgsfield — higgsfield.ai/pricing
+[2031] Guía de conectores personalizados de Claude — support.claude.com/en/articles/11175166
+[2032] Precios, versiones y nombres de menú consultados el 23 de noviembre de 2026. El software por suscripción cambia a menudo; si la pantalla real es distinta, consulta primero las páginas oficiales de arriba.
+[2033] Sobre la autora
+[2034] <b>Ji-A Ahn</b>
+[2035] Obtuvo la licenciatura, el máster y el doctorado en el Departamento de Diseño Visual de la Universidad Femenina Ewha. Es profesora asistente del Departamento de Contenidos de Vídeo y Medios de la Universidad Kyungbok y directora de su Centro de Diseño Promocional, donde enseña producción de vídeo y animación gráfica y realiza vídeos promocionales para la universidad y empresas locales. Le interesan la IA, la transformación digital, el XR y el vídeo, y este libro sigue su forma de enseñar: primero la práctica, después la teoría.
+[2036] Fue diseñadora de imagen en la Oficina de Prensa del Ayuntamiento de Seongnam y directora ejecutiva de Dosum Co., Ltd.; entre sus libros están <i>¿Qué es la UX?</i> y <i>ChatGPT en clase: code &amp; play</i>.
+[2037] Cómo se hizo este libro
+[2038] Las prácticas y pantallas de este libro se hicieron en dos días, el 22 y el 23 de noviembre de 2026: siguiendo las indicaciones de la autora, Claude manejó directamente After Effects en un PC con Windows. Composiciones y capas se crearon con el puente de Higgsfield; la navegación por menús y las capturas, con la función de uso del ordenador de Claude; y los vídeos de práctica y las fotos de las figuras, con los modelos generativos de Higgsfield. El inicio de sesión, los pagos, la decisión de qué incluir y qué dejar fuera y la revisión final los hizo una persona.
+[2039] Registro
+[2040] Capturas y figuras
+[2041] 105 (capturas reales, diagramas hechos a mano e imágenes generadas con rótulos)
+[2042] Proyecto de AE
+[2043] 34 composiciones — un archivo .aep en la carpeta project del repositorio
+[2044] Créditos de Higgsfield
+[2045] Unos 238 (tabla del cap. 25)
+[2046] Maquetación
+[2047] Compuesto en HTML y CSS y exportado a PDF (182 × 257 mm)
+[2048] Datos del libro
+[2049] Título
+[2050] After Effects 2027: práctica completa — de los fundamentos a la colaboración con IA
+[2051] Autora · publicación
+[2052] Ji-A Ahn · 23 de noviembre de 2026 (2027 EDITION, 1.ª edición)
+[2053] Versión de referencia
+[2054] Material de práctica
+[2055] Repositorio de GitHub (dirección en la contraportada)
+[2056] Fuentes
+[2057] Texto Noto Sans CJK, figuras Nanum Gothic (SIL Open Font License)
+[2058] Las capturas y figuras son de la autora. Adobe, After Effects y Premiere son marcas de Adobe Inc.; Higgsfield, de Higgsfield AI; Claude, de Anthropic. Este libro no es una publicación oficial de ninguna de estas empresas.
+[2059] Un solo programa, After Effects, de principio a fin.<br/>Primero a mano, luego con la IA.
+[2060] Fundamentos · animación gráfica · expresiones · composición · 3D
+[2061] Panel del plugin Higgsfield · puente de Claude · AI Assistant de AE
+[2062] Capturas reales y registros reales de créditos
+[2063] Material de práctica · archivos de proyecto
+[2064] Escanea el código QR para ir directamente al repositorio.

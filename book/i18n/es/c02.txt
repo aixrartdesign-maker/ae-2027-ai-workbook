@@ -1,0 +1,202 @@
+[245] <b>Cómo leer este libro</b><span class="tag t1">Paso a paso</span> pulsa en el orden de los números · <span class="tag t2">¿Por qué?</span> un párrafo de principio · <span class="tag t3">Un paso más</span> funciones a fondo · <span class="tag t4">Estándar profesional</span> normas del oficio · <span class="tag t5">Reto</span> tareas sin respuesta única. Si empiezas, basta con leer Paso a paso y ¿Por qué?
+[246] <span class="tag t1">Paso a paso</span> 1-1 Crear el lienzo (composición)
+[247] Mantén pulsado <span class="k">Ctrl</span> y pulsa <span class="k">N</span>. Se abre la ventana de ajustes.
+[248] <b>Figura 1-1</b>① Nombre ② preajuste de tamaño ③ fotogramas por segundo ④ duración ⑤ OK.
+[249] Escribe un nombre en ①. Ejemplo: <span class="k">01_처음움직임</span>
+[250] Haz triple clic en la casilla ③ Frame Rate y escribe <span class="k">30</span>.
+[251] Haz triple clic en la casilla ④ Duration y escribe <span class="k">500</span>. Cambia a 5 segundos (0:00:05:00).
+[252] Pulsa ⑤ OK.
+[253] <b>Si funcionó</b>Ves una pantalla vacía (la composición) en el centro y una línea de tiempo vacía abajo.
+[254] <span class="tag t1">Paso a paso</span> 1-2 Escribir una palabra
+[255] Pulsa el icono <b>T</b> (herramienta Texto) en la barra superior.
+[256] Haz clic una vez en la pantalla central y escribe <span class="k">HELLO</span>.
+[257] Pulsa la flecha de la izquierda (herramienta Selección) para terminar de escribir.
+[258] En el panel Properties de la derecha, pon el tamaño de letra en <span class="k">200</span> y un color oscuro.
+[259] <b>Si te atascas</b>¿No ves el texto? → Es blanco como el fondo. Cambia el color de Fill. ¿No funcionan los atajos? → Comprueba que el teclado está en inglés.
+[260] <span class="tag t1">Paso a paso</span> 1-3 Grabar el movimiento (fotogramas clave)
+[261] <b>Figura 1-2</b>① Pulsa el cronómetro de Position y aparece un rombo azul ② valor de posición actual.
+[262] Arrastra el texto a la izquierda de la pantalla.
+[263] Pulsa una vez el icono de reloj (cronómetro) de <b>Position</b> en el panel Properties. Se crea el primer registro en 0 s.
+[264] Arrastra la línea vertical azul de la línea de tiempo (indicador de tiempo) hasta <b>02:00f</b>.
+[265] Arrastra el texto a la derecha. Se crea automáticamente un segundo registro en 2 s.
+[266] <b>Figura 1-3</b>① Tiempo actual 2 s ② valor de posición cambiado ③ nuevo fotograma clave en 2 s ④ primer fotograma clave en 0 s. En pantalla se ve la trayectoria (línea punteada).
+[267] Pulsa <span class="k">Space</span> para reproducir. El texto se desliza.
+[268] <span class="tag t1">Paso a paso</span> 1-4 Suavizarlo
+[269] Haz clic una vez en la palabra <b>Position</b> de la línea de tiempo. Se seleccionan los dos fotogramas clave.
+[270] Pulsa <span class="k">F9</span>. Los rombos pasan a tener forma de reloj de arena.
+[271] <b>Figura 1-4</b>① Clic en Position para seleccionar todas las claves ②③ claves con forma de reloj de arena tras F9.
+[272] <b>Si funcionó</b>Al reproducir de nuevo, el texto arranca despacio y se detiene despacio.
+[273] <span class="tag t1">Paso a paso</span> 1-5 Guardar como archivo de vídeo
+[274] Pulsa <span class="k">Ctrl</span>+<span class="k">M</span>. Se abre abajo la Render Queue (cola de render).
+[275] Comprueba que ② Output Module es <b>H.264</b> (archivo MP4).
+[276] Pulsa el texto azul junto a ③ Output To y elige carpeta y nombre.
+[277] Pulsa ④ <b>Render</b>. Cuando la barra se llena, está listo.
+[278] <b>Figura 1-5</b>① Ajustes de render ② formato de salida (H.264) ③ ubicación ④ botón Render.
+[279] <b>Enhorabuena</b>Acabas de recorrer todo el flujo de AE: lienzo → capa → fotograma clave → salida. El resto del libro profundiza en estos cuatro pasos.
+[280] <span class="tag t2">¿Por qué?</span>
+[281] AE es un programa que «calcula lo de en medio si le das el principio y el final». Si registras (pones un fotograma clave) a la izquierda en 0 s y a la derecha en 2 s, AE rellena las 58 imágenes intermedias. Esto se llama <b>interpolación</b>. F9 cambia el modo de rellenar de «velocidad constante» a «lento–rápido–lento».
+[282] <span class="tag t5">Reto</span>
+[283] En los mismos 5 segundos, haz que el texto entre, se detenga y a los 3 segundos salga hacia arriba (4 fotogramas clave).
+[284] Registra también Opacity para que aparezca mientras se desliza.
+[285] Leer la pantalla, el tiempo y los iconos <span class="lv">●○○</span>
+[286] Ahora ponemos nombre, uno a uno, a la pantalla que usaste en el capítulo 1. Si sabes qué significan los iconos, las funciones nuevas ya no asustan.
+[287] <span class="tag t2">¿Por qué?</span> 2-1 Cuatro paneles clave
+[288] Menú · barra de herramientas (Tools)
+[289] Almacén de materiales
+[290] Escenario · la imagen en el tiempo actual
+[291] Preview · caja de herramientas
+[292] ③ Timeline — capas (arriba = delante) × tiempo (izquierda → derecha)
+[293] Indicador de tiempo (CTI)
+[294] <b>Figura 2-1</b>Mapa de la pantalla de AE. ① reúnes materiales ② miras el lienzo ③ los apilas en el tiempo ④ cambias valores.
+[295] Panel
+[296] Es como
+[297] Project
+[298] Lista de vídeos, imágenes, música y composiciones importados
+[299] Composition
+[300] Monitor que muestra la imagen en el tiempo actual
+[301] Un escenario
+[302] Timeline
+[303] Apilas capas arriba y abajo y registras valores en el tiempo
+[304] Una partitura
+[305] Cambiar valores de la capa elegida, buscar efectos
+[306] Una caja de herramientas
+[307] <b>Si te atascas</b>Si los paneles desaparecen o se enredan → Window → Workspace → Reset. Pulsa <span class="k">`</span> (la tecla a la izquierda del 1) sobre un panel para maximizarlo; púlsala otra vez para volver.
+[308] <span class="tag t2">¿Por qué?</span> 2-2 Fotogramas, fps y código de tiempo
+[309] 1 segundo = varios fotogramas. 30 fps son 30 fotogramas por segundo
+[310] Cómo leer el código de tiempo
+[311] Horas : minutos : segundos : fotogramas
+[312] A 30 fps, 01:15 = 1,5 segundos
+[313] Fps habituales
+[314] Aspecto de cine y videoclip
+[315] Estándar de TV y YouTube (Corea, EE. UU.)
+[316] TV europea (PAL)
+[317] Deportes, juegos, pantallas LED; fluidez
+[318] <b>Figura 2-2</b>El vídeo es una sucesión de imágenes fijas (fotogramas). El número azul arriba a la izquierda de la línea de tiempo es el código de tiempo.
+[319] Haz clic en el código de tiempo y escribe un número para ir a ese momento. <span class="k">PgUp</span>/<span class="k">PgDn</span> avanzan un fotograma; <span class="k">Shift</span>+<span class="k">PgUp</span>/<span class="k">PgDn</span>, diez.
+[320] <span class="tag t1">Paso a paso</span> 2-3 Iconos de la línea de tiempo
+[321] Mostrar/ocultar
+[322] Audio
+[323] Ver solo esta capa
+[324] Bloquear
+[325] Ocultar en la línea de tiempo
+[326] Contraer transformaciones
+[327] Calidad (borrador/óptima)
+[328] Efectos sí/no
+[329] Fusión de fotogramas
+[330] Desenfoque de movimiento
+[331] Convertir en capa de ajuste
+[332] Pasar a 3D
+[333] Empezar claves
+[334] Valor registrado (rombo)
+[335] Vincular propiedades
+[336] <b>Figura 2-3</b>Interruptores a la izquierda de la línea de tiempo e iconos de fotogramas clave.
+[337] <b>Figura 2-4</b>Pulsa Toggle Switches / Modes abajo para cambiar las columnas. ① Mode (fusión) ② Track Matte ③ Parent &amp; Link.
+[338] ▾ Pelota
+[339] ◎ = cronómetro (azul si está activo)
+[340] ◀ ◆ ▶ = clave anterior · añadir clave · clave siguiente
+[341] ◆ fotograma clave   │ indicador de tiempo
+[342] <b>Figura 2-5</b>Activa el cronómetro (◎) y se coloca un fotograma clave (◆) en el indicador de tiempo.
+[343] <span class="tag t2">¿Por qué?</span> 2-4 Iconos del panel Project
+[344] Icono
+[345] Tipo
+[346] Descripción
+[347] Tres fotogramas de película + imagen
+[348] Un lienzo creado por ti. Doble clic para abrir su línea de tiempo
+[349] Un fotograma de película
+[350] Footage (vídeo)
+[351] Vídeo y música importados
+[352] Una hoja de papel
+[353] Still (imagen)
+[354] PNG, JPG, PSD, etc.
+[355] Carpeta amarilla
+[356] Para ordenar. La carpeta Solids se crea sola
+[357] Nombre en cursiva
+[358] No se encuentra el original — clic derecho → Replace Footage
+[359] <span class="tag t2">¿Por qué?</span> 2-5 Tipos de capa
+[360] Capa
+[361] Cómo se crea
+[362] Uso
+[363] Footage (material)
+[364] Arrastrar desde Project
+[365] Vídeo, imágenes, música
+[366] Solid (sólido)
+[367] Fondos, base para efectos
+[368] Shape (forma)
+[369] Dibujar con rectángulo o elipse
+[370] Formas, iconos, líneas
+[371] Text (texto)
+[372] Clic con la herramienta T
+[373] Rótulos, títulos
+[374] Null (asa vacía)
+[375] Un asa de control invisible
+[376] Adjustment (ajuste)
+[377] Aplicar un efecto a todas las capas de abajo a la vez
+[378] Puesta en escena en espacio 3D
+[379] <span class="tag t4">Estándar profesional</span> Formatos de composición
+[380] Uso
+[381] Tamaño
+[382] Fps
+[383] YouTube y TV, horizontal
+[384] 29,97 / 30, aspecto cine 23,976
+[385] Shorts y Reels
+[386] Feed de Instagram
+[387] Pantallas LED y fachadas
+[388] La resolución nativa del lugar
+[389] Si los fps del material y de la composición no coinciden, el movimiento va a saltos. La regla es ajustarse al material. Para televisión se entrega a menudo a 29,97 fps con código de tiempo Drop Frame.
+[390] <span class="tag t3">Un paso más</span> Hábitos de orden
+[391] Selecciona una capa y pulsa <span class="k">Enter</span> para renombrarla. «Shape Layer 7» no lo reconocerás ni tú dentro de una semana. Para pedirle a la IA algo como «retrasa 0,5 s la capa del subtítulo», los nombres son imprescindibles.
+[392] Usa la casilla de color a la izquierda de la capa para etiquetar por tipo y bloquea con el candado las capas terminadas.
+[393] <b>Ojo con el idioma del teclado</b>Los atajos de una tecla como U, P o S solo funcionan con el teclado en inglés. Con otro modo de entrada escriben un carácter y AE parece colgado. Nos pasó de verdad al escribir este libro. Pulsa Esc y cambia el idioma del teclado.
+[394] Repaso del capítulo
+[395] <b>Si funcionó</b>Sabes leer un código de tiempo y decir cuántos segundos y fotogramas son, y explicar cinco interruptores (ojo, solo, candado, 3D, desenfoque de movimiento).
+[396] Calcula qué fotograma es 0:00:01:15 en una composición a 30 fps (45) y escribe cuántos fotogramas es ese mismo tiempo a 24 fps.
+[397] La calidad del movimiento — fotogramas clave y gráficos <span class="lv">●●○</span>
+[398] Si en el capítulo 1 hiciste deslizar un texto, aquí vemos «cómo» se mueve. Los mismos dos fotogramas clave pueden parecer ligeros o pesados según la forma de la velocidad.
+[399] <span class="tag t2">¿Por qué?</span> 3-1 Cinco propiedades de transformación
+[400] Propiedad
+[401] Atajo
+[402] Anchor Point (punto de anclaje)
+[403] Centro al girar o escalar. Donde está la bisagra de una puerta
+[404] Position (posición)
+[405] Coordenadas x, y. Arriba a la izquierda es 0, 0
+[406] Scale (escala)
+[407] %. El icono de cadena fija la proporción
+[408] Rotation (rotación)
+[409] «1x+30°» = una vuelta y 30 grados
+[410] Opacity (opacidad)
+[411] 0 transparente a 100 opaco
+[412] <span class="k">U</span> muestra solo las propiedades con fotogramas clave; <span class="k">UU</span>, solo las modificadas. Es la primera tecla al abrir el proyecto de otra persona.
+[413] <span class="tag t2">¿Por qué?</span> 3-2 Cómo se rellena entre fotogramas clave
+[414] Velocidad constante, mecánico
+[415] Arranque y parada suaves
+[416] El valor salta de golpe
+[417] Horizontal = tiempo, vertical = valor. Los rombos son fotogramas clave.
+[418] <b>Figura 3-1</b>Tres formas de rellenar entre claves. En la línea de tiempo también se distinguen por la forma: ◆ Linear, reloj de arena Easy Ease, ■ Hold.
+[419] <span class="tag t1">Paso a paso</span> 3-3 Pelota que bota
+[420] Práctica
+[421] 03_통통공 (1920×1080, 3 s). Una pelota cae, bota tres veces y se para.
+[422] Dibuja la pelota con la elipse y el suelo con el rectángulo (dibuja sin ninguna capa seleccionada para que cada una sea una capa nueva).
+[423] Para cada tiempo de la tabla, mueve el indicador de tiempo y lleva la pelota a esa posición.
+[424] Tiempo
+[425] 0 s
+[426] Sale en el aire
+[427] 0,5 s
+[428] Suelo — aplastada
+[429] 0,58 s
+[430] Alargada al rebotar
+[431] 0,9 s
+[432] Primera cima
+[433] 1,25 s
+[434] Segundo contacto
+[435] 1,5 / 1,7 s
+[436] Otra vez, más bajo
+[437] 2,4 s
+[438] Rueda y se para
+[439] <b>Figura 3-2</b>Selecciona la pelota para ver su trayectoria (punteada) y sus claves (cuadrados).
+[440] <span class="lbl">PROMPT · Si se lo pides a Claude</span>Crea una composición 03_통통공 en la que una pelota naranja bote tres veces y se pare. Al tocar el suelo, aplástala al 125 % de ancho y 75 % de alto, y alárgala al subir. Lenta arriba, rápida abajo.
+[441] Para este libro, Claude puso 14 fotogramas clave con esa instrucción (0 créditos, unos segundos). A mano lleva 10–15 minutos.
+[442] <span class="tag t3">Un paso más</span> 3-4 Graph Editor
+[443] Haz clic en la palabra Position de la capa de la pelota.
+[444] Pulsa <span class="k">Shift+F3</span> y los fotogramas clave se ven como curvas.
+[445] <b>Figura 3-3</b>Gráfico de valores. Rojo es x, verde es y. En AE la y crece hacia abajo, así que los picos verdes son los momentos en que toca el suelo.
+[446] Si el <b>gráfico de velocidad</b> tiene forma de colina, el movimiento es lento–rápido–lento. Casi todo el movimiento de interfaces tiene esta forma.

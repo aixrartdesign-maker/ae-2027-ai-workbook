@@ -1,0 +1,38 @@
+[2065] No se encuentra el original — ver «Volver a enlazar» abajo
+[2066] Si renombras o mueves los archivos originales — volver a enlazar
+[2067] Un proyecto de AE (.aep) no guarda dentro el vídeo ni las imágenes; solo recuerda <b>dónde están los archivos originales (su ruta)</b>. Por eso, si durante el trabajo renombras un archivo, lo mueves a otra carpeta o lo borras, la próxima vez que abras el proyecto saldrá el aviso «files are missing». Esa capa aparece en pantalla como <b>barras de color</b> y su nombre en el panel Project pasa a cursiva.
+[2068] En el panel Project, haz clic derecho en el elemento con el nombre en cursiva → <b>Replace Footage → File</b> (<span class="k">Ctrl+H</span>).
+[2069] Elige el archivo en su nueva ubicación, o el archivo renombrado, y pulsa <b>Import</b>. Si faltan más archivos de la misma carpeta, AE los encuentra y los enlaza todos a la vez.
+[2070] Si es una secuencia de imágenes (001.png, 002.png …), elige el primer archivo y activa <b>Sequence</b>.
+[2071] Si faltan muchos archivos, usa <b>File → Dependencies → Find Missing Footage</b> para ver solo los que faltan y enlazarlos uno a uno.
+[2072] <b>Otro uso de Replace Footage</b>Cambia solo el original y mantiene efectos, claves y máscaras. Con el mismo método puedes cambiar un clip de práctica a 480p por la versión final escalada (18-5). Un archivo borrado no se puede volver a enlazar: recupéralo de la papelera o pon en su lugar un archivo con el mismo contenido.
+[2073] <span class="tag t4">Estándar profesional</span> Que no se rompan las rutas
+[2074] Crea primero carpetas <span class="mono">footage</span> y <span class="mono">render</span> dentro de la carpeta del proyecto, mete ahí el material y luego impórtalo. No importes directamente desde el escritorio o Descargas.
+[2075] No renombres los archivos después de importarlos. Si tienes que hacerlo, termina el Replace Footage antes de cerrar AE.
+[2076] Al pasar a otro ordenador o entregar, reúne también el material en una carpeta con <b>File → Dependencies → Collect Files</b> (14-6).
+[2077] El modo de fusión decide <b>con qué cálculo</b> se mezclan los colores de una capa con las capas de abajo. Hay casi 30, pero divididos en siete grupos resultan fáciles. Los modos de un mismo grupo solo cambian de intensidad.
+[2078] Grupo
+[2079] Modos principales
+[2080] Cómo mezcla
+[2081] Básico
+[2082] La capa de arriba tapa sin más. Dissolve reparte la opacidad en puntos
+[2083] Oscurecer
+[2084] Desaparece el blanco y solo quedan las zonas oscuras: textura de papel, sombras, tinta
+[2085] Aclarar
+[2086] Desaparece el negro y solo quedan las zonas claras: luz, fuego, destellos
+[2087] Contraste
+[2088] Desaparece el gris medio y sube el contraste: aplicar texturas, corrección de color
+[2089] Diferencia
+[2090] Muestra la diferencia entre dos capas: comprobar alineaciones, efectos de inversión
+[2091] Toma solo el tono, la saturación o la luminancia: colorear vídeo en blanco y negro
+[2092] Transparencia
+[2093] Con la forma de esta capa recorta o conserva todo lo de abajo
+[2094] Usar la columna Mode en la línea de tiempo
+[2095] El botón <b>Toggle Switches / Modes</b> de la parte inferior de la línea de tiempo (<span class="k">F4</span>) alterna entre las columnas de interruptores y la columna <b>Mode</b> (figura 2-4).
+[2096] Haz clic en la casilla Mode de la fila de la capa (al principio, Normal) y elige un modo. Con la capa seleccionada, <span class="k">Shift</span>+<span class="k">=</span> / <span class="k">Shift</span>+<span class="k">-</span> recorren los modos uno a uno para compararlos al momento.
+[2097] Con clic derecho en la fila de títulos de columna → <b>Columns</b> puedes dejar siempre visibles columnas como Modes, Parent &amp; Link o Stretch (velocidad). Sirve para ver interruptores y modos a la vez.
+[2098] <b>Si parece que el modo no hace nada</b>El modo de fusión mezcla con las <b>capas de abajo</b>. En la capa más baja no hay nada con qué mezclar, así que no cambia nada. Un modo puesto dentro de una precomposición solo mezcla dentro de ella; para mezclar con lo de fuera, pon el modo en la capa de la precomposición.
+[2099] Barras de color en pantalla, nombre en cursiva
+[2100] El archivo original se renombró o se movió. Clic derecho → Replace Footage → File (2-4)
+[2101] El modo de fusión no tiene efecto
+[2102] Es la capa más baja o el modo se puso dentro de una precomposición (4-8)

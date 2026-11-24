@@ -1,0 +1,202 @@
+[245] <b>How to read this book</b><span class="tag t1">Follow Along</span> click in the order of the numbers · <span class="tag t2">Why?</span> one paragraph of principle · <span class="tag t3">One Step Further</span> deeper features · <span class="tag t4">Industry Standard</span> real-world specs · <span class="tag t5">Challenge</span> open-ended tasks. If you are new, reading only Follow Along and Why? is enough.
+[246] <span class="tag t1">Follow Along</span> 1-1 Make a Canvas (Composition)
+[247] Hold <span class="k">Ctrl</span> and press <span class="k">N</span>. The settings window opens.
+[248] <b>Figure 1-1</b>① Name ② Size preset ③ Frame rate ④ Duration ⑤ OK.
+[249] Type a name in ①. Example: <span class="k">01_처음움직임</span>
+[250] Triple-click the ③ Frame Rate box and type <span class="k">30</span>.
+[251] Triple-click the ④ Duration box and type <span class="k">500</span>. It changes to 5 seconds (0:00:05:00).
+[252] Click ⑤ OK.
+[253] <b>If it worked</b>You see an empty screen (the composition) in the middle and an empty timeline below.
+[254] <span class="tag t1">Follow Along</span> 1-2 Type a Word
+[255] Click the <b>T</b> icon (Type tool) on the toolbar at the top.
+[256] Click once on the screen in the middle and type <span class="k">HELLO</span>.
+[257] Click the arrow at the far left (Selection tool) to finish typing.
+[258] In the Properties panel on the right, set the font size to <span class="k">200</span> and the color to something dark.
+[259] <b>If you are stuck</b>Can’t see the text? → It is white like the background. Change the Fill color. Shortcuts not working? → Check that your keyboard is in English input mode.
+[260] <span class="tag t1">Follow Along</span> 1-3 Record Motion (Keyframes)
+[261] <b>Figure 1-2</b>① Click the stopwatch next to Position and a blue diamond appears ② the current position value.
+[262] Drag the text to the left side of the screen.
+[263] Click the clock icon (stopwatch) next to <b>Position</b> in the Properties panel once. The first record is made at 0 seconds.
+[264] Drag the blue vertical line on the timeline (the time indicator) to <b>02:00f</b>.
+[265] Drag the text to the right. A second record is created automatically at 2 seconds.
+[266] <b>Figure 1-3</b>① Current time 2 s ② changed position value ③ new keyframe at 2 s ④ first keyframe at 0 s. The screen shows the motion path (dotted line).
+[267] Press <span class="k">Space</span> to play. The text slides.
+[268] <span class="tag t1">Follow Along</span> 1-4 Make It Smooth
+[269] Click the word <b>Position</b> on the timeline once. Both keyframes are selected.
+[270] Press <span class="k">F9</span>. The diamonds turn into hourglass shapes.
+[271] <b>Figure 1-4</b>① Click Position to select all keys ②③ keyframes in hourglass shape after F9.
+[272] <b>If it worked</b>When you play it again, the text starts slowly and stops slowly.
+[273] <span class="tag t1">Follow Along</span> 1-5 Save as a Video File
+[274] Press <span class="k">Ctrl</span>+<span class="k">M</span>. The Render Queue opens below.
+[275] Check that ② Output Module is <b>H.264</b> (an MP4 file).
+[276] Click the blue text next to ③ Output To and choose the folder and name.
+[277] Click ④ <b>Render</b>. When the bar is full, you are done.
+[278] <b>Figure 1-5</b>① Render settings ② output format (H.264) ③ save location ④ Render button.
+[279] <b>Congratulations</b>You have just gone through the whole flow of AE — canvas → layer → keyframe → output. The rest of the book digs deeper into these four steps.
+[280] <span class="tag t2">Why?</span>
+[281] AE is a program that “calculates the in-between once you set the start and end”. If you record (keyframe) left at 0 s and right at 2 s, AE fills in the 58 pictures in between. This is called <b>interpolation</b>. F9 changes how it fills them from “constant speed” to “slow–fast–slow”.
+[282] <span class="tag t5">Challenge</span>
+[283] In the same 5 seconds, make the text come in, stop, and disappear upwards after 3 seconds (4 keyframes).
+[284] Also record Opacity so the text fades in as it slides.
+[285] Reading the Screen, Time and Icons <span class="lv">●○○</span>
+[286] Now we name, one by one, the parts of the screen you used in Chapter 1. Once you know what the icons mean, new features are no longer scary.
+[287] <span class="tag t2">Why?</span> 2-1 Four Key Panels
+[288] Menu · Toolbar (Tools)
+[289] Storeroom for materials
+[290] Stage · the frame at the current time
+[291] Preview · toolbox
+[292] ③ Timeline — layers (top is front) × time (left → right)
+[293] Time indicator (CTI)
+[294] <b>Figure 2-1</b>A map of the AE screen. ① gather materials, ② view the canvas, ③ stack them on time, ④ change values.
+[295] Panel
+[296] Like
+[297] Project
+[298] List of imported video, images, music and compositions
+[299] Composition
+[300] Monitor showing the frame at the current time
+[301] A stage
+[302] Timeline
+[303] Stack layers up and down and record values over time
+[304] A musical score
+[305] Change values of the selected layer, find effects
+[306] A toolbox
+[307] <b>If you are stuck</b>If panels disappear or get tangled → Window → Workspace → Reset. Press <span class="k">`</span> (the key left of 1) over a panel to maximize it; press again to go back.
+[308] <span class="tag t2">Why?</span> 2-2 Frames, Frame Rate, Timecode
+[309] 1 second = several frames. 30 fps is 30 frames per second
+[310] How to read timecode
+[311] Hours : Minutes : Seconds : Frames
+[312] At 30 fps, 01:15 = 1.5 seconds
+[313] Common frame rates
+[314] Film and music video feel
+[315] Broadcast and YouTube standard (Korea, US)
+[316] European broadcast (PAL)
+[317] Sports, games, LED screens; smoothness
+[318] <b>Figure 2-2</b>Video is a series of still pictures (frames). The blue number at the top left of the timeline is the timecode.
+[319] Click the timecode and type a number to jump to that time. <span class="k">PgUp</span>/<span class="k">PgDn</span> move one frame; <span class="k">Shift</span>+<span class="k">PgUp</span>/<span class="k">PgDn</span> move ten frames.
+[320] <span class="tag t1">Follow Along</span> 2-3 Timeline Icons
+[321] Show/hide
+[322] Audio on
+[323] Show only this layer
+[324] Lock
+[325] Hide in timeline
+[326] Collapse transformations
+[327] Quality (draft/best)
+[328] Effects on/off
+[329] Frame blending
+[330] Motion blur
+[331] Make adjustment layer
+[332] Switch to 3D
+[333] Start keyframes
+[334] Recorded value (diamond)
+[335] Link properties
+[336] <b>Figure 2-3</b>Switches on the left of the timeline and keyframe-related icons.
+[337] <b>Figure 2-4</b>Click Toggle Switches / Modes at the bottom to change the columns. ① Mode (blending) ② Track Matte ③ Parent &amp; Link.
+[338] ▾ Ball
+[339] ◎ = stopwatch (blue when on)
+[340] ◀ ◆ ▶ = previous key · add key · next key
+[341] ◆ keyframe   │ time indicator
+[342] <b>Figure 2-5</b>Turn on the stopwatch (◎) and a keyframe (◆) is placed at the time indicator.
+[343] <span class="tag t2">Why?</span> 2-4 Icons in the Project Panel
+[344] Icon
+[345] Type
+[346] Description
+[347] Three film frames + small picture
+[348] A canvas you made. Double-click to open its timeline
+[349] One film frame
+[350] Footage (video)
+[351] Imported video and music
+[352] A sheet of paper
+[353] Still (image)
+[354] PNG, JPG, PSD, etc.
+[355] Yellow folder
+[356] For organizing. The Solids folder is created automatically
+[357] Name in italics
+[358] Original not found — right-click → Replace Footage
+[359] <span class="tag t2">Why?</span> 2-5 Types of Layers
+[360] Layer
+[361] How to make
+[362] Use
+[363] Footage (source)
+[364] Drag from the Project panel
+[365] Video, images, music
+[366] Solid
+[367] Backgrounds, a surface for effects
+[368] Shape
+[369] Draw with the rectangle or ellipse tool
+[370] Shapes, icons, lines
+[371] Text
+[372] Click with the T tool
+[373] Captions, titles
+[374] Null (empty handle)
+[375] An invisible control handle
+[376] Adjustment
+[377] Apply an effect to all layers below at once
+[378] Staging in 3D space
+[379] <span class="tag t4">Industry Standard</span> Composition Specs
+[380] Use
+[381] Size
+[382] Frame rate
+[383] YouTube and broadcast, landscape
+[384] 29.97 / 30, film feel 23.976
+[385] Shorts and Reels
+[386] Instagram feed
+[387] LED screens and façades
+[388] The venue’s native resolution
+[389] If the frame rate of the footage and the composition differ, motion stutters. Match the footage as a rule. Broadcast delivery often uses 29.97 fps Drop Frame timecode.
+[390] <span class="tag t3">One Step Further</span> Tidy Habits
+[391] Select a layer and press <span class="k">Enter</span> to rename it. Even you won’t recognize “Shape Layer 7” a week later. To tell AI something like “delay the subtitle layer by 0.5 s”, names are essential.
+[392] Use the color box at the left of a layer for labels by type, and lock finished layers.
+[393] <b>Check your input language</b>Single-key shortcuts such as U, P and S only work in English input mode. With another input mode they type a character instead and AE looks frozen. This actually happened while writing this book. Press Esc and switch to English input.
+[394] Chapter Check
+[395] <b>If it worked</b>You can read a timecode and say how many seconds and frames it is, and explain five switch icons (eye, solo, lock, 3D, motion blur).
+[396] Work out which frame 0:00:01:15 is in a 30 fps composition (45), then write down how many frames the same time is at 24 fps.
+[397] Quality of Motion — Keyframes and Graphs <span class="lv">●●○</span>
+[398] In Chapter 1 you made text slide; this chapter is about “how” it moves. The same two keyframes can look light or heavy depending on the shape of the speed.
+[399] <span class="tag t2">Why?</span> 3-1 Five Transform Properties
+[400] Property
+[401] Shortcut
+[402] Anchor Point
+[403] Center for rotation and scaling. Where a door’s hinge is
+[404] Position
+[405] x, y coordinates. Top left is 0, 0
+[406] Scale
+[407] %. The chain icon locks the aspect ratio
+[408] Rotation
+[409] “1x+30°” = one full turn plus 30 degrees
+[410] Opacity
+[411] 0 transparent to 100 opaque
+[412] <span class="k">U</span> reveals only properties with keyframes; <span class="k">UU</span> reveals only changed properties. It is the first key to press when you open someone else’s project.
+[413] <span class="tag t2">Why?</span> 3-2 How the Gaps between Keyframes Are Filled
+[414] Constant speed, mechanical
+[415] Slow start and stop
+[416] Value jumps
+[417] Horizontal = time, vertical = value. Diamonds are keyframes.
+[418] <b>Figure 3-1</b>Three ways to fill between keyframes. On the timeline they look different too: ◆ Linear, hourglass Easy Ease, ■ Hold.
+[419] <span class="tag t1">Follow Along</span> 3-3 Bouncing Ball
+[420] Practice
+[421] 03_통통공 (1920×1080, 3 s). A ball drops, bounces three times and stops.
+[422] Draw a ball with the ellipse tool and a floor with the rectangle tool (draw with no layer selected so each becomes a new layer).
+[423] For each time in the table below, move the time indicator and move the ball to that position.
+[424] Time
+[425] 0 s
+[426] Starts in the air
+[427] 0.5 s
+[428] Floor — squashed
+[429] 0.58 s
+[430] Stretched as it bounces
+[431] 0.9 s
+[432] First peak
+[433] 1.25 s
+[434] Second contact
+[435] 1.5 / 1.7 s
+[436] One more, lower
+[437] 2.4 s
+[438] Rolls and stops
+[439] <b>Figure 3-2</b>Select the ball to see its motion path (dotted) and keyframes (squares).
+[440] <span class="lbl">PROMPT · Asking Claude</span>Make a 03_통통공 composition and have an orange ball bounce three times and stop. At the moment it touches the floor, squash it to 125% wide and 75% tall, and stretch it as it bounces up. Slow at the top, fast at the bottom.
+[441] For this book, Claude added 14 keyframes from the prompt above (0 credits, a few seconds). By hand it takes 10–15 minutes.
+[442] <span class="tag t3">One Step Further</span> 3-4 Graph Editor
+[443] Click the word Position on the ball layer.
+[444] Press <span class="k">Shift+F3</span> and the keyframes are shown as curves.
+[445] <b>Figure 3-3</b>Value graph. Red is x, green is y. In AE, y grows downward, so the green peaks are the moments the ball touches the floor.
+[446] If the <b>speed graph</b> is hill-shaped, the motion is slow–fast–slow. Most UI motion has this shape.

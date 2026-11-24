@@ -1,0 +1,143 @@
+[1230] <span class="tag t2">¿Por qué?</span> 13-7 Formatos 3D que se pueden importar
+[1231] Extensión
+[1232] En AE
+[1233] Notas
+[1234] Importación directa (Advanced 3D)
+[1235] Recomendado. Materiales, texturas y animación en un solo archivo. Blender y la generación 3D de Higgsfield exportan en este formato
+[1236] Importación directa
+[1237] Solo forma y material básico (.mtl). Sin animación
+[1238] Importación directa (desde la 25.2)
+[1239] Los datos de Maya y de captura de movimiento suelen venir en este formato. Si la animación del esqueleto es compleja, pásala antes a GLB en Blender
+[1240] Enlazado como capa Cineware
+[1241] Renderiza la escena de Cinema 4D tal cual. Los cambios, en C4D
+[1242] No directamente
+[1243] Formato de cadena de producción de cine. Convierte a GLB o renderiza fuera y compón
+[1244] Imagen para Environment Light
+[1245] Para luz ambiental y reflejos. Basta con 2K–4K
+[1246] <b>Guía de tamaño</b>Para trabajar con fluidez en AE, mantén cada GLB por debajo de 500.000 polígonos y las texturas en 2K (2048 px) o menos. Si pesa más, redúcelo con Decimate en Blender.
+[1247] <span class="tag t1">Paso a paso</span> 13-8 Ajustar materiales y texturas
+[1248] Las capas planas y los modelos 3D gestionan los materiales en sitios distintos.
+[1249] <b>Capas 3D planas</b>: despliega la capa hasta <b>Material Options</b>. Cambia Diffuse (brillo bajo la luz), Specular Intensity (fuerza del brillo), Specular Shininess (lo estrecho y nítido del brillo) y Metal (cuánto se mezcla el color de la capa en el reflejo).
+[1250] <b>Modelos 3D, texto 3D y formas</b>: al seleccionar la capa en Advanced 3D aparece <b>Material Assignment</b> en el panel Properties y en la línea de tiempo. Las propiedades del material por defecto son Base Color, Roughness, Metallic, Emission Color e Intensity, y Ambient Response. Los valores PBR del archivo del modelo entran tal cual.
+[1251] <b>Materiales Substance 3D (.sbsar)</b>: desde la 26.0 se aplican a modelos y mallas paramétricas, y desde la 27.0 también a texto y formas 3D. En la 27.0 también se puede usar una capa de vídeo o de composición como fuente del material.
+[1252] Para cambiar la textura en sí, edítala en Blender o Substance, vuelve a exportar el GLB y sustitúyelo en el panel Project con clic derecho → <b>Replace Footage → File</b> (<span class="k">Ctrl+H</span>).
+[1253] Muestra de material
+[1254] Material Options (plano)
+[1255] Material por defecto (modelos y texto 3D)
+[1256] Papel mate
+[1257] Plástico
+[1258] Lámina de cristal brillante
+[1259] Metallic 0, Roughness 0,05, Opacity de la capa 30–40 %
+[1260] Logo metálico
+[1261] Metallic 1, Roughness 0,25 + Environment Light imprescindible
+[1262] Letrero de neón
+[1263] Accepts Lights Off + efecto Glow
+[1264] Definir Emission Color, Emission Intensity 2–5
+[1265] <span class="tag t1">Paso a paso</span> 13-9 Girar la cámara con un null
+[1266] Si pones claves directamente a la cámara, cuesta hacer que gire en círculo. En su lugar, pon un null en el centro del sujeto y haz la cámara hija de él: <b>solo con girar el null, la cámara traza un círculo</b>. Es el mismo principio por el que, al girar el hombro, la mano dibuja un círculo (4-3). Composición <span class="mono">13-4_카메라널궤도</span>.
+[1267] Propiedad animada
+[1268] Ojo
+[1269] Orbit_Null
+[1270] Normalmente fija. Position <span class="mono">0, 0, −2667</span>, Point of Interest <span class="mono">0, 0, 0</span>
+[1271] Orbit_Null (3D)
+[1272] Eje de giro
+[1273] Crane_Null
+[1274] Y Rotation = girar a izquierda y derecha, X Rotation = mirar por encima
+[1275] Crane_Null (3D)
+[1276] Altura y posición
+[1277] Position Y = subida de grúa, Position X = desplazamiento lateral (truck)
+[1278] Crea dos veces <b>Layer → New → Null Object</b> y llámalos <span class="mono">Orbit_Null</span> y <span class="mono">Crane_Null</span>. Activa en ambos el <b>interruptor 3D</b> (columna del cubo). Si está apagado, solo verás una Rotation y no habrá Y Rotation.
+[1279] Pon la Position de los dos null en el centro del giro, normalmente en medio del sujeto (p. ej., <span class="mono">960, 540, 0</span>). Emparenta Orbit_Null con Crane_Null.
+[1280] Emparenta la cámara con Orbit_Null. Luego selecciona la cámara y pon <span class="k">A</span> (Point of Interest) en <span class="mono">0, 0, 0</span> y <span class="k">P</span> (Position) en <span class="mono">0, 0, −2667</span>. Los valores del hijo son relativos al padre, así que la cámara mira al null desde 2667 px delante de él. 2667 es el valor de Zoom de esta cámara; a esa distancia, las capas en z=0 se ven a su tamaño original.
+[1281] Selecciona Orbit_Null, pulsa <span class="k">R</span> y pon claves en <b>Y Rotation</b> (0° en 0 s, 0x+360° en 4 s), o añade la expresión de abajo.
+[1282] Si bajas la Position Y de Crane_Null (hacia arriba), la cámara sube y mira desde arriba. Como el giro y la subida están en null distintos, puedes ajustarlos por separado.
+[1283] <b>Figura 13-9</b>Línea de tiempo del archivo de práctica. ① El padre de Orbit_Null es 2 Crane_Null, con una expresión en Y Rotation ② expresión de subida y bajada en la Position de Crane_Null ③ el padre de Camera 1 es 1 Orbit_Null.
+[1284] <b>Figura 13-10</b>Resultado de girar solo el null sin tocar la cámara. La misma escena de frente, desde arriba a la derecha y desde la izquierda. Se ve la diferencia de profundidad entre las dos tarjetas.
+[1285] <span class="lbl">EXPRESSION · Mover la cámara con null</span>// Orbit_Null Y Rotation — una vuelta en 4 s<br/>time * 90;<br/>// Orbit_Null Y Rotation — vaivén de 35° a izquierda y derecha (archivo de práctica)<br/>Math.sin(time*Math.PI/2) * 35;<br/>// Crane_Null Position — sube 300 px y baja en 2 s<br/>value + [0, -Math.sin(time*Math.PI/4)*300, 0];
+[1286] Movimiento de cámara
+[1287] Dónde se anima
+[1288] Órbita (Orbit, Arc)
+[1289] Orbit_Null Y Rotation
+[1290] Mirar por encima (Tilt over)
+[1291] Orbit_Null X Rotation
+[1292] Grúa (Crane)
+[1293] Crane_Null Position Y
+[1294] Truck
+[1295] Crane_Null Position X
+[1296] Travelling (Dolly, acercarse)
+[1297] Position Z de la cámara (relativa al padre, así que un número fija la distancia)
+[1298] Alabeo (Roll)
+[1299] Z Rotation de la cámara
+[1300] Zoom
+[1301] Zoom de la cámara. Cambia el ángulo de visión y la perspectiva, así que no es lo mismo que un travelling.
+[1302] <b>Si te atascas</b>Al emparentar cambia mucho la imagen → la Position de la cámara ahora se lee respecto al padre. Vuelve a poner <span class="mono">0, 0, −distancia</span> como en el paso 3. La cámara mira a otro sitio → comprueba que Point of Interest sea <span class="mono">0, 0, 0</span>. Al dar una vuelta se ve el borde del fondo o la parte de atrás de una tarjeta → el fondo es un solo plano. Déjalo en un vaivén izquierda-derecha como en el archivo de práctica o llena todo el entorno con modelos 3D y Environment Light.
+[1303] <b>Si funcionó</b>Al mover la cámara y las luces en 4 Views, la perspectiva y las sombras de Active Camera cambian con ellas.
+[1304] <b>Si te atascas</b>Si no ves sombras, revisa tres sitios: Casts Shadows de la luz, Material Options → Casts Shadows de la capa que proyecta la sombra y Accepts Shadows de la que la recibe. Una luz Ambient sola no crea sombras.
+[1305] Renderiza dos veces el mismo modelo GLB, con Roughness 0,1 y 0,8, y compáralos lado a lado. Luego cambia el HDR de Environment Light de interior a exterior y anota cómo cambia el paisaje reflejado en el metal.
+[1306] Render, salida y otros programas <span class="lv">●○○</span>
+[1307] Por bien que lo hagas, si exportas mal se rompe la calidad o el archivo pesa demasiado. Repasamos el último paso de la entrega.
+[1308] Idea · guion gráfico
+[1309] Material
+[1310] Rodaje · Higgsfield
+[1311] Trabajo en AE
+[1312] Capas · claves
+[1313] Revisión
+[1314] Salida
+[1315] Render Queue · AME
+[1316] Entrega
+[1317] TV · redes · pantallas LED
+[1318] <b>Figura 14-1</b>El camino de un vídeo hasta salir. Cada parte del libro cubre un paso de este flujo.
+[1319] 14-1 Dos caminos de salida
+[1320] Camino
+[1321] Renderizar dentro de AE. Ideal para másteres sin pérdida y con fondo transparente
+[1322] Renderizar en segundo plano mientras sigues trabajando en AE. Ideal para archivos comprimidos como H.264 y preajustes de YouTube
+[1323] 14-2 Ajustes de salida según el uso
+[1324] Formato · códec
+[1325] Subir a YouTube y redes
+[1326] El preajuste YouTube de Media Encoder
+[1327] Máster para montaje
+[1328] Casi sin pérdida, archivos grandes
+[1329] Fondo transparente (rótulos, logos)
+[1330] Gráficos para poner sobre Premiere
+[1331] Entrega para televisión
+[1332] Las especificaciones de la cadena (códec, volumen, zonas seguras)
+[1333] Comprueba normas como el volumen −24 LKFS
+[1334] Resolución del lugar, bitrate alto
+[1335] Un códec que lea el reproductor del lugar
+[1336] Animación web
+[1337] Extensiones como Bodymovin
+[1338] 14-3 Ir y venir con Premiere — Dynamic Link
+[1339] En Premiere, haz clic derecho en un clip y elige <b>Replace With After Effects Composition</b>: se crea una composición de AE y lo que cambies en AE aparece en Premiere sin renderizar. También puedes arrastrar una composición de AE al panel Project de Premiere.
+[1340] 14-4 MOGRT — plantillas que se editan en Premiere
+[1341] <b>Window → Essential Graphics</b>. Elige la composición en Primary y arrastra al panel las propiedades que quieres que se puedan editar (texto, color, deslizadores de tamaño). También puedes hacer clic derecho en una propiedad de la línea de tiempo y elegir <b>Add Property to Essential Graphics</b>.
+[1342] <b>Figura 14-2</b>① Clic derecho en Source Text en la línea de tiempo → Add Property to Essential Graphics.
+[1343] <b>Figura 14-3</b>Panel Essential Graphics. ① Primary: la composición que será plantilla ② propiedad registrada (el texto) ③ Export Motion Graphics Template. Composición <span class="mono">07-3_익스프레션_글자</span>.
+[1344] Guarda un archivo .mogrt con <b>Export Motion Graphics Template</b>.
+[1345] Cárgalo en Essential Graphics de Premiere y el montador cambia solo texto y colores sin AE. Sirve para repartir rótulos inferiores e identificadores de canal en un equipo.
+[1346] <b>Enlace con el capítulo 7</b>Si incluyes controles de expresión (7-16) y una caja de tamaño automático (7-12), tendrás un MOGRT cuya caja crece sola aunque el montador escriba un nombre largo.
+[1347] 14-5 Archivos de Photoshop e Illustrator
+[1348] Importa PSD o AI como <b>Composition - Retain Layer Sizes</b> y obtendrás una composición con las capas vivas. Si editas y guardas el original, AE también se actualiza.
+[1349] 14-6 Orden y copia de seguridad
+[1350] <b>File → Dependencies → Collect Files</b>: reúne en una carpeta el proyecto y todo el material que usa. Imprescindible para pasar a otro ordenador o entregar un trabajo.
+[1351] <b>Reduce Project</b>: borra lo que no usan las composiciones seleccionadas.
+[1352] <b>Increment and Save</b> (<span class="k">Ctrl+Alt+Shift+S</span>): guarda un archivo nuevo subiendo el número final del nombre. Deja un historial al que volver.
+[1353] <b>Frame.io</b>: sube resultados con el panel Frame.io V4 de AE (menú Window) y recibe los comentarios del cliente fotograma a fotograma.
+[1354] 14-7 Si el render va lento
+[1355] Método
+[1356] Resolución de previsualización Half / Quarter
+[1357] Respuesta más rápida mientras trabajas
+[1358] Calcular solo parte del cuadro
+[1359] Prerrenderizar y sustituir
+[1360] Convertir una precomposición pesada en un archivo de vídeo
+[1361] Limpiar la caché cuando se lía
+[1362] Reducir la memoria reservada a otras apps
+[1363] <b>Si funcionó</b>Se crea un MP4 H.264 en Media Encoder o en la Render Queue y se reproduce también en el móvil.
+[1364] <b>Si te atascas</b>Si el render va muy lento, activa Composition → Preview → Cache Work Area in Background y elige ProRes 4444 / Alpha solo cuando necesites fondo transparente.
+[1365] Exporta el mismo vídeo de 10 segundos en tres formatos: YouTube (16:9), Shorts (9:16) y televisión (comprueba la norma 1920×1080 59.94i).
+[1366] Herramientas complementarias y alternativas <span class="lv">●○○</span>
+[1367] AE no lo hace todo solo. Saber con qué usarlo y con qué compararlo ahorra mucho tiempo de trabajo.
+[1368] 15-1 Herramientas que combinan bien
+[1369] Trabajo que se reparte con AE
+[1370] Cómo se conecta
+[1371] Premiere (antes Premiere Pro)
+[1372] Montaje, subtítulos, sonido. AE hace gráficos y composición

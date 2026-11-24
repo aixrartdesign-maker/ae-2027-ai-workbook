@@ -1,0 +1,258 @@
+[1743] Con el mismo plan, haz una versión de 15 segundos y un anuncio bumper de 6. Lo que tuviste que quitar es el núcleo del plan.
+[1744] Créditos · derechos de autor · revisión (registros reales) <span class="lv">●○○</span>
+[1745] Anotamos tal cual los créditos y el tiempo que costaron de verdad las prácticas del libro. Después repasamos los puntos de derechos de autor y revisión antes de publicar vídeo hecho con IA.
+[1746] 25-1 El coste real de las prácticas del libro
+[1747] Ajustes
+[1748] Créditos
+[1749] Generar un vídeo de práctica
+[1750] Seedance 2.0 mini · 480p · 5 s
+[1751] 1 min aprox.
+[1752] woman · 5 s
+[1753] Unos 5
+[1754] 9:16 · 5 s
+[1755] 4 min aprox.
+[1756] Borrar tatuaje · 480p · 5 s
+[1757] Unos 18
+[1758] 8 min aprox.
+[1759] Título de Claude y correcciones
+[1760] Trabajo con el puente
+[1761] Decenas de segundos
+[1762] Lluvia · 5 s (indicado 68)
+[1763] 5 min aprox.
+[1764] Noche · 5 s (indicado 68)
+[1765] Vídeo con voz
+[1766] Seedance 2.0 mini / 2.5 · 480p · 10 s
+[1767] 2 min aprox.
+[1768] En el equipo
+[1769] Unos segundos
+[1770] Inglés · 10 s
+[1771] Grady · 10 s
+[1772] 1k · 5 s (indicado 3)
+[1773] Imágenes del guion gráfico
+[1774] 21 Z Image + 21 Nano Banana 2
+[1775] AI Assistant · logo reveal
+[1776] Trabajo dentro de AE
+[1777] Material de práctica de fundamentos y composición
+[1778] 8 × Seedance 2.0 mini 720p 5 s + 3 imágenes
+[1779] Unos 45
+[1780] 3 min aprox.
+[1781] Imágenes para figuras
+[1782] 19 GPT Image (iluminación, profesiones, estudio)
+[1783] Unos 14
+[1784] <b>Total</b>
+[1785] <b>Unos 238</b>
+[1786] Con el plan Ultra, 1.510,04 → 1.272,15 créditos (23/11/2026). Las herramientas de escena descontaron menos de lo indicado y Upscale más, así que comprueba siempre el saldo. Los costes pueden variar según el plan y el momento.
+[1787] 25-2 Cómo ahorrar
+[1788] Practica con el modelo más barato, 480p y 5 segundos. Pídele a Claude «enséñame primero un presupuesto con la opción más barata» y comparará el coste por modelo antes de generar.
+[1789] El número del botón Generate del panel puede subir según el número de fotogramas.
+[1790] Los modelos de la lista ilimitada de tu plan tampoco gastan créditos en el plugin.
+[1791] 25-3 Derechos de autor y revisión
+[1792] ¿Revisaste lo que pintaron Reframe y Draw to Edit (ropa, fondo, piel)?
+[1793] ¿No hay fotogramas con manos, caras, texto o logos rotos?
+[1794] ¿Evitaste generar personas reales, marcas o personajes?
+[1795] ¿Tienes consentimiento para cambios de voz y traducciones?
+[1796] ¿Anotaste modelos, instrucciones, créditos y fechas?
+[1797] ¿Avisaste al cliente de qué partes están generadas con IA?
+[1798] <b>Si funcionó</b>Los créditos, modelos e instrucciones de este trabajo están reunidos en una tabla.
+[1799] <b>Si te atascas</b>Si rechazan una generación, quita las palabras que apuntan a marcas, personas reales o logos, cámbialas por nombres genéricos y vuelve a pedirlo.
+[1800] Lo que viene — rumbo, aprendizaje, retos <span class="lv">●○○</span>
+[1801] Las herramientas de IA cambian cada pocos meses. Los botones se mueven, pero queda la capacidad de juzgar «qué encargar y qué hacer uno mismo». Este capítulo mira uno o dos años adelante y presenta caminos para demostrar tu nivel y sacar tu obra.
+[1802] 26-1 Así va a cambiar
+[1803] Tendencia
+[1804] Ahora (finales de 2026)
+[1805] Siguiente paso (previsión)
+[1806] IA dentro de AE
+[1807] AI Assistant en beta: ordenar proyectos, escribir y corregir expresiones, revisar
+[1808] Lanzamiento definitivo, agentes siempre activos (always-on) que asumen solos el trabajo repetitivo
+[1809] Conectar IA externa
+[1810] A través de plugins como el puente de Higgsfield
+[1811] MCP local de Adobe (beta privada 2027): Claude y ChatGPT editan directamente los archivos originales
+[1812] Calidad de generación
+[1813] Práctica a 480p, entrega a 720p–1080p, 4K escalando
+[1814] 4K nativo, más duración, mejor coherencia de personas y objetos
+[1815] El papel de las personas
+[1816] Mucho pulsar botones y retocar claves
+[1817] Planificar, dirigir, revisar y decidir sobre derechos: crece el peso del «director»
+[1818] Previsión basada en los anuncios de Adobe MAX 2026 y en avisos de Higgsfield. Fechas y funciones pueden cambiar.
+[1819] <b>Entonces, ¿qué practicar?</b>① Saber escribir buenas instrucciones (qué, en qué segundo, con qué sensación) ② un ojo que duda de los resultados de la IA y los corrige ③ los fundamentos de AE (capas, claves, expresiones). Lo tercero es lo que te permite rematar a mano los archivos que hace la IA.
+[1820] 26-2 Higgsfield Academy y certificados
+[1821] Higgsfield Academy (higgsfield.ai/academy) es una colección de cursos en vídeo dentro de Higgsfield. Las lecciones se ven gratis; al entregar la tarea del final de cada una se abre la siguiente, y al terminar el curso recibes un <b>certificado de finalización (Certificate of Completion)</b>. Las tareas requieren suscripción de pago y créditos.
+[1822] Curso de ejemplo
+[1823] Contenido
+[1824] Iniciación. Introducción y 7 lecciones, 1 h 42 min aprox. Primer vídeo, foto de producto y anuncio en vídeo. Certificado
+[1825] Movimientos de cámara y diseño de planos
+[1826] El flujo del cine con IA de la idea al montaje
+[1827] Crear un portafolio publicitario y un flujo de clientes con Claude y Higgsfield
+[1828] El proceso para obtener resultados en 4K
+[1829] <b>Cómo usarlo en clase</b>Pon el curso de iniciación como tarea al inicio del semestre y pide el certificado: todo el grupo arranca desde el mismo punto. En webs externas (Udemy, etc.) también hay cursos y pruebas propias de Higgsfield, pero no son el certificado oficial de Higgsfield.
+[1830] 26-3 Certificación de Adobe
+[1831] Adobe ofrece la certificación <b>Adobe Certified Professional</b>. Si apruebas el examen de una aplicación (para After Effects, Visual Effects &amp; Motion Graphics), recibes una insignia digital. Puedes examinarte en centros autorizados o a través de tu centro educativo; pregunta en tu departamento o a un socio educativo de Adobe. No evalúa directamente las funciones de IA, pero es una buena forma de demostrar los fundamentos para corregir a mano lo que hace la IA.
+[1832] 26-4 Festivales y concursos de Higgsfield
+[1833] Concurso
+[1834] Dimensión
+[1835] Condiciones y fechas
+[1836] Premios por $1.000.000 · 14 ganadores
+[1837] Abierto en agosto de 2026, ganadores anunciados a principios de noviembre. Cortos de 3 minutos o más, equipos de 1 a 4. Unas 5.000 obras finales
+[1838] Premios por $1.000.000 · 20 ganadores
+[1839] Películas originales de 3 a 7 minutos. Producción del 12 al 26/11/2026, resultados el 3 de diciembre
+[1840] Premio de $500.000
+[1841] 8.752 obras de 139 países
+[1842] <b>Reglas comunes</b>: el vídeo y las imágenes con IA deben hacerse dentro de Higgsfield y guardarse en el proyecto del concurso. El montaje puede hacerse en programas externos como AE o Premiere.
+[1843] <b>Derechos</b>: los derechos de autor siguen siendo del autor, pero Higgsfield obtiene amplios derechos para usar las obras en su promoción. Lee sin falta las bases (Official Rules) antes de participar.
+[1844] <b>Concursos locales</b>: crecen las categorías de vídeo con IA en ayuntamientos, cadenas de televisión y festivales de cine. Revisa antes en las bases «la declaración de uso de IA» y «las restricciones de herramientas de generación».
+[1845] Fuentes: higgsfield.ai/community/contests, blog oficial de Higgsfield (Talent Contest, Academy), Advanced Television (marzo de 2026). Consultado en noviembre de 2026.
+[1846] 26-5 Qué hacer después de este libro
+[1847] Convertir el guion gráfico de la cafetería del capítulo 24 en un vídeo real y añadirlo a tu portafolio
+[1848] Conseguir el certificado del curso de iniciación de Higgsfield Academy
+[1849] Planificar un corto de 3 minutos y presentarlo al próximo concurso
+[1850] Cuando salga el MCP local de Adobe, repetir las mismas prácticas y anotar las diferencias
+[1851] Apéndice
+[1852] A. Resumen de atajos (Windows · en Mac, Ctrl → Cmd, Alt → Option)
+[1853] Proyecto · composición
+[1854] Crear capas
+[1855] Importar archivo
+[1856] Sólido
+[1857] Nueva composición
+[1858] Capa de ajuste
+[1859] Ajustes de composición
+[1860] Null
+[1861] Nuevo proyecto
+[1862] Texto
+[1863] Precomponer
+[1864] Cámara
+[1865] Guardar con número siguiente
+[1866] Luz
+[1867] Mostrar propiedades
+[1868] Anclaje, posición, escala, rotación, opacidad
+[1869] Mano (desplazar la vista)
+[1870] Shift+P, etc.
+[1871] Varias propiedades a la vez
+[1872] Zoom
+[1873] Propiedades con claves / modificadas
+[1874] Rotación
+[1875] Efectos / expresiones
+[1876] Mover el anclaje
+[1877] Trazado de máscara / todo
+[1878] Rectángulo y elipse
+[1879] Audio / forma de onda
+[1880] Pluma
+[1881] Calado de máscara
+[1882] Texto
+[1883] Herramientas de cámara
+[1884] Pin de Puppet
+[1885] Cubo (malla 3D)
+[1886] Moverse en el tiempo
+[1887] Editar capas
+[1888] Inicio / final
+[1889] Duplicar
+[1890] Un fotograma
+[1891] Dividir
+[1892] Diez fotogramas
+[1893] Llevar entrada/salida al tiempo actual
+[1894] Clave anterior / siguiente
+[1895] Recortar entrada/salida
+[1896] Entrada / salida de la capa
+[1897] Subir / bajar un puesto
+[1898] Escribir un tiempo
+[1899] Invertir el tiempo
+[1900] Inicio / final del área de trabajo
+[1901] Claves · animación
+[1902] Vista · previsualización · salida
+[1903] Alt+Shift+P, etc.
+[1904] Añadir clave en el tiempo actual
+[1905] Space / 0 (teclado numérico)
+[1906] Previsualizar
+[1907] Ajustar a la vista
+[1908] Acercar / alejar
+[1909] Clave Hold
+[1910] Maximizar panel
+[1911] Ajustes de interpolación
+[1912] Cuadrícula (Grid)
+[1913] Graph Editor
+[1914] Zonas seguras
+[1915] Alt+arrastrar (grupo de claves)
+[1916] Estirar o encoger el espacio entre claves
+[1917] Render Queue
+[1918] Alt+clic (cronómetro)
+[1919] Expresión
+[1920] Guardar fotograma
+[1921] <b>Ojo con el idioma del teclado</b>Los atajos de una tecla (U, P, S…) solo funcionan con el teclado en inglés. Comprueba antes el idioma de entrada.
+[1922] B. 30 efectos de uso frecuente
+[1923] Efectos y usos
+[1924] Desenfoque · nitidez
+[1925] Gaussian Blur (desenfoque general), Camera Lens Blur (desenfoque de lente), Directional Blur (sensación de velocidad), CC Radial Blur (efecto zoom), Unsharp Mask (nitidez)
+[1926] Luz
+[1927] Glow (resplandor), Lens Flare (destello de lente), CC Light Rays (rayos), CC Light Sweep (barrido de luz)
+[1928] Color
+[1929] Lumetri Color, Curves, Tint, Fill (relleno de color), Gradient Ramp (degradado)
+[1930] Distorsión
+[1931] Turbulent Displace (ondulación), Wave Warp (olas), Mesh Warp, CC Bend It, Displacement Map (refracción)
+[1932] Generar
+[1933] Fractal Noise (humo, nubes, textura), Grid, Stroke (línea sobre una máscara), CC Particle World (partículas), Audio Spectrum (barras de música)
+[1934] Estilizar
+[1935] Drop Shadow, Bevel Alpha, Find Edges, Posterize Time (movimiento entrecortado), Echo (estelas)
+[1936] Croma · mate
+[1937] Tiempo · estabilización
+[1938] Warp Stabilizer (corregir temblores), Time Remap (control de velocidad; clic derecho en la capa → Time)
+[1939] C. El ecosistema de plugins
+[1940] Plugin
+[1941] Boris FX Mocha AE (incluido)
+[1942] Seguimiento planar, cambio de pantallas, rotoscopia precisa
+[1943] Cinema 4D Lite · Cineware (incluidos)
+[1944] Integración de escenas 3D
+[1945] Maxon Red Giant (Trapcode Particular, etc.)
+[1946] Partículas, trazos 3D, reacción a la música (de pago)
+[1947] Modelos 3D, rayos y neón (Saber es gratis)
+[1948] Rigging de personajes (script gratuito)
+[1949] Exportar Lottie (JSON) para la web
+[1950] Plugin de Higgsfield
+[1951] Panel de generación y edición con IA y puente de Claude (cap. 17–22 del libro)
+[1952] D. Glosario
+[1953] Término
+[1954] Composición (Comp)
+[1955] El lienzo donde se apilan capas. Un vídeo entero o una de sus piezas
+[1956] Fotograma clave
+[1957] Un punto que registra un valor en un momento. Entre dos claves rellena AE (interpolación)
+[1958] Interpolación
+[1959] Cómo cambia el valor entre claves. Linear, Bezier, Hold
+[1960] Canal alfa
+[1961] Información de transparencia. Necesaria para archivos con fondo transparente
+[1962] Mate (Matte)
+[1963] Información en blanco y negro que decide qué se ve y qué se oculta
+[1964] Derrame (Spill)
+[1965] El color de la pantalla verde que se pega al sujeto
+[1966] Rotoscopia
+[1967] Recortar el contorno del sujeto fotograma a fotograma
+[1968] Tracking
+[1969] Seguir el movimiento de puntos, planos o de la cámara en un vídeo
+[1970] Agrupar capas en una nueva composición
+[1971] Reglas en JavaScript pegadas a propiedades
+[1972] Plantillas de animación gráfica editables en Premiere
+[1973] Estándar común que permite a la IA usar funciones de programas externos
+[1974] Unidad de coste de generación en Higgsfield
+[1975] Fotogramas por segundo (fps)
+[1976] Número de imágenes que se muestran por segundo
+[1977] Tabla de conversión que cambia los colores de golpe (look)
+[1978] E. El repositorio de GitHub
+[1979] El material de práctica del libro está organizado en un repositorio de GitHub. La dirección está en la contraportada. Descarga el material, reproduce los mismos resultados y luego cambia las instrucciones para crear los tuyos.
+[1980] Carpeta
+[1981] Lista de vídeos e imágenes de práctica (manifest.csv), modelos, ajustes, créditos e instrucciones de generación
+[1982] Instrucciones originales para Claude y Higgsfield por capítulo
+[1983] Todas las expresiones del capítulo 7 (archivos .js con comentarios)
+[1984] El proyecto de AE de práctica (.aep) y una guía de composiciones por capítulo
+[1985] Capturas de pantalla originales antes de anotarlas
+[1986] El PDF y el manuscrito HTML del libro, las figuras (img/) y los scripts de maquetación (build/)
+[1987] El código Python que creó los diagramas (SVG)
+[1988] El registro real del trabajo (orden, errores, créditos)
+[1989] <b>Nombres de composición</b>En el proyecto del repositorio, los nombres de las composiciones empiezan con el número de capítulo y sección del libro, así que al ordenar por nombre en el panel Project aparecen en el orden del libro (01_처음움직임, 05-1_글로우·잔상 … 24-2_스토리보드_v2; los nombres están en coreano). En algunas pestañas de las capturas se ven nombres de trabajo anteriores (E_샘플_…, C7–C11, etc.), pero son las mismas composiciones.
+[1990] <b>Uso del material</b>El material de práctica lo generó la autora con un plan de pago de Higgsfield y se publica para uso libre en educación y prácticas sin ánimo de lucro. Para uso comercial, revisa las condiciones de cada modelo de generación. Las instrucciones se escribieron para no imitar a personas reales.
+[1991] F. Registro de trabajo de las prácticas (22–23/11/2026)
+[1992] Conectar el PC con la app de escritorio de Claude, activar el uso del ordenador, permitir el acceso a las apps de Adobe
+[1993] Instalar After Effects 2027 desde Creative Cloud (junto a la 2024)
+[1994] ae_force_english.txt en Documentos → AE en inglés → Continue en Crash Repair
+[1995] Instalar el plugin de Higgsfield 1.0.64 → Window → Extensions → Higgsfield → iniciar sesión
+[1996] En Claude: Customize → Connectors → añadir conector personalizado Higgsfield Bridge → permitir
+[1997] Claude: crear la composición del título de apertura → duplicar _v2 → claves de salto y expresión de flotación → mover a mano la clave de Offset
+[1998] Claude: generar un vídeo de práctica (2,5 créditos) → importarlo en la composición "18_패널_걷는인물"
+[1999] Panel: Remove BG (unos 5) → Reframe 9:16 (18) → Draw to Edit, borrar tatuaje (unos 18)
+[2000] Panel: prácticas de clima, hora del día, traducción, voz y escalado; revisión del proyecto con AI Assistant

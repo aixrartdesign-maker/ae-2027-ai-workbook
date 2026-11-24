@@ -1,0 +1,93 @@
+[794] <b>Если вы новичок</b>Эту главу можно пропустить и вернуться к ней позже. Предыдущих глав хватит, чтобы делать видео.
+[795] 7-1 Добавляем и убираем выражения
+[796] <b>Alt+щелчок</b> по секундомеру слева от имени свойства открывает поле ввода. Вставьте код и щёлкните снаружи.
+[797] Если значение стало красным, выражение применено. При ошибке причина появится на оранжевой полосе под композицией.
+[798] Чтобы выключить, нажмите переключатель =; чтобы удалить — снова Alt+щелчок. <span class="k">EE</span> раскрывает только свойства с выражениями.
+[799] <b>Pick Whip (спираль)</b>Перетащите значок спирали рядом с полем ввода на другое свойство — код связи напишется сам. Даже не зная кода, можно «связать это значение с тем».
+[800] Случайное дрожание
+[801] Покачивание вверх-вниз — ровная волна
+[802] Перелёт и возврат после остановки
+[803] Повтор с начала
+[804] Туда-обратно
+[805] Накопление
+[806] 0 → 100 за 1–3 с
+[807] Плавно 0 → 100
+[808] Сдвиг по слоям
+[809] <b>Рисунок 7-1</b>Выражения в виде графиков: по горизонтали время, по вертикали значение. Форма движения, которую даёт одна строка кода.
+[810] <b>Рисунок 7-2</b>Реальный экран AE (1 с 18 к). Тёмный круг — текущая позиция, бледные — позиции с шагом 0,07 с назад. Шлейф сделан одной строкой <span class="mono">thisComp.layer("M1").transform.position.valueAtTime(time-0.07)</span>. Композиция <span class="mono">07-1_익스프레션_움직임</span> есть в файле проекта на GitHub.
+[811] Пример
+[812] Код
+[813] Если менять числа
+[814] Дрожание
+[815] 2 = 2 раза в секунду, 120 = до 120 px. Ручная камера (1,8), сбойный экран (15,40)
+[816] Покачивание
+[817] Больше 3 — быстрее, меньше 120 — меньше амплитуда. Парящий логотип: (time*2)*6
+[818] Круговая орбита
+[819] 150 = радиус. Разные радиусы для cos и sin дают эллипс
+[820] Туда-обратно
+[821] При наличии ключей то же даёт одна строка <span class="mono">loopOut("pingpong")</span>
+[822] Затухающий отскок
+[823] 9 = число отскоков, 3 = как быстро затухает, 260 = первая высота
+[824] Непрерывное вращение
+[825] 180° в секунду. Секундная стрелка — time*6
+[826] 7-2 Базовый словарь
+[827] Слово
+[828] Собственное значение свойства (значение ключей). Основа при сочетании выражений и ключей
+[829] Текущее время (секунды)
+[830] Номер слоя (1, 2, 3… сверху)
+[831] Текущая композиция / текущий слой
+[832] thisComp.layer("Имя")
+[833] Обращение к другому слою
+[834] Обращение к значению эффекта
+[835] Свойства с двумя значениями, как позиция и масштаб (массивы). x — [0], y — [1]
+[836] 7-3 Дрожание — wiggle
+[837] <span class="lbl">EXPRESSION · Основа</span>wiggle(3, 30); // 3 раза в секунду в пределах 30 px
+[838] <span class="lbl">EXPRESSION · Только одна ось (Position)</span>w = wiggle(2, 40);<br/>[value[0], w[1]]; // x как есть, дрожит только y
+[839] <span class="lbl">EXPRESSION · Мягкая тряска камеры</span>wiggle(0.8, 12, 3, 0.5); // частота, размах, октавы (мелкая дрожь), множитель
+[840] <span class="lbl">EXPRESSION · Зацикленное дрожание (для лупов, период 5 с)</span>freq = 2; amp = 30; loopTime = 5;<br/>t = time % loopTime;<br/>w1 = wiggle(freq, amp, 1, 0.5, t);<br/>w2 = wiggle(freq, amp, 1, 0.5, t - loopTime);<br/>linear(t, 0, loopTime, w1, w2);
+[841] <span class="lbl">EXPRESSION · Дрожание, управляемое ползунками</span>wiggle(effect("Freq")("Slider"), effect("Amp")("Slider"));
+[842] 7-4 Движение во времени — time
+[843] <span class="lbl">EXPRESSION · Непрерывное вращение (Rotation)</span>time * 90; // 90 градусов в секунду
+[844] <span class="lbl">EXPRESSION · Покачивание вверх-вниз (Position)</span>amp = 6; speed = 2;<br/>value + [0, Math.sin(time * speed) * amp];
+[845] <span class="lbl">EXPRESSION · Движение по кругу (Position)</span>r = 200; speed = 1.5;<br/>c = [thisComp.width/2, thisComp.height/2];<br/>c + [Math.cos(time*speed)*r, Math.sin(time*speed)*r];
+[846] <span class="lbl">EXPRESSION · Пульс (Scale)</span>s = 100 + Math.sin(time * 6) * 5;<br/>[s, s];
+[847] <span class="lbl">EXPRESSION · Мигание (Opacity)</span>Math.round(time * 4) % 2 == 0 ? 100 : 0; // мигает дважды в секунду
+[848] 7-5 Повтор — loopOut, loopIn
+[849] После последнего ключа повтор с начала
+[850] Туда-обратно
+[851] Продолжение от конечного значения с накоплением (ступени, крутящееся колесо)
+[852] Продолжать с последней скоростью
+[853] Повтор и до первого ключа
+[854] Повтор только двух последних ключей
+[855] Повтор только последней секунды
+[856] <b>Внимание</b>Для loop-выражений нужно не меньше двух ключей, а со свойствами Path работают не все.
+[857] 7-6 Пересчёт значений — linear, ease, clamp
+[858] <span class="lbl">EXPRESSION · 0 → 100 между 1 и 3 с (Opacity)</span>linear(time, 1, 3, 0, 100);
+[859] <span class="lbl">EXPRESSION · Плавно (есть также easeIn и easeOut)</span>ease(time, 0, 2, 0, 360);
+[860] <span class="lbl">EXPRESSION · Масштаб по расстоянию до другого слоя (Scale)</span>d = length(thisComp.layer("Cursor").position, position);<br/>s = linear(d, 0, 400, 150, 100); // близко — 150%, далеко — 100%<br/>[s, s];
+[861] <span class="lbl">EXPRESSION · Ограничение диапазона</span>clamp(value, 0, 100);
+[862] <b>Рисунок 7-3</b>Реальный экран AE (07-2_익스프레션_값, 1 с 15 к). Слева вверху: при одном и том же 3-секундном перемещении у linear шаг ровный, у ease плотнее на концах, у easeOut — только в конце. Справа вверху: шлейф valueAtTime. Слева внизу: поворот и масштаб, закреплённые seedRandom. Справа внизу: полоска, смотрящая на оранжевую точку через atan2. В самом низу: индикатор прогресса по thisComp.duration.
+[863] 7-7 Отскок и остановка — инерционный отскок (inertial bounce)
+[864] «Доводка»: после остановки на ключе объект слегка перелетает и возвращается. Подходит для позиции, масштаба и поворота.
+[865] <span class="lbl">EXPRESSION · Мяч, отскакивающий от пола (Position, 2 ключа: начало падения · пол)</span>e = .7; g = 5000; nMax = 9;<br/>n = 0; if (numKeys &gt; 0){ n = nearestKey(time).index; if (key(n).time &gt; time) n--; }<br/>if (n &gt; 0){<br/>  t = time - key(n).time; v = -velocityAtTime(key(n).time - .001)*e;<br/>  vl = length(v); vu = (vl &gt; 0) ? normalize(v) : [0,0];<br/>  tCur = 0; segDur = 2*vl/g; tNext = segDur; nb = 1;<br/>  while (tNext &lt; t &amp;&amp; nb &lt;= nMax){ vl *= e; segDur *= e; tCur = tNext; tNext += segDur; nb++; }<br/>  if (nb &lt;= nMax){ delta = t - tCur; value + vu*delta*(vl - g*delta/2); } else { value; }<br/>} else value;
+[866] 7-8 Следование и сдвиг — valueAtTime, index
+[867] <span class="lbl">EXPRESSION · Следовать за слоем выше с задержкой 0,1 с (Position)</span>delay = 0.1;<br/>thisComp.layer(index - 1).position.valueAtTime(time - delay);
+[868] <span class="lbl">EXPRESSION · Старт позже по номеру слоя (дубликаты появляются по очереди)</span>delay = 0.08 * (index - 1);<br/>valueAtTime(time - delay);
+[869] <span class="lbl">EXPRESSION · Каждый дубликат встаёт правее (Position)</span>gap = 220;<br/>[100 + (index - 1) * gap, value[1]];
+[870] <span class="lbl">EXPRESSION · Плавное следование</span>smooth(0.3, 5); // усреднение за 0,3 с по 5 отсчётам
+[871] 7-9 Движение по маркерам
+[872] <span class="lbl">EXPRESSION · Подскок на каждом маркере (Scale)</span>m = thisLayer.marker; n = 0;<br/>if (m.numKeys &gt; 0){ n = m.nearestKey(time).index; if (m.key(n).time &gt; time) n--; }<br/>if (n &gt; 0){ t = time - m.key(n).time; s = 100 + 30*Math.exp(-8*t)*Math.cos(20*t); [s, s]; } else value;
+[873] <b>Рисунок 7-4</b>① Три маркера на слое (<span class="k">*</span> на цифровой клавиатуре) ② выражение на Scale. Каждый раз, когда индикатор времени проходит маркер, круг вырастает и успокаивается. В примере амплитуда 60 и затухание 6 для более сильного подскока. Композиция <span class="mono">07-4_익스프레션_마커</span>.
+[874] <span class="lbl">EXPRESSION · Реакция на громкость (Scale) — пошагово в 5-8</span>// Сначала: правый щелчок по аудиослою → Keyframe Assistant → Convert Audio to Keyframes<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider");<br/>s = linear(a, 0, 20, 100, 140);<br/>[s, s];
+[875] 7-10 Случайность — random, seedRandom
+[876] <span class="lbl">EXPRESSION · Своя фиксированная случайная позиция для каждого слоя</span>seedRandom(index, true); // true = не меняется со временем<br/>[random(0, thisComp.width), random(0, thisComp.height)];
+[877] <span class="lbl">EXPRESSION · Случайный цвет (Fill Color)</span>seedRandom(index, true);<br/>hslToRgb([random(), 0.6, 0.55, 1]);
+[878] <span class="lbl">EXPRESSION · Рваное дрожание (8 раз в секунду)</span>posterizeTime(8);<br/>wiggle(8, 20);
+[879] 7-11 Выражения для текста — Source Text
+[880] <span class="lbl">EXPRESSION · Счётчик чисел</span>n = linear(time, 0, 3, 0, 2026);<br/>Math.round(n).toLocaleString(); // 2,026
+[881] <span class="lbl">EXPRESSION · Проценты с одним знаком после запятой</span>linear(time, 0, 2, 0, 98.6).toFixed(1) + "%";
+[882] <span class="lbl">EXPRESSION · Таймер 00:00</span>s = Math.floor(time); m = Math.floor(s/60);<br/>("0"+m).slice(-2) + ":" + ("0"+(s%60)).slice(-2);
+[883] <span class="lbl">EXPRESSION · Эффект пишущей машинки</span>txt = value; speed = 15; // 15 символов в секунду<br/>txt.substr(0, Math.floor(time * speed));
+[884] <span class="lbl">EXPRESSION · Имя слоя как текст</span>thisLayer.name;
+[885] <span class="lbl">EXPRESSION · Размер и цвет текста (с 2020 года)</span>style.setFontSize(80).setFillColor([0.9, 0.35, 0.2]);
+[886] 7-12 Автоматическая плашка — sourceRectAtTime

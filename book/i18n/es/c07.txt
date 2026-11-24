@@ -1,0 +1,106 @@
+[887] Haz que la caja de fondo crezca sola según la longitud del texto, como en un rótulo inferior.
+[888] <span class="lbl">EXPRESSION · Size de la forma rectangular</span>r = thisComp.layer("Caption").sourceRectAtTime(time, false);<br/>pad = 40;<br/>[r.width + pad*2, r.height + pad];
+[889] <span class="lbl">EXPRESSION · Position de la forma rectangular (dentro del grupo)</span>r = thisComp.layer("Caption").sourceRectAtTime(time, false);<br/>[r.left + r.width/2, r.top + r.height/2];
+[890] <b>Figura 7-5</b>La pantalla real de AE (07-3_익스프레션_글자). Máquina de escribir (Text Animator), caja automática con sourceRectAtTime, un rig que controla seis barras con un Slider y un contador con easeOut en el efecto Numbers (sube hasta 2027).
+[891] 7-13 Espacio y dirección
+[892] <span class="lbl">EXPRESSION · Girar solo en la dirección del movimiento (Rotation)</span>v = position.velocity;<br/>radiansToDegrees(Math.atan2(v[1], v[0]));
+[893] <span class="lbl">EXPRESSION · Mirar hacia otra capa (Rotation)</span>d = thisComp.layer("Target").position - position;<br/>radiansToDegrees(Math.atan2(d[1], d[0])) + 90;
+[894] <span class="lbl">EXPRESSION · Mantener el tamaño aunque el padre escale (Scale)</span>s = []; ps = parent.transform.scale.value;<br/>for (i = 0; i &lt; ps.length; i++) s[i] = value[i] * 100 / ps[i];<br/>s;
+[895] <span class="lbl">EXPRESSION · Posición en pantalla de una capa 3D (Position de capa 2D)</span>thisComp.layer("3D Point").toComp([0, 0, 0]);
+[896] <span class="lbl">EXPRESSION · Desenfoque según la distancia a la cámara (Blur)</span>d = length(thisComp.activeCamera.toWorld([0,0,0]), toWorld(anchorPoint));<br/>linear(d, 500, 2000, 0, 20);
+[897] 7-14 Ajustarse a la duración de la composición
+[898] <span class="lbl">EXPRESSION · Aparecer los primeros 0,5 s y desaparecer los últimos 0,5 s (Opacity)</span>f = 0.5;<br/>Math.min(linear(time, inPoint, inPoint+f, 0, 100), linear(time, outPoint-f, outPoint, 100, 0));
+[899] <span class="lbl">EXPRESSION · Barra de progreso (Scale x)</span>p = (time - inPoint) / (outPoint - inPoint) * 100;<br/>[p, value[1]];
+[900] <span class="lbl">EXPRESSION · Mostrar el número de fotograma (Source Text)</span>timeToFrames(time);
+[901] 7-15 Crear trazados — createPath
+[902] <span class="lbl">EXPRESSION · Una línea entre dos null (Path)</span>a = fromComp(thisComp.layer("PointA").toComp([0,0]));<br/>b = fromComp(thisComp.layer("PointB").toComp([0,0]));<br/>createPath([a, b], [], [], false);
+[903] PointA (null)
+[904] PointB (null)
+[905] points = [a, b] · abierto (false)
+[906] PointA
+[907] PointB
+[908] Mueve un null y la línea le sigue sola
+[909] <b>Figura 7-6</b>createPath crea un trazado a partir de una lista de coordenadas. Si pasas como puntos las posiciones de dos null, la línea se redibuja cada vez que los mueves. Con las dos listas de tangentes vacías, la línea es recta.
+[910] 7-16 Expression Controls — construir un rig
+[911] Reúne en un null controles Slider, Angle, Checkbox, Color, Point y Layer de Effect → Expression Controls y haz que muchas capas los lean: tendrás un «rig» que lo controla todo desde un sitio. Al exportar un MOGRT (cap. 14), estos controles se convierten en los mandos de Premiere.
+[912] <span class="lbl">EXPRESSION · Encender y apagar con una casilla (Opacity)</span>thisComp.layer("Control").effect("Show")("Checkbox") == 1 ? 100 : 0;
+[913] <span class="lbl">EXPRESSION · Unificar el color de marca con un Color Control (Fill Color)</span>thisComp.layer("Control").effect("BrandColor")("Color");
+[914] 7-17 Cuando hay un error
+[915] Mensaje de ejemplo
+[916] Causa y solución
+[917] Paréntesis o comillas sin pareja
+[918] Ha cambiado el nombre de la capa. Corrige el nombre o llámala por index
+[919] Los nombres de efectos cambian entre versiones de idioma. Vuelve a enlazar el efecto con el Pick Whip
+[920] Se dio un solo número a posición o escala. Usa [x, y]
+[921] Errores como ranges.filter is undefined
+[922] Motor Legacy ExtendScript. Elige el motor JavaScript en File → Project Settings → Expressions
+[923] <b>Pedírselo a la IA</b>Pega el código con «arregla este error» y Claude o el AI Assistant de AE arreglan casi todo al momento. Pero lo importante es entender el resultado: si sabes leer las tablas de este capítulo, sabrás leer el código que te da la IA.
+[924] <b>Si funcionó</b>Como en la figura 7-2, un círculo y tres estelas le siguen con una sola línea de código.
+[925] <b>Si te atascas</b>Si aparece la franja naranja de error, comprueba que el nombre de la capa entre comillas es exacto (espacios incluidos) y que está elegido el motor JavaScript en Project Settings → Expressions. Una vez resuelto, cierra la franja con la X de la derecha.
+[926] Haz un rig que controle la frecuencia y la fuerza de wiggle con un Slider Control y enlázalo con el Pick Whip a otras cinco capas.
+[927] Haz un «rig de rótulo inferior» con controles Slider, Color y Checkbox en un null: la caja se ajusta a la longitud del nombre (sourceRectAtTime), los colores cambian de golpe y la animación de entrada se puede activar y desactivar.
+[928] Expórtalo como MOGRT y comprueba que funciona en Premiere.
+[929] Técnicas para que la imagen rodada y la creada parezcan una sola. Aquí empiezan los efectos visuales del cine. Todo el material de práctica de esta parte se hizo con Higgsfield; la lista y las instrucciones están en <span class="mono">sources/</span> del repositorio de GitHub.
+[930] Croma — pantalla verde y azul <span class="lv">●●○</span>
+[931] Se graba al actor delante de una tela verde o azul, se borra solo ese color y se combina con otro fondo. El borrado lo hace Keylight en AE, pero el 80 % del resultado se decide en el rodaje.
+[932] 8-1 ¿Por qué verde?
+[933] El croma elige «un color que las personas casi no tienen» y borra solo ese. La piel humana, sea cual sea su origen, mezcla tonos rojos y amarillos, así que el verde y el azul, en el lado opuesto, son los que mejor se separan. El verde se ha convertido en el estándar actual por tres razones.
+[934] Razón
+[935] Los sensores digitales son fuertes en verde
+[936] En la mayoría de sensores (patrón Bayer), 2 de cada 4 píxeles captan verde. Hay más información y menos ruido en el verde, así que los bordes salen limpios.
+[937] Es luminoso, hace falta menos luz
+[938] Con la misma luz, el verde sale más claro que el azul. Es más fácil iluminar uniformemente una pantalla grande.
+[939] Choca poco con la ropa
+[940] La ropa azul —vaqueros, trajes— es habitual, pero la ropa verde fluorescente es rara.
+[941] 8-2 Cuándo se sigue usando la pantalla azul
+[942] Situación
+[943] La época del celuloide
+[944] En película, la capa sensible al azul tenía el grano más fino, así que casi todo el cine de los 70 a los 90 usó pantalla azul. Las escenas de vuelo de <i>Superman</i> (1978) son un ejemplo clásico.
+[945] Escenas nocturnas y fondos oscuros
+[946] El verde es luminoso y el derrame (spill) verde en los bordes del actor es fuerte. El azul se nota menos y casa bien con fondos oscuros.
+[947] Pelo rubio o claro, atrezo verde
+[948] Cuando los reflejos verdes se ven en el pelo o se borran también ropa o plantas verdes.
+[949] Escenas de agua y mar
+[950] Como en <i>La vida de Pi</i>, cuando el cielo y el horizonte de un gran tanque de agua se resuelven con fondo azul.
+[951] <b>Solo una regla</b>Elige un color que no tengan el actor ni el atrezo. Si el actor viste de verde, azul; si el uniforme es azul, verde. Alguna vez se usan fondos rojos o magenta.
+[952] 8-3 Rodar para un croma limpio — iluminación
+[953] <b>Figura 8-1</b>Esquema de iluminación de pantalla verde (visto desde arriba; generado con Higgsfield GPT Image y rotulado). Las luces de pantalla ①② iluminan solo la pantalla de forma uniforme, sin dar al actor; las luces del actor ③④⑤ no tocan la pantalla. El actor se sitúa a 2–3 m de la pantalla para evitar reflejos verdes (spill) y sombras.
+[954] <b>Figura 8-2</b>Así se ve en un estudio real (ejemplo hecho con Higgsfield GPT Image). Hay luces separadas para la pantalla y para la persona, y la persona se aparta de la pantalla.
+[955] Casi todos los problemas de croma vienen de una «pantalla desigual» y de «luz verde sobre el actor». Prepáralo en este orden.
+[956] <b>Ilumina por separado la pantalla y al actor.</b> Ilumina la pantalla con luces amplias y suaves (softboxes, bancos fluorescentes) desde arriba y abajo en ambos lados, uniforme, como si la pintaras. Al actor, con luz principal y de relleno aparte.
+[957] <b>Separa al actor 2–3 m de la pantalla.</b> Si está cerca, la luz verde reflejada cae en hombros y cabeza (spill) y las sombras caen en la pantalla.
+[958] <b>Iguala el brillo.</b> La diferencia de brillo en toda la pantalla debe quedar dentro de 1/3 de paso. En el monitor de forma de onda (Waveform) o en False Color de la cámara debe verse una línea plana. Un poco más oscura que la cara del actor, o igual, es un nivel seguro.
+[959] <b>Pon contraluz (rim light).</b> La luz desde arriba y detrás del actor marca el contorno del pelo y tapa el derrame verde. Un tono algo cálido (ámbar, magenta claro) compensa el spill.
+[960] <b>Haz coincidir la dirección de la luz con el fondo.</b> Si en el vídeo de fondo el sol está a la izquierda, pon también a la izquierda la luz principal del actor. Aunque el croma sea perfecto, si la luz no coincide parece una «persona pegada».
+[961] <b>Ajustes de cámara</b>: obturación rápida (1/100 o más) para reducir el desenfoque de movimiento y, si es posible, grabación en 4:2:2 o superior con bitrate alto. Los archivos muy comprimidos rompen los bordes en escalones.
+[962] Error habitual
+[963] Resultado
+[964] Solución
+[965] Arrugas y costuras de la tela
+[966] Las sombras de las arrugas no se borran
+[967] Tensar la tela; recortar las arrugas con un Garbage Matte
+[968] El actor pegado a la pantalla
+[969] Borde verde, sombra bajo los pies
+[970] Separarlo; Spill Suppressor
+[971] Atrezo brillante, gafas
+[972] Reflejan verde y quedan agujeros
+[973] Acabado mate, cambiar el ángulo
+[974] Pelo al viento
+[975] Desaparecen los pelos finos
+[976] Reforzar el contraluz; hacer un mate suave aparte
+[977] La cámara se movió y no hay referencias
+[978] No se puede encajar el fondo
+[979] Poner marcas de tracking (cruces) en la pantalla (cap. 10)
+[980] 8-4 Sacar el croma con Keylight — práctica
+[981] Material de práctica
+[982] S01 persona ante pantalla verde (Higgsfield Seedance 2.0 mini, 720p 5 s, 5 créditos) + I12 fondo de estudio luminoso (Nano Banana 2, 1,5 créditos).
+[983] <b>Figura 8-3</b>El original. Los bordes de la pantalla están oscuros y con manchas: es desigual, justo el «error habitual» de 8-3.
+[984] <b>Figura 8-4</b>Resultado tras elegir solo el Screen Colour. Con esto ya sale casi todo.
+[985] Pon el vídeo de la persona arriba y la imagen de fondo abajo. Aplica a la capa de la persona <b>Effect → Keying → Keylight (1.2)</b>.
+[986] Con el cuentagotas de <b>Screen Colour</b>, pica el verde cercano al actor. Solo con esto se borra casi todo.
+[987] Cambia <b>View</b> a <b>Screen Matte</b> para verlo en blanco y negro. El fondo debe ser negro del todo y la persona, blanca del todo. Las manchas grises indican que aún no se ha borrado bien.
+[988] Sube <b>Screen Matte → Clip Black</b> para volver negro el gris del fondo y baja <b>Clip White</b> para volver blanco el gris dentro de la persona. Si te pasas, se come el pelo; ve poco a poco.
+[989] Vuelve View a <b>Final Result</b> y reduce el borde verde restante con <b>Screen Balance</b> y <b>Despill Bias</b>, o añade <b>Advanced Spill Suppressor</b>.
+[990] Recorta todo lo que queda fuera de la pantalla (focos, soportes) con una máscara de pluma (Garbage Matte). Por último, limpia los bordes con <b>Key Cleaner</b> y da a la persona el mismo tono de color que el fondo (cap. 12).
+[991] <b>Figura 8-5</b>Vista Screen Matte. Fondo gris = aún semitransparente.
+[992] <b>Figura 8-6</b>Tras Clip Black 35 y Clip White 85. Fondo negro, persona blanca. Las manchas blancas de las cuatro esquinas son zonas a las que no llegó la luz; se recortan con una máscara.
