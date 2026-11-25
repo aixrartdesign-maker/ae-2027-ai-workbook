@@ -1,0 +1,131 @@
+[2765] IA de AE · conexión
+[2766] Cap. 17–18
+[2767] Cap. 19–21
+[2768] Puente de Claude
+[2769] Cap. 22–23
+[2770] Los menús se nombran según la versión en inglés. Todas las pantallas son de la versión en inglés (18-2)
+[2771] Historia, mapa de la IA, instalación (00, 18-2)
+[2772] IA integrada de AE, conexión, panel ① (17–19)
+[2773] Paneles ②③, títulos con Claude (20–23)
+[2774] Proyecto integrado, revisión (24–25)
+[2775] <b>¿Poco tiempo?</b>Asienta la base con los capítulos 1 → 3 → 4 y luego prueba la conexión con IA y la práctica con 18 → 19 → 22. Lee los demás capítulos cuando necesites una función. Cada capítulo se puede seguir solo con los archivos del repositorio, sin los resultados de capítulos anteriores.
+[2776] <span class="tpn">PART 5</span><span class="tpt">IA integrada de AE y conexión</span><span class="pn" data-target="part-5"></span>
+[2777] <span class="tn">17</span><span class="tt">IA integrada de AE<em> — AI Assistant y Object Matte</em></span><span class="pn" data-target="ch-17"></span>
+[2778] <span class="tn">18</span><span class="tt">Conectar<em> — interfaz en inglés, plugin, puente</em></span><span class="pn" data-target="ch-18"></span>
+[2779] <span class="tn">19</span><span class="tt">Panel ① Edición<em> — quitar fondo · reencuadre · borrar tatuajes</em></span><span class="pn" data-target="ch-19"></span>
+[2780] <span class="tn">20</span><span class="tt">Panel ② Escena<em> — clima · hora del día · luz · acción</em></span><span class="pn" data-target="ch-20"></span>
+[2781] <span class="tn">21</span><span class="tt">Panel ③ Audio<em> — silencios · traducción · voz</em></span><span class="pn" data-target="ch-21"></span>
+[2782] <span class="tpn">PART 7</span><span class="tpt">Crear con Claude</span><span class="pn" data-target="part-7"></span>
+[2783] <span class="tn">22</span><span class="tt">Claude ① crear y corregir títulos</span><span class="pn" data-target="ch-22"></span>
+[2784] <span class="tn">23</span><span class="tt">Claude ② logo reveal · rótulo inferior · transición · cristal</span><span class="pn" data-target="ch-23"></span>
+[2785] Cap. 19 Remove BG, cap. 11 Object Matte
+[2786] Cap. 19 Reframe
+[2787] Cap. 20 Scene
+[2788] Cap. 21 Audio
+[2789] Cap. 22–23 Claude
+[2790] Cap. 17 AI Assistant
+[2791] Ninguna de las dos conexiones necesita clave API. Basta con añadir la dirección en los conectores de Claude e iniciar sesión con tu cuenta de Higgsfield (18-5). El resultado es un archivo .aep normal, y la gran ventaja es que una persona siempre puede corregir a mano las capas que hizo la IA.
+[2792] En Claude, ve a <b>Customize → Connectors → + Add → Add custom connector</b>, escribe la dirección e inicia sesión en Higgsfield en la ventana que se abre (18-5). Nunca tienes que darle tu contraseña a Claude.
+[2793] <b>Otro uso de Replace Footage</b>Cambia solo el original y mantiene efectos, claves y máscaras. Con el mismo método puedes cambiar un clip de práctica a 480p por la versión final escalada (19-5). Un archivo borrado no se puede volver a enlazar: recupéralo de la papelera o pon en su lugar un archivo con el mismo contenido.
+[2794] <b>Revisión antes de renderizar</b>Un ojo apagado, un Solo activo o un fx apagado cambian el render. Acostúmbrate a repasar las columnas de conmutadores justo antes de renderizar. También puedes pedir al AI Assistant del capítulo 17 que «busque capas desactivadas y estados de solo».
+[2795] <b>Comparado con Higgsfield</b>Change Weather (20-1) moja el suelo y cambia la luz de una vez. CC Rainfall solo crea las gotas, pero puedes ajustar grosor, cantidad y dirección fotograma a fotograma, y no gasta créditos. También funciona combinar ambos: añadir solo gotas en primer plano sobre el resultado de la IA.
+[2796] <b>El límite del puente</b>Como se ve en el capítulo 22, el puente de Claude actual no pudo mover las claves del Range Selector. Un reparto realista es dejar a la IA el esqueleto del animador y ajustar el ritmo a mano.
+[2797] <b>Comparado con la IA</b>Higgsfield Remove BG (cap. 19) recorta personas sin tela verde y Object Matte de AE (cap. 11) también crea un mate con un clic. Aun así, la televisión y el cine siguen usando croma porque saca con precisión hasta lo semitransparente: un pelo, un vaso, el humo. En 2026, los mates con IA son rápidos, pero todavía no superan al croma en calidad de borde ni en coherencia entre fotogramas.
+[2798] El <b>Motion Control</b> de Higgsfield (20-4) es una aplicación del método sin marcadores con IA. Extrae el movimiento de un vídeo de referencia y lo aplica a la imagen de otra persona. En AE, el vídeo del personaje así creado se recorta con Keylight o Remove BG y se compone con un fondo.
+[2799] <b>Con IA</b>Change Time of Day de Higgsfield (20-2) cambia no solo el cielo, sino también la luz sobre los edificios. A mano solo cambia el cielo y la luz la ajustas tú, pero controlas por completo la calidad original y el resultado.
+[2800] <b>Comparado con Higgsfield Draw to Edit</b>Content-Aware Fill conserva la calidad original y es gratis, pero deja huellas en fondos complejos. Draw to Edit (19-4) vuelve a pintar con naturalidad, pero gasta créditos y puede cambiar la resolución. Para objetos sencillos, AE; para escenas complejas, generación con IA.
+[2801] <b>Materiales Substance (.sbsar)</b>: importa materiales de Adobe Substance 3D Assets y elígelos en el desplegable Material. Los mapas están dentro del material y el color y la rugosidad se cambian con deslizadores (17-7).
+[2802] <b>Capas como materiales (27.0)</b>: usa una composición, un vídeo o una imagen como Base Color. Ideal para pantallas y carteles en movimiento (17-7).
+[2803] Como Composition - Retain Layer Sizes (14-5). Para editar texto de Illustrator, usa SVG (17-7)
+[2804] Ejecuta archivos .jsx con <b>File → Scripts → Run Script File</b> y coloca los que uses a menudo en la carpeta Scripts para usarlos como paneles desde el menú Window. Para tareas repetitivas como renombrar en lote o alinear capas. Hoy el AI Assistant (capítulo 17) y el puente de Claude (capítulo 22) asumen buena parte de esta función
+[2805] IA integrada de AE y conexión
+[2806] Primero aprendemos el AI Assistant integrado en AE 2027, que no requiere instalación. Después pasamos AE a inglés, instalamos el plugin de Higgsfield y tendemos un puente entre Claude y AE. La conexión solo hay que hacerla una vez.
+[2807] <b>Figura 17-1</b>El menú Window de AE 2027. Aquí se reúnen AI Assistant (beta), Adobe Stock, Content-Aware Fill, Essential Graphics y Frame.io V4.
+[2808] 17-1 Abrir el AI Assistant y leer el panel
+[2809] Al terminar una acción, pasa el ratón por el icono de créditos para ver cuántos gastó en realidad (17-8).
+[2810] 17-2 Caso ① Revisar y ordenar un proyecto heredado
+[2811] <b>Figura 17-2</b> Primera pantalla de AI Assistant e instrucciones de ejemplo
+[2812] <b>Figura 17-3</b> Petición para aprobar una acción
+[2813] <b>Figura 17-4</b> El informe, al cabo de un minuto. Encontró versiones duplicadas (v1, v2), una capa de cristal apagada, tramos vacíos en la composición del logo y una Render Queue vacía. No gastó créditos de Higgsfield.
+[2814] <b>Créditos generativos de Adobe</b>La mayoría de las acciones de IA del AI Assistant gastan créditos generativos de tu cuenta de Adobe. Consulta el saldo en la página de tu cuenta de Adobe. Son independientes de los créditos de Higgsfield. La política completa está en la sección 17-8.
+[2815] 17-3 Caso ② Expresiones — explicar, escribir y corregir
+[2816] Trabaja con las expresiones del capítulo 7 junto al Assistant. Practica con un proyecto que tenga expresiones, como la composición de título del capítulo 22. Las expresiones que escribe el Assistant pueden variar un poco cada vez, así que acostúmbrate a leer el resultado con el vocabulario del capítulo 7.
+[2817] 17-4 Caso ③ Retocar texto, formas y plantillas
+[2818] 17-5 Caso ④ Generar imágenes y vídeo
+[2819] Dentro del Assistant puedes crear fondos, imágenes de referencia y vídeos cortos con Firefly y modelos asociados y llevarlos directamente al proyecto. Generar gasta muchos créditos, así que revisa antes las tarifas de 17-8.
+[2820] <b>¿Qué generar y dónde?</b>Para recursos que usarás enseguida dentro de After Effects —un fondo, una textura— el Assistant es cómodo. Para comparar muchos modelos o mantener el mismo personaje en varios planos, es mejor Higgsfield (capítulos 19–21). En ambos casos, revisa las condiciones de uso comercial (17-8) y que no aparezcan personas reales ni marcas.
+[2821] 17-6 Object Matte — pruébalo tú
+[2822] 17-7 Otras novedades de la 27.0 — pruébalas tú
+[2823] <span class="tag t2">¿Por qué?</span> 17-8 Créditos generativos de Adobe: cuántos y cómo se gastan
+[2824] 18-1 Mapa de conexión
+[2825] <b>Figura 18-1</b>Mapa de conexión. Claude ordena la generación con el MCP de Higgsfield y maneja AE con el puente. Los botones del panel y AI Assistant se usan directamente dentro de AE.
+[2826] 18-2 Pasar AE a inglés (sin reinstalar)
+[2827] 18-3 Instalar el plugin de Higgsfield
+[2828] <b>Figura 18-2</b> Pasa el ratón por ① Window ② Extensions y aparece ③ Higgsfield.
+[2829] <b>Figura 18-3</b> La primera vez sale la pantalla de inicio de sesión. Pulsa <b>Continue in Browser</b> e inicia sesión con tu cuenta de Higgsfield. <i>(Tu turno: iniciar sesión)</i>
+[2830] 18-4 Recorrido por el panel
+[2831] <b>Figura 18-4</b> Primera pantalla tras iniciar sesión. La marca <b>MCP</b> arriba a la derecha indica que se puede conectar con Claude.
+[2832] <b>Figura 18-5</b> Las cinco herramientas más usadas, más Bridge MCP y Video generation (Seedance 2.5).
+[2833] <b>Figura 18-6</b> Herramientas Scene, Audio y Create. Abajo, en Plugins, salen las apps que has creado con Supercomputer.
+[2834] Cap. 18, 19, 22
+[2835] Cap. 21
+[2836] 18-5 Conectar el puente de Claude
+[2837] 19-1 Hacer vídeos de práctica baratos
+[2838] Con el puente, Claude creó una composición de 1920×1080 y 5 segundos y encajó el vídeo en el cuadro. El tatuaje se puso a propósito para la práctica 19-4.
+[2839] 19-2 Remove BG — quitar el fondo
+[2840] <b>Figura 19-1</b> ① Seleccionar capa ② vista previa ③ qué conservar ④ Generate
+[2841] <b>Figura 19-2</b> El resultado es un mate en blanco y negro. El blanco se conserva; el negro es el fondo que se borra. Descárgalo con ↓ arriba a la izquierda. Coste real: <b>unos 5 créditos</b>.
+[2842] 19-3 Reframe — de horizontal a Short vertical
+[2843] <b>Figura 19-3</b> ① Vista previa vertical: arriba y abajo vacíos ② 9:16 ③ Generate
+[2844] <b>Figura 19-4</b> En lugar de recortar, la IA pintó lo que faltaba: ① cielo y árboles arriba ② unos vaqueros que no estaban en el original.
+[2845] 19-4 Draw to Edit — borrar un tatuaje
+[2846] <b>Figura 19-5</b> ① Marca sobre el tatuaje ② tamaño del pincel ③ instrucción
+[2847] <b>Figura 19-6</b> Antes (círculo rojo: tatuaje) y después. El tatuaje de flor desaparece y solo queda piel.
+[2848] <b>Figura 19-7</b> Pantalla del resultado. Bajo el resultado quedan anotados la instrucción, el método (Draw To Video), la resolución y la duración.
+[2849] 19-5 Upscale — subir la calidad
+[2850] <b>Figura 19-8</b> Vídeo de práctica a 480p · 1k elegido · el botón marcaba <b>3 créditos</b>, pero se descontaron unos <b>19 créditos</b>. Tardó 1 minuto 40 segundos.
+[2851] <b>Figura 19-9</b> Resultado. Las juntas de los ladrillos y los mechones del pelo son más nítidos, pero no aparecen detalles que no estuvieran en el original.
+[2852] <b>Edit video</b>Herramienta que modifica un vídeo existente según lo que describas. Sirve para arreglar la escena de lluvia del capítulo 20, en la que la persona no se moja (p. ej., her hair and t-shirt are wet from rain).
+[2853] Con el mismo vídeo del capítulo 19 de una persona caminando, hacemos «tarde soleada → día de lluvia → noche».
+[2854] 20-1 Change Weather — que llueva
+[2855] <b>Figura 20-1</b> Ajustes de Change Weather. El botón marcaba 68 créditos, pero se descontaron <b>22,5 créditos</b>.
+[2856] <b>Figura 20-2</b> Soleado → lluvia. El suelo se mojó y el cielo se nubló, pero la ropa y el pelo de la persona siguieron secos.
+[2857] 20-2 Change Time of Day — pasar a noche
+[2858] <b>Figura 20-3</b> Ajustes de Time of Day. También marcaba 68, real <b>22,5 créditos</b>.
+[2859] <b>Figura 20-4</b> Día → noche, antes y después
+[2860] 20-3 Change Lighting — cambiar solo la luz (pantalla de ajustes)
+[2861] <b>Figura 20-5</b> Ajustes de Lighting. La dirección y el ambiente de la luz se describen con palabras.
+[2862] 20-4 Motion Control — trasladar un movimiento (pantalla de ajustes)
+[2863] <b>Figura 20-6</b> Rellena las dos casillas, Motion (movimiento de referencia) y Character (imagen de la persona), y pulsa Generate.
+[2864] 21-1 Hacer un vídeo de práctica con voz
+[2865] <b>Figura 21-1</b> Inicio del panel → pestaña <b>Audio</b>. Remove Silences · Translate · Change Voice
+[2866] 21-2 Remove Silences — cortar los silencios (gratis)
+[2867] <b>Figura 21-2</b> «4 silencios, se quitarán 3 s». Pulsa Cut y el clip de la línea de tiempo se corta en el sitio.
+[2868] <b>Figura 21-3</b> En el entorno de este libro (AE 2027 + plugin v1.0.64), Cut dio el error «Function ranges.filter is undefined».
+[2869] 21-3 Translate — traducir a otro idioma
+[2870] <b>Figura 21-4</b> Target language: English. Un clip de 10 segundos: <b>30 créditos</b>, 1 minuto 40 segundos.
+[2871] <b>Figura 21-5</b> El resultado aparece en la pantalla de generación del panel. Descárgalo con ↓ arriba a la izquierda y ponlo en la composición.
+[2872] 21-4 Change Voice — cambiar la voz
+[2873] <b>Figura 21-6</b> Elige una voz de la lista Voice (por defecto, Grady). <b>2 créditos</b>, un minuto.
+[2874] Crear con Claude
+[2875] 22-1 Crear un título de apertura
+[2876] <b>Figura 22-1</b> El resultado de Claude. ① Composición «Claude × Higgsfield × Adobe Intro» ② capas con nombre (fondo, título, subtítulo; en coreano en la captura) ③ selector de rango y claves de posición y opacidad. No gasta créditos.
+[2877] 22-2 Corregir — conversando y luego a mano
+[2878] <b>Figura 22-2</b> ① Clave final de Offset movida a 7 s para una entrada más lenta ② las cuatro claves de escala de Claude ③ valor rojo = posición con expresión
+[2879] 22-3 Pulirlo como identificador de canal para TV
+[2880] <b>Figura 22-3</b> Identificador de canal v3 para emisión (6 s)
+[2881] 22-4 Lo que Claude no puede hacer y lo que hace la persona
+[2882] 23-1 Herramientas de una sola petición — rótulo inferior y cristal
+[2883] <b>Figura 23-1</b> Rótulo inferior «Adobe After Effects» (barra gris oscuro) y una insignia de cristal líquido «AI Practice LIVE» arriba a la derecha. Todas las capas están separadas y vivas, así que puedes corregirlas a mano.
+[2884] 23-2 Logo reveal y transición de escena
+[2885] <b>Figura 23-2</b> Logo reveal (por escala). Solo hay tres capas —Transition, Logo y fondo—, así que es fácil de corregir.
+[2886] <b>Figura 23-3</b> La transición (wipe_left) quedó al principio en 0 s, así que arrastramos a mano la barra a 3,5 s en la línea de tiempo. La herramienta de transiciones del puente no tiene un valor para fijar el inicio.
+[2887] <b>La revisión, también a la IA</b>El AI Assistant del capítulo 17 miró esta composición y señaló que «entre 3 y 3,5 s y entre 4,5 y 5 s hay tramos vacíos en los que solo se ve el fondo». Basta con alargar el final de la capa del logo hasta 5 s.
+[2888] Video generation · método de práctica del cap. 19
+[2889] Calidad de entrega con Upscale (19-5)
+[2890] Rótulo inferior (23-1)
+[2891] Logo reveal y transición (23-2), Shorts con Reframe (19-3)
+[2892] Revisión de huecos y capas desactivadas con el AI Assistant (17-2)
+[2893] En Material Assignment pon Metallic 1 y Roughness 0,25. Si tienes un material metálico Substance (.sbsar), aplica metal cepillado al frente y metal oscuro a los lados por separado (17-7).
+[2894] <b>Con la IA</b>La niebla, el polvo y las fuentes de luz o los fondos pueden generarse en Higgsfield sobre negro y ponerse en modo Screen (capítulos 19–21), y la preparación repetitiva de capas de ajuste, los nombres y las expresiones pueden encargarse al puente de Claude (capítulo 22) o al AI Assistant (capítulo 17). Las decisiones las toman las personas. Decidir «dónde está el momento protagonista» es trabajo del director.
+[2895] Paneles de generación y edición con IA y el puente de Claude (capítulos 18–23)
