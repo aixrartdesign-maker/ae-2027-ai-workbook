@@ -2,7 +2,7 @@
 import re, sys, html as H
 S=open('/tmp/b13_b.html',encoding='utf-8').read()
 sys.path.insert(0,'/home/claude/book/tools'); import ins_rig; S=ins_rig.apply(S)
-import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S); S=ins_reorder.apply7(S)
+import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S); S=ins_reorder.apply7(S); import ins_restructure; S=ins_restructure.apply8(S)
 
 # ---- stray challenge boxes on the TOC page -> move into chapters 06, 07, 12
 m=re.search(r'<section class="chapter toc-page">.*?</section>',S,flags=re.S)
@@ -17,7 +17,9 @@ def add_to_chapter(no,box):
     assert k==1
 import os
 _R2=os.environ.get('RENUM2','1')=='1'
-add_to_chapter('16' if _R2 else '06',strays[0]); add_to_chapter('17' if _R2 else '07',strays[1]); add_to_chapter('22' if _R2 else '12',strays[2])
+_R3=os.environ.get('RENUM3','1')=='1'
+_c=(('17','18','23') if _R3 else ('16','17','22')) if _R2 else ('06','07','12')
+add_to_chapter(_c[0],strays[0]); add_to_chapter(_c[1],strays[1]); add_to_chapter(_c[2],strays[2])
 
 # ---- chapter ids + collect titles
 parts=[]; cur=None
@@ -63,11 +65,13 @@ def entry(kind,cid,label,title):
     if ' — ' in t:
         a,b=t.split(' — ',1); t=a+'<em> — '+b+'</em>'
     return f'<div class="te"><span class="tn">{lab}</span><span class="tt">{t}</span><span class="pn" data-target="{cid}"></span></div>'
-idx=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 6'][0]
-colA=''.join(entry(*t) for t in toc[:idx]); colB=''.join(entry(*t) for t in toc[idx:])
+idx=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 5'][0]
+idx2=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 8'][0]
+colA=''.join(entry(*t) for t in toc[:idx]); colB=''.join(entry(*t) for t in toc[idx:idx2]); colC=''.join(entry(*t) for t in toc[idx2:])
 newtoc=('<section class="chapter toc-page" data-break="1">\n<div class="ch-no">CONTENTS</div>\n<h1 class="ch">차례</h1>\n'
         '<div class="toc1">'+colA+'</div>\n</section>\n'
-        '<section class="chapter toc-page toc-cont" data-break="1">\n<div class="toc1">'+colB+'</div>\n</section>')
+        '<section class="chapter toc-page toc-cont" data-break="1">\n<div class="toc1">'+colB+'</div>\n</section>\n'
+        '<section class="chapter toc-page toc-cont" data-break="1">\n<div class="toc1">'+colC+'</div>\n</section>')
 S=S.replace(toc_sec,newtoc)
 # PART 0 starts a new page
 S=re.sub(r'(<section class="part" id="part-\d+") style="break-before:page;margin-top:0">',r'\1 data-break="1">',S)

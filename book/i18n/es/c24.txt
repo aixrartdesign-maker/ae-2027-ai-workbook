@@ -1,0 +1,250 @@
+[3721] Este libro trata un solo programa, After Effects (AE), de principio a fin. En la primera parte (PARTES 1–4) vemos qué es la IA y obtienes resultados enseguida con las tres vías para añadir IA —la IA integrada de AE, el panel del plugin de Higgsfield y el puente de Claude—; en la segunda (PARTES 5–9) se tratan los fundamentos, los gráficos animados, la composición y el 3D para corregir y ampliar esos resultados tú mismo.
+[3722] NEW · Empezar con IA
+[3723] Cap. 1–3
+[3724] Cap. 4–5 · GPT, etc.
+[3725] Cap. 6–8
+[3726] Cap. 9–10
+[3727] Cap. 11–15 · personajes
+[3728] Cap. 16–18
+[3729] Cap. 19–23
+[3730] Cap. 24–27
+[3731] Cap. 28–30 · apéndices
+[3732] Si eres principiante, empieza por la PARTE 1; si ya conoces AE, puedes empezar por la PARTE 2.
+[3733] Plan de pago de Higgsfield, cuenta de Claude y app de escritorio (para las PARTES 1–4, 9)
+[3734] Historia, mapa de la IA, instalación (1–2)
+[3735] Croma, corrección de color (19, 23)
+[3736] Tracking, rastreador 3D, borrado (20–22)
+[3737] 3D, render y salida, consejos por profesión (24–27)
+[3738] Personajes, parent, máscaras, mates (14–15)
+[3739] IA integrada de AE, conexión, panel ① (3–6)
+[3740] Formas y técnicas de animación gráfica (16)
+[3741] Paneles ②③, títulos con Claude (7–10)
+[3742] Animación de texto (17)
+[3743] Planificación integrada, revisión (28–29)
+[3744] Expresiones ①: vocabulario básico (18)
+[3745] Presentación final: promo de 30 s (28, 30)
+[3746] Expresiones ②, tarea de mitad de curso (18)
+[3747] <span class="tpn">PART 1</span><span class="tpt">NEW — empezar AE 2027 con IA</span><span class="pn" data-target="part-1"></span>
+[3748] <span class="tn">01</span><span class="tt">Qué es la IA<em> — historia y la IA generativa actual</em></span><span class="pn" data-target="ch-01"></span>
+[3749] <span class="tn">02</span><span class="tt">Instalar y preparar AE<em> — coste, instalación, historial de versiones, idioma</em></span><span class="pn" data-target="ch-02"></span>
+[3750] <span class="tpn">PART 2</span><span class="tpt">Conectar</span><span class="pn" data-target="part-2"></span>
+[3751] <span class="tn">04</span><span class="tt">Conectar<em> — registro en Higgsfield, plugin, puente</em></span><span class="pn" data-target="ch-04"></span>
+[3752] <span class="tn">05</span><span class="tt">Más allá de Claude<em> — conectar ChatGPT · Gemini · Copilot · Cursor</em></span><span class="pn" data-target="ch-05"></span>
+[3753] <span class="tpn">PART 3</span><span class="tpt">Panel de Higgsfield</span><span class="pn" data-target="part-3"></span>
+[3754] <span class="tpn">PART 4</span><span class="tpt">Crear con Claude</span><span class="pn" data-target="part-4"></span>
+[3755] <span class="tn">14</span><span class="tt">Qué es un personaje<em> — diseño, rig y mantener al mismo personaje con IA</em></span><span class="pn" data-target="ch-14"></span>
+[3756] NEW — empezar AE 2027 con IA
+[3757] Veremos qué es la IA y cómo llegó hasta aquí, instalaremos AE y lo que trae de nuevo, y conoceremos el AI Assistant que ahora vive dentro de AE. Si abres el libro por primera vez, empieza aquí.
+[3758] Qué es la IA — historia y la IA generativa actual <span class="lv">●○○</span>
+[3759] La IA no apareció de repente en 2022. Más de 70 años de investigación han llegado al punto de «lo pides con palabras y obtienes imágenes y vídeo». Este capítulo resume de una vez qué es la IA, cómo llegó hasta aquí y qué IA ya forman parte del trabajo en AE.
+[3760] 1-1 Qué es la IA — de las reglas al aprendizaje
+[3761] La <b>inteligencia artificial (IA, Artificial Intelligence)</b> es el conjunto de tecnologías que permiten a un ordenador hacer lo que las personas hacían con su inteligencia. Al principio se escribían las reglas una a una: «muchos píxeles rojos y forma redonda = manzana». Pero las manzanas son tan variadas que las reglas no acababan nunca.
+[3762] Así que el método cambió. En lugar de escribir reglas, se le <b>muestran muchísimos ejemplos</b> al ordenador y él mismo encuentra lo que tienen en común: eso es el <b>aprendizaje automático (machine learning)</b>. La variante que usa muchas capas de cálculo inspiradas en las redes neuronales del cerebro se llama <b>aprendizaje profundo (deep learning)</b>, y casi toda la IA que usamos hoy es aprendizaje profundo.
+[3763] Modelo (Model)
+[3764] La IA ya entrenada. «Seedance 2.0», «Claude» y «Firefly Image 5» son nombres de modelos
+[3765] Datos de entrenamiento
+[3766] Los textos, imágenes y vídeos con los que aprendió el modelo. Lo que aprendió determina la calidad del resultado y las cuestiones de derechos de autor
+[3767] Prompt
+[3768] La instrucción que das al modelo. Todos los recuadros PROMPT de este libro son prompts
+[3769] IA generativa
+[3770] IA que va más allá de clasificar y juzgar: crea textos, imágenes, sonido y vídeo nuevos
+[3771] Agente (Agent)
+[3772] IA que no solo responde, sino que usa herramientas directamente para terminar el trabajo. Claude manejando AE a través del puente es un ejemplo de agente
+[3773] Unidad de uso que se descuenta en cada generación. Varía según el modelo, la resolución y la duración (4-2, 3-8)
+[3774] 1-2 Breve historia de la IA — 70 años en una tabla
+[3775] Año
+[3776] Qué pasó
+[3777] Alan Turing propone el test de Turing en un artículo que pregunta «¿Pueden pensar las máquinas?»
+[3778] En la conferencia de Dartmouth (EE. UU.) se usa por primera vez el término «inteligencia artificial»
+[3779] Años 70–80
+[3780] La era de los sistemas expertos con reglas escritas a mano. Los resultados no estuvieron a la altura y llegaron dos «inviernos de la IA» en los que se cortó la financiación
+[3781] Deep Blue de IBM vence al campeón mundial de ajedrez
+[3782] El modelo de aprendizaje profundo AlexNet gana por amplio margen un concurso de reconocimiento de imágenes. Empieza la era de entrenar redes neuronales con tarjetas gráficas (GPU)
+[3783] Se presentan las GAN, dos redes neuronales que compiten para crear imágenes: el comienzo de «la IA dibuja»
+[3784] AlphaGo vence a Lee Sedol, profesional de go de 9.º dan
+[3785] Investigadores de Google publican la arquitectura Transformer, el esqueleto de la IA conversacional y de vídeo actual
+[3786] GPT-3. La capacidad de continuar un texto se acerca al nivel humano
+[3787] La generación de imágenes se populariza (DALL·E 2, Midjourney, Stable Diffusion). En noviembre se lanza ChatGPT
+[3788] Se lanza Adobe Firefly y el Relleno generativo de Photoshop. La IA conversacional se extiende como herramienta de trabajo
+[3789] OpenAI presenta Sora y se acelera la carrera de la generación de vídeo (Kling, Runway, Veo, etc.). En noviembre Anthropic publica MCP
+[3790] Aparecen modelos de vídeo que también generan sonido. Se extienden los agentes que manejan apps directamente, y apps de Adobe como Photoshop llegan a ChatGPT
+[3791] Plugin de Higgsfield para AE (mayo), Bridge MCP (julio), AI Assistant de AE 27.0 (noviembre). La era de trabajar con IA dentro de AE
+[3792] 1-3 Cómo crea la IA generativa
+[3793] Cada tipo de IA generativa crea de forma distinta. Si conoces el principio a grandes rasgos, entenderás «por qué salen dedos raros» y «por qué el mismo prompt da resultados distintos».
+[3794] Principio (muy breve)
+[3795] Uso en AE · modelos principales
+[3796] Texto (LLM)
+[3797] Mira lo escrito y elige la siguiente palabra, una a una, por probabilidad
+[3798] Planificación, subtítulos, escribir expresiones, manejar AE · Claude, ChatGPT, Gemini
+[3799] Imagen
+[3800] Parte de ruido y lo va quitando poco a poco para ajustarse al prompt (difusión)
+[3801] Fondos, objetos, style frames · Firefly, GPT Image, Nano Banana, FLUX
+[3802] Vídeo
+[3803] Extiende la generación de imágenes al eje del tiempo y crea los fotogramas juntos para que encajen
+[3804] B-roll, cambiar escenas, animar imágenes · Seedance, Kling, Veo, Runway
+[3805] Sonido
+[3806] Genera la forma de onda de voces y música, o sus rasgos
+[3807] Narración, doblaje, efectos de sonido · ElevenLabs, etc.
+[3808] Segmentación y seguimiento
+[3809] Encuentra los bordes de los objetos y los sigue fotograma a fotograma
+[3810] Quitar fondos, rotoscopia · Object Matte y Roto Brush de AE
+[3811] <b>Por qué el resultado cambia cada vez</b>La IA generativa parte cada vez de un ruido y unas probabilidades distintos. Por eso el mismo prompt da resultados diferentes y, para conseguir uno que te guste, generas varias veces (créditos) o acotas con imágenes de referencia y una semilla (seed). Los fotogramas clave de AE, en cambio, se renderizan igual siempre. Por eso el flujo básico de este libro es «hacerlo rápido con IA y corregirlo con precisión en AE».
+[3812] 1-4 El mapa de la IA generativa en 2026
+[3813] Servicios principales
+[3814] Chat · agentes
+[3815] Plataformas de generación integradas
+[3816] Higgsfield (modelos de muchas empresas con los mismos créditos), app Adobe Firefly, Runway
+[3817] AI Assistant (27.0), Object Matte (26.2), Roto Brush, Content-Aware Fill, panel de Higgsfield
+[3818] Estándar de conexión
+[3819] MCP — el puerto común que une la IA y las apps (1-8, cap. 5)
+[3820] <b>Lo que la IA aún no sabe hacer</b>① A veces dice cosas verosímiles pero falsas (alucinaciones). Comprueba tú los nombres de menú y los valores. ② Le cuesta mantener idéntica a la misma persona o logotipo de una escena a otra (14-6). ③ Los derechos de autor y de imagen de los datos y los resultados son responsabilidad de quien los usa (cap. 29). ④ Cada generación cuesta dinero.
+[3821] Instalar y preparar AE — coste, instalación, historial de versiones, idioma <span class="lv">●○○</span>
+[3822] En un solo capítulo: comprar AE, instalarlo, actualizarlo a la última versión y pasar los menús a inglés. Al final resumimos las actualizaciones hasta hoy y los 30 años de historia de AE.
+[3823] <span class="tag t1">Paso a paso</span> 2-3 Instalar AE y actualizar a la última versión
+[3824] Abre la <b>app de escritorio Creative Cloud</b> (instalada en 2-2). Comprueba que el perfil de arriba a la izquierda es tu cuenta de Adobe.
+[3825] En la pestaña <b>Aplicaciones</b>, busca <b>After Effects</b> y pulsa <b>Instalar</b>. Descarga varios GB, así que mantén la corriente e internet conectados.
+[3826] Al terminar, pulsa <b>Abrir</b>. Cuando aparezca la pantalla de inicio la primera vez, pulsa <b>New Project</b> y comprueba que se abre un proyecto vacío.
+[3827] Comprueba la versión: menú de AE <b>Help → About After Effects</b>. Este libro se basa en la <b>27.0</b>. Si tienes la 26.x o anterior, actualiza en el paso siguiente.
+[3828] Actualizar: en la sección <b>Actualizaciones</b> de la app Creative Cloud, pulsa <b>Actualizar</b> junto a After Effects. En <b>⋯ → Otras versiones</b> de la lista de apps también puedes instalar una versión anterior en paralelo (útil si los ordenadores del centro tienen una versión antigua).
+[3829] Si quieres probar funciones nuevas antes, instala aparte After Effects (Beta) desde la sección <b>Apps beta</b>. Se instala junto a la versión estable y sus funciones pueden ser inestables.
+[3830] Requisitos del equipo (referencia)
+[3831] Suficiente para los ejercicios del libro
+[3832] Windows 10/11 de 64 bits o un macOS reciente
+[3833] Memoria (RAM)
+[3834] Mínimo 16 GB; para 4K y 3D se recomiendan 32 GB o más
+[3835] Tarjeta gráfica
+[3836] 4 GB de VRAM o más; Advanced 3D y Object Matte dependen mucho de la GPU
+[3837] Almacenamiento
+[3838] Espacio libre para la instalación + un SSD para la caché de disco (27-2)
+[3839] Los requisitos mínimos exactos cambian con cada versión; consúltalos en la página de requisitos del sistema de After Effects en adobe.com.
+[3840] Conectamos a AE el plugin de Higgsfield y el puente de Claude, y vemos cómo conectar otras IA como ChatGPT y Gemini. Solo hay que conectar una vez.
+[3841] Conectar — registro en Higgsfield, plugin, puente <span class="lv">●○○</span>
+[3842] Más allá de Claude — conectar ChatGPT · Gemini · Copilot · Cursor <span class="lv">●○○</span>
+[3843] Los ejercicios del libro usan Claude, pero MCP, la base de la conexión, es un estándar común a muchas IA. Puedes usar la misma cuenta y los mismos créditos de Higgsfield en otras IA como ChatGPT y Cursor. Empieza conectando la IA que ya usas.
+[3844] Lo habrás logrado si conectas Higgsfield a tu IA (ChatGPT, etc.) y creas una imagen sencilla en la ventana del chat.
+[3845] 5-1 De un vistazo — qué IA y cómo conectarla
+[3846] Cómo conectar Higgsfield
+[3847] Control de AE (puente)
+[3848] Conviene saber
+[3849] Ajustes → Conectores → conector personalizado con <span class="mono">mcp.higgsfield.ai/mcp</span>
+[3850] <b>Comprobado en este libro</b> (cap. 6–10)
+[3851] Funciona en la app de escritorio y en la web
+[3852] Añade el plugin oficial de <b>Higgsfield</b> desde la lista de Plugins → inicia sesión
+[3853] Se puede añadir la dirección del puente como servidor MCP personalizado (según el plan). No probado en este libro
+[3854] Con el conector de Adobe, usa algunas funciones de Photoshop, Premiere y Firefly dentro de ChatGPT (5-4)
+[3855] Añade Higgsfield desde Customize → Marketplace
+[3856] Introducir la dirección en los ajustes de MCP
+[3857] Cuando trabajas junto con código y scripts
+[3858] Instalar la CLI de Higgsfield + skills
+[3859] Ajustes de MCP
+[3860] Agentes de programación que trabajan en el terminal
+[3861] Añade la dirección del servidor al archivo de configuración de una herramienta compatible con MCP, como Gemini CLI
+[3862] Igual
+[3863] Si trabajas sobre todo con una cuenta de Google
+[3864] Añade el servidor en un entorno compatible con MCP, como el modo agente de Copilot en VS Code
+[3865] Entornos de trabajo de Microsoft
+[3866] <b>Misma cuenta, mismos créditos</b>Puedes conectar una cuenta de Higgsfield a Claude, ChatGPT y Cursor a la vez, y generes donde generes se gastan los mismos créditos. No hace falta clave API: basta con pulsar Permitir en la ventana de inicio de sesión de Higgsfield.
+[3867] <span class="tag t1">Paso a paso</span> 5-2 Conectar Higgsfield a ChatGPT
+[3868] Inicia sesión en ChatGPT (web o app de escritorio). Para generar necesitas una suscripción de pago de Higgsfield (4-2).
+[3869] Abre la lista de <b>Plugins</b> desde el menú izquierdo o los ajustes. Escribe <b>Higgsfield</b> en el buscador.
+[3870] Pulsa <b>Higgsfield</b> y luego <b>Add</b>. Cuando se abra la ventana de Higgsfield, inicia sesión <b>tú mismo</b> y permite el acceso. No escribas nunca la contraseña en el chat de ChatGPT.
+[3871] Abre un chat nuevo y pruébalo llamando a Higgsfield por su nombre.
+[3872] <span class="lbl">PROMPT · para ChatGPT</span>Haz con Higgsfield una imagen 16:9 con el modelo más barato: un callejón de noche bajo la lluvia con letreros de neón, sin personas. Antes de generar, dime cuántos créditos costará.
+[3873] <b>Si funciona</b>El resultado aparece en el chat y la misma imagen se ve en tu lista de generaciones de higgsfield.ai.
+[3874] <b>Algunas funciones no están</b>Según la ayuda de Higgsfield, algunas skills como crear sitios web no están disponibles en el plugin de ChatGPT y solo funcionan en Claude, Cursor o agentes CLI. Los nombres y la ubicación de los menús pueden cambiar con las actualizaciones de ChatGPT.
+[3875] 5-3 Añadir otros servidores MCP a ChatGPT — si quieres el puente
+[3876] ChatGPT puede añadir directamente servidores MCP remotos. Sirve para servidores que no están en la lista de plugins, como el puente de Higgsfield (<span class="mono">bridge.higgsfield.ai/mcp</span>).
+[3877] En la pantalla de Plugins de ChatGPT, elige <b>Add</b> → <b>Create custom MCP server</b>. En pantallas antiguas había que activar antes <b>Ajustes → Apps → Configuración avanzada → Modo desarrollador</b>.
+[3878] Escribe un nombre (p. ej., Higgsfield Bridge) y la dirección del servidor, y créalo.
+[3879] Cuando se abra la ventana de inicio de sesión, entra en Higgsfield tú mismo.
+[3880] Con el panel de Higgsfield abierto en AE y <b>Connect</b> de Bridge MCP pulsado, pruébalo escribiendo en el chat «Muéstrame la lista de composiciones del proyecto de AE abierto ahora».
+[3881] <b>Planes y permisos</b>Qué planes admiten servidores MCP personalizados y hasta dónde llegan los permisos de escritura (control) ha variado según el plan de ChatGPT y la época. Este libro solo comprobó el control por el puente en Claude, así que en otras IA prueba antes con una tarea corta si obtienes el mismo resultado.
+[3882] 5-4 Adobe dentro de ChatGPT — Adobe for ChatGPT
+[3883] En diciembre de 2025 Adobe permitió usar Photoshop, Adobe Express y Acrobat dentro de ChatGPT, y hoy un único <b>conector de Adobe</b> te deja llamar funciones de Photoshop, Premiere, Firefly, Express, Acrobat y más conversando. AE en sí no está, pero es útil para preparar el material.
+[3884] Pídelo así
+[3885] «Adobe Photoshop, desenfoca el fondo de esta foto»
+[3886] Retocar fotos de fondo para AE
+[3887] «Haz un cartel para un evento con Adobe Express»
+[3888] Material promocional para acompañar el vídeo
+[3889] «Adobe Acrobat, saca solo las tablas de este PDF»
+[3890] Organizar material para subtítulos y gráficos de datos
+[3891] Para retoques más finos, usa el botón del chat para pasar a la app web o de escritorio y seguir trabajando.
+[3892] 5-5 Qué IA elegir
+[3893] Cuándo
+[3894] Recomendación
+[3895] Quieres manejar AE hablando
+[3896] Claude + puente (el entorno de referencia de este libro)
+[3897] Ya usas ChatGPT a diario
+[3898] Empieza a generar con ChatGPT + el plugin de Higgsfield. Para fotos y documentos, el conector de Adobe
+[3899] También haces scripts y automatización
+[3900] Cursor · Codex · Claude Code + CLI de Higgsfield
+[3901] Tu empresa usa Microsoft o Google
+[3902] Herramientas de Copilot o Gemini compatibles con MCP. Revisa antes la política de seguridad de tu empresa
+[3903] <b>Reglas para cualquier IA</b>Los inicios de sesión y los pagos hazlos tú. Conecta solo desde listas oficiales (plugins, marketplace) o direcciones oficiales. A una IA recién conectada, encárgale primero tareas que gasten pocos créditos.
+[3904] Fuentes: Ayuda de Higgsfield «How do I connect Higgsfield to Claude, ChatGPT, or another AI agent?», documentación para desarrolladores y avisos de la comunidad de OpenAI (modo desarrollador de ChatGPT y MCP personalizado), Adobe Newsroom (10/12/2025), Ayuda de Adobe «Adobe for ChatGPT». Consultado en noviembre de 2026.
+[3905] <b>Si te atascas</b>Si no aparece el plugin, revisa tu plan y región, y prueba a llamar a Higgsfield por su nombre en un chat nuevo. En algunos casos hay un interruptor para activar conectores en cada conversación. Si hay un error de conexión, elimina el conector, vuelve a añadirlo y actualiza la lista de herramientas.
+[3906] Qué es un personaje — diseño, rig y mantener al mismo personaje con IA <span class="lv">●○○ ~ ●●○</span>
+[3907] Antes de mover el robot articulación por articulación en el capítulo siguiente, veamos qué es un «personaje» y cómo prepararlo. Lo animes a mano o con IA, un buen personaje cumple las mismas condiciones.
+[3908] Lo habrás logrado si eliges tu personaje y haces una hoja de personaje sencilla con dos vistas: frente y perfil.
+[3909] 14-1 Qué es un personaje
+[3910] Un <b>personaje (character)</b> es quien piensa, se mueve y lleva la historia en un vídeo. No tiene por qué ser una persona. Animales, robots, mascotas escolares, logotipos que hablan e incluso un cartón de leche con ojos y boca son personajes si tienen carácter y actúan.
+[3911] Personajes en animación gráfica
+[3912] Mascota de marca
+[3913] Guía en vídeos promocionales de empresas o centros, stickers para redes
+[3914] Presentador de vídeo explicativo
+[3915] Una figura que explica cómo usar una app o una campaña pública
+[3916] Objetos personificados
+[3917] Vídeos de datos donde las barras del gráfico crecen sonriendo
+[3918] Personajes de IA
+[3919] Modelos e influencers virtuales creados con IA. El reto es mantener la misma cara en cada escena (14-6)
+[3920] 14-2 Qué hace bueno a un personaje
+[3921] Condición
+[3922] Cómo comprobarlo
+[3923] Silueta
+[3924] ¿Se reconoce aunque lo rellenes de negro? El peinado, las orejas y los objetos crean la silueta
+[3925] Proporciones
+[3926] Proporción cabeza-cuerpo (2–3 cabezas es tierno, 6–8 es realista). ¿Están claras las articulaciones que se moverán?
+[3927] 2–3 colores principales. ¿Destaca sobre el fondo?
+[3928] Personalidad
+[3929] ¿Se ve su personalidad solo con la postura y la expresión? Una vez definida la personalidad, se definen la velocidad al andar y los gestos
+[3930] Sencillez
+[3931] Cuantas menos líneas y piezas, más fácil de animar y mejor mantiene la IA su aspecto
+[3932] <span class="tag t1">Paso a paso</span> 14-3 Hacer una hoja de personaje
+[3933] Una <b>hoja de personaje</b> es un plano que muestra a un personaje desde varios ángulos y con varias expresiones. Mantiene su aspecto aunque cambien los animadores o le pidas a la IA muchas escenas.
+[3934] En papel o en Illustrator, dibuja el cuerpo entero de <b>frente</b>. Alinea la altura con una línea guía.
+[3935] A la misma altura, dibuja el <b>perfil</b> (y, si hace falta, 3/4 y espalda). Este conjunto se llama <b>turnaround</b>.
+[3936] Debajo, dibuja 4–6 <b>expresiones</b> (neutra, sonrisa, sorpresa, enfado, tristeza), solo la cara.
+[3937] Al lado, anota las <b>muestras de color</b> (valores HEX) y notas de altura y proporciones. En AE, pon estos colores en una capa de control (18-16).
+[3938] Guarda la hoja terminada como PNG en la carpeta <span class="mono">99_Guide</span> del proyecto. También la usarás como imagen de referencia para la IA en 14-6.
+[3939] 14-4 Tres formas de mover un personaje en AE
+[3940] Cómo
+[3941] Ideal para
+[3942] Capas por partes + parent
+[3943] Separa cabeza, torso, brazos y piernas en capas y emparéntalas en cada articulación (15-3, 15-4)
+[3944] Robots, muñecos de papel, ilustraciones planas
+[3945] Clavas pines en un solo dibujo y lo doblas como goma (16-6)
+[3946] Colas, pelo, mascotas que se balancean
+[3947] Plugins de rigging
+[3948] Crea IK de extremidades y controles faciales con herramientas como Duik o RubberHose (apéndice C)
+[3949] Animación de personajes completa, con mucho diálogo y caminatas
+[3950] <span class="tag t1">Paso a paso</span> 14-5 Preparar un personaje en Illustrator o Photoshop
+[3951] Divide el dibujo en <b>una capa distinta para cada parte que se mueve</b>: cabeza, torso, brazo, antebrazo, mano, muslo, espinilla y pie (izquierdo y derecho).
+[3952] Para que no se vean huecos al doblar las articulaciones, dibuja los extremos de las piezas que se unen <b>redondeados y solapados</b> (círculos en codos y rodillas).
+[3953] Pon a las capas nombres cortos en inglés (<span class="mono">Head</span>, <span class="mono">Arm_Upper_L</span>…). Usarás esos mismos nombres en expresiones e instrucciones a la IA.
+[3954] Al importar en AE con <b>File → Import → File</b>, elige en Import As <b>Composition - Retain Layer Sizes</b> (25-5). Cada parte entra como una capa propia.
+[3955] Lleva el Anchor Point de cada parte a la <b>articulación</b>. Con la <b>Pan Behind Tool</b> (<span class="k">Y</span>) de la barra, arrastra el del brazo al hombro y el del antebrazo al codo. Ya está todo listo para el parentesco del capítulo siguiente.
+[3956] 14-6 Personajes de IA — mantener a la misma persona en cada escena
+[3957] Lo más difícil al hacer vídeos de personajes con IA es la <b>coherencia</b>: la cara, la ropa y las proporciones cambian un poco en cada escena. Combinando estos métodos se reduce mucho.
+[3958] Imágenes de referencia
+[3959] Incluye siempre la hoja de personaje de 14-3. Si das frente y perfil juntos, los giros se deforman menos
+[3960] Descripción fija
+[3961] Define en un párrafo los rasgos que no cambian —como «chubasquero amarillo, gafas redondas, robot de 2,5 cabezas»— y usa siempre las mismas frases
+[3962] Funciones para guardar personajes
+[3963] Guarda al personaje con funciones como los personajes (referencia de persona) de Higgsfield o los Elements de Kling, y llámalo por su nombre
+[3964] Semilla · mismo modelo
+[3965] Anota la semilla (seed) y el modelo de un resultado que te guste y no los cambies
+[3966] Acabado en AE
+[3967] Si añades en AE el logotipo, el color del vestuario y los subtítulos sobre el movimiento hecho con IA, los elementos de marca serán exactamente iguales en cada escena
+[3968] <b>Si usas a una persona real como personaje</b>Para crear un personaje de IA con la cara o la voz de una persona real necesitas su consentimiento. No uses fotos de famosos ni de otras personas como referencia, y comprueba también los derechos de uso de mascotas escolares o de empresa (cap. 29).
+[3969] <b>Si funciona</b>Tienes una hoja de personaje en la carpeta 99_Guide y el archivo del personaje, dividido en partes, está en AE como capas.
+[3970] <b>Si te atascas</b>Si las partes entran fusionadas en una sola imagen, Import As está en Footage. Vuelve a importar con Composition - Retain Layer Sizes.
