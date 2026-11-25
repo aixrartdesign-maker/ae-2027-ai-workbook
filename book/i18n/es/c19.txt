@@ -1,0 +1,338 @@
+[2427] <span class="tag t1">Paso a paso</span> 2-6 Ocultar y ordenar capas — Shy, Solo, Lock, Guide
+[2428] Cuando hay decenas de capas, hay que saber que «hacer invisible» tiene varios tipos. <b>Ocultar en pantalla</b>, <b>dejar fuera del render</b> y <b>ocultar solo en la lista de la línea de tiempo</b> son conmutadores distintos.
+[2429] Conmutador / función
+[2430] Render
+[2431] Cuándo usarlo
+[2432] Ojo (Video)
+[2433] Oculta
+[2434] Fuera
+[2435] Para apagar algo un momento y comparar. Olvidar que está apagado y renderizar es el error más común
+[2436] Solo esta capa
+[2437] Se renderiza en solo
+[2438] Para trabajar una capa aislada. Si renderizas con Solo activo, solo sale esa capa
+[2439] Lock (candado)
+[2440] Visible
+[2441] Incluida
+[2442] Para que las capas terminadas no se muevan por accidente
+[2443] Shy (figura tímida)
+[2444] Ocultar solo de la lista de la línea de tiempo para ver solo las capas en uso
+[2445] Fuera por defecto
+[2446] Imágenes de referencia, cuadrículas guía, viñetas del storyboard
+[2447] Conmutador fx
+[2448] Solo efectos apagados
+[2449] Sin efectos
+[2450] Para apagar efectos pesados y trabajar más ligero
+[2451] Abre las columnas de conmutadores con <b>Toggle Switches / Modes</b> (<span class="k">F4</span>) en la parte inferior de la línea de tiempo. La columna de la figurita en cada capa es <b>Shy</b>.
+[2452] Haz clic en la columna Shy de las capas que quieras ocultar (fondos terminados, nulos de iluminación, etc.). El icono se aplana.
+[2453] Pulsa el botón <b>Hide All Shy Layers</b> (la misma figura) arriba a la derecha de la línea de tiempo. Las capas marcadas desaparecen de la lista, pero siguen en pantalla y en el render.
+[2454] Pulsa el mismo botón otra vez para volver a verlas.
+[2455] Para una imagen de referencia, selecciona la capa y elige <b>Layer → Guide Layer</b>. Aparece una marca azul delante del nombre y no se renderiza (puedes activarla con la opción Guide Layers de Render Settings).
+[2456] Atajo / función
+[2457] Mostrar solo propiedades con fotogramas clave / solo las cambiadas respecto a los valores por defecto. Lo primero al leer el proyecto de otra persona
+[2458] Mostrar solo propiedades con expresiones
+[2459] Ocultar o mostrar contornos, tiradores, trazados y líneas de cámara en el panel Composition. Para juzgar una imagen limpia
+[2460] Color de etiqueta → Select Label Group
+[2461] Haz clic en el recuadro de color a la izquierda de la capa y elige <b>Select Label Group</b> para seleccionar a la vez todas las capas de ese color. Decide, por ejemplo, amarillo para subtítulos y morado para efectos, y podrás ocultarlas o moverlas juntas
+[2462] Búsqueda en la línea de tiempo
+[2463] Escribe «Opacity» o el nombre de una capa en el campo de la lupa sobre la línea de tiempo para dejar solo eso
+[2464] <b>Revisión antes de renderizar</b>Un ojo apagado, un Solo activo o un fx apagado cambian el render. Acostúmbrate a repasar las columnas de conmutadores justo antes de renderizar. También puedes pedir al AI Assistant del capítulo 23 que «busque capas desactivadas y estados de solo».
+[2465] 13-10 Ejes y rotación a fondo — X, Y, Z, Orientation, atajos
+[2466] Casi toda la dificultad del 3D está en los ejes. After Effects tiene tres, que coinciden con las flechas de color de la pantalla.
+[2467] Eje
+[2468] Color de flecha
+[2469] En Position
+[2470] En Rotation (girando sobre ese eje como un pincho)
+[2471] Rojo
+[2472] Izquierda–derecha. La derecha es +
+[2473] Asentir hacia delante y atrás. Tumbar algo, una puerta que se abre hacia arriba
+[2474] Verde
+[2475] Arriba–abajo. <b>Abajo es +</b> (al revés que en matemáticas)
+[2476] Negar con la cabeza. Dar la vuelta a una tarjeta, una puerta giratoria
+[2477] Azul
+[2478] Profundidad. Más lejos es +
+[2479] Inclinar como la aguja de un reloj (igual que la rotación 2D)
+[2480] <b>Orientation frente a X, Y, Z Rotation</b>: una capa 3D tiene dos juegos de valores de rotación. <b>Orientation</b> define «hacia dónde mira»; al animarla siempre toma el camino más corto y no puede girar más de 360°. <b>X, Y, Z Rotation</b> se animan por eje y admiten varias vueltas, como «2x+30°». Usa Orientation para el ángulo inicial y Rotation para el movimiento, y nada se enreda.
+[2481] Atajo / herramienta
+[2482] Mostrar Position, Anchor Point, Scale, Rotation. En una capa 3D, <span class="k">R</span> abre Orientation y X, Y, Z Rotation juntas
+[2483] <span class="k">Shift</span>+tecla de propiedad
+[2484] Añadir a las propiedades ya mostradas (p. ej., <span class="k">P</span> y luego <span class="k">Shift+R</span>)
+[2485] Herramienta de selección / de rotación. Arrastra un anillo de eje con la herramienta de rotación para girar solo sobre ese eje
+[2486] Herramienta de cámara (órbita, desplazamiento, dolly). Cada pulsación cambia a la siguiente
+[2487] Modos de eje en la barra de herramientas
+[2488] <b>Local Axis</b> (los de la capa), <b>World Axis</b> (los del espacio), <b>View Axis</b> (los de la vista actual). Para subir una capa inclinada «hacia arriba en el espacio», usa World
+[2489] Cambiar a vistas 3D asignadas (13-5)
+[2490] Auto-Orient. Con <b>Orient Towards Camera</b> la capa siempre mira a la cámara (hojas, tarjetas de partículas)
+[2491] Lleva el pivote (Anchor Point) al centro del objeto. Si algo gira raro, prueba esto primero
+[2492] <b>Girar como una puerta</b>La rotación ocurre alrededor del Anchor Point. Para que una tarjeta se abra por su borde izquierdo, lleva el Anchor Point a ese borde con la <b>Pan Behind Tool</b> (<span class="k">Y</span>) y anima Y Rotation.
+[2493] 13-11 Mapas de textura — las siete imágenes de un material PBR
+[2494] La superficie de un modelo 3D no se define con unos pocos números, sino con <b>varias imágenes (mapas)</b>. El software 3D actual, el Advanced 3D de After Effects y Substance usan <b>PBR</b> (renderizado basado en física, flujo Metal-Roughness). Con solo conocer los nombres de los mapas entenderás los modelos y materiales que descargues.
+[2495] Mapa
+[2496] Aspecto
+[2497] Foto en color
+[2498] El color propio de la superficie. No debe llevar sombras ni brillos
+[2499] Blanco y negro
+[2500] Negro es liso (espejo), blanco es rugoso (mate). Aquí van huellas y arañazos
+[2501] Blanco y negro (normalmente 0 o 1)
+[2502] Solo las zonas blancas reflejan como metal. En el hierro oxidado, solo el óxido es negro
+[2503] Imagen violeta-azulada
+[2504] Mantiene la forma pero cambia la dirección en que incide la luz, así parece tener relieve
+[2505] Empuja de verdad la superficie. Pesado, solo para primeros planos
+[2506] Color, casi todo negro
+[2507] Partes que brillan por sí mismas. Pantallas, neón, salpicaderos
+[2508] Oscuridad en rendijas y rincones. Da más volumen que sin él
+[2509] <b>Tres formas de usar mapas en After Effects</b>
+[2510] <b>Meter los mapas en el archivo del modelo</b>: aplica los mapas en Blender o Substance Painter y exporta a <b>GLB</b>; los mapas viajan dentro del archivo y aparecen nada más importarlo en After Effects. La forma más fiable.
+[2511] <b>Materiales Substance (.sbsar)</b>: importa materiales de Adobe Substance 3D Assets y elígelos en el desplegable Material. Los mapas están dentro del material y el color y la rugosidad se cambian con deslizadores (23-7).
+[2512] <b>Capas como materiales (27.0)</b>: usa una composición, un vídeo o una imagen como Base Color. Ideal para pantallas y carteles en movimiento (23-7).
+[2513] <b>Paso a paso — que el metal parezca metal con un HDRI</b>
+[2514] Coloca un modelo metálico (o texto 3D extruido con Metallic 1 y Roughness 0,2) en una composición Advanced 3D. Al principio parece un bulto gris. El metal <b>refleja su entorno</b>, y si no hay nada que reflejar se ve apagado.
+[2515] Importa un archivo HDRI (.hdr o .exr, 2K–4K) y colócalo al fondo de la composición. Hay HDRI gratuitos en sitios como Poly Haven.
+[2516] En <b>Layer → New → Light</b> elige Light Type <b>Environment</b> y pulsa OK. En Light Options, pon como <b>Source</b> la capa HDRI que acabas de colocar.
+[2517] Apaga el ojo de la capa HDRI. No se ve como fondo; solo se usa para reflejos y luz.
+[2518] Ajusta la Intensity (empieza en 100%) y la Y Rotation de la luz de entorno hasta encontrar un ángulo en que el reflejo recorra las letras. Anima ese ángulo y tendrás un logo de lujo con luz que fluye.
+[2519] 13-12 Element 3D — el plugin 3D más conocido
+[2520] <b>Element 3D</b> de Video Copilot es un plugin de pago que dibuja modelos 3D rápidamente con la GPU dentro de After Effects. Desde antes de que existiera Advanced 3D ha sido un estándar para logos, tipografía y escenas de naves en 3D, y muchas plantillas del mercado aún lo exigen. Sus puntos fuertes son la <b>importación de modelos OBJ y C4D</b>, la <b>extrusión</b> de texto, muchos ajustes de material, el <b>Particle Replicator</b> que copia un modelo cientos de veces y la integración con cámaras y luces de After Effects.
+[2521] Crea un sólido negro (<span class="k">Ctrl+Y</span>) y aplica <b>Effect → Video Copilot → Element</b>. Si la composición no tiene cámara, crea primero una con <b>Layer → New → Camera</b>. Element filma la escena con la cámara de After Effects.
+[2522] Para extruir texto, crea una capa de texto, apaga su ojo y elígela en Element en <b>Custom Layers → Custom Text and Masks → Path Layer 1</b>.
+[2523] Pulsa <b>Scene Setup</b> arriba en Effect Controls para abrir la ventana propia de Element. El botón <b>EXTRUDE</b> de arriba levanta el texto en 3D. Para usar un modelo, carga un OBJ con <b>IMPORT</b> o elígelo en el <b>Model Browser</b> de la izquierda.
+[2524] Arrastra un material (metal, vidrio, cromo, etc.) desde <b>Presets</b>, abajo, sobre el modelo. Cambia las texturas Diffuse, Specularity, Reflectivity, Normal Bump e Illumination en el panel <b>Edit</b> de la derecha. Los mapas de 13-11 se usan aquí directamente.
+[2525] Pulsa <b>OK</b> para volver a After Effects. Cambia Particle Count y Replicator Shape (Plane, Ring, Sphere, etc.) en <b>Group 1 → Particle Replicator</b> de Effect Controls y el modelo se multiplica en una matriz.
+[2526] Activa Ambient Occlusion y Motion Blur en <b>Render Settings</b>, y en <b>Lighting</b> haz que use las luces de After Effects. Si va pesado, deja Render Mode en Preview mientras trabajas.
+[2527] Comparación
+[2528] Advanced 3D de After Effects (integrado)
+[2529] Element 3D (plugin)
+[2530] Coste
+[2531] Incluido en After Effects
+[2532] Se compra aparte
+[2533] Formatos de modelo
+[2534] Duplicar y distribuir
+[2535] Duplicar capas a mano
+[2536] Cientos a la vez con Particle Replicator
+[2537] Compatibilidad con plantillas
+[2538] Sobre todo plantillas nuevas
+[2539] Lo exigen muchas plantillas existentes
+[2540] Precaución
+[2541] Gana funciones en cada versión
+[2542] Tras una versión nueva de After Effects, a veces hay que esperar una actualización de compatibilidad
+[2543] <b>Comprueba antes de instalar</b>Element 3D depende mucho de la tarjeta gráfica (GPU), y justo después de un cambio de versión mayor de After Effects puede fallar hasta que salga una actualización. Revisa las versiones compatibles en la web de Video Copilot antes de instalar y, al comprar plantillas, busca primero la indicación «requiere Element 3D».
+[2544] <span class="tag t1">Paso a paso</span> 14-8 Una vuelta por la Render Queue — leer todos los ajustes
+[2545] Selecciona la composición en el panel Project y elige <b>Composition → Add to Render Queue</b> (<span class="k">Ctrl+M</span>). El panel Render Queue se abre abajo con una fila.
+[2546] Haz clic en el texto azul junto a <b>Render Settings</b> (Best Settings por defecto). Comprueba Quality <b>Best</b> y Resolution <b>Full</b> y mira <b>Time Span</b> debajo. <b>Work Area Only</b> renderiza solo el área de trabajo; <b>Length of Comp</b>, todo. Es la causa más común de un vídeo cortado.
+[2547] Haz clic en el texto azul junto a <b>Output Module</b> (H.264 o High Quality por defecto). Ajusta los elementos de la tabla y pulsa OK.
+[2548] Haz clic en el texto azul junto a <b>Output To</b> y elige carpeta y nombre. Usa la carpeta <span class="mono">render</span> del proyecto.
+[2549] Pulsa <b>Render</b> arriba a la derecha. Al terminar suena un aviso y la fila se pone verde. Para sacar la misma composición en varios formatos, pulsa <b>+</b> a la izquierda de la fila Output Module y añade otra salida (MP4 y ProRes a la vez).
+[2550] Elemento de Output Module
+[2551] Cómo elegir
+[2552] H.264 (MP4), QuickTime (MOV), AVI, PNG Sequence, JPEG Sequence, TIFF Sequence, OpenEXR Sequence, WAV, etc.
+[2553] Códec y calidad. Para QuickTime, Video Codec (ProRes 422 HQ, ProRes 4444, etc.); para H.264, la tasa de bits; para JPEG, Quality
+[2554] <b>RGB</b> (lo normal) / <b>RGB + Alpha</b> (fondo transparente) / Alpha (solo mate en blanco y negro)
+[2555] Millions of Colors / <b>Millions of Colors+</b> (automático con alfa). Entregas de alto nivel: Trillions (16 bits)
+[2556] Premultiplied (Matted, por defecto) / Straight (Unmatted). Sigue la especificación de quien lo recibe
+[2557] Resize para entregar a la vez una versión 1080p de algo hecho en 4K
+[2558] Con <b>Import &amp; Replace Usage</b> el render entra en el proyecto y sustituye a la composición original donde se usa (prerender)
+[2559] Auto / On / Off, 48 kHz. Si no hay sonido, comprueba si está en Off
+[2560] <b>Haz tus ajustes habituales predeterminados</b>En <b>Edit → Templates → Output Module</b>, guarda ajustes con nombres como «ProRes 4444 alfa» o «YouTube 4K» y marca uno como Default para no elegir cada opción cada vez. En los estudios, el equipo comparte las mismas plantillas.
+[2561] 14-9 Formatos de un vistazo — MP4 (H.264), MOV, AVI, 4K
+[2562] Formato
+[2563] Dónde se elige
+[2564] Transparencia
+[2565] Dónde se usa y consejos
+[2566] No
+[2567] YouTube, redes, móviles, presentaciones. 1080p a 10–20 Mbps, 4K a 35–45 Mbps. Pierde calidad si se reutiliza para editar, así que solo para la entrega final
+[2568] Archivos más pequeños con la misma calidad. Para 4K o más, o con poco espacio. Los dispositivos antiguos pueden no reproducirlo
+[2569] Máster de edición. Archivos grandes, pero se mantiene limpio por muchas veces que se reutilice
+[2570] <b>Sí</b>
+[2571] Recursos que van sobre otro vídeo, como subtítulos, logos y efectos. Entrega a servidores de emisión
+[2572] Según ajustes
+[2573] Formato antiguo de Windows. Sin compresión, archivos enormes. Solo si el equipo del lugar, como reproductores de pantallas LED, solo lee AVI
+[2574] Secuencia PNG
+[2575] Una imagen por fotograma. Sin pérdida; si el render se detiene, se puede continuar
+[2576] Secuencia JPG
+[2577] Previsualizaciones ligeras, fotogramas para web o motores de juego, extraer miniaturas
+[2578] Secuencia EXR
+[2579] Sí
+[2580] Entrega VFX, color de 32 bits. Para pasar a otros programas de composición
+[2581] <b>Para renderizar en 4K</b>: no amplíes en la salida; <b>crea la composición en 4K desde el principio</b>. En <b>Composition → Composition Settings</b> (<span class="k">Ctrl+K</span>) elige el Preset <b>UHD 4K 29.97</b> (3840×2160); el 4K DCI de cine es 4096×2160. Ampliar a 4K una composición 1080p con Resize en Output Module solo la estira borrosa. Mientras trabajas, deja la resolución de previsualización en Half.
+[2582] <b>Si no sabes qué elegir</b>Renderiza una vez el máster en ProRes 422 HQ (4444 si necesitas transparencia) y crea el MP4 a partir de ese archivo en Media Encoder. Si hay cambios, rehaces desde el máster sin volver a renderizar en After Effects.
+[2583] <span class="tag t1">Paso a paso</span> 14-10 Renderizar con fondo transparente (alfa)
+[2584] Para poner animaciones de subtítulos o logos sobre vídeo en Premiere, necesitas un archivo con fondo transparente. En After Effects, <b>donde no hay nada</b> es transparente.
+[2585] Apaga o borra el sólido de fondo de la composición. El Background Color de Composition Settings no se renderiza, así que no te preocupes por él.
+[2586] Pulsa <b>Toggle Transparency Grid</b> (el icono de tablero) bajo el panel Composition. Donde veas el tablero saldrá transparente.
+[2587] Añádela a la Render Queue con <span class="k">Ctrl+M</span>, pon Format en <b>QuickTime</b> en Output Module y en Format Options elige el Video Codec <b>Apple ProRes 4444</b>.
+[2588] Cambia <b>Channels</b> a <b>RGB + Alpha</b>. Con RGB, las zonas transparentes se rellenan de negro.
+[2589] Deja Color en <b>Premultiplied (Matted)</b>, el valor por defecto. Si colocas el archivo en una pista sobre el vídeo en la línea de tiempo de Premiere y se ve el fondo, lo has conseguido.
+[2590] Si necesitas imágenes por fotograma, saca del mismo modo con Format <b>PNG Sequence</b> y Channels <b>RGB + Alpha</b>.
+[2591] <b>Cuando la alfa no funciona</b>① MP4 (H.264) y JPG no guardan transparencia. ② Comprueba si Channels está en RGB. ③ Asegúrate de que no queda un sólido encendido al fondo ni un efecto en una capa de ajuste que rellene el fondo (como Fill). ④ Si aparece un borde oscuro alrededor del texto, quien lo recibe interpretó la alfa como Straight; cámbialo a Premultiplied o vuelve a renderizar en Straight.
+[2592] <span class="tag t1">Paso a paso</span> 14-11 Secuencias de imágenes — renderizar a JPG/PNG e importarlas de nuevo
+[2593] <b>A. Renderizar una secuencia</b>
+[2594] En Output Module de la Render Queue, pon Format en <b>JPEG Sequence</b> (o PNG Sequence).
+[2595] Para JPEG, sube Quality a <b>10</b> (máximo) en <b>Format Options</b>.
+[2596] Elige una <b>carpeta nueva</b> en Output To. El nombre debe terminar en <span class="mono">[#####]</span>, como <span class="mono">title_[#####].jpg</span>. After Effects pone ahí los números de fotograma 00000, 00001…
+[2597] Render. Diez segundos a 30 fps son 300 imágenes en la carpeta.
+[2598] <b>B. Importar una secuencia</b>
+[2599] Elige <b>File → Import → File</b> (<span class="k">Ctrl+I</span>) y selecciona solo el <b>primer archivo</b> de la carpeta de la secuencia.
+[2600] Activa la casilla <b>JPEG Sequence</b> (PNG Sequence para PNG) al pie del cuadro y pulsa Import. Cientos de imágenes entran como un solo clip. Sin la casilla, entra una sola foto.
+[2601] Ajusta la velocidad. Selecciónala en el panel Project y elige <b>File → Interpret Footage → Main</b> (<span class="k">Ctrl+Alt+G</span>) → en <b>Frame Rate</b>, escribe 24 o 30 en <b>Assume this frame rate</b>.
+[2602] En secuencias con transparencia, como PNG, elige Premultiplied o Straight en <b>Alpha</b> del mismo cuadro, o pulsa <b>Guess</b>.
+[2603] <b>Por qué usar secuencias</b>Si un render de tres horas se corta a medias, los fotogramas ya hechos se conservan y puedes continuar desde ahí. Los resultados por fotogramas de Blender, C4D o herramientas de vídeo con IA se importan igual. La velocidad por defecto se cambia en <b>Edit → Preferences → Import → Sequence Footage</b>.
+[2604] 14-12 Importar un proyecto entero (.aep)
+[2605] Para unir a tu proyecto una escena de otra persona, una animación de logo de un trabajo anterior o una plantilla descargada, <b>importa directamente el archivo .aep</b>. No hace falta abrirlo y copiar y pegar.
+[2606] Primero, en el ordenador original, reúne el proyecto y sus recursos en una carpeta con <b>File → Dependencies → Collect Files</b> (14-6). Mueve esa carpeta dentro de la carpeta de tu proyecto.
+[2607] En tu proyecto elige <b>File → Import → File</b> (<span class="k">Ctrl+I</span>) y selecciona el .aep. También puedes arrastrar el .aep desde el Explorador al panel Project.
+[2608] En el panel Project aparece una <b>carpeta</b> con el nombre del archivo, con las composiciones, recursos y estructura de carpetas tal cual.
+[2609] Si faltan archivos (nombres en cursiva), vuelve a vincularlos con Replace Footage de 2-4. Los demás archivos de la misma carpeta se vinculan a la vez.
+[2610] Para conservar solo las composiciones necesarias, selecciónalas y elige <b>File → Dependencies → Reduce Project</b>. Se limpia lo que no se usa.
+[2611] Qué importar
+[2612] Composiciones de otro .aep
+[2613] El método anterior. Si en un proyecto se duplican recursos con el mismo nombre, únelos con <b>File → Dependencies → Consolidate All Footage</b>
+[2614] Secuencias de Premiere
+[2615] <b>File → Import → Import Adobe Premiere Pro Project</b>, o Dynamic Link desde Premiere (14-3)
+[2616] Photoshop e Illustrator
+[2617] Como Composition - Retain Layer Sizes (14-5). Para editar texto de Illustrator, usa SVG (23-7)
+[2618] Ajustes de animación (.ffx)
+[2619] Aplícalos desde el panel Effects &amp; Presets o con <b>Animation → Apply Animation Preset</b>
+[2620] Se usa en Essential Graphics de Premiere. Para editarlo en After Effects hace falta el .aep original
+[2621] <b>Ojo con la versión</b>Un .aep guardado en una versión nueva de After Effects no se abre en versiones antiguas. Al pasarlo a alguien con una versión anterior, guárdalo con <b>File → Save As → Save a Copy As</b> (para la versión anterior). Al abrir un proyecto antiguo en una versión nueva verás un aviso de conversión; guárdalo con otro nombre para no sobrescribir el original.
+[2622] 14-13 La idea de plantilla — cinco formas
+[2623] Una plantilla es «reutilizar una estructura bien hecha». En After Effects la misma palabra designa cinco tipos de archivo distintos, y distinguirlos ahorra confusiones en el trabajo.
+[2624] Archivo
+[2625] Cómo crearla y usarla
+[2626] Plantilla de proyecto
+[2627] En <b>File → Save As → Save As</b>, guarda con el tipo <b>After Effects Project Template</b>. Al abrirla se abre una copia sin título, así que el original nunca se sobrescribe. Grafismo semanal de emisión, bases para tareas de clase
+[2628] Ajuste de animación
+[2629] Selecciona propiedades con efectos y fotogramas clave y elige <b>Animation → Save Animation Preset</b>. Arrástralo desde User Presets en el panel Effects &amp; Presets. Para entradas de texto, temblores y paquetes de corrección de color que usas a menudo
+[2630] Plantilla de gráficos animados
+[2631] Se exporta con Essential Graphics; en Premiere solo se cambian textos y colores (14-4)
+[2632] (dentro del proyecto)
+[2633] Si subes a Essential Graphics propiedades de dentro de una precomposición, fuera puedes colocarla muchas veces y dar <b>a cada una un texto y un color distintos</b>. Un rótulo inferior sirve para diez invitados
+[2634] Plantilla del mercado
+[2635] Paquete .aep
+[2636] Proyectos terminados que se compran en Adobe Stock, Envato, Motion Array, etc. Edítalos en este orden
+[2637] <b>Paso a paso — editar una plantilla del mercado</b>
+[2638] Antes de comprar, revisa en la descripción la <b>versión de After Effects necesaria</b>, los <b>plugins necesarios</b> (Element 3D, Optical Flares, Trapcode, etc.), las <b>fuentes</b> y la <b>resolución</b>. Sin los plugins, al abrirla solo verás avisos rojos.
+[2639] Descomprime la descarga en la carpeta del proyecto y lee primero los archivos <b>Help</b> o <b>Read Me</b> incluidos o mira el vídeo guía.
+[2640] Al abrir el .aep suele estar dividido en carpetas como <b>01_Edit</b> (qué editar), <b>02_Final</b> (qué renderizar) y <b>03_Elements</b> (no tocar). Abre solo las composiciones de la carpeta Edit.
+[2641] Cambia los textos dentro de las composiciones Edit; para huecos de foto o vídeo, selecciona la capa del hueco y arrastra tu archivo desde el panel Project manteniendo <span class="k">Alt</span>. Si el tamaño no encaja, ajústalo con <span class="k">Ctrl+Alt+F</span> (Fit to Comp).
+[2642] Cambia todos los colores de una vez en la capa <b>Controller</b> o <b>Color Control</b> que traen la mayoría de plantillas (la misma idea que los rigs de 7-16).
+[2643] Envía la composición Final a la Render Queue. Para pasársela a otros, reúnela con Collect Files.
+[2644] <b>Plantillas y oficio</b>Las plantillas ayudan a cumplir plazos, pero solo son tuyas en la medida en que sabes cambiarlas. Con los rigs (7-16), Essential Graphics (14-4) y las precomposiciones (4-5) de este libro podrás desmontarlas y rehacerlas a tu gusto, y acabar creando tus propias plantillas para vender o compartir con tu equipo.
+[2645] 16-1 Cómo trabajan los profesionales con experiencia — el flujo de producción
+[2646] Saber muchas funciones y hacer bien el trabajo son cosas distintas. Los profesionales con experiencia usan las mismas funciones <b>en un orden fijo</b>. Si se respeta el orden, el proyecto no se viene abajo con las correcciones.
+[2647] Referencias y style frames
+[2648] Haz aprobar primero 3–5 vídeos de referencia y un fotograma fijo (style frame). Acordar «una imagen» antes de que nada se mueva
+[2649] Animática
+[2650] Vídeo tosco con cajas y texto provisional, ajustado solo en tiempos. Se fijan las duraciones de los planos con la música y la locución
+[2651] Estructura del proyecto
+[2652] Carpetas (00_Comps, 01_Footage, 02_Precomps, 03_Render, 99_Guide), reglas de nombres (SH010_title_v003), una composición máster con una precomposición por plano
+[2653] Primero el rig
+[2654] Crea capas de control (7-16) para color, texto y velocidad y luego anima. Con las correcciones, solo cambias los valores de control
+[2655] Bloqueo → pulido
+[2656] Fotogramas clave Linear solo para posición y tiempos (bloqueo) → velocidad en el Graph Editor (3-4) → solapes y movimientos secundarios (pulido)
+[2657] Composición y look
+[2658] Una pila de capas de ajuste en orden fijo: etalonaje → resplandor → grano → viñeta
+[2659] Sonido
+[2660] Los efectos de sonido entran durante el pulido, no al final. Adelantar uno o dos fotogramas los fotogramas clave para cuadrar con el sonido sube mucho la calidad percibida
+[2661] Revisión y entrega
+[2662] Zonas seguras, erratas, capas desactivadas, sonoridad, renders por especificación (14-8), copia de seguridad con Collect Files
+[2663] 16-2 Proyectos pesados — técnicas de usuarios avanzados
+[2664] Técnica
+[2665] Proxies
+[2666] Clic derecho en recursos 4K u 8K → <b>Create Proxy → Movie</b> para trabajar con una copia ligera, y renderiza con los originales mediante <b>Proxy Use: Use No Proxies</b> en Render Settings
+[2667] Prerender
+[2668] Renderiza una precomposición pesada ya terminada con Post-Render Action: <b>Import &amp; Replace Usage</b> y sustitúyela por vídeo (14-8). Si hay cambios, vuelve a la composición original
+[2669] Caché de disco
+[2670] Apunta <b>Preferences → Media &amp; Disk Cache</b> a un SSD rápido con 100 GB o más. En proyectos grandes se nota
+[2671] 32 bpc, trabajo lineal
+[2672] Pon Bit Depth en 32 bpc en <b>File → Project Settings → Color</b>. Los efectos que suman luz —resplandor, desenfoque de movimiento, efectos de lente— se mezclan con naturalidad, como luz real. Los VFX de cine y publicidad unifican la gestión del color con OCIO/ACES
+[2673] Multipase 3D
+[2674] Recibe EXR multicanal de Blender o C4D (luz, reflejos, sombras y profundidad separados) y extrae los pases con <b>Effect → 3D Channel → EXtractoR</b> para corregirlos por separado; por ejemplo, reducir solo los reflejos sin volver a renderizar el 3D
+[2675] Varios formatos a la vez
+[2676] Coloca la composición máster 16:9 como precomposición en composiciones 9:16 y 1:1 y solo reencuadra. Al cambiar el original se actualizan todos los formatos
+[2677] Scripts y automatización
+[2678] Ejecuta archivos .jsx con <b>File → Scripts → Run Script File</b> y coloca los que uses a menudo en la carpeta Scripts para usarlos como paneles desde el menú Window. Para tareas repetitivas como renombrar en lote o alinear capas. Hoy el AI Assistant (capítulo 23) y el puente de Claude (capítulo 21) asumen buena parte de esta función
+[2679] Render por línea de comandos
+[2680] Renderiza sin abrir la ventana con <b>aerender</b> de la carpeta de instalación de After Effects. Ejemplo: <span class="mono">aerender -project "D:\job\title.aep" -comp "Final" -output "D:\job\render\title.mov"</span>. Para renderizar varios proyectos seguidos durante la noche
+[2681] Control de versiones
+[2682] Guarda v001, v002… con File → Increment and Save, y añade _sent al final del nombre de las versiones enviadas al cliente. Siempre debes poder rastrear qué enviaste
+[2683] <span class="tag t3">Un paso más</span> 24-4 Proyecto avanzado — un título de apertura cinematográfico de 30 segundos
+[2684] Reúne en una escena las funciones aprendidas y tendrás un título como el de un tráiler. La calidad premium no sale de un botón especial, sino de superponer <b>profundidad (3D, profundidad de campo) + luz (reflejos, destellos, resplandor) + atmósfera (niebla, polvo) + textura de película (grano, desenfoque de movimiento) + sonido</b>. Este ejercicio sigue el mismo orden que usan los diseñadores de títulos profesionales.
+[2685] Objetivo
+[2686] Una apertura de 30 segundos en la que un título 3D metálico surge despacio de la niebla en un espacio oscuro, la luz recorre las letras y todo se asienta con un destello de lente. 4K, relación 2,39:1, 23,976 fps.
+[2687] <b>1. Preparar</b>
+[2688] Nueva composición <span class="mono">MAIN_title</span>, 3840×2160, 23,976 fps, 30 segundos. Elige el renderizador <b>Advanced 3D</b>. En la pestaña <b>Advanced</b>, pon el Shutter Angle del desenfoque de movimiento en 180° (el mismo que una cámara de cine).
+[2689] Pon Bit Depth en <b>32 bpc</b> en <b>File → Project Settings → Color</b>. Con luces superpuestas, los colores se mezclan suavemente sin bandas.
+[2690] Crea arriba un letterbox 2,39:1. Dibuja una máscara rectangular en un sólido negro dejando vacía el área central de 3840×1607 (máscara Inverted) y déjala como capa normal, no como Guide Layer. Llámala <span class="mono">LETTERBOX</span>.
+[2691] <b>2. Crear el título</b>
+[2692] Escribe el título (una serifa gruesa o una sans ancha, con tracking amplio) y activa el conmutador 3D. En <b>Geometry Options</b> pon Extrusion Depth 60, Bevel Style <b>Angular</b> y Bevel Depth 4.
+[2693] En Material Assignment pon Metallic 1 y Roughness 0,25. Si tienes un material metálico Substance (.sbsar), aplica metal cepillado al frente y metal oscuro a los lados por separado (23-7).
+[2694] Como en 13-11, asigna un HDRI como Source de la Environment Light y apaga el ojo de la capa HDRI. La luz del entorno empieza a reflejarse en las letras.
+[2695] <b>3. Cámara y profundidad</b>
+[2696] Crea una cámara (50 mm) y emparéntala a un nulo (13-9). Avanza despacio la Z Position del nulo −400 a lo largo de 30 segundos (dolly in) y suaviza el último fotograma clave con <b>Easy Ease In</b> (<span class="k">Shift+F9</span>) para que se detenga con suavidad.
+[2697] Activa <b>Depth of Field</b> en la cámara y, con el texto y la cámara seleccionados, elige <b>Layer → Camera → Link Focus Distance to Layer</b>. El foco sigue pegado al texto aunque la cámara se mueva. Sube Aperture para aumentar el desenfoque delante y detrás.
+[2698] Haz que la luz fluya. Anima la Y Rotation de la Environment Light para que gire 60° entre los segundos 8 y 14 y el reflejo recorrerá las letras de izquierda a derecha. Ese momento es el «plano protagonista» del título.
+[2699] <b>4. Atmósfera — niebla y polvo</b>
+[2700] Con el método B de 5-7, crea dos capas de niebla con Fractal Noise, activa su 3D y coloca una delante del texto (Z −300) y otra detrás (Z 600). Al pasar la cámara aparece paralaje entre las nieblas.
+[2701] Con el método ① de 5-7, crea partículas de polvo diminutas (Faded Sphere, Birth Size 0,02, Velocity 0,02, Gravity 0) con Opacity 40% y Mode Add. El polvo flotando en la luz da sensación de espacio.
+[2702] Aplica a la capa de polvo un Fast Box Blur de 2 para que parezca desenfocada.
+[2703] <b>5. Luz — destellos y resplandor</b>
+[2704] Aplica <b>Effect → Generate → Lens Flare</b> (u Optical Flares) a un sólido negro con Mode <b>Screen</b>. Hacia el segundo 14, cuando pasa el reflejo, anima Flare Brightness 0 → 120 → 60.
+[2705] Crea una capa de ajuste <span class="mono">ADJ_glow</span> arriba (bajo el letterbox) y aplica <b>Glow</b> (o Deep Glow) con Glow Threshold 80%, Radius 60 e Intensity 0,6. Solo los reflejos brillantes resplandecen suavemente.
+[2706] Para luz que se escapa por detrás de las letras, aplica <b>CC Light Rays</b> a un duplicado del texto, pon Center en la fuente de luz tras las letras y usa Mode Add.
+[2707] <b>6. Color y textura de película</b>
+[2708] Aplica Lumetri Color a una capa de ajuste <span class="mono">ADJ_grade</span>. En Color Wheels, empuja un poco las Shadows hacia el verde azulado y las Highlights hacia el naranja (teal and orange), y levanta ligeramente los negros con Curves para unos negros elevados de película. También puedes usar una LUT en la pestaña Creative.
+[2709] Aplica <b>Noise &amp; Grain → Add Grain</b> (Intensity 0,3, Size 1,2) a una capa de ajuste <span class="mono">ADJ_grain</span>. Desaparece la lisura digital y aparece la textura de película.
+[2710] Viñeta: una máscara elíptica Inverted en un sólido negro, Feather 1200, Opacity 50%. La mirada se dirige al texto central.
+[2711] De arriba abajo, el orden es letterbox → grano → viñeta → etalonaje → resplandor → escena. El grano siempre va al final (cerca de arriba).
+[2712] <b>7. Sonido y render</b>
+[2713] Añade un dron grave largo, un whoosh cuando pasa el reflejo y un impacto contundente en el momento en que el título se completa. Adelanta uno o dos fotogramas el fotograma clave del pico del destello para que coincida con el impacto.
+[2714] Activa el conmutador de desenfoque de movimiento de todas las capas y el botón Enable Motion Blur de la parte superior de la línea de tiempo.
+[2715] Renderiza el máster en ProRes 422 HQ 4K y crea la versión de entrega a partir de ese archivo en Media Encoder, en H.264 4K a 40 Mbps (14-9).
+[2716] Qué lo hace parecer «barato»
+[2717] Dónde corregirlo
+[2718] Todo es nítido y limpio
+[2719] Faltan profundidad de campo, grano y desenfoque de movimiento
+[2720] La luz es plana
+[2721] No hay Environment Light ni reflejos. El metal necesita algo que reflejar
+[2722] El movimiento es mecánico
+[2723] Fotogramas clave Linear, todo se mueve a la vez. Suavizado y desfases de 0,1–0,3 s (7-8)
+[2724] Los colores son demasiado chillones
+[2725] Baja la saturación y da tonos distintos a sombras y luces
+[2726] No hay sonido
+[2727] La mitad de la calidad de un título es el sonido. Reajusta los fotogramas clave a los efectos de sonido
+[2728] Demasiados efectos
+[2729] Céntrate en un solo momento protagonista (el barrido de luz) y quita el resto
+[2730] <b>Con la IA</b>La niebla, el polvo y las fuentes de luz o los fondos pueden generarse en Higgsfield sobre negro y ponerse en modo Screen (capítulos 18–20), y la preparación repetitiva de capas de ajuste, los nombres y las expresiones pueden encargarse al puente de Claude (capítulo 21) o al AI Assistant (capítulo 23). Las decisiones las toman las personas. Decidir «dónde está el momento protagonista» es trabajo del director.
+[2731] C. El ecosistema de plugins — lo que más usan los profesionales
+[2732] Los plugins completan lo que falta en After Effects o aceleran mucho lo que ya tiene. Estos son los que más aparecen en el trabajo y en las plantillas del mercado. Los precios y las versiones compatibles cambian, así que comprueba en la web de cada empresa la compatibilidad con After Effects 2027 antes de instalar.
+[2733] Plugin (empresa)
+[2734] Partículas
+[2735] El estándar de partículas 3D. Humo, chispas, efectos mágicos, texto que se deshace en partículas. Form crea partículas en cuadrícula para gráficos abstractos
+[2736] Partículas 3D por nodos, replicación de modelos
+[2737] Modelos 3D, extrusión de texto, replicación (13-12)
+[2738] Cinema 4D · Cineware (Maxon, versión Lite incluida en After Effects)
+[2739] Vincula escenas 3D como capas
+[2740] Destellos de lente. Un clásico de los títulos de cine
+[2741] Resplandor premium que se expande como luz real
+[2742] Saber (Video Copilot, gratuito)
+[2743] Sables de luz, neón, contornos eléctricos
+[2744] Efectos generales
+[2745] Cientos de efectos: glitches, efectos de lente, transiciones, halos de luz. Estándar en emisión y publicidad
+[2746] Tracking y rotoscopia
+[2747] La versión superior de Mocha AE (integrado, 9-6). Añade eliminación, estabilización y corrección de lente
+[2748] Construir looks de cine viendo una previsualización
+[2749] Velocidad y desenfoque
+[2750] Cámara lenta que crea fotogramas nuevos, desenfoque de movimiento a posteriori
+[2751] Ruido
+[2752] Eliminación de ruido en escenas oscuras
+[2753] Líneas y conexiones
+[2754] Gráficos de datos y redes con puntos y líneas conectados
+[2755] Rigging
+[2756] Duik (RxLab, gratuito) · RubberHose · Joysticks 'n Sliders (Battle Axe)
+[2757] Rigs de articulaciones, extremidades y expresiones faciales de personajes
+[2758] Productividad
+[2759] Motion Tools Pro (gratuito) · Flow · Overlord (Battle Axe) · Animation Composer (Mister Horse)
+[2760] Alinear, suavizar, pasar capas desde Illustrator, bibliotecas de ajustes. Reducen los clics que haces decenas de veces al día
+[2761] Exportación web
+[2762] Lottie (JSON) para web y apps
+[2763] Paneles de generación y edición con IA y el puente de Claude (capítulos 17–22)
+[2764] <b>Si eliges tus primeros plugins</b>Empieza por los gratuitos Saber, Duik y Motion Tools Pro y añade uno a uno según te llegue trabajo en cada área. Para efectos y publicidad, mira primero Trapcode Particular y Optical Flares; para emisión, Sapphire; si haces muchos logos 3D, Element 3D. Si usas muchas plantillas, los plugins que exigen son tu primera lista de compra.

@@ -1,0 +1,338 @@
+[2427] <span class="tag t1">Follow Along</span> 2-6 Hiding and Organizing Layers — Shy, Solo, Lock, Guide
+[2428] Once you have dozens of layers, you need to know that “making something invisible” comes in different kinds. <b>Hiding it on screen</b>, <b>leaving it out of the render</b> and <b>hiding it only from the Timeline list</b> are different switches.
+[2429] Switch / feature
+[2430] Render
+[2431] When to use
+[2432] Eye (Video)
+[2433] Hidden
+[2434] Left out
+[2435] To switch something off briefly and compare. Forgetting it's off and rendering is the most common mistake
+[2436] This layer only
+[2437] Rendered as soloed
+[2438] To work on one layer alone. Render with Solo on and only that layer comes out
+[2439] Lock (padlock)
+[2440] Visible
+[2441] Included
+[2442] To stop finished layers from moving by accident
+[2443] Shy (shy figure)
+[2444] Hide from the Timeline list only, to see just the layers you're working on
+[2445] Left out by default
+[2446] Reference images, guide grids, storyboard frames
+[2447] fx switch
+[2448] Effects off only
+[2449] Effects left out
+[2450] To turn off heavy effects and work lighter
+[2451] Open the switch columns with <b>Toggle Switches / Modes</b> (<span class="k">F4</span>) at the bottom of the Timeline. The small figure column on each layer row is <b>Shy</b>.
+[2452] Click the Shy column of the layers to hide (finished backgrounds, lighting nulls, etc.). The icon flattens.
+[2453] Click the <b>Hide All Shy Layers</b> button (the same figure) at the top right of the Timeline. The marked layers disappear from the list. They still appear on screen and in the render.
+[2454] Click the same button again to show them.
+[2455] For a reference image, select the layer and choose <b>Layer → Guide Layer</b>. A blue mark appears before its name and it doesn't render (you can turn it on with the Guide Layers item in Render Settings).
+[2456] Shortcut / feature
+[2457] Show only properties with keyframes / only properties changed from defaults. The first move when reading someone else's project
+[2458] Show only properties with expressions
+[2459] Hide or show layer outlines, handles, paths and camera lines in the Composition panel. For judging a clean picture
+[2460] Label color → Select Label Group
+[2461] Click the color box on a layer's left and choose <b>Select Label Group</b> to select all layers of that color at once. Decide, say, yellow for captions and purple for effects, and you can hide or move many at once
+[2462] Timeline search field
+[2463] Type “Opacity” or a layer name in the magnifier field above the Timeline to show only that
+[2464] <b>Check before rendering</b>An eye left off, Solo left on or fx left off changes the render. Make a habit of scanning the switch columns right before you render. You can also ask the AI Assistant from Chapter 23 to “find disabled layers and solo states.”
+[2465] 13-10 Axes and Rotation, Fully Explained — X, Y, Z, Orientation, Shortcuts
+[2466] Most of what makes 3D feel hard is the axes. After Effects has three, matching the colored arrows on screen.
+[2467] Axis
+[2468] Arrow color
+[2469] In Position
+[2470] In Rotation (spinning around that axis like a skewer)
+[2471] Red
+[2472] Left–right. Right is +
+[2473] Nodding forward and back. Laying something flat, a door opening upward
+[2474] Green
+[2475] Up–down. <b>Down is +</b> (opposite to math)
+[2476] Shaking the head left and right. Flipping a card, a revolving door
+[2477] Blue
+[2478] Depth. Farther is +
+[2479] Tilting like a clock hand (same as 2D rotation)
+[2480] <b>Orientation versus X, Y, Z Rotation</b>: a 3D layer has two sets of rotation values. <b>Orientation</b> sets “which way it faces”; when keyframed it always takes the shortest path, so it can't turn more than 360°. <b>X, Y, Z Rotation</b> can be keyframed per axis and allows multiple turns, like “2x+30°.” Use Orientation for the starting angle and Rotation for motion, and nothing gets tangled.
+[2481] Shortcut / tool
+[2482] Show Position, Anchor Point, Scale, Rotation. On a 3D layer, <span class="k">R</span> opens Orientation and X, Y, Z Rotation together
+[2483] <span class="k">Shift</span>+property key
+[2484] Add to the properties already shown (e.g., <span class="k">P</span> then <span class="k">Shift+R</span>)
+[2485] Selection tool / Rotation tool. Drag an axis ring with the Rotation tool to rotate on that axis only
+[2486] Camera tool (orbit, pan, dolly). Each press switches to the next
+[2487] Axis modes in the toolbar
+[2488] <b>Local Axis</b> (the layer's own), <b>World Axis</b> (the space's), <b>View Axis</b> (the current view's). To raise a tilted layer “up in space,” use World
+[2489] Switch to assigned 3D views (13-5)
+[2490] Auto-Orient. Choose <b>Orient Towards Camera</b> and the layer always faces the camera (leaves, particle cards)
+[2491] Moves the pivot (Anchor Point) to the object's center. If something rotates oddly, try this first
+[2492] <b>Rotating like a door</b>Rotation happens around the Anchor Point. To make a card open on its left edge, use the <b>Pan Behind Tool</b> (<span class="k">Y</span>) to move the Anchor Point to the left edge, then keyframe Y Rotation.
+[2493] 13-11 Understanding Texture Maps — The Seven Images of a PBR Material
+[2494] A 3D model's surface is defined not by a few numbers but by <b>several images (maps)</b>. Today's 3D software, After Effects' Advanced 3D and Substance all use <b>PBR</b> (physically based rendering, Metal-Roughness workflow). Knowing the map names alone lets you understand downloaded models and materials.
+[2495] Map
+[2496] Looks like
+[2497] Color photo
+[2498] The surface's own color. It must not contain shadows or highlights
+[2499] Black and white
+[2500] Black is smooth (mirror), white is rough (matte). Fingerprints and scratches go here
+[2501] Black and white (usually 0 or 1)
+[2502] Only white areas reflect like metal. On rusty iron, only the rust is black
+[2503] Purple-blue image
+[2504] Keeps the shape but changes the direction light hits, so it looks bumpy
+[2505] Actually pushes the surface up. Heavy, so only for close-ups
+[2506] Color, mostly black
+[2507] Parts that glow on their own. Screens, neon, dashboards
+[2508] Darkness in gaps and corners. Gives more depth than without it
+[2509] <b>Three ways to use maps in After Effects</b>
+[2510] <b>Pack maps into the model file</b>: apply maps in Blender or Substance Painter and export as <b>GLB</b>; the maps travel inside the file and appear as soon as you import it into After Effects. The most reliable way.
+[2511] <b>Substance materials (.sbsar)</b>: import materials from Adobe Substance 3D Assets and choose them from the Material dropdown. The maps are inside the material, and you change color and roughness with sliders (23-7).
+[2512] <b>Layers as materials (27.0)</b>: use a composition, video or image as Base Color. Good for moving screens and signs (23-7).
+[2513] <b>Follow Along — making metal look like metal with an HDRI</b>
+[2514] Place a metal model (or extruded 3D text with Metallic 1, Roughness 0.2) in an Advanced 3D composition. At first it looks like a gray lump. Metal is an object that <b>reflects its surroundings</b>, so with nothing to reflect it looks dull.
+[2515] Import an HDRI file (.hdr or .exr, 2K–4K) and place it at the bottom of the composition. You can get free HDRIs from sites such as Poly Haven.
+[2516] Choose <b>Layer → New → Light</b>, set Light Type to <b>Environment</b>, and click OK. Set <b>Source</b> in Light Options to the HDRI layer you just placed.
+[2517] Turn off the HDRI layer's eye. It isn't seen as a background; it is used only for reflections and light.
+[2518] Adjust the environment light's Intensity (start at 100%) and Y Rotation to find an angle where the reflection sweeps across the text. Keyframe that angle and you get a premium logo with flowing light.
+[2519] 13-12 Element 3D — The Best-Known 3D Plug-in
+[2520] Video Copilot's <b>Element 3D</b> is a paid plug-in that draws 3D models quickly on the GPU inside After Effects. Since before Advanced 3D existed it has been a standard for 3D logos, type and spaceship scenes, and many market templates still require it. Its strengths are <b>OBJ and C4D model import</b>, text <b>extrusion</b>, rich material presets, the <b>Particle Replicator</b> that copies one model hundreds of times, and integration with After Effects cameras and lights.
+[2521] Create a black solid (<span class="k">Ctrl+Y</span>) and apply <b>Effect → Video Copilot → Element</b>. If the composition has no camera, first create one with <b>Layer → New → Camera</b>. Element shoots the scene through the After Effects camera.
+[2522] To extrude text, create a text layer, turn off its eye, and choose that text layer under Element's <b>Custom Layers → Custom Text and Masks → Path Layer 1</b>.
+[2523] Click <b>Scene Setup</b> at the top of Effect Controls to open Element's own window. Click the <b>EXTRUDE</b> button at the top and the text rises in 3D. To use a model, load an OBJ file with <b>IMPORT</b> or choose one from the <b>Model Browser</b> on the left.
+[2524] Drag a material (metal, glass, chrome, etc.) from <b>Presets</b> at the bottom onto the model. Change the Diffuse, Specularity, Reflectivity, Normal Bump and Illumination textures in the <b>Edit</b> panel on the right. The maps from 13-11 are used here directly.
+[2525] Click <b>OK</b> to return to After Effects. Change Particle Count and Replicator Shape (Plane, Ring, Sphere, etc.) under <b>Group 1 → Particle Replicator</b> in Effect Controls and the model multiplies into an array.
+[2526] Turn on Ambient Occlusion and Motion Blur in <b>Render Settings</b>, and set <b>Lighting</b> to use After Effects lights. If it's heavy, keep Render Mode at Preview while working.
+[2527] Comparison
+[2528] After Effects Advanced 3D (built in)
+[2529] Element 3D (plug-in)
+[2530] Cost
+[2531] Included with After Effects
+[2532] Purchased separately
+[2533] Model formats
+[2534] Duplicating and arraying
+[2535] Duplicate layers yourself
+[2536] Hundreds at once with Particle Replicator
+[2537] Template compatibility
+[2538] Mostly newer templates
+[2539] Required by many existing market templates
+[2540] Caution
+[2541] Gains features with every version
+[2542] After a new After Effects version, you may have to wait for a compatibility update
+[2543] <b>Check before installing</b>Element 3D relies heavily on your graphics card (GPU), and right after a major After Effects version change it can crash until a compatibility update comes out. Check the supported versions on the Video Copilot site before installing, and when buying templates, look for an “Element 3D required” note first.
+[2544] <span class="tag t1">Follow Along</span> 14-8 One Lap Around the Render Queue — Reading Every Setting
+[2545] Select the composition to render in the Project panel and choose <b>Composition → Add to Render Queue</b> (<span class="k">Ctrl+M</span>). The Render Queue panel opens at the bottom with one row.
+[2546] Click the blue text next to <b>Render Settings</b> (Best Settings by default). Check that Quality is <b>Best</b> and Resolution is <b>Full</b>, then look at <b>Time Span</b> below. <b>Work Area Only</b> renders just the work area; <b>Length of Comp</b> renders everything. This is the most common reason for a cut-off video.
+[2547] Click the blue text next to <b>Output Module</b> (H.264 or High Quality by default). Set the items in the table below and click OK.
+[2548] Click the blue text next to <b>Output To</b> to choose the folder and file name. Use the project folder's <span class="mono">render</span> folder.
+[2549] Click <b>Render</b> at the top right. When it finishes you hear a sound and the row turns green. To output the same composition in several formats, click <b>+</b> to the left of the Output Module row to add another output (MP4 and ProRes at once).
+[2550] Output Module item
+[2551] How to choose
+[2552] H.264 (MP4), QuickTime (MOV), AVI, PNG Sequence, JPEG Sequence, TIFF Sequence, OpenEXR Sequence, WAV, etc.
+[2553] Codec and quality. For QuickTime, Video Codec (ProRes 422 HQ, ProRes 4444, etc.); for H.264, bitrate; for JPEG, Quality
+[2554] <b>RGB</b> (usual) / <b>RGB + Alpha</b> (transparent background) / Alpha (black-and-white matte only)
+[2555] Millions of Colors / <b>Millions of Colors+</b> (automatic with alpha). High-end deliveries use Trillions (16-bit)
+[2556] Premultiplied (Matted, default) / Straight (Unmatted). Follow the recipient's spec
+[2557] Resize to deliver a 1080p version of something made in 4K at the same time
+[2558] Choose <b>Import &amp; Replace Usage</b> and the render comes into the project and replaces the original composition where it's used (pre-render)
+[2559] Auto / On / Off, 48 kHz. If there's no sound, check whether this is Off
+[2560] <b>Make your usual settings the default</b>In <b>Edit → Templates → Output Module</b>, save settings with names like “ProRes 4444 alpha” or “YouTube 4K” and set one as Default so you don't pick every item each time. In professional settings, teams share the same templates.
+[2561] 14-9 Formats at a Glance — MP4 (H.264), MOV, AVI, 4K
+[2562] Format
+[2563] Where to choose
+[2564] Transparency
+[2565] Where it's used, and tips
+[2566] No
+[2567] YouTube, social media, phones, presentations. 1080p at 10–20 Mbps, 4K at 35–45 Mbps. Quality drops if reused for editing, so final delivery only
+[2568] Smaller files at the same quality. For 4K and above, or when storage is tight. Older devices may not play it
+[2569] Editing master. Large files, but stays clean however many times you reuse it
+[2570] <b>Yes</b>
+[2571] Sources laid over other video, such as captions, logos and effects. Delivery to broadcast playout servers
+[2572] Depends on settings
+[2573] An old Windows format. Uncompressed, so files are huge. Only when on-site equipment such as LED-screen players reads AVI only
+[2574] PNG sequence
+[2575] One image per frame. Lossless; if the render stops midway you can resume
+[2576] JPG sequence
+[2577] Light previews, frames for web or game engines, extracting thumbnails
+[2578] EXR sequence
+[2579] Yes
+[2580] VFX delivery, 32-bit color. For passing to other compositing software
+[2581] <b>To render in 4K</b>: don't enlarge at output; <b>make the composition 4K from the start</b>. In <b>Composition → Composition Settings</b> (<span class="k">Ctrl+K</span>) set the Preset to <b>UHD 4K 29.97</b> (3840×2160); cinema DCI 4K is 4096×2160. Resizing a 1080p composition to 4K in the Output Module only stretches it blurry. While working, set preview resolution to Half to keep things light.
+[2582] <b>If you're not sure what to choose</b>Render the master once as ProRes 422 HQ (4444 if you need transparency), then put that file into Media Encoder to make the MP4. If changes come, you remake from the master instead of rendering in After Effects again.
+[2583] <span class="tag t1">Follow Along</span> 14-10 Rendering with a Transparent Background (Alpha)
+[2584] To lay caption or logo animations over Premiere or other video, you need a file with a transparent background. In After Effects, <b>wherever there is nothing</b> is transparent.
+[2585] Turn off or delete the background solid in the composition. The Background Color in Composition Settings isn't rendered, so you don't need to worry about it.
+[2586] Click <b>Toggle Transparency Grid</b> (the checkerboard icon) at the bottom of the Composition panel. Wherever you see the checkerboard will come out transparent.
+[2587] Add it to the Render Queue with <span class="k">Ctrl+M</span>, set Format to <b>QuickTime</b> in the Output Module, and set the Video Codec in Format Options to <b>Apple ProRes 4444</b>.
+[2588] Change <b>Channels</b> to <b>RGB + Alpha</b>. Left at RGB, transparent areas are filled with black.
+[2589] Leave Color at the default <b>Premultiplied (Matted)</b>. If you place the rendered file on a track above video in a Premiere timeline and the background shows through, you've succeeded.
+[2590] If you need per-frame images, output the same way with Format <b>PNG Sequence</b> and Channels <b>RGB + Alpha</b>.
+[2591] <b>When the alpha doesn't come through</b>① MP4 (H.264) and JPG can't hold transparency. ② Check whether Channels is RGB. ③ Make sure there's no solid left on at the bottom or an effect on an adjustment layer that fills the background (such as Fill). ④ If dark fringes appear around text, the recipient read the alpha as Straight; switch it to Premultiplied or re-render as Straight.
+[2592] <span class="tag t1">Follow Along</span> 14-11 Image Sequences — Rendering to JPG/PNG and Importing Again
+[2593] <b>A. Rendering a sequence</b>
+[2594] In the Render Queue's Output Module, set Format to <b>JPEG Sequence</b> (or PNG Sequence).
+[2595] For JPEG, raise Quality to <b>10</b> (maximum) in <b>Format Options</b>.
+[2596] Choose a <b>new folder</b> in Output To. The file name must end with <span class="mono">[#####]</span>, as in <span class="mono">title_[#####].jpg</span>. After Effects puts frame numbers 00000, 00001… in that spot.
+[2597] Render. Ten seconds at 30 fps gives 300 images in the folder.
+[2598] <b>B. Importing a sequence</b>
+[2599] Choose <b>File → Import → File</b> (<span class="k">Ctrl+I</span>) and select only the <b>first file</b> in the sequence folder.
+[2600] Turn on the <b>JPEG Sequence</b> checkbox (PNG Sequence for PNG) at the bottom of the dialog and click Import. Hundreds of images come in as one clip. With the checkbox off, only one still comes in.
+[2601] Set the sequence's speed. Select it in the Project panel and choose <b>File → Interpret Footage → Main</b> (<span class="k">Ctrl+Alt+G</span>) → under <b>Frame Rate</b>, enter 24 or 30 in <b>Assume this frame rate</b>.
+[2602] For sequences with transparency, such as PNG, choose Premultiplied or Straight under <b>Alpha</b> in the same dialog, or click <b>Guess</b>.
+[2603] <b>Why use sequences</b>If a three-hour render dies midway, the frames already made remain and you can resume from there. Frame outputs from Blender, C4D or AI video tools are imported the same way. Change the default frame rate in <b>Edit → Preferences → Import → Sequence Footage</b>.
+[2604] 14-12 Importing a Whole Project (.aep)
+[2605] To merge a scene someone else made, a logo animation from earlier work or a downloaded template into your current project, <b>import the .aep file directly</b>. No need to open it and copy and paste.
+[2606] First, on the original computer, use <b>File → Dependencies → Collect Files</b> to gather the project and its sources into one folder (14-6). Move that folder into your project folder.
+[2607] In your project, choose <b>File → Import → File</b> (<span class="k">Ctrl+I</span>) and pick the .aep file. You can also drag the .aep from Explorer into the Project panel.
+[2608] A <b>folder</b> with the file's name appears in the Project panel, containing the compositions, sources and folder structure as they were.
+[2609] If files are missing (names in italics), relink them with Replace Footage from 2-4. The other files in the same folder relink along with it.
+[2610] To keep only the compositions you need, select them and choose <b>File → Dependencies → Reduce Project</b>. Unused items are cleaned out.
+[2611] What to bring in
+[2612] Compositions from another .aep
+[2613] The method above. If sources with the same name are duplicated in one project, merge them with <b>File → Dependencies → Consolidate All Footage</b>
+[2614] Premiere sequences
+[2615] <b>File → Import → Import Adobe Premiere Pro Project</b>, or Dynamic Link from Premiere (14-3)
+[2616] Photoshop and Illustrator
+[2617] As Composition - Retain Layer Sizes (14-5). To edit Illustrator text, use SVG (23-7)
+[2618] Animation presets (.ffx)
+[2619] Apply from the Effects &amp; Presets panel or with <b>Animation → Apply Animation Preset</b>
+[2620] Used in Premiere's Essential Graphics. To edit in After Effects you need the original .aep
+[2621] <b>Watch the version</b>An .aep saved in a newer After Effects doesn't open in older versions. When handing over to someone on an older version, save with <b>File → Save As → Save a Copy As</b> (for the previous version). When you open an old project in a new version, you'll see a “converted” notice; save under a new name so you don't overwrite the original.
+[2622] 14-13 The Idea of Templates — Five Forms
+[2623] A template means “reusing a well-made structure.” In After Effects the same word points to five different kinds of file, so telling them apart saves confusion on the job.
+[2624] File
+[2625] How to make and use
+[2626] Project template
+[2627] In <b>File → Save As → Save As</b>, save with the file type <b>After Effects Project Template</b>. Opening it opens an untitled copy, so the original is never overwritten. Weekly broadcast graphics, class assignment frames
+[2628] Animation preset
+[2629] Select properties with effects and keyframes and choose <b>Animation → Save Animation Preset</b>. Drag it from User Presets in the Effects &amp; Presets panel. For text entrances, wiggles and color-grade bundles you use often
+[2630] Motion Graphics template
+[2631] Exported with Essential Graphics; in Premiere only text and colors are changed (14-4)
+[2632] (inside the project)
+[2633] Put properties inside a precomp into Essential Graphics, and outside you can place that precomp many times and give <b>each a different text and color</b>. One lower third makes ten guests' name tags
+[2634] Market template
+[2635] .aep bundle
+[2636] Finished projects bought from Adobe Stock, Envato, Motion Array and others. Edit them in the order below
+[2637] <b>Follow Along — editing a market template</b>
+[2638] Before buying, check the description for the <b>required After Effects version</b>, <b>required plug-ins</b> (Element 3D, Optical Flares, Trapcode, etc.), <b>fonts</b> and <b>resolution</b>. Without the plug-ins you only get red warnings when you open it.
+[2639] Unzip the download into your project folder and first read the included <b>Help</b> or <b>Read Me</b> files or watch the guide video.
+[2640] When you open the .aep it's usually split into folders such as <b>01_Edit</b> (where to edit), <b>02_Final</b> (what to render) and <b>03_Elements</b> (don't touch). Open only the compositions in the Edit folder.
+[2641] Change text inside the Edit compositions; for photo or video slots, select the slot layer and hold <span class="k">Alt</span> while dragging your file from the Project panel onto it. If the size is off, fit it with <span class="k">Ctrl+Alt+F</span> (Fit to Comp).
+[2642] Change colors all at once in the <b>Controller</b> or <b>Color Control</b> layer most templates include (the same idea as the rigs in 7-16).
+[2643] Send the Final composition to the Render Queue. When handing it to others, gather it with Collect Files.
+[2644] <b>Templates and skill</b>Templates help you meet deadlines, but they're only yours as far as you can change them. Knowing the rigs (7-16), Essential Graphics (14-4) and precomposing (4-5) from this book lets you take templates apart and reshape them—and eventually build your own templates to sell or share with your team.
+[2645] 16-1 How Experienced Pros Work — The Professional Pipeline
+[2646] Knowing many features and doing the job well are different things. Experienced professionals use the same features <b>in a fixed order</b>. Keep to the order and revision requests won't bring the project down.
+[2647] Reference and style frames
+[2648] Get 3–5 reference videos and one still frame (style frame) approved first. Agree on “one picture” before anything moves
+[2649] Animatic
+[2650] A rough video timed with boxes and placeholder text. Lock cut lengths to music and narration
+[2651] Project structure
+[2652] Folders (00_Comps, 01_Footage, 02_Precomps, 03_Render, 99_Guide), naming rules (SH010_title_v003), one master composition with a precomp per shot
+[2653] Rig first
+[2654] Build control layers (7-16) for color, text and speed, then animate. When revisions come, change only the control values
+[2655] Blocking → polishing
+[2656] Linear keys for position and timing only (blocking) → speed in the Graph Editor (3-4) → overlap and follow-through (polish)
+[2657] Compositing and look
+[2658] An adjustment-layer stack in a fixed order: grade → glow → grain → vignette
+[2659] Sound
+[2660] Sound effects go in during polishing, not at the very end. Pulling keyframes one or two frames earlier to match sounds raises perceived quality a lot
+[2661] Review and delivery
+[2662] Safe areas, typos, disabled layers, loudness, renders per spec (14-8), backup with Collect Files
+[2663] 16-2 Handling Heavy Projects — Techniques of Experienced Users
+[2664] Technique
+[2665] Proxies
+[2666] Right-click 4K or 8K sources → <b>Create Proxy → Movie</b> to work with a light copy, and render from the originals with <b>Proxy Use: Use No Proxies</b> in Render Settings
+[2667] Pre-rendering
+[2668] Render a finished heavy precomp with Post-Render Action: <b>Import &amp; Replace Usage</b> and swap it for video (14-8). If changes come, switch back to the original composition
+[2669] Disk cache
+[2670] Point <b>Preferences → Media &amp; Disk Cache</b> to a fast SSD with 100 GB or more. On big projects the difference is noticeable
+[2671] 32 bpc, linear work
+[2672] Set Bit Depth to 32 bpc in <b>File → Project Settings → Color</b>. Light-adding effects such as glow, motion blur and lens effects blend naturally, like real light. Film and commercial VFX unify color management with OCIO/ACES
+[2673] 3D multipass
+[2674] Receive multichannel EXRs from Blender or C4D (light, reflection, shadow and depth separated) and pull out passes with <b>Effect → 3D Channel → EXtractoR</b> to grade them separately—for example, reducing only reflections without re-rendering the 3D
+[2675] Several specs at once
+[2676] Place the 16:9 master composition as a precomp in 9:16 and 1:1 compositions and only reposition. Changing the original updates every spec
+[2677] Scripts and automation
+[2678] Run .jsx files with <b>File → Scripts → Run Script File</b>, and put scripts you use often in the Scripts folder to use them as panels from the Window menu. For repetitive work such as batch renaming and arranging layers. Today the AI Assistant (Chapter 23) and the Claude bridge (Chapter 21) take over much of this role
+[2679] Command-line rendering
+[2680] Render without opening the window using <b>aerender</b> in the After Effects install folder. Example: <span class="mono">aerender -project "D:\job\title.aep" -comp "Final" -output "D:\job\render\title.mov"</span>. For rendering several projects in a row overnight
+[2681] Version control
+[2682] Keep v001, v002… with File → Increment and Save, and add _sent to the end of versions sent to clients. You must always be able to trace what you sent
+[2683] <span class="tag t3">One Step Further</span> 24-4 Advanced Project — A 30-Second Cinematic Opening Title
+[2684] Put the features you've learned into one scene and you get a title like a film trailer. Premium quality doesn't come from a special button but from layering <b>depth (3D, depth of field) + light (reflections, flares, glow) + atmosphere (fog, dust) + film texture (grain, motion blur) + sound</b>. This assignment follows the same order professional title designers use.
+[2685] Goal
+[2686] A 30-second opening in which a metallic 3D title slowly emerges from fog in a dark space, light sweeps across the letters, and it settles with a lens flare. 4K, 2.39:1 aspect ratio, 23.976 fps.
+[2687] <b>1. Setting up</b>
+[2688] New composition <span class="mono">MAIN_title</span>, 3840×2160, 23.976 fps, 30 seconds. Choose the <b>Advanced 3D</b> renderer. In the <b>Advanced</b> tab, set Motion Blur's Shutter Angle to 180° (the same blur as a film camera).
+[2689] Set Bit Depth to <b>32 bpc</b> in <b>File → Project Settings → Color</b>. With overlapping light, colors blend smoothly without banding.
+[2690] Make a 2.39:1 letterbox on top. Draw a rectangle mask on a black solid leaving the central 3840×1607 area empty (mask Inverted), and keep it a normal layer, not a Guide Layer. Name it <span class="mono">LETTERBOX</span>.
+[2691] <b>2. Making the title</b>
+[2692] Type the title (a bold serif or a wide sans serif, generous tracking) and turn on the 3D switch. In <b>Geometry Options</b>, set Extrusion Depth 60, Bevel Style <b>Angular</b>, Bevel Depth 4.
+[2693] In Material Assignment, set Metallic 1 and Roughness 0.25. If you have a Substance metal material (.sbsar), apply brushed metal to the front and dark metal to the sides separately (23-7).
+[2694] As in 13-11, set an HDRI as the Environment Light's Source and turn off the HDRI layer's eye. Surrounding light starts to reflect on the letters.
+[2695] <b>3. Camera and depth</b>
+[2696] Create a camera (50 mm) and parent it to a null (13-9). Push the null's Z Position forward slowly by −400 over 30 seconds (dolly in), and ease the last keyframe with <b>Easy Ease In</b> (<span class="k">Shift+F9</span>) so it stops smoothly.
+[2697] Turn on the camera's <b>Depth of Field</b>, then with the text and camera selected choose <b>Layer → Camera → Link Focus Distance to Layer</b>. Focus stays locked to the text as the camera moves. Raise Aperture to increase blur in front and behind.
+[2698] Make the light flow. Keyframe the Environment Light's Y Rotation to turn 60° between 8 and 14 seconds and the reflection sweeps across the letters from left to right. This moment is the title's “hero shot.”
+[2699] <b>4. Atmosphere — fog and dust</b>
+[2700] Using method B from 5-7, make two Fractal Noise fog layers, turn on their 3D switches, and place one in front of the text (Z −300) and one behind (Z 600). Parallax appears between the fog layers as the camera passes.
+[2701] Using method ① from 5-7, make tiny dust particles (Faded Sphere, Birth Size 0.02, Velocity 0.02, Gravity 0) with Opacity 40% and Mode Add. Dust floating in the light gives a sense of space.
+[2702] Give the dust layer a Fast Box Blur of 2 so it looks out of focus.
+[2703] <b>5. Light — flares and glow</b>
+[2704] Apply <b>Effect → Generate → Lens Flare</b> (or Optical Flares) to a black solid with Mode <b>Screen</b>. Around 14 seconds, where the reflection passes, keyframe Flare Brightness 0 → 120 → 60.
+[2705] Create an <span class="mono">ADJ_glow</span> adjustment layer near the top (below the letterbox) and apply <b>Glow</b> (or Deep Glow) with Glow Threshold 80%, Radius 60 and Intensity 0.6. Only bright reflections bloom softly.
+[2706] For light leaking from behind the letters, apply <b>CC Light Rays</b> to a duplicate of the text, set Center to the light source behind the letters, and use Mode Add.
+[2707] <b>6. Color and film texture</b>
+[2708] Apply Lumetri Color to an <span class="mono">ADJ_grade</span> adjustment layer. In Color Wheels, push Shadows slightly toward teal and Highlights toward orange (teal and orange), and lift the blacks a little with Curves for film-like raised blacks. You can also use a LUT in the Creative tab.
+[2709] Apply <b>Noise &amp; Grain → Add Grain</b> (Intensity 0.3, Size 1.2) to an <span class="mono">ADJ_grain</span> adjustment layer. Digital smoothness disappears and film texture appears.
+[2710] Vignette: an Inverted elliptical mask on a black solid, Feather 1200, Opacity 50%. The eye is drawn to the text in the center.
+[2711] From the top, the order is letterbox → grain → vignette → grade → glow → scene. Grain always goes last (near the top).
+[2712] <b>7. Sound and render</b>
+[2713] Add a long low drone, a whoosh as the reflection passes, and a heavy impact at the moment the title completes. Move the flare's peak keyframe one or two frames earlier to match the impact frame.
+[2714] Turn on every layer's motion blur switch and the Enable Motion Blur button at the top of the Timeline.
+[2715] Render the master as 4K ProRes 422 HQ, and make the delivery version from that file in Media Encoder as 4K H.264 at 40 Mbps (14-9).
+[2716] What makes it look “cheap”
+[2717] Where to fix it
+[2718] Everything is sharp and clean
+[2719] Depth of field, grain and motion blur are missing
+[2720] The light is flat
+[2721] No Environment Light or reflections. Metal needs something to reflect
+[2722] Motion feels mechanical
+[2723] Linear keys, everything moves at once. Use easing and 0.1–0.3 s offsets (7-8)
+[2724] Colors are too loud
+[2725] Lower saturation and give shadows and highlights different hues
+[2726] There's no sound
+[2727] Half of a title's quality is sound. Re-time keyframes to the sound effects
+[2728] Too many effects
+[2729] Focus on one hero moment (the light sweep) and strip back the rest
+[2730] <b>Working with AI</b>Fog, dust and light sources or background scenes can be generated in Higgsfield on black and laid on with Screen mode (Chapters 18–20), and repetitive adjustment-layer setup, naming and expressions can be handed to the Claude bridge (Chapter 21) or the AI Assistant (Chapter 23). People make the judgments. Deciding “where the hero moment is” is the director's job.
+[2731] C. The Plug-in Ecosystem — What Professionals Use Most
+[2732] Plug-ins fill in what After Effects lacks or make existing features much faster. Below are the ones you meet most often on the job and in market templates. Prices and supported versions change, so check each company's site for After Effects 2027 support before installing.
+[2733] Plug-in (company)
+[2734] Particles
+[2735] The standard for 3D particles. Smoke, sparks, magic effects, text breaking into particles. Form makes grid-shaped particles for abstract graphics
+[2736] Node-based 3D particles, model replication
+[2737] 3D models, text extrusion, replication (13-12)
+[2738] Cinema 4D · Cineware (Maxon, Lite included with After Effects)
+[2739] Links 3D scenes in like layers
+[2740] Lens flares. A staple of film titles
+[2741] Premium glow that spreads like real light
+[2742] Saber (Video Copilot, free)
+[2743] Lightsabers, neon, electric outlines
+[2744] All-round effects
+[2745] Hundreds of effects: glitches, lens effects, transitions, light bloom. Standard in broadcast and advertising
+[2746] Tracking and roto
+[2747] The bigger version of Mocha AE (built in, 9-6). Adds removal, stabilization and lens correction
+[2748] Building film looks while watching a preview
+[2749] Speed and blur
+[2750] Slow motion that creates new frames, motion blur added afterward
+[2751] Noise
+[2752] Noise removal for dark scenes
+[2753] Lines and connections
+[2754] Data and network graphics with connected dots and lines
+[2755] Rigging
+[2756] Duik (RxLab, free) · RubberHose · Joysticks 'n Sliders (Battle Axe)
+[2757] Character joints, limbs and facial rigs
+[2758] Productivity
+[2759] Motion Tools Pro (free) · Flow · Overlord (Battle Axe) · Animation Composer (Mister Horse)
+[2760] Alignment, easing, moving Illustrator layers over, preset libraries. Cuts down the clicks you make dozens of times a day
+[2761] Web export
+[2762] Lottie (JSON) for web and apps
+[2763] AI generation and editing panels and the Claude bridge (Chapters 17–22)
+[2764] <b>Choosing your first plug-ins</b>Start with the free Saber, Duik and Motion Tools Pro, then add one at a time as work in each area comes in. For effects and advertising, look first at Trapcode Particular and Optical Flares; for broadcast, Sapphire; for lots of 3D logos, Element 3D. If you use many templates, the plug-ins they require are your first shopping list.
