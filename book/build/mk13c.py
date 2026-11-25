@@ -2,7 +2,7 @@
 import re, sys, html as H
 S=open('/tmp/b13_b.html',encoding='utf-8').read()
 sys.path.insert(0,'/home/claude/book/tools'); import ins_rig; S=ins_rig.apply(S)
-import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S); S=ins_reorder.apply7(S); import ins_restructure; S=ins_restructure.apply8(S)
+import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S); S=ins_reorder.apply7(S); import ins_restructure; S=ins_restructure.apply8(S); import ins_cases; S=ins_cases.apply9(S)
 
 # ---- stray challenge boxes on the TOC page -> move into chapters 06, 07, 12
 m=re.search(r'<section class="chapter toc-page">.*?</section>',S,flags=re.S)

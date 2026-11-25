@@ -1,0 +1,60 @@
+[3971] <span class="tag t1">Paso a paso</span> 7-3 Change Lighting — cambiar solo la luz
+[3972] Abre la composición de la persona caminando del capítulo 6 y selecciona la capa de vídeo en la línea de tiempo. Pulsa <b>Scene → Change Lighting</b> en el inicio del panel y el clip seleccionado entra directamente. Si entra otro clip, abre antes la composición que quieres y vuelve a abrir la herramienta.
+[3973] Elige en la barra inferior el tramo que vas a usar (hasta 14 segundos). Este clip usó sus 5,1 segundos completos.
+[3974] Elige la luz en <b>Presets</b>. Hay seis: Purple, Backlight, Rainbow, Golden Hour, Paparazzi Flash y Spotlight. Aquí elegimos <b>Golden Hour</b>, contraluz de atardecer.
+[3975] <b>Generate</b>. Unos 3 minutos después el resultado aparece en la pantalla de generación del panel; descárgalo con ↓ arriba a la izquierda y ponlo en la composición.
+[3976] <b>Figura 7-5</b> Ajustes de Video Lighting. Tramo de 5,1 s, preset Golden Hour. El botón mostraba 68 créditos, pero el cargo real fue de <b>22,5 créditos</b>.
+[3977] <b>Figura 7-6</b> Pantalla del resultado. Ahora el sol entra por arriba a la derecha y los bordes de los ladrillos y del pelo se volvieron naranjas.
+[3978] <b>Figura 7-7</b> Original (izquierda) y Golden Hour (derecha). La luz cambió bien, pero el resultado <b>se redibujó en 1:1 con un encuadre más abierto</b>. Si debes conservar el encuadre original, sube la Scale del resultado para igualarlo o recupera la proporción con el Reframe del capítulo 6.
+[3979] <span class="tag t1">Paso a paso</span> 7-4 Motion Control — transferir movimiento
+[3980] Inicio del panel: <b>Scene → Motion Control</b>. Pulsa la casilla <b>Motion</b> de la izquierda para elegir un movimiento preset o sube tu propio vídeo con <b>Custom motion</b>.
+[3981] Primero importa la imagen del personaje en AE (Ctrl+I) y luego arrástrala desde el panel Project a la casilla <b>Character</b> de la derecha. Si arrastrar no funciona, pulsa la casilla y elige el archivo directamente.
+[3982] Ajusta Quality (720p/1080p) y Background (Image: el fondo de la imagen del personaje / Video: el fondo del vídeo de referencia) y pulsa <b>Generate</b>. El modelo es Kling 3.0 Motion Control y la salida es 9:16.
+[3983] <b>Figura 7-8</b> Un baile preset + el robot Dubu del capítulo 14. 720p · fondo Image · <b>25 créditos</b>.
+[3984] <b>Figura 7-9</b> El resultado se bloqueó como «NSFW Content» y se devolvieron los créditos. Lo detuvo el filtro de seguridad o un error de proceso; los personajes con una estructura distinta del cuerpo humano, como un robot de extremidades de palo, a menudo no logran recibir el movimiento.
+[3985] Segundo intento: cambiamos el personaje por una imagen de cuerpo entero con proporciones humanas (el personaje del chubasquero amarillo, generado con la descripción fija de 14-6) y usamos como movimiento el vídeo de la persona caminando del capítulo 6. Como arrastrar la imagen al panel no funcionaba, ejecutamos la misma función desde Claude a través del MCP de Higgsfield.
+[3986] <span class="lbl">PROMPT · para Claude</span>Con Higgsfield Motion Control, transfiere el movimiento del vídeo de la persona caminando a la imagen del personaje del chubasquero amarillo. 720p, y dime los créditos antes de generar.
+[3987] <b>Figura 7-10</b> Fotogramas a 1 s y 4 s, cada uno con el original (izquierda) y el resultado (derecha). Solo la persona pasó a ser el personaje del chubasquero amarillo; el paso, el movimiento de cámara y el encuadre del fondo siguen al original. La textura del muro se redibujó. 1280×720 · <b>35 créditos</b>.
+[3988] <b>Registra también los fallos</b>Las generaciones bloqueadas devuelven los créditos, pero el tiempo se pierde. La transferencia de movimiento funciona bien con un personaje de <b>cabeza, torso y extremidades con proporciones humanas</b>, una imagen frontal de cuerpo entero clara y un movimiento de referencia sencillo. Para personajes con otra estructura, como robots, es más fiable emparentar las partes en AE y animarlas tú, como en el capítulo 14.
+[3989] 10-3 Cinco casos con Claude — empezar con una sola petición
+[3990] Los cinco casos siguientes son cosas que de verdad le pedimos a Claude a través del puente mientras escribíamos este libro. Ninguno gastó créditos, y los resultados quedan como capas y fotogramas clave con nombre que puedes corregir a mano. El «Qué corregimos» del final de cada caso es lo que realmente falló en el primer resultado. Acostúmbrate a no usar tal cual el primer resultado de la IA y a revisarlo una vez con una hoja de contactos.
+[3991] Caso
+[3992] Tamaño · duración
+[3993] Qué se aprende
+[3994] Infografía de barras
+[3995] 1920×1080 · 6 s
+[3996] Llevar el Anchor Point a la base de la barra para que crezca hacia arriba
+[3997] Cuenta atrás de evento
+[3998] Fotogramas clave que repiten la misma acción cada segundo
+[3999] Tarjeta vertical para Shorts
+[4000] 1080×1920 · 6 s
+[4001] Mover toda la tarjeta con una sola capa padre
+[4002] Créditos finales
+[4003] 1920×1080 · 8 s
+[4004] Un desplazamiento que sube a velocidad constante (lineal)
+[4005] Clic en el botón de suscripción
+[4006] 1920×1080 · 5 s
+[4007] Una interacción breve: pulsación → cambio de color → onda
+[4008] Caso 1. Infografía de barras
+[4009] <span class="lbl">PROMPT · para Claude</span>/use-after-effects<br/>
+Crea una composición de 1920×1080 y 6 segundos, "Claude사례1_막대그래프". Sobre fondo azul marino, el título "월별 조회수" (visualizaciones mensuales) y el subtítulo "단위: 만 회 · 예시 데이터" (unidad: 10 000 visualizaciones · datos de ejemplo). Cuatro barras de septiembre a diciembre (26, 38, 50, 64) crecen de abajo arriba una tras otra, con 0,25 s de diferencia, y cuando cada barra termina, su número aparece encima subiendo un poco. Resalta solo el último mes en lima. Pon nombres en coreano a las capas.
+[4010] <b>Figura 10-4</b> 0,4 s · 1,3 s · 1,8 s · 3 s. Las barras crecen una a una desde la izquierda y cada número aparece cuando su barra ha terminado de crecer.
+[4011] <b>Qué corregimos</b>Para que las barras no crecieran a la vez hacia arriba y hacia abajo desde el centro, Claude llevó el <b>Anchor Point de cada barra a su borde inferior</b> (media altura hacia abajo) y luego subió Scale Y de 0 a 100. A mano, arrastra el ancla a la base de la barra con la Pan Behind Tool (Y). En el primer intento el nombre de la fuente se escribió con espacio, «Malgun Gothic», y dio error; lo corregimos con los nombres PostScript <span class="mono">MalgunGothic</span> y <span class="mono">MalgunGothicBold</span>.
+[4012] Caso 2. Cuenta atrás de evento
+[4013] <span class="lbl">PROMPT · para Claude</span>Una composición de 1920×1080 y 6 segundos, "Claude사례2_카운트다운". Dentro de un anillo circular morado, 5, 4, 3, 2, 1 cambian cada segundo, apareciendo grandes y encogiéndose, y el anillo rebota un poco en cada cambio. Termina a los 5 s con un "START" lima que salta. Abajo, en pequeño: "행사가 곧 시작됩니다" (el evento está a punto de empezar).
+[4014] <b>Figura 10-5</b> 0,5 s · 2,5 s · 4,5 s · 5,6 s. El anillo se forma superponiendo dos círculos: uno exterior (morado) y uno interior (color de fondo).
+[4015] <b>Qué corregimos</b>En el primer resultado el texto START (150 pt) era más ancho que el anillo y se superponía al borde. Al decir «reduce START para que quepa dentro del anillo», se bajó a 100 pt y se recolocó. Cada número sigue el mismo patrón —aparece a los 0,12 s y desaparece entre 0,85 y 1 s—, así que a mano puedes copiar los fotogramas clave de una capa de número y pegarlos un segundo después cada vez.
+[4016] Caso 3. Tarjeta vertical para Shorts
+[4017] <span class="lbl">PROMPT · para Claude</span>Una composición para Shorts de 1080×1920 y 6 segundos, "Claude사례3_쇼츠카드". Una tarjeta blanca sube rebotando desde abajo sobre fondo morado y se detiene; dentro aparecen uno tras otro una etiqueta NEW lima, el título "애펙 2027 / AI와 30초 만에" (AE 2027 / en 30 segundos con IA), dos líneas de texto y un botón azul marino "자세히 보기 →" (ver más). El botón crece un poco una vez a los 3,5 s y vuelve. Emparenta todos los elementos de la tarjeta con la tarjeta.
+[4018] <b>Figura 10-6</b> 0,35 s · 0,9 s · 1,6 s · 3 s. La tarjeta solo tiene 3 claves de posición; el texto y el botón de dentro suben siguiendo a su padre (la tarjeta).
+[4019] <b>Qué corregimos</b>Al principio el título y el texto se hicieron alineados a la izquierda y las letras se salían por el borde izquierdo de la tarjeta (un problema de dónde queda el ancla del texto en AE). Los rehicimos centrados y, tras emparentar, pusimos las posiciones en <b>coordenadas relativas a la tarjeta</b> (título 0, −200 / texto 0, 60). Emparentar mientras el padre se mueve desplaza al hijo de forma inesperada, así que es más seguro emparentar antes de animar. En Shorts los botones de la app tapan arriba y abajo, así que deja el texto importante en el 70 % central de la pantalla.
+[4020] Caso 4. Créditos finales
+[4021] <span class="lbl">PROMPT · para Claude</span>Una composición de 1920×1080 y 8 segundos, "Claude사례4_엔딩크레딧". Sobre fondo negro, el título "만든 사람들" (hecho por) y una lista de funciones y nombres suben de abajo arriba a velocidad constante. La última línea dice "이 영상의 일부 장면은 AI로 만들었습니다" (algunas escenas de este vídeo se hicieron con IA). Usa nombres de ejemplo y un interlineado amplio.
+[4022] <b>Figura 10-7</b> 1,5 s · 3,2 s · 4,8 s · 6,4 s. La capa del texto solo tiene dos claves de posición (0 s y 8 s), y el título está emparentado con ella y sube a la vez.
+[4023] <b>Qué corregimos</b>Los créditos se leen mejor a velocidad constante, así que <b>no añadimos suavizado</b> a las claves de posición (lineal). Al principio el interlineado era estrecho; dijimos «amplía el interlineado» y el Leading pasó a 72 px. Si corriges el suavizado automáticamente con la herramienta de cierre (finalize), como en los otros casos, las claves lineales se vuelven suaves, así que no la uses en los créditos. Si hay escenas hechas con IA, acostúmbrate a indicarlo también en los créditos (cap. 29).
+[4024] Caso 5. Clic en el botón de suscripción
+[4025] <span class="lbl">PROMPT · para Claude</span>Una composición de 1920×1080 y 5 segundos, "Claude사례5_구독버튼". En el centro de un fondo claro salta un botón redondeado rojo "구독" (suscribirse); un cursor redondo se acerca desde abajo a la derecha y hace clic a los 1,5 s, el botón se hunde un poco y cambia a un botón gris "구독중" (suscrito), y se expande una onda roja. El cursor se va hacia los 3 s.
+[4026] <b>Figura 10-8</b> 0,3 s · 1,2 s · 1,75 s · 2,8 s. Los botones rojo y gris están superpuestos y se alternan con la opacidad.
+[4027] <b>Qué corregimos</b>La marca de verificación de «구독중 ✓» no existe en Malgun Gothic y salió en blanco. Quitamos el símbolo y dejamos solo «구독중». Si lo necesitas, dibuja la marca con una forma o usa una fuente que lo tenga. El cursor se sustituyó por un círculo de forma; si necesitas un puntero de ratón real, importa una imagen de icono y dale las mismas claves de posición.
+[4028] <b>Lo que enseñaron los cinco casos</b>① Si pides nombres de capa en coreano, luego puedes corregir por nombre, como «pon en verde solo 막대_12월». ② Revisa siempre el resultado con una hoja de contactos (varios momentos en una imagen). ③ Usa nombres PostScript para las fuentes y comprueba que los símbolos existen en la fuente. ④ Emparenta antes de añadir movimiento.
+[4029] 114 (capturas reales, diagramas hechos a mano e imágenes generadas con rótulos)
