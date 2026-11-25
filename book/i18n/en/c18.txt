@@ -1,0 +1,303 @@
+[2124] Snow — CC Snowfall, Step by Step
+[2125] For snow, <b>CC Snowfall</b> is faster than CC Particle World. It fills the whole frame with flakes at different depths in one go, with wind and drifting built in.
+[2126] Open the composition that holds the footage you want snow on. Choose <b>Layer → New → Solid</b> (<span class="k">Ctrl+Y</span>), click <b>Make Comp Size</b>, set the color to black, name it <span class="mono">Snow_Near</span>, and click <b>OK</b>.
+[2127] With the solid selected, choose <b>Effect → Simulation → CC Snowfall</b>. CC Snowfall opens in the Effect Controls panel at the top left, and white dots start falling on the black frame.
+[2128] At the bottom of Effect Controls, turn off <b>Composite With Original</b>. The black background is still there, so in the Timeline set the solid's Mode column (shown with <span class="k">F4</span>) to <b>Screen</b>. Now only the snow stays on top of the footage.
+[2129] Change the values to the “Near snow” column in the table below. Click a number to type it, or drag left and right over it.
+[2130] Duplicate the solid with <span class="k">Ctrl+D</span> and rename it <span class="mono">Snow_Far</span>. Use the “Far snow” values, then add <b>Effect → Blur &amp; Sharpen → Fast Box Blur</b> with a Blur Radius of 2. Distant snow must be smaller, slower and softer to create depth.
+[2131] Give the near-snow layer a Fast Box Blur of 1.5 as well. Flakes passing close to the camera are out of focus, so a slight blur looks natural.
+[2132] Press <span class="k">Space</span> to play and adjust Wind. Tilting the snow slightly against the direction a person walks makes it feel like a windy day.
+[2133] Near snow
+[2134] Far snow
+[2135] Number of flakes. More for far snow, fewer for near snow
+[2136] Flake size
+[2137] How uneven the sizes are
+[2138] Falling speed. Slow for big, heavy flakes
+[2139] Sideways push. Keep it the same on both layers
+[2140] How much each flake's direction scatters
+[2141] How far flakes sway from side to side
+[2142] Far snow slightly fainter
+[2143] <b>More convincing</b>Snowy days are low in contrast and cool. Put an adjustment layer (<b>Layer → New → Adjustment Layer</b>) above the footage and in Lumetri Color set Temperature −15, Contrast −20 and Highlights +15 so the snow and the background look like the same weather. For snow settling on the ground, use Extras → <b>Ground Level</b> and <b>Embed Depth</b> to set the height where flakes disappear.
+[2144] Rain — CC Rainfall, Step by Step
+[2145] Use <b>CC Rainfall</b> for rain. The streaks themselves are nearly transparent, so the effect alone doesn't make rain “visible.” You need three things together: streaks, a wet color grade and depth.
+[2146] Create a black solid (<span class="k">Ctrl+Y</span>) named <span class="mono">Rain_Near</span>. Apply <b>Effect → Simulation → CC Rainfall</b>.
+[2147] In Effect Controls, turn off <b>Composite With Original</b> and set the layer Mode to <b>Screen</b> (the same idea as with snow).
+[2148] Enter the values from the table below. <b>Wind</b> slants the streaks, and a lower <b>Spread</b> lines them up in one direction.
+[2149] Duplicate it with <span class="k">Ctrl+D</span> to make <span class="mono">Rain_Far</span>, raise Drops and lower Size and Opacity. Distant rain must be thin and dense to look like rain hanging in the air.
+[2150] Put an adjustment layer directly above the footage and apply <b>Effect → Color Correction → Lumetri Color</b>. In Basic Correction set Exposure −0.6, Contrast −15, Saturation 75 and Temperature −20. This gives the dark, cool light of a rainy day.
+[2151] For lightning, make another adjustment layer with the <b>Exposure</b> effect and keyframe Exposure up to +1.5 for just two or three frames and back down. If you also want the bolt itself, use <b>Effect → Generate → Advanced Lightning</b>.
+[2152] Near rain
+[2153] Far rain
+[2154] Number of drops
+[2155] Streak thickness and length
+[2156] Falling speed. Faster means longer streaks
+[2157] Slant. Keep it the same on both layers
+[2158] Slight variation in each streak's slant
+[2159] Direction scatter. Small for a downpour
+[2160] Streak strength
+[2161] Soft Solid gives white streaks; Refracting gives clear streaks that bend the background
+[2162] <b>Compared with Higgsfield</b>Change Weather in 19-1 wets the ground and changes the light in one go. CC Rainfall only makes streaks, but you can adjust thickness, amount and direction frame by frame, and it costs no credits. Layering both—adding only foreground streaks on top of the AI result—also works well.
+[2163] Smoke — Rising Columns and Low-Lying Smoke
+[2164] Build smoke in two ways. <b>Smoke rising from one spot</b>, like a chimney, incense or a teacup, uses CC Particle World; <b>wide smoke</b> lying on the ground or drifting across the frame uses Fractal Noise.
+[2165] <b>A. A rising column of smoke</b>
+[2166] Create a black solid (<span class="k">Ctrl+Y</span>) named <span class="mono">Smoke_Column</span> and apply <b>Effect → Simulation → CC Particle World</b>.
+[2167] In Effect Controls, open <b>Producer</b>, move Position X and Y to where the smoke should start (e.g., above a teacup), and narrow Radius X, Y and Z to 0.02. Smoke must come from one point to form a column.
+[2168] <b>Birth Rate</b> 0.6, <b>Longevity (sec)</b> 3. Open <b>Physics</b> and set Velocity 0.15, <b>Gravity −0.08</b> (negative, so it rises) and Extra 0.4 (how much it wavers).
+[2169] Open <b>Particle</b>: Particle Type <b>Faded Sphere</b>, Birth Size 0.25, Death Size 1.4 (spreading as it rises), Max Opacity 20%. Set Birth Color to light gray and Death Color to dark gray.
+[2170] Apply <b>Effect → Blur &amp; Sharpen → Fast Box Blur</b> with a Blur Radius of 25. The particles melt into one mass of smoke.
+[2171] Apply <b>Effect → Distort → Turbulent Displace</b> with Amount 40 and Size 60. <span class="k">Alt</span>+click Evolution's stopwatch and enter the expression <span class="mono">time*120</span> so the smoke keeps billowing.
+[2172] Set the layer Mode to <b>Screen</b> to place it over the background footage. If it's too strong, lower the layer Opacity to about 60%.
+[2173] <b>B. Smoke and fog lying across the frame</b>
+[2174] Create a black solid named <span class="mono">Smoke_Ground</span> and apply <b>Effect → Noise &amp; Grain → Fractal Noise</b>. The frame turns into a gray cloud pattern.
+[2175] Noise Type <b>Soft Linear</b>, Contrast 160, Brightness −45. Dark areas will become transparent; bright areas will become smoke.
+[2176] Open <b>Transform</b>, uncheck Uniform Scaling and set Scale Width 400 and Scale Height 160. The smoke stretches sideways. Set Complexity to 5.
+[2177] Add movement. <span class="k">Alt</span>+click the <b>Offset Turbulence</b> stopwatch and enter <span class="mono">value + [time*60, 0]</span> so the smoke drifts to the right. Also put <span class="mono">time*40</span> on <b>Evolution</b> so its shape keeps changing.
+[2178] With the layer selected in the Timeline, double-click the <b>Rectangle Tool</b> (<span class="k">Q</span>) in the toolbar to create a layer-sized mask. Press <span class="k">F</span> twice to show Mask Feather, raise it to 200, then drag the mask's top edge down to the lower third of the frame. The smoke now hugs the ground.
+[2179] Set Mode to <b>Screen</b> and Opacity to 50%. Add one layer in front and one behind with a different Scale for layered smoke.
+[2180] <b>Colored smoke</b>For colored smoke like a smoke grenade, finish with <b>Effect → Color Correction → Tint</b> and change Map White To to your color. Smoke from a fire is orange at the bottom and gray at the top, so set CC Particle World's Birth Color to orange and Death Color to gray.
+[2181] 9-2 The Tracker Panel at a Glance
+[2182] All 2D tracking starts in the <b>Window → Tracker</b> panel. It looks crowded, but from top to bottom it runs in order: “what to track → how → where to apply the result.”
+[2183] Control
+[2184] Applies the 3D Camera Tracker (Chapter 10)
+[2185] Applies Warp Stabilizer, which removes shake automatically (9-8)
+[2186] Follows points and applies their motion to another layer
+[2187] Follows points and moves the footage the opposite way to remove shake
+[2188] The footage layer being tracked. Filled in automatically when you select a footage layer and click Track Motion
+[2189] The tracker you are editing when one layer has several trackers
+[2190] Transform (position, rotation, scale), Parallel corner pin (4 parallel points), Perspective corner pin (4 points with perspective), Stabilize, Raw (data only)
+[2191] What to follow with Transform. Position alone gives one point; turning on Rotation or Scale gives two
+[2192] Where the result goes. You can pick a layer or an <b>Effect point control</b> (an effect's point, such as a lens flare's center)
+[2193] Channel (RGB, Luminance, Saturation), blur or enhance before tracking, Adapt Feature On Every Frame, what to do when confidence is low
+[2194] Analyze one frame backward, backward to the end, forward to the end, one frame forward
+[2195] Returns the tracker to its starting position · Applies the result to the target
+[2196] The <b>track point</b> that appears in the Layer panel has three parts. The inner box (Feature Region) is the pattern to follow, the outer box (Search Region) is the area searched for that pattern in the next frame, and the center cross (Attach Point) is where the result attaches. Drag the empty space inside the box to move all three together; drag a box corner to change only its size.
+[2197] <span class="tag t1">Follow Along</span> 9-3 One-Point Tracking — Attach to a Null and Make Text Follow
+[2198] This is the most basic way to put a name tag next to a moving person or an arrow over a moving car. The key is to apply the result to a <b>null</b> first, not directly to the text. A null is an invisible empty handle, so you can hang any number of text, shape and image layers on it, and the text's own animation stays intact.
+[2199] Put the footage in a composition and click its layer to select it. Choose <b>Animation → Track Motion</b> (or <b>Track Motion</b> in the Tracker panel). The view switches to the Layer panel and <b>Track Point 1</b> appears.
+[2200] In the Tracker panel, check that Track Type is <b>Transform</b> and only <b>Position</b> is checked.
+[2201] Move the time indicator to 0 seconds (<span class="k">Home</span>). Drag the empty space inside the track point's inner box onto a <b>high-contrast, clearly shaped spot</b> on the target (a button on a shoulder, the corner of a license plate). While you drag, the inside of the box is magnified.
+[2202] If the target moves fast, widen the outer box; if the pattern is large, enlarge the inner box a little. Bigger boxes are more accurate but slower to analyze.
+[2203] Click <b>Analyze forward</b> (▶) in the Tracker panel. The box follows frame by frame, leaving small dots (keyframes) along its path.
+[2204] If the box slips partway, click <b>Stop</b> right away, go to the first frame where it went wrong, move the box back into place, and click Analyze forward again. Only the frames after that are reanalyzed.
+[2205] Now create the target. Choose <b>Layer → New → Null Object</b> (<span class="k">Ctrl+Alt+Shift+Y</span>). <span class="mono">Null 1</span> appears in the Timeline.
+[2206] Click <b>Edit Target…</b> in the Tracker panel, set Layer to <b>Null 1</b> in the Motion Target dialog, and click <b>OK</b>.
+[2207] Click <b>Apply</b> to open the Motion Tracker Apply Options dialog. Leave Apply Dimensions at <b>X and Y</b> and click <b>OK</b>. The null's Position gets a keyframe on every frame.
+[2208] Go back to the Composition panel and write your text (<span class="k">Ctrl+T</span> for the Type Tool, click the frame and type). Place the text where you want it next to the target.
+[2209] In the Timeline, drag the spiral icon (pick whip) in the text layer's <b>Parent &amp; Link</b> column onto <b>Null 1</b>. When you play, the text keeps its current position and follows the target.
+[2210] What to attach
+[2211] How to do it, and tips
+[2212] Parent it to the null. Put text-in animations (Chapter 6) on the text layer itself and they will play while following
+[2213] Shapes (arrows, circles)
+[2214] Same as text. Hang several on one null and they all follow together
+[2215] Images, video, precomps
+[2216] Same method. If the target moves closer or farther away, use two-point tracking (9-4) so the size follows too
+[2217] Draw a mask on an adjustment layer and parent it to the null to recolor or blur just that area. For targets that change shape, mask tracking (9-7) works better
+[2218] An effect's point
+[2219] Choose <b>Effect point control</b> in Edit Target and a point such as Lens Flare's Flare Center follows directly. Use it to make a sun glint follow a moving car
+[2220] <b>Why not apply it directly to the text?</b>If you Apply directly to the text, its Position is overwritten by tracking keyframes, so you can't move it or add an entrance animation. With a null, the null handles tracking and the text handles design, and neither gets in the other's way. If you redo the track, you only replace the null.
+[2221] <span class="tag t1">Follow Along</span> 9-4 Two-Point Tracking — When the Target Turns and Grows
+[2222] When the target tilts or comes toward the camera, position alone isn't enough. Two points measure distance and angle so <b>rotation and scale</b> follow too—a logo on a turning car wheel, or a sticker on a box coming closer.
+[2223] Select the footage layer and choose <b>Animation → Track Motion</b>. In the Tracker panel, check <b>Position, Rotation and Scale</b>. Track Point 1 and 2 appear in the Layer panel.
+[2224] Put the two points on the target <b>as far apart as possible</b> (the box's top-left and bottom-right corners). If the points are close, small errors make the rotation wobble badly.
+[2225] Analyze forward (▶). Check that both points followed all the way to the end.
+[2226] Create a null (<span class="k">Ctrl+Alt+Shift+Y</span>), pick it in Edit Target, then Apply → X and Y → OK. The null gets Position, Rotation and Scale keyframes.
+[2227] Parent the image you want to attach (logo, sticker) to the null. It turns and grows with the target.
+[2228] <b>When a point leaves the frame</b>The analysis breaks the moment one side of the target leaves the frame. Stop on that frame, move that point to another pattern that is still visible, and continue analyzing. To move only the Feature Region and keep the Attach Point where it is, hold <span class="k">Alt</span> while dragging the box.
+[2229] <span class="tag t1">Follow Along</span> 9-5 Four-Point Tracking — Replacing a Handheld Screen
+[2230] 9-6 Mocha AE — Tracking a Plane Instead of a Point
+[2231] A point tracker follows one small pattern, so it fails when a finger covers it or it blurs. <b>Mocha AE</b>, included with After Effects, follows <b>an entire flat plane</b>, so it holds up even when part of it is hidden. Use it when the screen replacement in 9-5 keeps slipping.
+[2232] Select the footage layer and choose <b>Animation → Track in Boris FX Mocha</b>. The <b>Mocha AE</b> effect is added to the layer.
+[2233] Click the large <b>Mocha</b> logo button at the top of Effect Controls. The Mocha window opens separately.
+[2234] Choose the <b>X-Spline</b> pen tool at the top left and click points just inside the flat surface you want to follow (a phone screen, a sign on a wall). Right-click at the end to close the shape.
+[2235] Click <b>Track Forwards</b> (the right arrow with a T) in the playback buttons at the bottom. The plane is followed frame by frame and the blue shape moves with it.
+[2236] Turn on <b>Show planar surface</b> (the S-shaped button) in the top toolbar to show a blue rectangle. Drag its four corners exactly onto the screen's four corners.
+[2237] Save with <b>File → Save Project</b> (<span class="k">Ctrl+S</span>) and close the Mocha window.
+[2238] Back in After Effects, open <b>Tracking Data</b> in Effect Controls, click <b>Create Track Data</b>, check the layer name in the dialog, and click <b>OK</b>.
+[2239] Set <b>Export Option</b> to <b>Corner Pin (Supports Motion Blur)</b>, set <b>Layer Export To</b> to the replacement image layer, and click <b>Apply Export</b>. The image's four corners stick to the screen.
+[2240] <b>Where Mocha shines</b>Shots where a finger crosses the screen, focus drifts briefly, or reflections pass over the screen. Leaving out the area the finger crosses when you draw the shape makes it more stable.
+[2241] <span class="tag t1">Follow Along</span> 9-7 Mask Tracking — Hiding Faces and License Plates
+[2242] Mosaicking a face or a license plate is done with the <b>mask tracker</b>, which makes a mask follow the target. No null is needed; the mask itself moves.
+[2243] Duplicate the footage layer with <span class="k">Ctrl+D</span>. The top layer gets the hiding effect; the bottom stays as the original.
+[2244] Select the top layer and use the <b>Ellipse Tool</b> in the toolbar (press <span class="k">Q</span> to switch) to draw a mask around the face. For a license plate, use the Rectangle Tool.
+[2245] Expand the layer in the Timeline and click <b>Masks → Mask 1</b> to select it. Right-click the mask name → <b>Track Mask</b>. The Tracker panel switches to mask mode.
+[2246] Choose the <b>Method</b> in the Tracker panel: <b>Face Tracking (Outline Only)</b> for faces, <b>Perspective</b> for license plates, and <b>Position, Scale &amp; Rotation</b> for everything else.
+[2247] Click <b>Track selected masks forward</b> (▶). The mask shape gets a keyframe on every frame.
+[2248] Apply <b>Effect → Stylize → Mosaic</b> to the top layer and set Horizontal Blocks and Vertical Blocks to about 40. To hide with blur instead, apply <b>Gaussian Blur</b> with Blurriness 40 and check <b>Repeat Edge Pixels</b>.
+[2249] Press <span class="k">F</span> twice and raise Mask Feather to about 15 to soften the edge. If the target slips outside the mask, increase Mask Expansion by 10–20.
+[2250] 9-8 Removing Shake — Warp Stabilizer and Stabilize Motion
+[2251] Tracking is used not only to “attach” things but also to “steady” shaky footage. For handheld footage, try Warp Stabilizer first; if the result wobbles, steady it yourself with Stabilize Motion.
+[2252] <b>A. Warp Stabilizer — automatic</b>
+[2253] Select the footage layer and choose <b>Animation → Warp Stabilizer VFX</b> (or Warp Stabilize in the Tracker panel).
+[2254] A blue banner reading “Analyzing in background” appears, followed by an orange “Stabilizing” banner. Wait until it disappears. You can keep working in the meantime.
+[2255] Choose <b>Result</b> in Effect Controls. <b>Smooth Motion</b> keeps the camera move and removes only the jitter; <b>No Motion</b> locks the shot as if on a tripod.
+[2256] Raising <b>Smoothness</b> (default 50%) makes it smoother but crops more of the edges. Leave <b>Framing</b> at the default Stabilize, Crop, Auto-scale (scales up by the amount cropped).
+[2257] If straight lines such as buildings look bent, change <b>Method</b> from Subspace Warp to <b>Position, Scale, Rotation</b>. The image moves as a whole without warping.
+[2258] <b>B. Stabilize Motion — manual</b>
+[2259] Select the footage layer and click <b>Stabilize Motion</b> in the Tracker panel. Check Position and Rotation.
+[2260] Place the two points on background features that don't move (a building corner, a sign) and Analyze forward.
+[2261] <b>Apply</b> → X and Y → OK. The footage moves opposite to the shake, so the background holds still.
+[2262] Black gaps appear at the edges, so precompose the footage (<span class="k">Ctrl+Shift+C</span>) and scale it up to about 110%.
+[2263] <b>The “precompose to use with other effects” warning</b>Warp Stabilizer won't work if the layer already has other effects before it or if the layer size differs from the composition. Precompose the footage (Move all attributes) and apply it to the precomp layer again.
+[2264] 10-2 Reading the 3D Camera Tracker Effect Controls
+[2265] After analysis, <b>3D Camera Tracker</b> stays in the footage layer's Effect Controls. Everything you adjust when results are poor is here.
+[2266] What it does and how to choose
+[2267] Analyze again · Stop analyzing
+[2268] <b>Fixed Angle of View</b> (no zoom, default) · <b>Variable Zoom</b> (footage zoomed during the shot) · <b>Specify Angle of View</b> (enter it if you know the lens's angle of view)
+[2269] 3D Solved (points in the calculated space) · 2D Source (points found in the original footage)
+[2270] Draws the points in the render too. For checking only; usually off
+[2271] Size of the points on screen. Enlarge when they're too small to select
+[2272] Size of the red target. New text and solids start at this size too
+[2273] Creates only a camera without selecting points
+[2274] Auto Detect · Typical · <b>Mostly Flat Scene</b> (footage showing only a floor or wall) · <b>Tripod Pan</b> (footage only panned from a tripod)
+[2275] Average error of the solve (pixels). Lower is better; above 1, results may slide
+[2276] Takes longer when checked but finds more points in footage with little texture
+[2277] Automatically deletes the same point in other frames when you delete it. Turn on when deleting points on moving people or cars
+[2278] 10-3 The Target Menu — What You Can Create
+[2279] Select points and right-click the target to open the menu below. Whatever you choose creates <b>a 3D camera plus a layer placed at that spot</b>, and the camera is created only once.
+[2280] Menu item
+[2281] What it creates, and its use
+[2282] 3D text lying on the target plane. Floor text, wall text
+[2283] A 3D solid stuck to the target plane. Swap in an image to replace signs, posters and screens (10-5)
+[2284] A 3D null at that spot. A handle to hang logos, precomps and 3D models on (10-4)
+[2285] A floor that only receives shadows, plus a light. Makes standing text cast shadows on the real floor (10-6)
+[2286] With several points selected, creates one per point. For placing markers at several spots on the floor
+[2287] Sets that plane as the “ground” and origin. Layers you create afterward are placed relative to it
+[2288] Deletes the selected points. Delete points on moving people, cars and water
+[2289] <b>Working with the target</b>Hover over a point and a target is drawn from the three nearest points. If it's not the plane you want, drag across an empty area to select several points, or hold <span class="k">Shift</span> and click points one by one. Drag the target's center to slide only the target along the plane.
+[2290] <span class="tag t1">Follow Along</span> 10-4 Standing a Logo or Image on a Null
+[2291] To stand a logo or precomp in the space instead of text, the cleanest way is to create a null and hang it there.
+[2292] Finish the analysis as in step 1 of 10-1. With the 3D Camera Tracker effect name clicked and selected, drag to select points on the floor where the logo should stand.
+[2293] Right-click the target → <b>Create Null and Camera</b>. <span class="mono">Track Null 1</span> and <span class="mono">3D Tracker Camera</span> appear in the Timeline.
+[2294] Drag the logo image (or a precomp) from the Project panel into the Timeline and turn on the layer's <b>3D Layer</b> switch (the cube icon).
+[2295] Drag the logo layer's Parent &amp; Link pick whip onto <b>Track Null 1</b>.
+[2296] Select the logo layer, press <span class="k">P</span> to show Position, and enter <b>0, 0, 0</b>. Once parented, 0 means “the same spot as the parent,” so the logo moves exactly to the null.
+[2297] If the size is off, press <span class="k">S</span> to show Scale and reduce it (the tracker's space uses large units, so start at 10–30%). If the logo lies flat, press <span class="k">R</span> to show Rotation and stand it up with X Rotation −90°.
+[2298] Play with <span class="k">Space</span> and check that the logo stays on the floor. If it seems to float, nudge Position Z or Y until it touches the floor.
+[2299] <span class="tag t1">Follow Along</span> 10-5 Replacing a Sign on a Wall
+[2300] After analysis, select only points on the <b>wall</b> where the sign is, so the target stands parallel to the wall.
+[2301] Right-click the target → <b>Create Solid and Camera</b>. <span class="mono">Track Solid 1</span> appears, stuck to the wall.
+[2302] Select the solid and use <span class="k">P</span> (Position, Scale) and <span class="k">R</span> (Rotation) to match the sign's size and position. Lowering the layer Opacity to 50% makes it easy to line up with the sign behind it.
+[2303] Hold <span class="k">Alt</span> and drag the new sign image from the Project panel onto the solid in the Timeline. Position, rotation and scale stay; only the content changes. Set Opacity back to 100%.
+[2304] If the new sign looks too clean and floats, match its brightness and color to the wall with Lumetri, and add the footage's grain with <b>Effect → Noise &amp; Grain → Add Grain</b>.
+[2305] 10-6 Adding Shadows — Shadow Catcher
+[2306] Select floor points under the standing text, then right-click the target → <b>Create Shadow Catcher, Camera and Light</b>. A <span class="mono">Shadow Catcher 1</span> solid and <span class="mono">Light 1</span> are created.
+[2307] Expand the text layer and set <b>Material Options → Casts Shadows</b> to <b>On</b> (press <span class="k">A</span> twice to open it quickly).
+[2308] Select <b>Light 1</b> and move its Position to match the direction of the sun or lights in the footage. The shadow must fall the same way as the shadows already in the shot.
+[2309] Match <b>Shadow Darkness</b> and <b>Shadow Diffusion</b> (softness) in Light Options to the shadows in the footage. On overcast days, use more Diffusion.
+[2310] 10-7 When It Doesn't Solve Well
+[2311] Cause and what to adjust
+[2312] “Analysis failed,” or almost no points
+[2313] Too little texture, or too much shake or blur. Turn on Detailed Analysis and Analyze again. If it still fails, reduce shake with Warp Stabilizer, precompose, and analyze that
+[2314] Text slides on the floor
+[2315] Check Average Error. Select points on people, cars or water, use Delete Selected Points (with Auto-delete Points Across Time on), and analyze again
+[2316] Footage where the camera only rotates in place
+[2317] Set Advanced → Solve Method to <b>Tripod Pan</b>. There's no depth, but the direction is right
+[2318] Footage showing only a floor
+[2319] Set Solve Method to <b>Mostly Flat Scene</b>
+[2320] Footage zoomed during the shot
+[2321] Set Shot Type to <b>Variable Zoom</b>
+[2322] Layer size warning
+[2323] Precompose (Move all attributes) and analyze again (Figure 10-1)
+[2324] 10-8 Replacing the Sky
+[2325] 23-1 Opening the AI Assistant and Reading the Panel
+[2326] Open After Effects 27.0. Click the <b>AI Assistant</b> icon in the header bar at the top, or choose <b>Window → AI Assistant</b>. You can also type “Assistant” in the Quick Apply search (<span class="k">Ctrl+Space</span> in the Timeline).
+[2327] The panel docks like any other panel. Docking it as a tab next to Effects &amp; Presets on the right keeps it out of the way.
+[2328] Type what you want in the <b>prompt bar</b> at the bottom and press <span class="k">Enter</span>. If you're not sure what to write, click the icon next to <b>Start with a sample prompt</b> and choose an example.
+[2329] When the Assistant wants to change the project, it asks <b>Deny / Always proceed / Proceed</b>. At first, read the details every time and click Proceed. Always proceed stops it from asking again for the same kind of action.
+[2330] When a chat gets long and tangled, open a new one with the <b>Add a new chat</b> icon at the top left of the panel. Context from the old chat doesn't carry over.
+[2331] When an action finishes, hover over the credits icon to see how many credits it actually used (23-8).
+[2332] <b>Undo works one action at a time</b><span class="k">Ctrl+Z</span> undoes the Assistant's actions one by one. If one request changed ten things, you must press it ten times. Before a big cleanup, save a copy with <b>File → Save As</b>.
+[2333] The Assistant can <b>read and change</b> your project, so it matters to know what it's good and bad at before you hand work over. Adobe says that in the beta it polished <b>project organization</b> and <b>expressions</b> the most.
+[2334] Area
+[2335] What you can ask for
+[2336] Project organization
+[2337] Explain items, sort into folders, rename, add color labels, suggest how to tidy layers and compositions
+[2338] Explain an expression in plain words, write an expression from a description of the motion, find and fix errors, and update expressions that reference a name when you rename it
+[2339] Text and shapes
+[2340] Change only part of the text, edit a specific character range, add, remove or reorder Path Operations on shapes, dashed strokes (Dashes)
+[2341] Templates
+[2342] Expose properties and media in Essential Graphics, tidy control names, export as a MOGRT
+[2343] Change keyframe interpolation (Linear, Ease, Hold, etc.)
+[2344] Generate images and video with Firefly and partner models, import them into the project, render compositions
+[2345] Skills
+[2346] Save a sequence of tasks you repeat often as a <b>skill</b> and reuse it later
+[2347] If you ask for something it can't do, the Assistant explains how to do it by hand. That guidance is useful for finding menu names too.
+[2348] 23-2 Case ① Inspecting and Tidying an Inherited Project
+[2349] <b>Adobe generative credits</b>Most AI actions in the AI Assistant spend generative credits from your Adobe account. Check your remaining balance on your Adobe account page. They are separate from Higgsfield credits. Section 23-8 covers the full policy.
+[2350] Read the inspection report and ask for the cleanup. This time the request changes things, so check each approval dialog.
+[2351] Check the Project panel. If you don't like a folder name or color, follow up with something like “Rename the folder Footage to 01_Footage.” Capturing before and after screenshots makes it easy to show teammates what changed.
+[2352] 23-3 Case ② Expressions — Explaining, Writing and Fixing
+[2353] Work with the expressions from Chapter 7 alongside the Assistant. Practice on a project that contains expressions, such as the title composition from Chapter 21. The expressions the Assistant writes can differ slightly each time, so get in the habit of reading the result with the vocabulary from Chapter 7.
+[2354] <b>A. Reading someone else's expression</b>
+[2355] In the Timeline, click to select the property that has an expression (the one marked with a red =).
+[2356] Type something like the following. The more exactly you name the layer and property, the less likely it reads the wrong place.
+[2357] The Assistant explains the expression line by line. For <span class="mono">wiggle(2,30)</span>, for example, it explains that it “shakes randomly twice per second by up to 30 pixels.”
+[2358] <b>B. Describing motion to get an expression</b>
+[2359] When you send it, an approval dialog appears. Click Proceed and the expression goes onto the Logo layer's Position.
+[2360] Press <span class="k">E</span> twice to show only properties with expressions. If you see something like <span class="mono">value + [0, Math.sin(time*Math.PI)*20]</span>, which adds a sine curve to the current value, it's right.
+[2361] Play it and keep talking about what you want changed. A follow-up that adjusts the previous request, like “Make it 10 pixels and a bit faster,” means you don't have to start over.
+[2362] <b>C. Fixing errors</b>
+[2363] When you rename a layer, expressions that called that name break and an orange error bar appears (7-17). Hand it over like this.
+[2364] The Assistant states the cause, such as “references a layer that doesn't exist” or “property name misspelled,” and fixes it. To prevent this in the first place, let the Assistant do the renaming.
+[2365] <b>Turning things on and off with a checkbox</b>Ask “Add a Checkbox Control named Show to the layer Control, and make the layer Caption visible only when Show is checked” and it puts an expression like <span class="mono">…("Show")("Checkbox").value ? 100 : 0</span> on Opacity. You can build the rigs from 7-16 just by describing them.
+[2366] 23-4 Case ③ Touching Up Text, Shapes and Templates
+[2367] This is especially handy when small last-minute fixes are scattered across many compositions before delivery.
+[2368] Ask like this (example)
+[2369] What the Assistant does
+[2370] Changes only that part instead of replacing all the text, so font, color and animators stay
+[2371] Restyles only a specific character range
+[2372] Adds a Path Operation to the shape and reorders it (5-2)
+[2373] Creates Dashes on the Stroke and enters the values
+[2374] Exposes properties and media in the Essential Graphics panel, tidies names, and exports a MOGRT (14-4)
+[2375] Changes keyframe interpolation all at once (3-2)
+[2376] <b>Three parts of a good request</b>① <b>Where</b> (composition, layer and property names) ② <b>What</b> (the values or numbers to change) ③ <b>What to keep</b> (“keep the styling,” “do not change anything else”). With all three, the approval dialog is short and clear too.
+[2377] 23-5 Case ④ Generating Images and Video
+[2378] Inside the Assistant you can create backgrounds, reference images and short videos with Firefly and partner models and put them straight into the project. Generation uses many credits, so check the rates in 23-8 first.
+[2379] Describe what to create in the prompt bar in detail. Including size, length and where you'll use it means fewer redos.
+[2380] Check the model and estimated credits in the approval dialog and click Proceed. If you don't name a model, the Assistant picks one.
+[2381] The result arrives in the Project panel as a <b>file (footage)</b>. It isn't stacked as a layer, so drag it into the Timeline.
+[2382] To make the image move, follow up: “Use this image as a reference and generate a 5-second video with a slow camera push-in.” Video costs credits per second, so test short and at low resolution first.
+[2383] <b>Which generation, where?</b>For sources you'll use right away inside After Effects—a background, a texture—the Assistant is convenient. For comparing many models or keeping the same character across shots, Higgsfield (Chapters 18–20) is better. Either way, check the commercial-use terms (23-8) and make sure no real people or trademarks appear.
+[2384] 23-6 Object Matte — Try It Yourself
+[2385] Double-click the walking-person footage layer to open it in the <b>Layer panel</b>.
+[2386] Choose the <b>Object Matte Tool</b> (<span class="k">Alt+W</span>) in the toolbar and click once on the person. The person is selected with a purple outline.
+[2387] Paint missing areas with <b>Quick Selection</b> or the <b>Selection Brush</b> to add them; hold <span class="k">Alt</span> while painting to subtract.
+[2388] Refine thin edges such as hair by painting with <b>Refine Edge</b>.
+[2389] Use the play button at the bottom of the Layer panel to propagate to the frames before and after, then go back to the Composition panel and check the background is gone. From 27.0, this result is saved to disk and survives reopening the project.
+[2390] 23-7 Other New Features in 27.0 — Try Them Yourself
+[2391] Besides the AI Assistant, 27.0 adds several new hands-on features. Try each one briefly.
+[2392] Layers as 3D materials — moving pictures on a 3D object
+[2393] Choose <b>Advanced 3D</b> from the <b>3D Renderer</b> menu at the top of the Composition panel.
+[2394] Make a 3D object. Type some text, turn on the <b>3D Layer</b> switch and set Extrusion Depth to 40 in Geometry Options, or import a 3D model (13-4).
+[2395] Drag the precomp, solid, image or video to use as the material <b>into the same composition</b>. If it's in another composition, it won't appear in the list.
+[2396] Select the 3D layer and expand <b>Material Assignment</b> in the Timeline. Choose the layer you just added from the <b>Material</b> dropdown. In the Properties panel's search field you can filter by Compositions, Footage and Substance 3D Materials (.sbsar).
+[2397] Position the material on the surface with <b>Offset, Rotation and Scale</b>, and refine the look with <b>Roughness, Metallic, Opacity, Emission Color, Emission Intensity and Ambient Response</b>. To make it glow like a screen, raise Emission Intensity.
+[2398] Animation inside the precomp used as the material plays on the 3D object's surface as is. No exporting or reimporting needed.
+[2399] In the same way, you can import <b>Substance 3D materials (.sbsar)</b> and apply them separately to the front, sides, back and bevel of 3D text and shapes—metal on the front, wood on the sides. Switching the renderer to Classic 3D or Cinema 4D reverts to the default material; switching back to Advanced 3D restores it.
+[2400] Contour Paint — turning footage into a painting
+[2401] Select the footage layer and choose <b>Effect → Stylize → Contour Paint</b>.
+[2402] Set <b>View</b> at the top of Effect Controls to <b>Edge Map</b>. You see the edges After Effects found and their direction (cyan arrows).
+[2403] While watching the Edge Map, raise <b>Contour Smearing → Stylization</b>. Higher values remove small details and smear paint along the large contours. <b>Cleanliness</b> sets how much fine detail is removed.
+[2404] Set View back to <b>Final Result</b>. For a more abstract look, raise <b>Smear Iterations</b> (up to 100; rendering slows down).
+[2405] Setting <b>Color Reduction → Draw Color Fills</b> to <b>Over Smeared Image</b> or <b>Only</b> reduces the colors to a few for a print- or poster-like look. Set the number of colors with <b>Posterization Level</b>, or use <b>Match to Nearest Custom Color</b> to limit it to a palette you choose.
+[2406] <b>Getting better Contour Paint results</b>An <b>Unsharp Mask</b> before it strengthens edges for crisper shapes, and <b>Shadow/Highlight</b> before it brings out detail in dark areas. If colors flicker frame to frame, switch to the Custom Color method.
+[2407] Also worth knowing
+[2408] Feature
+[2409] How to use it
+[2410] Adobe Stock panel
+[2411] Search and download in <b>Window → Adobe Stock</b> and assets go straight into the Project panel. Licensing follows Adobe Stock's terms
+[2412] Editable Illustrator text
+[2413] Save from Illustrator as SVG and import it: text becomes After Effects text layers, keeping font, size, color, position and variable-font settings (14-5)
+[2414] Auto-Save and recovery
+[2415] When you reopen After Effects after a crash, it lets you choose a project to recover. Still, make <span class="k">Ctrl+S</span> a habit
+[2416] Quick Apply history
+[2417] Quick Apply remembers recently used effects, presets and menu commands so you don't have to search again
+[2418] Object Matte disk cache
+[2419] Saves propagated Object Matte results to disk so they aren't recalculated when you reopen the project. Saves memory on long clips
+[2420] Guides
+[2421] Set percentage positions, edge pinning and guide colors. Handy when building vertical and horizontal layouts together
+[2422] PNG sequence compression
+[2423] A Compression slider in the render settings trades render time for file size. Quality is unchanged (lossless)
+[2424] An audio effect that reduces harsh “s” and “sh” sounds in voices
+[2425] <span class="tag t2">Why?</span> 23-8 Adobe Generative Credits — How Many, and How They Are Spent
+[2426] AI Assistant check for gaps and disabled layers (23-2)

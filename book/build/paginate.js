@@ -450,6 +450,25 @@
   function run() {
     normalize();
     var queue = collect();
+    (function () {
+      var cur = null;
+      queue.forEach(function (it) {
+        if (it.el.classList && it.el.classList.contains('part')) { cur = document.createElement('ol'); cur.className = 'part-chs'; it.el.appendChild(cur); return; }
+        if (cur && it.el.matches && it.el.matches('.ch-no')) {
+          var h = it.el.nextElementSibling; // may be detached; find via queue
+        }
+      });
+      for (var i = 0; i < queue.length; i++) {
+        var it = queue[i];
+        if (it.el.classList && it.el.classList.contains('part')) { cur = it.el.querySelector('ol.part-chs'); continue; }
+        if (cur && it.el.matches && it.el.matches('h1.ch')) {
+          var no = queue[i - 1] && queue[i - 1].el.matches('.ch-no') ? queue[i - 1].el.textContent.replace(/\D+/g, '') : '';
+          var li = document.createElement('li');
+          li.innerHTML = '<span class="cn">' + no + '</span><span class="ct">' + it.el.childNodes[0].textContent.trim() + '</span>';
+          cur.appendChild(li);
+        }
+      }
+    })();
     var P = newPage();
     var carry = [];
     function desc(it) { if (!it) return '-'; var e = it.el; return e.tagName.toLowerCase() + (e.className ? '.' + String(e.className).split(' ').slice(0, 2).join('.') : '') + ':' + (e.textContent || '').trim().slice(0, 14); }
@@ -478,6 +497,12 @@
       if (!queue.length) { closePage(false); continue; }
       var it = queue.shift();
       if (it.brk && (P.items.length || carry.length)) { queue.unshift(it); closePage(carry.length === 0); continue; }
+      if (it.el.classList && it.el.classList.contains('part')) {
+        if (P.items.length || carry.length) { queue.unshift(it); closePage(true, 'divider'); continue; }
+        it.brk = false;
+        P.body.appendChild(it.el); P.items.push(it); P.divider = true; P.pg.classList.add('divider');
+        closePage(true, 'divider-done'); continue;
+      }
       it.brk = false;
       if (carry.length >= 3 && it.el.matches && it.el.matches('h2') && P.items.length) { queue.unshift(it); closePage(false, 'h2-after-deferred'); continue; }
       P.body.appendChild(it.el);

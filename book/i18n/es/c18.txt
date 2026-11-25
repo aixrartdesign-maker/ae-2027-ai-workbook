@@ -1,0 +1,303 @@
+[2124] Nieve — CC Snowfall paso a paso
+[2125] Para la nieve, <b>CC Snowfall</b> es más rápido que CC Particle World. Llena todo el encuadre de copos a distintas profundidades de una vez, con viento y balanceo ya incluidos.
+[2126] Abre la composición con el vídeo al que quieres añadir nieve. Elige <b>Layer → New → Solid</b> (<span class="k">Ctrl+Y</span>), pulsa <b>Make Comp Size</b>, pon el color negro, nómbralo <span class="mono">Snow_Near</span> y pulsa <b>OK</b>.
+[2127] Con el sólido seleccionado, elige <b>Effect → Simulation → CC Snowfall</b>. CC Snowfall se abre en el panel Effect Controls arriba a la izquierda y empiezan a caer puntos blancos sobre el fondo negro.
+[2128] Abajo en Effect Controls, desactiva <b>Composite With Original</b>. El fondo negro sigue ahí, así que en la línea de tiempo cambia la columna Mode del sólido (se muestra con <span class="k">F4</span>) a <b>Screen</b>. Ahora solo queda la nieve sobre el vídeo.
+[2129] Introduce los valores de la columna «Nieve cercana» de la tabla. Haz clic en un número para escribirlo o arrástralo a izquierda y derecha.
+[2130] Duplica el sólido con <span class="k">Ctrl+D</span> y renómbralo <span class="mono">Snow_Far</span>. Usa los valores de «Nieve lejana» y añade <b>Effect → Blur &amp; Sharpen → Fast Box Blur</b> con Blur Radius 2. La nieve lejana debe ser más pequeña, lenta y suave para crear profundidad.
+[2131] Da también a la capa de nieve cercana un Fast Box Blur de 1,5. Los copos que pasan cerca de la cámara están desenfocados, y un ligero desenfoque resulta natural.
+[2132] Reproduce con <span class="k">Space</span> y ajusta Wind. Inclinar un poco la nieve contra la dirección en que camina una persona crea un día de viento.
+[2133] Nieve cercana
+[2134] Nieve lejana
+[2135] Número de copos. Más en la lejana, menos en la cercana
+[2136] Tamaño de los copos
+[2137] Cuánto varían los tamaños
+[2138] Velocidad de caída. Lenta para copos grandes
+[2139] Empuje lateral. Igual en ambas capas
+[2140] Cuánto se dispersa la dirección de cada copo
+[2141] Amplitud del balanceo lateral
+[2142] Nieve lejana algo más tenue
+[2143] <b>Más creíble</b>Los días de nieve tienen poco contraste y luz fría. Pon una capa de ajuste (<b>Layer → New → Adjustment Layer</b>) sobre el vídeo y en Lumetri Color ajusta Temperature −15, Contrast −20 y Highlights +15 para que nieve y fondo parezcan el mismo tiempo. Para la nieve que se posa en el suelo, usa Extras → <b>Ground Level</b> y <b>Embed Depth</b> para fijar la altura donde desaparecen los copos.
+[2144] Lluvia — CC Rainfall paso a paso
+[2145] Para la lluvia usa <b>CC Rainfall</b>. Las gotas son casi transparentes, así que el efecto solo no hace «visible» la lluvia. Hacen falta tres cosas juntas: gotas, un color de ambiente mojado y profundidad.
+[2146] Crea un sólido negro (<span class="k">Ctrl+Y</span>) llamado <span class="mono">Rain_Near</span>. Aplica <b>Effect → Simulation → CC Rainfall</b>.
+[2147] En Effect Controls, desactiva <b>Composite With Original</b> y cambia el Mode de la capa a <b>Screen</b> (igual que con la nieve).
+[2148] Introduce los valores de la tabla. <b>Wind</b> inclina las gotas y un <b>Spread</b> menor las alinea en una sola dirección.
+[2149] Duplica con <span class="k">Ctrl+D</span> para crear <span class="mono">Rain_Far</span>, sube Drops y baja Size y Opacity. La lluvia lejana debe ser fina y densa para parecer lluvia en el aire.
+[2150] Pon una capa de ajuste justo encima del vídeo y aplica <b>Effect → Color Correction → Lumetri Color</b>. En Basic Correction: Exposure −0,6, Contrast −15, Saturation 75, Temperature −20. Así se consigue la luz oscura y fría de un día lluvioso.
+[2151] Para un relámpago, crea otra capa de ajuste con el efecto <b>Exposure</b> y pon fotogramas clave que suban Exposure a +1,5 solo durante dos o tres fotogramas y bajen de nuevo. Si quieres también el rayo, usa <b>Effect → Generate → Advanced Lightning</b>.
+[2152] Lluvia cercana
+[2153] Lluvia lejana
+[2154] Número de gotas
+[2155] Grosor y longitud de las gotas
+[2156] Velocidad de caída. Más rápida, gotas más largas
+[2157] Inclinación. Igual en ambas capas
+[2158] Ligera variación de inclinación en cada gota
+[2159] Dispersión de dirección. Pequeña para un aguacero
+[2160] Intensidad de las gotas
+[2161] Soft Solid da trazos blancos; Refracting, trazos transparentes que refractan el fondo
+[2162] <b>Comparado con Higgsfield</b>Change Weather (19-1) moja el suelo y cambia la luz de una vez. CC Rainfall solo crea las gotas, pero puedes ajustar grosor, cantidad y dirección fotograma a fotograma, y no gasta créditos. También funciona combinar ambos: añadir solo gotas en primer plano sobre el resultado de la IA.
+[2163] Humo — columnas que suben y humo a ras de suelo
+[2164] El humo se hace de dos maneras. <b>El humo que sube desde un punto</b> (chimenea, incienso, taza) se hace con CC Particle World; el <b>humo amplio</b> que cubre el suelo o cruza el encuadre, con Fractal Noise.
+[2165] <b>A. Una columna de humo que sube</b>
+[2166] Crea un sólido negro (<span class="k">Ctrl+Y</span>) llamado <span class="mono">Smoke_Column</span> y aplica <b>Effect → Simulation → CC Particle World</b>.
+[2167] En Effect Controls, despliega <b>Producer</b>, mueve Position X e Y a donde debe salir el humo (p. ej., sobre una taza) y reduce Radius X, Y y Z a 0,02. Para formar una columna, el humo debe salir de un punto.
+[2168] <b>Birth Rate</b> 0,6, <b>Longevity (sec)</b> 3. Despliega <b>Physics</b>: Velocity 0,15, <b>Gravity −0,08</b> (negativo, así sube) y Extra 0,4 (cuánto ondula).
+[2169] Despliega <b>Particle</b>: Particle Type <b>Faded Sphere</b>, Birth Size 0,25, Death Size 1,4 (se expande al subir), Max Opacity 20%. Birth Color gris claro y Death Color gris oscuro.
+[2170] Aplica <b>Effect → Blur &amp; Sharpen → Fast Box Blur</b> con Blur Radius 25. Las partículas se funden en una sola masa de humo.
+[2171] Aplica <b>Effect → Distort → Turbulent Displace</b> con Amount 40 y Size 60. Haz <span class="k">Alt</span>+clic en el cronómetro de Evolution e introduce la expresión <span class="mono">time*120</span> para que el humo ondule sin parar.
+[2172] Cambia el Mode de la capa a <b>Screen</b> para ponerla sobre el vídeo de fondo. Si queda demasiado denso, baja la Opacity de la capa a un 60%.
+[2173] <b>B. Humo y niebla a lo ancho del encuadre</b>
+[2174] Crea un sólido negro llamado <span class="mono">Smoke_Ground</span> y aplica <b>Effect → Noise &amp; Grain → Fractal Noise</b>. El encuadre se convierte en un patrón de nubes gris.
+[2175] Noise Type <b>Soft Linear</b>, Contrast 160, Brightness −45. Las zonas oscuras serán transparentes; las claras, humo.
+[2176] Despliega <b>Transform</b>, desactiva Uniform Scaling y pon Scale Width 400 y Scale Height 160. El humo se estira a lo ancho. Complexity, 5.
+[2177] Añade movimiento. Haz <span class="k">Alt</span>+clic en el cronómetro de <b>Offset Turbulence</b> e introduce <span class="mono">value + [time*60, 0]</span> para que el humo se desplace a la derecha. Pon también <span class="mono">time*40</span> en <b>Evolution</b> para que la forma cambie sin parar.
+[2178] Con la capa seleccionada en la línea de tiempo, haz doble clic en la <b>Rectangle Tool</b> (<span class="k">Q</span>) de la barra de herramientas para crear una máscara del tamaño de la capa. Pulsa <span class="k">F</span> dos veces, sube Mask Feather a 200 y baja el borde superior de la máscara hasta el tercio inferior. El humo queda a ras de suelo.
+[2179] Mode <b>Screen</b> y Opacity 50%. Añade una capa delante y otra detrás con otro Scale para un humo en varias capas.
+[2180] <b>Humo de color</b>Para humo de color, como el de una bengala de humo, termina con <b>Effect → Color Correction → Tint</b> y cambia Map White To al color deseado. El humo de un fuego es naranja abajo y gris arriba, así que pon en CC Particle World Birth Color naranja y Death Color gris.
+[2181] 9-2 El panel Tracker de un vistazo
+[2182] Todo el tracking 2D empieza en el panel <b>Window → Tracker</b>. Parece lleno, pero de arriba abajo sigue un orden: «qué seguir → cómo → dónde aplicar el resultado».
+[2183] Control
+[2184] Aplica el 3D Camera Tracker (capítulo 10)
+[2185] Aplica Warp Stabilizer, que elimina el temblor automáticamente (9-8)
+[2186] Sigue puntos y aplica su movimiento a otra capa
+[2187] Sigue puntos y mueve el vídeo en sentido contrario para quitar el temblor
+[2188] La capa de vídeo que se sigue. Se rellena sola al seleccionar la capa y pulsar Track Motion
+[2189] El tracker que editas cuando una capa tiene varios
+[2190] Transform (posición, rotación, escala), Parallel corner pin (4 puntos paralelos), Perspective corner pin (4 puntos con perspectiva), Stabilize, Raw (solo datos)
+[2191] Qué seguir con Transform. Solo Position da un punto; con Rotation o Scale, dos
+[2192] Dónde va el resultado. Puedes elegir una capa o un <b>Effect point control</b> (el punto de un efecto, como el centro de un destello)
+[2193] Channel (RGB, Luminance, Saturation), desenfocar o realzar antes de seguir, Adapt Feature On Every Frame, qué hacer si la confianza es baja
+[2194] Analizar un fotograma atrás, atrás hasta el final, adelante hasta el final, un fotograma adelante
+[2195] Devuelve el tracker a su posición inicial · Aplica el resultado al destino
+[2196] El <b>punto de seguimiento</b> del panel Layer tiene tres partes. El recuadro interior (Feature Region) es el patrón a seguir; el exterior (Search Region), la zona donde se busca ese patrón en el siguiente fotograma; la cruz central (Attach Point), donde se engancha el resultado. Arrastrar el espacio vacío dentro del recuadro mueve las tres partes juntas; arrastrar una esquina cambia solo el tamaño.
+[2197] <span class="tag t1">Paso a paso</span> 9-3 Tracking de un punto — enganchar a un nulo y que el texto lo siga
+[2198] Es la forma más básica de poner una etiqueta con el nombre junto a una persona que camina o una flecha sobre un coche en marcha. La clave es aplicar el resultado primero a un <b>nulo (Null)</b>, no directamente al texto. Un nulo es un asa vacía e invisible: puedes colgarle tantos textos, formas e imágenes como quieras, y la animación propia del texto no se estropea.
+[2199] Pon el vídeo en una composición y haz clic en su capa para seleccionarla. Elige <b>Animation → Track Motion</b> (o <b>Track Motion</b> en el panel Tracker). La vista pasa al panel Layer y aparece <b>Track Point 1</b>.
+[2200] En el panel Tracker, comprueba que Track Type es <b>Transform</b> y que solo está marcado <b>Position</b>.
+[2201] Lleva el indicador de tiempo a 0 segundos (<span class="k">Home</span>). Arrastra el espacio vacío del recuadro interior sobre un <b>punto de alto contraste y forma clara</b> del objetivo (un botón en el hombro, la esquina de una matrícula). Mientras arrastras, el interior del recuadro se ve ampliado.
+[2202] Si el objetivo se mueve rápido, amplía el recuadro exterior; si el patrón es grande, agranda un poco el interior. Recuadros más grandes son más precisos pero más lentos.
+[2203] Pulsa <b>Analyze forward</b> (▶) en el panel Tracker. El recuadro sigue fotograma a fotograma y deja pequeños puntos (fotogramas clave) en su trayectoria.
+[2204] Si el recuadro se desliza, pulsa <b>Stop</b> enseguida, ve al primer fotograma erróneo, vuelve a colocar el recuadro y pulsa de nuevo Analyze forward. Solo se reanalizan los fotogramas siguientes.
+[2205] Ahora crea el destino. Elige <b>Layer → New → Null Object</b> (<span class="k">Ctrl+Alt+Shift+Y</span>). Aparece <span class="mono">Null 1</span> en la línea de tiempo.
+[2206] Pulsa <b>Edit Target…</b> en el panel Tracker, elige Layer <b>Null 1</b> en el cuadro Motion Target y pulsa <b>OK</b>.
+[2207] Pulsa <b>Apply</b> para abrir Motion Tracker Apply Options. Deja Apply Dimensions en <b>X and Y</b> y pulsa <b>OK</b>. La Position del nulo recibe un fotograma clave en cada fotograma.
+[2208] Vuelve al panel Composition y escribe el texto (<span class="k">Ctrl+T</span> para la Type Tool, clic en el encuadre y escribe). Colócalo donde quieras junto al objetivo.
+[2209] En la línea de tiempo, arrastra el icono de espiral (pick whip) de la columna <b>Parent &amp; Link</b> de la capa de texto sobre <b>Null 1</b>. Al reproducir, el texto mantiene su posición y sigue al objetivo.
+[2210] Qué enganchar
+[2211] Cómo hacerlo y consejos
+[2212] Emparéntalo al nulo. Pon las animaciones de entrada del texto (capítulo 6) en la propia capa de texto y se reproducirán mientras sigue
+[2213] Formas (flechas, círculos)
+[2214] Igual que el texto. Varias colgadas de un nulo siguen todas juntas
+[2215] Imágenes, vídeo, precomposiciones
+[2216] Mismo método. Si el objetivo se acerca o aleja, usa el tracking de dos puntos (9-4) para que también siga la escala
+[2217] Dibuja una máscara en una capa de ajuste y emparéntala al nulo para recolorear o desenfocar solo esa zona. Para objetivos que cambian de forma, es mejor el tracking de máscara (9-7)
+[2218] El punto de un efecto
+[2219] Elige <b>Effect point control</b> en Edit Target y un punto como el Flare Center de Lens Flare sigue directamente. Sirve para que un reflejo de sol siga a un coche en marcha
+[2220] <b>¿Por qué no aplicarlo directamente al texto?</b>Si aplicas Apply directamente al texto, su Position se sobrescribe con fotogramas clave del tracking y ya no puedes moverlo ni añadir una animación de entrada. Con un nulo, el nulo se encarga del tracking y el texto del diseño, sin estorbarse. Si rehaces el tracking, solo cambias el nulo.
+[2221] <span class="tag t1">Paso a paso</span> 9-4 Tracking de dos puntos — cuando el objetivo gira y crece
+[2222] Cuando el objetivo se inclina o se acerca a la cámara, la posición no basta. Dos puntos miden distancia y ángulo para que también sigan la <b>rotación y la escala</b>: un logo en una rueda que gira o una pegatina en una caja que se acerca.
+[2223] Selecciona la capa de vídeo y elige <b>Animation → Track Motion</b>. En el panel Tracker marca <b>Position, Rotation y Scale</b>. Aparecen Track Point 1 y 2 en el panel Layer.
+[2224] Coloca los dos puntos en el objetivo <b>lo más separados posible</b> (las esquinas superior izquierda e inferior derecha de la caja). Si están cerca, pequeños errores hacen oscilar mucho la rotación.
+[2225] Analyze forward (▶). Comprueba que ambos puntos llegan hasta el final.
+[2226] Crea un nulo (<span class="k">Ctrl+Alt+Shift+Y</span>), elígelo en Edit Target y luego Apply → X and Y → OK. El nulo recibe fotogramas clave de Position, Rotation y Scale.
+[2227] Emparenta al nulo la imagen que quieras enganchar (logo, pegatina). Gira y crece con el objetivo.
+[2228] <b>Cuando un punto sale del encuadre</b>El análisis se rompe en cuanto un lado del objetivo sale del encuadre. Detente en ese fotograma, mueve ese punto a otro patrón aún visible y sigue analizando. Para mover solo la Feature Region sin tocar el Attach Point, mantén <span class="k">Alt</span> mientras arrastras el recuadro.
+[2229] <span class="tag t1">Paso a paso</span> 9-5 Tracking de cuatro puntos — sustituir una pantalla en la mano
+[2230] 9-6 Mocha AE — seguir un plano en lugar de un punto
+[2231] Un tracker de puntos sigue un patrón pequeño, así que falla si un dedo lo tapa o se desenfoca. <b>Mocha AE</b>, incluido en After Effects, sigue <b>todo un plano</b>, de modo que aguanta aunque parte quede oculta. Úsalo cuando la sustitución de pantalla de 9-5 se desliza.
+[2232] Selecciona la capa de vídeo y elige <b>Animation → Track in Boris FX Mocha</b>. Se añade el efecto <b>Mocha AE</b> a la capa.
+[2233] Pulsa el gran botón con el logo de <b>Mocha</b> arriba en Effect Controls. La ventana de Mocha se abre aparte.
+[2234] Elige la pluma <b>X-Spline</b> arriba a la izquierda y haz clic en puntos justo dentro de la superficie plana a seguir (pantalla de un móvil, cartel en una pared). Clic derecho al final para cerrar la forma.
+[2235] Pulsa <b>Track Forwards</b> (la flecha a la derecha con una T) en los botones de reproducción de abajo. El plano se sigue fotograma a fotograma y la forma azul se mueve con él.
+[2236] Activa <b>Show planar surface</b> (el botón en forma de S) en la barra superior para ver un rectángulo azul. Arrastra sus cuatro esquinas exactamente a las de la pantalla.
+[2237] Guarda con <b>File → Save Project</b> (<span class="k">Ctrl+S</span>) y cierra la ventana de Mocha.
+[2238] De vuelta en After Effects, despliega <b>Tracking Data</b> en Effect Controls, pulsa <b>Create Track Data</b>, comprueba el nombre de la capa en el cuadro y pulsa <b>OK</b>.
+[2239] Pon <b>Export Option</b> en <b>Corner Pin (Supports Motion Blur)</b>, elige en <b>Layer Export To</b> la capa de la imagen nueva y pulsa <b>Apply Export</b>. Las cuatro esquinas de la imagen se pegan a la pantalla.
+[2240] <b>Dónde brilla Mocha</b>Planos en los que un dedo cruza la pantalla, el foco se pierde un momento o pasan reflejos por la pantalla. Dejar fuera de la forma la zona por la que pasa el dedo lo hace más estable.
+[2241] <span class="tag t1">Paso a paso</span> 9-7 Tracking de máscara — ocultar caras y matrículas
+[2242] Pixelar una cara o una matrícula se hace con el <b>tracker de máscara</b>, que hace que una máscara siga al objetivo. No hace falta nulo; la propia máscara se mueve.
+[2243] Duplica la capa de vídeo con <span class="k">Ctrl+D</span>. La de arriba lleva el efecto de ocultación; la de abajo queda como original.
+[2244] Selecciona la capa de arriba y con la <b>Ellipse Tool</b> (pulsa <span class="k">Q</span> para cambiar) dibuja una máscara alrededor de la cara. Para una matrícula, usa la Rectangle Tool.
+[2245] Despliega la capa en la línea de tiempo y haz clic en <b>Masks → Mask 1</b>. Clic derecho en el nombre de la máscara → <b>Track Mask</b>. El panel Tracker pasa a modo máscara.
+[2246] Elige el <b>Method</b> en el panel Tracker: <b>Face Tracking (Outline Only)</b> para caras, <b>Perspective</b> para matrículas y <b>Position, Scale &amp; Rotation</b> para lo demás.
+[2247] Pulsa <b>Track selected masks forward</b> (▶). La forma de la máscara recibe un fotograma clave en cada fotograma.
+[2248] Aplica <b>Effect → Stylize → Mosaic</b> a la capa de arriba con Horizontal Blocks y Vertical Blocks en torno a 40. Para ocultar con desenfoque, aplica <b>Gaussian Blur</b> con Blurriness 40 y marca <b>Repeat Edge Pixels</b>.
+[2249] Pulsa <span class="k">F</span> dos veces y sube Mask Feather a unos 15 para suavizar el borde. Si el objetivo se sale de la máscara, aumenta Mask Expansion entre 10 y 20.
+[2250] 9-8 Eliminar el temblor — Warp Stabilizer y Stabilize Motion
+[2251] El tracking sirve no solo para «enganchar» cosas, sino también para «estabilizar» vídeo tembloroso. Con grabaciones a mano prueba primero Warp Stabilizer; si el resultado ondula, estabiliza tú con Stabilize Motion.
+[2252] <b>A. Warp Stabilizer — automático</b>
+[2253] Selecciona la capa de vídeo y elige <b>Animation → Warp Stabilizer VFX</b> (o Warp Stabilize en el panel Tracker).
+[2254] Aparece una franja azul «Analyzing in background» y luego una naranja «Stabilizing». Espera a que desaparezca. Mientras tanto puedes seguir trabajando.
+[2255] Elige <b>Result</b> en Effect Controls. <b>Smooth Motion</b> conserva el movimiento de cámara y quita solo la vibración; <b>No Motion</b> fija el plano como en un trípode.
+[2256] Subir <b>Smoothness</b> (50% por defecto) suaviza más pero recorta más los bordes. Deja <b>Framing</b> en el valor por defecto, Stabilize, Crop, Auto-scale (amplía lo que se recorta).
+[2257] Si las líneas rectas, como edificios, se ven curvadas, cambia <b>Method</b> de Subspace Warp a <b>Position, Scale, Rotation</b>. La imagen se mueve entera sin deformarse.
+[2258] <b>B. Stabilize Motion — manual</b>
+[2259] Selecciona la capa de vídeo y pulsa <b>Stabilize Motion</b> en el panel Tracker. Marca Position y Rotation.
+[2260] Coloca los dos puntos en elementos del fondo que no se mueven (esquina de un edificio, una señal) y pulsa Analyze forward.
+[2261] <b>Apply</b> → X and Y → OK. El vídeo se mueve en sentido contrario al temblor y el fondo queda fijo.
+[2262] Aparecen huecos negros en los bordes, así que precompón el vídeo (<span class="k">Ctrl+Shift+C</span>) y sube Scale a un 110%.
+[2263] <b>El aviso «precomponga para usarlo con otros efectos»</b>Warp Stabilizer no funciona si la capa ya tiene otros efectos antes o si su tamaño difiere del de la composición. Precompón el vídeo (Move all attributes) y aplícalo de nuevo a la capa de precomposición.
+[2264] 10-2 Cómo leer los controles del 3D Camera Tracker
+[2265] Tras el análisis, <b>3D Camera Tracker</b> queda en Effect Controls de la capa de vídeo. Aquí está todo lo que se ajusta cuando el resultado es malo.
+[2266] Qué hace y cómo elegir
+[2267] Analizar de nuevo · Detener el análisis
+[2268] <b>Fixed Angle of View</b> (sin zoom, por defecto) · <b>Variable Zoom</b> (zoom durante la toma) · <b>Specify Angle of View</b> (introdúcelo si conoces el ángulo de visión del objetivo)
+[2269] 3D Solved (puntos en el espacio calculado) · 2D Source (puntos hallados en el vídeo original)
+[2270] Dibuja los puntos también en el render. Solo para comprobar; normalmente desactivado
+[2271] Tamaño de los puntos en pantalla. Auméntalo si cuesta seleccionarlos
+[2272] Tamaño de la diana roja. El texto y los sólidos que crees empiezan con este tamaño
+[2273] Crea solo una cámara sin seleccionar puntos
+[2274] Auto Detect · Typical · <b>Mostly Flat Scene</b> (solo se ve un suelo o una pared) · <b>Tripod Pan</b> (solo paneo desde trípode)
+[2275] Error medio del cálculo (píxeles). Cuanto menor, mejor; por encima de 1 el resultado puede deslizarse
+[2276] Tarda más, pero encuentra más puntos en vídeo con poca textura
+[2277] Al borrar un punto, borra automáticamente el mismo punto en otros fotogramas. Actívalo al borrar puntos sobre personas o coches en movimiento
+[2278] 10-3 El menú de la diana — qué se puede crear
+[2279] Selecciona puntos y haz clic derecho en la diana para abrir este menú. Cualquier opción crea <b>una cámara 3D y una capa colocada en ese punto</b>; la cámara se crea solo una vez.
+[2280] Opción del menú
+[2281] Qué crea y para qué sirve
+[2282] Texto 3D tendido en el plano de la diana. Texto en el suelo o en la pared
+[2283] Un sólido 3D pegado al plano de la diana. Cámbialo por una imagen para sustituir carteles, pósteres o pantallas (10-5)
+[2284] Un nulo 3D en ese punto. Un asa para colgar logos, precomposiciones y modelos 3D (10-4)
+[2285] Un suelo que solo recibe sombras, más una luz. Hace que el texto de pie proyecte sombra sobre el suelo real (10-6)
+[2286] Con varios puntos seleccionados, crea uno por punto. Para colocar marcas en varios sitios del suelo
+[2287] Define ese plano como «suelo» y origen. Las capas que crees después se colocan respecto a él
+[2288] Borra los puntos seleccionados. Conviene borrar los que están sobre personas, coches o agua
+[2289] <b>Manejar la diana</b>Pasa el ratón sobre un punto y se dibuja una diana con los tres puntos más cercanos. Si no es el plano que quieres, arrastra sobre una zona vacía para seleccionar varios puntos, o mantén <span class="k">Shift</span> y haz clic en ellos uno a uno. Arrastrar el centro de la diana la desliza por el plano.
+[2290] <span class="tag t1">Paso a paso</span> 10-4 Colocar un logo o una imagen en un nulo
+[2291] Para colocar en el espacio un logo o una precomposición en vez de texto, lo más limpio es crear un nulo y colgarlo de él.
+[2292] Termina el análisis como en el paso 1 de 10-1. Con el nombre del efecto 3D Camera Tracker seleccionado, arrastra para seleccionar puntos del suelo donde irá el logo.
+[2293] Clic derecho en la diana → <b>Create Null and Camera</b>. Aparecen <span class="mono">Track Null 1</span> y <span class="mono">3D Tracker Camera</span> en la línea de tiempo.
+[2294] Arrastra la imagen del logo (o una precomposición) del panel Project a la línea de tiempo y activa el conmutador <b>3D Layer</b> (el icono del cubo).
+[2295] Arrastra el pick whip de Parent &amp; Link de la capa del logo sobre <b>Track Null 1</b>.
+[2296] Selecciona la capa del logo, pulsa <span class="k">P</span> e introduce Position <b>0, 0, 0</b>. Una vez emparentado, 0 significa «el mismo sitio que el padre», así que el logo va exactamente al nulo.
+[2297] Si el tamaño no cuadra, pulsa <span class="k">S</span> y reduce Scale (el espacio del tracker usa unidades grandes; empieza con 10–30%). Si el logo queda tumbado, pulsa <span class="k">R</span> y ponlo de pie con X Rotation −90°.
+[2298] Reproduce con <span class="k">Space</span> y comprueba que el logo se mantiene en el suelo. Si parece flotar, ajusta poco a poco Position Z o Y hasta que toque el suelo.
+[2299] <span class="tag t1">Paso a paso</span> 10-5 Sustituir un cartel en una pared
+[2300] Tras el análisis, selecciona solo puntos de la <b>pared</b> donde está el cartel, para que la diana quede paralela a la pared.
+[2301] Clic derecho en la diana → <b>Create Solid and Camera</b>. Aparece <span class="mono">Track Solid 1</span>, pegado a la pared.
+[2302] Selecciona el sólido y ajusta con <span class="k">P</span> (Position, Scale) y <span class="k">R</span> (Rotation) al tamaño y sitio del cartel. Bajar la Opacity de la capa al 50% facilita alinearlo con el cartel de detrás.
+[2303] Mantén <span class="k">Alt</span> y arrastra la nueva imagen del cartel desde el panel Project sobre el sólido en la línea de tiempo. Posición, rotación y escala se conservan; solo cambia el contenido. Vuelve a poner Opacity al 100%.
+[2304] Si el cartel nuevo se ve demasiado limpio y flota, iguala brillo y color con la pared mediante Lumetri y añade el grano del vídeo con <b>Effect → Noise &amp; Grain → Add Grain</b>.
+[2305] 10-6 Añadir sombras — Shadow Catcher
+[2306] Selecciona puntos del suelo bajo el texto de pie y haz clic derecho en la diana → <b>Create Shadow Catcher, Camera and Light</b>. Se crean un sólido <span class="mono">Shadow Catcher 1</span> y <span class="mono">Light 1</span>.
+[2307] Despliega la capa de texto y pon <b>Material Options → Casts Shadows</b> en <b>On</b> (pulsa <span class="k">A</span> dos veces para abrirlo rápido).
+[2308] Selecciona <b>Light 1</b> y mueve su Position para que coincida con la dirección del sol o las luces del vídeo. La sombra debe caer hacia el mismo lado que las sombras de la toma.
+[2309] Ajusta <b>Shadow Darkness</b> (oscuridad) y <b>Shadow Diffusion</b> (suavidad) en Light Options comparándolas con las sombras del vídeo. En días nublados, más Diffusion.
+[2310] 10-7 Cuando no se resuelve bien
+[2311] Causa y qué ajustar
+[2312] «Analysis failed» o casi no hay puntos
+[2313] Poca textura, o mucho temblor o desenfoque. Activa Detailed Analysis y vuelve a pulsar Analyze. Si sigue fallando, reduce el temblor con Warp Stabilizer, precompón y analiza eso
+[2314] El texto se desliza por el suelo
+[2315] Revisa Average Error. Selecciona puntos sobre personas, coches o agua, usa Delete Selected Points (con Auto-delete Points Across Time activado) y vuelve a analizar
+[2316] La cámara solo gira sobre sí misma
+[2317] Pon Advanced → Solve Method en <b>Tripod Pan</b>. No hay profundidad, pero la dirección es correcta
+[2318] Solo se ve el suelo
+[2319] Solve Method en <b>Mostly Flat Scene</b>
+[2320] Zoom durante la toma
+[2321] Shot Type en <b>Variable Zoom</b>
+[2322] Aviso de tamaño de capa
+[2323] Precompón (Move all attributes) y vuelve a analizar (figura 10-1)
+[2324] 10-8 Cambiar el cielo
+[2325] 23-1 Abrir el AI Assistant y leer el panel
+[2326] Abre After Effects 27.0. Pulsa el icono <b>AI Assistant</b> en la barra de cabecera superior o elige <b>Window → AI Assistant</b>. También puedes escribir «Assistant» en la búsqueda de Quick Apply (<span class="k">Ctrl+Space</span> en la línea de tiempo).
+[2327] El panel se acopla como cualquier otro. Acoplado como pestaña junto a Effects &amp; Presets, a la derecha, no estorba.
+[2328] Escribe la tarea en la <b>barra de instrucciones (prompt bar)</b> de abajo y pulsa <span class="k">Enter</span>. Si no sabes qué escribir, pulsa el icono junto a <b>Start with a sample prompt</b> y elige un ejemplo.
+[2329] Cuando el Assistant quiere cambiar el proyecto, pregunta <b>Deny / Always proceed / Proceed</b>. Al principio lee siempre los detalles y pulsa Proceed. Always proceed hace que no vuelva a preguntar para el mismo tipo de acción.
+[2330] Si el chat se alarga y se enreda, abre uno nuevo con el icono <b>Add a new chat</b> arriba a la izquierda del panel. El contexto del chat anterior no pasa al nuevo.
+[2331] Al terminar una acción, pasa el ratón por el icono de créditos para ver cuántos gastó en realidad (23-8).
+[2332] <b>Deshacer va acción por acción</b><span class="k">Ctrl+Z</span> deshace las acciones del Assistant de una en una. Si una petición cambió diez cosas, hay que pulsarlo diez veces. Antes de una gran limpieza, guarda una copia con <b>File → Save As</b>.
+[2333] El Assistant puede <b>leer y modificar</b> tu proyecto, así que conviene saber en qué es bueno y en qué no antes de encargarle algo. Adobe dice que en la beta lo más pulido es la <b>organización del proyecto</b> y las <b>expresiones</b>.
+[2334] Área
+[2335] Qué puedes pedirle
+[2336] Organización del proyecto
+[2337] Explicar elementos, ordenarlos en carpetas, renombrar, poner etiquetas de color, proponer cómo ordenar capas y composiciones
+[2338] Explicar una expresión con palabras sencillas, escribir una a partir de la descripción de un movimiento, encontrar y corregir errores, y actualizar las expresiones que usan un nombre al renombrarlo
+[2339] Texto y formas
+[2340] Cambiar solo una parte del texto, editar un rango concreto de caracteres, añadir, quitar o reordenar Path Operations en formas, trazos discontinuos (Dashes)
+[2341] Plantillas
+[2342] Exponer propiedades y medios en Essential Graphics, ordenar los nombres de los controles, exportar un MOGRT
+[2343] Cambiar la interpolación de fotogramas clave (Linear, Ease, Hold, etc.)
+[2344] Generar imágenes y vídeo con Firefly y modelos asociados, importarlos al proyecto, renderizar composiciones
+[2345] Habilidades
+[2346] Guardar como <b>habilidad (skill)</b> una secuencia de tareas que repites a menudo y reutilizarla
+[2347] Si le pides algo que no puede hacer, el Assistant te explica cómo hacerlo a mano. Esa guía también sirve para encontrar los nombres de los menús.
+[2348] 23-2 Caso ① Revisar y ordenar un proyecto heredado
+[2349] <b>Créditos generativos de Adobe</b>La mayoría de las acciones de IA del AI Assistant gastan créditos generativos de tu cuenta de Adobe. Consulta el saldo en la página de tu cuenta de Adobe. Son independientes de los créditos de Higgsfield. La política completa está en la sección 23-8.
+[2350] Lee el informe de revisión y encarga la limpieza. Esta vez la petición cambia cosas, así que revisa cada cuadro de aprobación.
+[2351] Revisa el panel Project. Si no te gusta el nombre o el color de una carpeta, corrígelo con otra petición, como «Rename the folder Footage to 01_Footage». Capturas de antes y después ayudan a mostrar al equipo qué ha cambiado.
+[2352] 23-3 Caso ② Expresiones — explicar, escribir y corregir
+[2353] Trabaja con las expresiones del capítulo 7 junto al Assistant. Practica con un proyecto que tenga expresiones, como la composición de título del capítulo 21. Las expresiones que escribe el Assistant pueden variar un poco cada vez, así que acostúmbrate a leer el resultado con el vocabulario del capítulo 7.
+[2354] <b>A. Leer la expresión de otra persona</b>
+[2355] En la línea de tiempo, haz clic para seleccionar la propiedad con expresión (la marcada con un = rojo).
+[2356] Escribe algo así. Cuanto más exactos sean los nombres de capa y propiedad, menos probable es que lea el sitio equivocado.
+[2357] El Assistant explica la expresión línea a línea. Por ejemplo, con <span class="mono">wiggle(2,30)</span> explica que la capa «tiembla al azar dos veces por segundo hasta 30 píxeles».
+[2358] <b>B. Describir el movimiento para obtener una expresión</b>
+[2359] Al enviarla aparece un cuadro de aprobación. Pulsa Proceed y la expresión se añade a la Position de la capa Logo.
+[2360] Pulsa <span class="k">E</span> dos veces para mostrar solo las propiedades con expresión. Si ves algo como <span class="mono">value + [0, Math.sin(time*Math.PI)*20]</span>, que suma una curva sinusoidal al valor actual, es correcto.
+[2361] Reprodúcelo y sigue diciendo qué quieres cambiar. Una petición que ajuste la anterior, como «Make it 10 pixels and a bit faster», evita empezar de cero.
+[2362] <b>C. Corregir errores</b>
+[2363] Al renombrar una capa, las expresiones que usaban ese nombre se rompen y aparece una franja de error naranja (7-17). Encárgalo así.
+[2364] El Assistant indica la causa, como «hace referencia a una capa que no existe» o «nombre de propiedad mal escrito», y la corrige. Para evitarlo desde el principio, deja que el Assistant haga el renombrado.
+[2365] <b>Activar y desactivar con una casilla</b>Pide «Add a Checkbox Control named Show to the layer Control, and make the layer Caption visible only when Show is checked» y pondrá en Opacity una expresión como <span class="mono">…("Show")("Checkbox").value ? 100 : 0</span>. Puedes montar los rigs de 7-16 solo describiéndolos.
+[2366] 23-4 Caso ③ Retocar texto, formas y plantillas
+[2367] Resulta especialmente útil cuando pequeños cambios de última hora están repartidos por muchas composiciones antes de la entrega.
+[2368] Pídelo así (ejemplo)
+[2369] Qué hace el Assistant
+[2370] Cambia solo esa parte sin sustituir todo el texto, así que fuente, color y animadores se conservan
+[2371] Cambia el estilo solo de un rango concreto de caracteres
+[2372] Añade una Path Operation a la forma y la reordena (5-2)
+[2373] Crea Dashes en el Stroke e introduce los valores
+[2374] Expone propiedades y medios en el panel Essential Graphics, ordena los nombres y exporta un MOGRT (14-4)
+[2375] Cambia la interpolación de los fotogramas clave de una vez (3-2)
+[2376] <b>Tres partes de una buena petición</b>① <b>Dónde</b> (nombres de composición, capa y propiedad) ② <b>Qué</b> (los valores o números a cambiar) ③ <b>Qué conservar</b> («keep the styling», «do not change anything else»). Con las tres, el cuadro de aprobación también es corto y claro.
+[2377] 23-5 Caso ④ Generar imágenes y vídeo
+[2378] Dentro del Assistant puedes crear fondos, imágenes de referencia y vídeos cortos con Firefly y modelos asociados y llevarlos directamente al proyecto. Generar gasta muchos créditos, así que revisa antes las tarifas de 23-8.
+[2379] Describe con detalle en la barra de instrucciones qué crear. Indicar tamaño, duración y uso reduce las repeticiones.
+[2380] Revisa el modelo y los créditos estimados en el cuadro de aprobación y pulsa Proceed. Si no indicas modelo, lo elige el Assistant.
+[2381] El resultado llega al panel Project como <b>archivo (metraje)</b>. No se apila como capa, así que arrástralo a la línea de tiempo.
+[2382] Para dar movimiento a la imagen, continúa: «Use this image as a reference and generate a 5-second video with a slow camera push-in». El vídeo cuesta créditos por segundo, así que prueba primero corto y a baja resolución.
+[2383] <b>¿Qué generar y dónde?</b>Para recursos que usarás enseguida dentro de After Effects —un fondo, una textura— el Assistant es cómodo. Para comparar muchos modelos o mantener el mismo personaje en varios planos, es mejor Higgsfield (capítulos 18–20). En ambos casos, revisa las condiciones de uso comercial (23-8) y que no aparezcan personas reales ni marcas.
+[2384] 23-6 Object Matte — pruébalo tú
+[2385] Haz doble clic en la capa del vídeo de la persona caminando para abrirla en el <b>panel Layer</b>.
+[2386] Elige la <b>Object Matte Tool</b> (<span class="k">Alt+W</span>) en la barra de herramientas y haz un clic sobre la persona. Queda seleccionada con un contorno morado.
+[2387] Pinta las zonas que falten con <b>Quick Selection</b> o el <b>Selection Brush</b> para añadirlas; mantén <span class="k">Alt</span> mientras pintas para restar.
+[2388] Refina bordes finos como el pelo pintando con <b>Refine Edge</b>.
+[2389] Usa el botón de reproducción de la parte inferior del panel Layer para propagar a los fotogramas anteriores y posteriores; luego vuelve al panel Composition y comprueba que el fondo ha desaparecido. Desde la 27.0, este resultado se guarda en disco y se conserva al reabrir el proyecto.
+[2390] 23-7 Otras novedades de la 27.0 — pruébalas tú
+[2391] Además del AI Assistant, la 27.0 trae varias funciones nuevas de uso manual. Prueba cada una brevemente.
+[2392] Capas como materiales 3D — imágenes en movimiento sobre un objeto 3D
+[2393] Elige <b>Advanced 3D</b> en el menú <b>3D Renderer</b> de la parte superior del panel Composition.
+[2394] Crea un objeto 3D. Escribe un texto, activa el conmutador <b>3D Layer</b> y pon Extrusion Depth 40 en Geometry Options, o importa un modelo 3D (13-4).
+[2395] Arrastra la precomposición, sólido, imagen o vídeo que usarás como material <b>a la misma composición</b>. Si está en otra composición, no aparece en la lista.
+[2396] Selecciona la capa 3D y despliega <b>Material Assignment</b> en la línea de tiempo. Elige la capa que acabas de añadir en el desplegable <b>Material</b>. En el campo de búsqueda del panel Properties puedes filtrar por Compositions, Footage y Substance 3D Materials (.sbsar).
+[2397] Coloca el material en la superficie con <b>Offset, Rotation y Scale</b>, y afina el aspecto con <b>Roughness, Metallic, Opacity, Emission Color, Emission Intensity y Ambient Response</b>. Para que brille como una pantalla, sube Emission Intensity.
+[2398] La animación dentro de la precomposición usada como material se reproduce tal cual sobre la superficie del objeto 3D. No hace falta exportar ni reimportar.
+[2399] Del mismo modo puedes importar <b>materiales Substance 3D (.sbsar)</b> y aplicarlos por separado a la cara frontal, los lados, la trasera y el bisel de texto y formas 3D: metal delante, madera a los lados. Al cambiar el renderizador a Classic 3D o Cinema 4D vuelve el material por defecto; al volver a Advanced 3D se recupera.
+[2400] Contour Paint — convertir el vídeo en pintura
+[2401] Selecciona la capa de vídeo y elige <b>Effect → Stylize → Contour Paint</b>.
+[2402] Pon <b>View</b>, arriba en Effect Controls, en <b>Edge Map</b>. Verás los bordes que ha encontrado After Effects y su dirección (flechas cian).
+[2403] Mirando el Edge Map, sube <b>Contour Smearing → Stylization</b>. Cuanto más alto, más detalles pequeños desaparecen y más se extiende la pintura a lo largo de los contornos grandes. <b>Cleanliness</b> fija cuánto detalle fino se elimina.
+[2404] Vuelve a poner View en <b>Final Result</b>. Para un aspecto más abstracto, sube <b>Smear Iterations</b> (hasta 100; el render se ralentiza).
+[2405] Si pones <b>Color Reduction → Draw Color Fills</b> en <b>Over Smeared Image</b> u <b>Only</b>, los colores se reducen a unos pocos, con aspecto de grabado o póster. Fija el número de colores con <b>Posterization Level</b>, o usa <b>Match to Nearest Custom Color</b> para limitarlo a una paleta elegida por ti.
+[2406] <b>Para que Contour Paint funcione mejor</b>Un <b>Unsharp Mask</b> antes refuerza los bordes y da formas más nítidas, y <b>Shadow/Highlight</b> antes saca detalle en las sombras. Si los colores parpadean entre fotogramas, cambia al método Custom Color.
+[2407] También conviene saber
+[2408] Función
+[2409] Cómo usarla
+[2410] Panel Adobe Stock
+[2411] Busca y descarga en <b>Window → Adobe Stock</b> y los recursos van directos al panel Project. La licencia sigue las condiciones de Adobe Stock
+[2412] Texto de Illustrator editable
+[2413] Guarda desde Illustrator como SVG e impórtalo: el texto se convierte en capas de texto de After Effects con fuente, tamaño, color, posición y ajustes de fuente variable (14-5)
+[2414] Auto-Save y recuperación
+[2415] Al reabrir After Effects tras un cierre inesperado, te deja elegir un proyecto que recuperar. Aun así, acostúmbrate a <span class="k">Ctrl+S</span>
+[2416] Historial de Quick Apply
+[2417] Quick Apply recuerda los efectos, ajustes preestablecidos y comandos de menú usados hace poco para no tener que volver a buscarlos
+[2418] Caché en disco de Object Matte
+[2419] Guarda en disco los resultados propagados de Object Matte para no recalcularlos al reabrir el proyecto. Ahorra memoria en clips largos
+[2420] Guías (Guides)
+[2421] Posiciones en porcentaje, anclaje a los bordes y color de guía. Útil al maquetar a la vez versiones vertical y horizontal
+[2422] Compresión de secuencias PNG
+[2423] Un deslizador Compression en los ajustes de render cambia tiempo de render por tamaño de archivo. La calidad no cambia (sin pérdida)
+[2424] Efecto de audio que reduce los sonidos sibilantes ásperos («s», «sh») de la voz
+[2425] <span class="tag t2">¿Por qué?</span> 23-8 Créditos generativos de Adobe: cuántos y cómo se gastan
+[2426] Revisión de huecos y capas desactivadas con el AI Assistant (23-2)
