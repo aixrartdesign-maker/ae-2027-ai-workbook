@@ -1,0 +1,442 @@
+[2896] Ch. 1–2
+[2897] Ch. 3–5
+[2898] Ch. 6–7
+[2899] Ch. 8–10 · History · Costs
+[2900] Ch. 11–14
+[2901] Ch. 15–17
+[2902] Ch. 18–22
+[2903] Ch. 23–26
+[2904] Ch. 27–29 · Appendix
+[2905] To start with AI, read PARTs 1–3; to learn AE from scratch, you can start from PART 4.
+[2906] <b>Real credits are recorded.</b> For every exercise we wrote down how many credits it used and how many minutes it took (Chapter 28).
+[2907] Menu names follow the English version. All screens are from the English version (2-2)
+[2908] A paid Higgsfield plan, a Claude account and the desktop app (for PARTs 1–3 and 9)
+[2909] History, map of AI, installation (8–10, 2-2)
+[2910] Chroma key, color correction (18, 22)
+[2911] The first 30 minutes, reading the screen (11–12)
+[2912] Tracking, 3D tracker, removal (19–21)
+[2913] Keyframes and graphs (13)
+[2914] 3D, rendering and output, tips by job (23–26)
+[2915] Parenting, masks, mattes (14)
+[2916] AE's built-in AI, connecting, Panel ① (1–3)
+[2917] Shapes and motion graphics techniques (15)
+[2918] Panels ②③, Claude titles (4–7)
+[2919] Text animation (16)
+[2920] Integrated planning, review (27–28)
+[2921] Expressions ① basic vocabulary (17)
+[2922] Final presentation: 30-second promo video (27, 29)
+[2923] Expressions ②, midterm project (17)
+[2924] <b>Short on time?</b>Build the basics with Chapters 11 → 13 → 14, then try AI connection and practice with 2 → 3 → 6. Read the other chapters when you need a feature. Each chapter can be followed with the repository files alone, without results from earlier chapters.
+[2925] <span class="tn">01</span><span class="tt">AE's Built-in AI<em> — AI Assistant and Object Matte</em></span><span class="pn" data-target="ch-01"></span>
+[2926] <span class="tn">02</span><span class="tt">Connecting<em> — English UI, Plugin, Bridge</em></span><span class="pn" data-target="ch-02"></span>
+[2927] <span class="tn">03</span><span class="tt">Panel ① Edit<em> — Background Removal · Reframe · Tattoo Removal</em></span><span class="pn" data-target="ch-03"></span>
+[2928] <span class="tn">04</span><span class="tt">Panel ② Scene<em> — Weather · Time of Day · Lighting · Action</em></span><span class="pn" data-target="ch-04"></span>
+[2929] <span class="tn">05</span><span class="tt">Panel ③ Audio<em> — Gaps · Translation · Voice</em></span><span class="pn" data-target="ch-05"></span>
+[2930] <span class="tn">06</span><span class="tt">Claude ① Making and Fixing Titles</span><span class="pn" data-target="ch-06"></span>
+[2931] <span class="tn">07</span><span class="tt">Claude ② Logo Reveal · Lower Third · Transition · Glass</span><span class="pn" data-target="ch-07"></span>
+[2932] <span class="tn">08</span><span class="tt">Adobe and After Effects: 30 Years</span><span class="pn" data-target="ch-08"></span>
+[2933] <span class="tn">09</span><span class="tt">Why AI Now<em> — Higgsfield, Claude, MCP</em></span><span class="pn" data-target="ch-09"></span>
+[2934] <span class="tn">10</span><span class="tt">Before You Start<em> — Costs, Sign-up, Log-in, Credits</em></span><span class="pn" data-target="ch-10"></span>
+[2935] <span class="tn">11</span><span class="tt">The First 30 Minutes<em> — Animate One Word and Export a Video</em></span><span class="pn" data-target="ch-11"></span>
+[2936] <span class="tn">12</span><span class="tt">Reading the Screen, Time and Icons</span><span class="pn" data-target="ch-12"></span>
+[2937] <span class="tn">13</span><span class="tt">Quality of Motion<em> — Keyframes and Graphs</em></span><span class="pn" data-target="ch-13"></span>
+[2938] <span class="tn">14</span><span class="tt">Building Structure<em> — Parenting, Precompose, Masks, Mattes</em></span><span class="pn" data-target="ch-14"></span>
+[2939] <span class="tn">15</span><span class="tt">Shapes and Motion Graphics<em> — Lines, Effects, Puppet, Particles</em></span><span class="pn" data-target="ch-15"></span>
+[2940] <span class="tn">16</span><span class="tt">Text Animation and Typography</span><span class="pn" data-target="ch-16"></span>
+[2941] <span class="tn">17</span><span class="tt">Expressions, Fully Explained</span><span class="pn" data-target="ch-17"></span>
+[2942] <span class="tn">18</span><span class="tt">Chroma Key<em> — Green Screen and Blue Screen</em></span><span class="pn" data-target="ch-18"></span>
+[2943] <span class="tn">19</span><span class="tt">Tracking<em> — Sticking to a Moving Shot</em></span><span class="pn" data-target="ch-19"></span>
+[2944] <span class="tn">20</span><span class="tt">3D Camera Tracker and Sky Replacement</span><span class="pn" data-target="ch-20"></span>
+[2945] <span class="tn">21</span><span class="tt">Object Matte and Content-Aware Fill</span><span class="pn" data-target="ch-21"></span>
+[2946] <span class="tn">22</span><span class="tt">Color Correction and Looks</span><span class="pn" data-target="ch-22"></span>
+[2947] <span class="tn">23</span><span class="tt">3D Layers, Cameras, Lights</span><span class="pn" data-target="ch-23"></span>
+[2948] <span class="tn">24</span><span class="tt">Rendering, Output, Working with Other Apps</span><span class="pn" data-target="ch-24"></span>
+[2949] <span class="tn">25</span><span class="tt">Companion Tools and Alternatives</span><span class="pn" data-target="ch-25"></span>
+[2950] <span class="tn">26</span><span class="tt">Practical Tips by Job</span><span class="pn" data-target="ch-26"></span>
+[2951] <span class="tn">27</span><span class="tt">Integrated Project<em> — Planning a 30-Second Promo</em></span><span class="pn" data-target="ch-27"></span>
+[2952] <span class="tn">28</span><span class="tt">Credits · Copyright · Review (Real Records)</span><span class="pn" data-target="ch-28"></span>
+[2953] <span class="tn">29</span><span class="tt">What's Next<em> — Directions, Learning, Challenges</em></span><span class="pn" data-target="ch-29"></span>
+[2954] The Window menu contains <b>AI Assistant (beta)</b>. Added in 27.0, the panel takes on project tidying, writing and fixing expressions, and generating images and video through conversation. <b>Object Matte</b>, which replaced Roto Brush in April 2026 (26.2), selects subjects with four tools: Object Matte Tool, Quick Selection, Selection Brush and Refine Edge (Ch. 21).
+[2955] <b>Figure 1-1</b>The Window menu in AE 2027. AI Assistant (beta), Adobe Stock, Content-Aware Fill, Essential Graphics and Frame.io V4 are gathered here.
+[2956] 1-1 Opening the AI Assistant and Reading the Panel
+[2957] When an action finishes, hover over the credits icon to see how many credits it actually used (1-8).
+[2958] 1-2 Case ① Inspecting and Tidying an Inherited Project
+[2959] <b>Figure 1-2</b> The first AI Assistant screen and sample prompts
+[2960] <b>Figure 1-3</b> Request to approve an action
+[2961] <b>Figure 1-4</b> The report after about 1 minute. It found duplicate versions (v1, v2), a switched-off glass layer, empty stretches in the logo composition, and an empty Render Queue. No Higgsfield credits were used.
+[2962] <b>Adobe generative credits</b>Most AI actions in the AI Assistant spend generative credits from your Adobe account. Check your remaining balance on your Adobe account page. They are separate from Higgsfield credits. Section 1-8 covers the full policy.
+[2963] 1-3 Case ② Expressions — Explaining, Writing and Fixing
+[2964] Work with the expressions from Chapter 17 alongside the Assistant. Practice on a project that contains expressions, such as the title composition from Chapter 6. The expressions the Assistant writes can differ slightly each time, so get in the habit of reading the result with the vocabulary from Chapter 17.
+[2965] When you rename a layer, expressions that called that name break and an orange error bar appears (17-17). Hand it over like this.
+[2966] <b>Turning things on and off with a checkbox</b>Ask “Add a Checkbox Control named Show to the layer Control, and make the layer Caption visible only when Show is checked” and it puts an expression like <span class="mono">…("Show")("Checkbox").value ? 100 : 0</span> on Opacity. You can build the rigs from 17-16 just by describing them.
+[2967] 1-4 Case ③ Touching Up Text, Shapes and Templates
+[2968] Adds a Path Operation to the shape and reorders it (15-2)
+[2969] Exposes properties and media in the Essential Graphics panel, tidies names, and exports a MOGRT (24-4)
+[2970] Changes keyframe interpolation all at once (13-2)
+[2971] 1-5 Case ④ Generating Images and Video
+[2972] Inside the Assistant you can create backgrounds, reference images and short videos with Firefly and partner models and put them straight into the project. Generation uses many credits, so check the rates in 1-8 first.
+[2973] <b>Which generation, where?</b>For sources you'll use right away inside After Effects—a background, a texture—the Assistant is convenient. For comparing many models or keeping the same character across shots, Higgsfield (Chapters 3–5) is better. Either way, check the commercial-use terms (1-8) and make sure no real people or trademarks appear.
+[2974] 1-6 Object Matte — Try It Yourself
+[2975] 1-7 Other New Features in 27.0 — Try Them Yourself
+[2976] Make a 3D object. Type some text, turn on the <b>3D Layer</b> switch and set Extrusion Depth to 40 in Geometry Options, or import a 3D model (23-4).
+[2977] Save from Illustrator as SVG and import it: text becomes After Effects text layers, keeping font, size, color, position and variable-font settings (24-5)
+[2978] <span class="tag t2">Why?</span> 1-8 Adobe Generative Credits — How Many, and How They Are Spent
+[2979] 2-1 Connection Map
+[2980] <b>Figure 2-1</b>Connection map. Claude instructs generation through the Higgsfield MCP and controls AE through the bridge. Panel buttons and AI Assistant are used directly inside AE.
+[2981] 2-2 Switching AE to English (Without Reinstalling)
+[2982] 2-3 Installing the Higgsfield Plugin
+[2983] <b>Figure 2-2</b> Hover over ① Window ② Extensions and ③ Higgsfield appears.
+[2984] <b>Figure 2-3</b> The first time you open it, a log-in screen appears. Click <b>Continue in Browser</b> and log in with your Higgsfield account. <i>(Your turn: log in)</i>
+[2985] 2-4 A Tour of the Panel
+[2986] <b>Figure 2-4</b> The first screen after logging in. The <b>MCP</b> badge at the top right means it can connect to Claude.
+[2987] <b>Figure 2-5</b> Five frequently used tools plus Bridge MCP and Video generation (Seedance 2.5).
+[2988] <b>Figure 2-6</b> Scene, Audio and Create tools. Plugins at the bottom shows apps you made with Supercomputer.
+[2989] Ch. 3
+[2990] Ch. 2, 3, 6
+[2991] Ch. 4
+[2992] Ch. 5
+[2993] Ch. 27
+[2994] 2-5 Connecting the Claude Bridge
+[2995] 3-1 Making Cheap Practice Videos
+[2996] Through the bridge, Claude made a 1920×1080, 5-second composition and fitted the video to the frame. The tattoo was added on purpose for the 3-4 exercise.
+[2997] 3-2 Remove BG — Removing the Background
+[2998] <b>Figure 3-1</b> ① Select layer ② preview ③ what to keep ④ Generate
+[2999] <b>Figure 3-2</b> The result is a black-and-white matte. White is kept; black is the background to remove. Download with ↓ at the top left. Actual cost <b>about 5 credits</b>.
+[3000] 3-3 Reframe — Landscape to Vertical Shorts
+[3001] <b>Figure 3-3</b> ① Vertical preview — top and bottom are empty ② 9:16 ③ Generate
+[3002] <b>Figure 3-4</b> Instead of cropping, AI painted in the empty parts: ① sky and trees above ② jeans that weren’t in the original.
+[3003] 3-4 Draw to Edit — Removing a Tattoo
+[3004] <b>Figure 3-5</b> ① Mark on the tattoo ② brush size ③ instruction input
+[3005] <b>Figure 3-6</b> Before (red circle: tattoo) and after. The flower tattoo on the arm is gone and only skin remains.
+[3006] <b>Figure 3-7</b> The result screen. The instruction, method (Draw To Video), resolution and length are recorded below the result.
+[3007] 3-5 Upscale — Raising the Quality
+[3008] <b>Figure 3-8</b> 480p practice video · 1k selected · the button showed <b>3 credits</b>, but about <b>19 credits</b> were actually deducted. It took about 1 minute 40 seconds.
+[3009] <b>Figure 3-9</b> The result. The brick joints and hair strands are sharper, but detail that wasn’t in the original isn’t created.
+[3010] <b>Edit video</b>A tool that changes existing video as you describe. Use it to fix the problem in Chapter 4’s rain scene where the person isn’t wet (e.g. her hair and t-shirt are wet from rain).
+[3011] From the one walking video in Chapter 3, make “sunny afternoon → rainy day → night”.
+[3012] 4-1 Change Weather — Making It Rain
+[3013] <b>Figure 4-1</b> The Change Weather settings. The button showed 68 credits, but <b>22.5 credits</b> were actually deducted.
+[3014] <b>Figure 4-2</b> Sunny → rain. The ground got wet and the sky cloudy, but the person’s clothes and hair didn’t get wet.
+[3015] 4-2 Change Time of Day — Turning It to Night
+[3016] <b>When to use it</b>When a scene shot in daytime must cut together with evening or night scenes. Like cut 4 of the café video in Chapter 27, you can show a day passing in one location.
+[3017] <b>Figure 4-3</b> Time of Day settings. Again shown as 68, actual <b>22.5 credits</b>.
+[3018] <b>Figure 4-4</b> Day → night, before and after
+[3019] 4-3 Change Lighting — Changing Only the Light (settings screen)
+[3020] <b>Figure 4-5</b> Lighting settings. Describe the direction and mood of the light in words.
+[3021] 4-4 Motion Control — Transferring Movement (settings screen)
+[3022] <b>Figure 4-6</b> Fill the two boxes, Motion (reference movement) and Character (person image), and Generate.
+[3023] 5-1 Making a Talking Practice Video
+[3024] <b>Figure 5-1</b> Panel home → <b>Audio</b> tab. Remove Silences · Translate · Change Voice
+[3025] 5-2 Remove Silences — Cutting Out Gaps (free)
+[3026] <b>Figure 5-2</b> “4 silences, 3 s to be removed”. Click Cut and the timeline clip is cut in place.
+[3027] <b>Figure 5-3</b> In this book’s setup (AE 2027 + plugin v1.0.64), Cut gave the error “Function ranges.filter is undefined”.
+[3028] 5-3 Translate — Translating into Another Language
+[3029] <b>Figure 5-4</b> Target language: English. A 10-second clip cost <b>30 credits</b>, about 1 minute 40 seconds.
+[3030] <b>Figure 5-5</b> The result appears on the panel’s generation screen. Download with ↓ at the top left and put it in the composition.
+[3031] 5-4 Change Voice — Changing the Voice
+[3032] <b>Figure 5-6</b> Choose a voice from the Voice list (default Grady). <b>2 credits</b>, about 1 minute.
+[3033] 6-1 Making an Opening Title
+[3034] <b>Figure 6-1</b> The result Claude made. ① Composition “Claude × Higgsfield × Adobe Intro” ② named layers (Background, Title, Subtitle — shown in Korean in the screenshot) ③ range selector and position/opacity keyframes. No credits used.
+[3035] 6-2 Fixing It — by Conversation, Then by Hand
+[3036] <b>Figure 6-2</b> ① Offset end key moved to 7 s for a slower entrance ② the four scale keys Claude added ③ red value = position with an expression
+[3037] 6-3 Polishing into a Broadcast Channel ID
+[3038] <b>Figure 6-3</b> Channel ID v3 for broadcast (6 s)
+[3039] 6-4 What Claude Can’t Do, and What People Must Do
+[3040] 7-1 One-Shot Tools — Lower Thirds and Glass
+[3041] <b>Figure 7-1</b> Lower third “Adobe After Effects” (dark gray bar) and a liquid glass badge “AI Practice LIVE” at the top right. Every layer is separate and live, so you can fix it by hand.
+[3042] 7-2 Logo Reveal and Scene Transition
+[3043] <b>Figure 7-2</b> Logo reveal (scale method). There are only three layers — Transition, Logo, Background — so it is easy to fix.
+[3044] <b>Figure 7-3</b> The transition (wipe_left) was first placed at 0 s, so we dragged the bar to 3.5 s on the timeline by hand. The bridge’s transition tool has no value for setting the start time.
+[3045] <b>Let AI check too</b>Chapter 1’s AI Assistant looked at this composition and pointed out that “there are empty stretches showing only the background at 3–3.5 s and 4.5–5 s”. Extending the end of the logo layer to 5 s fixes it.
+[3046] 8-1 A Company Called Adobe
+[3047] 8-2 The Birth of After Effects
+[3048] 8-3 A History in Versions
+[3049] 8-4 Three Turning Points
+[3050] 9-1 Where the Time Goes in AE Work
+[3051] Ch. 3 Remove BG, Ch. 21 Object Matte
+[3052] Ch. 3 Reframe
+[3053] Ch. 4 Scene
+[3054] Ch. 5 Audio
+[3055] Ch. 6–7 Claude
+[3056] Ch. 1 AI Assistant
+[3057] 9-2 Three Paths
+[3058] 9-3 What Is Higgsfield?
+[3059] 9-4 What Is MCP and Why Does It Matter?
+[3060] Neither connection needs an API key. Add the address in Claude’s connector settings and log in with your Higgsfield account (2-5). The result is an ordinary .aep file, so the biggest advantage is that a person can always fix the layers AI made by hand.
+[3061] 10-1 Adobe Costs and Student Discounts
+[3062] 10-2 Adobe Sign-up and Log-in
+[3063] 10-3 Higgsfield Plans and Credits
+[3064] <b>What are credits?</b>: points deducted each time you generate. The cost depends on model, resolution and length. In this book a 5-second 480p practice video cost 2.5 credits and an upscale about 19 credits (Ch. 28).
+[3065] 10-4 Higgsfield Sign-up and Plugin Log-in
+[3066] In Claude, go to <b>Customize → Connectors → + Add → Add custom connector</b>, enter the address, and log in to Higgsfield in the window that opens (2-5). You never need to give Claude your password.
+[3067] <span class="tag t1">Follow Along</span> 11-1 Make a Canvas (Composition)
+[3068] <b>Figure 11-1</b>① Name ② Size preset ③ Frame rate ④ Duration ⑤ OK.
+[3069] <span class="tag t1">Follow Along</span> 11-2 Type a Word
+[3070] <span class="tag t1">Follow Along</span> 11-3 Record Motion (Keyframes)
+[3071] <b>Figure 11-2</b>① Click the stopwatch next to Position and a blue diamond appears ② the current position value.
+[3072] <b>Figure 11-3</b>① Current time 2 s ② changed position value ③ new keyframe at 2 s ④ first keyframe at 0 s. The screen shows the motion path (dotted line).
+[3073] <span class="tag t1">Follow Along</span> 11-4 Make It Smooth
+[3074] <b>Figure 11-4</b>① Click Position to select all keys ②③ keyframes in hourglass shape after F9.
+[3075] <span class="tag t1">Follow Along</span> 11-5 Save as a Video File
+[3076] <b>Figure 11-5</b>① Render settings ② output format (H.264) ③ save location ④ Render button.
+[3077] Now we name, one by one, the parts of the screen you used in Chapter 11. Once you know what the icons mean, new features are no longer scary.
+[3078] <span class="tag t2">Why?</span> 12-1 Four Key Panels
+[3079] <b>Figure 12-1</b>A map of the AE screen. ① gather materials, ② view the canvas, ③ stack them on time, ④ change values.
+[3080] <span class="tag t2">Why?</span> 12-2 Frames, Frame Rate, Timecode
+[3081] <b>Figure 12-2</b>Video is a series of still pictures (frames). The blue number at the top left of the timeline is the timecode.
+[3082] <span class="tag t1">Follow Along</span> 12-3 Timeline Icons
+[3083] <b>Figure 12-3</b>Switches on the left of the timeline and keyframe-related icons.
+[3084] <b>Figure 12-4</b>Click Toggle Switches / Modes at the bottom to change the columns. ① Mode (blending) ② Track Matte ③ Parent &amp; Link.
+[3085] <b>Figure 12-5</b>Turn on the stopwatch (◎) and a keyframe (◆) is placed at the time indicator.
+[3086] <span class="tag t2">Why?</span> 12-4 Icons in the Project Panel
+[3087] <b>Another use of Replace Footage</b>It swaps only the original and keeps effects, keyframes and masks. Use the same method to swap a 480p practice clip for the upscaled final (3-5). Deleted files can’t be relinked, so restore them from the Recycle Bin or swap in a file with the same content.
+[3088] When moving to another computer or submitting, use <b>File → Dependencies → Collect Files</b> (24-6) to gather the sources into one folder too.
+[3089] <span class="tag t2">Why?</span> 12-5 Types of Layers
+[3090] <span class="tag t1">Follow Along</span> 12-6 Hiding and Organizing Layers — Shy, Solo, Lock, Guide
+[3091] <b>Check before rendering</b>An eye left off, Solo left on or fx left off changes the render. Make a habit of scanning the switch columns right before you render. You can also ask the AI Assistant from Chapter 1 to “find disabled layers and solo states.”
+[3092] In Chapter 11 you made text slide; this chapter is about “how” it moves. The same two keyframes can look light or heavy depending on the shape of the speed.
+[3093] <span class="tag t2">Why?</span> 13-1 Five Transform Properties
+[3094] <span class="tag t2">Why?</span> 13-2 How the Gaps between Keyframes Are Filled
+[3095] <b>Figure 13-1</b>Three ways to fill between keyframes. On the timeline they look different too: ◆ Linear, hourglass Easy Ease, ■ Hold.
+[3096] <span class="tag t1">Follow Along</span> 13-3 Bouncing Ball
+[3097] <b>Figure 13-2</b>Select the ball to see its motion path (dotted) and keyframes (squares).
+[3098] <span class="tag t3">One Step Further</span> 13-4 Graph Editor
+[3099] <b>Figure 13-3</b>Value graph. Red is x, green is y. In AE, y grows downward, so the green peaks are the moments the ball touches the floor.
+[3100] <span class="tag t2">Why?</span> 14-1 Layer Order and Parents
+[3101] <b>Figure 14-1</b>Left: the upper layer is in front. Right: move the parent and the children follow.
+[3102] <span class="tag t1">Follow Along</span> 14-2 Setting a Parent (Parenting)
+[3103] <b>Figure 14-2</b>① Parent &amp; Link box ② list of layers you can choose as parent.
+[3104] <span class="tag t1">Follow Along</span> 14-3 Moving a Robot Body — Parenting at the Joints
+[3105] <b>Figure 14-3</b>Left: front parts sheet made with Higgsfield GPT Image. Each segment has a gray ball joint at its top end, and the red dot is the anchor point. Right: parent relationships. An indented layer is the child of the layer just above.
+[3106] <b>Animate Rotation only.</b> Now each segment needs only Rotation. Rotate the segment nearer the body first and let the end segment follow 2–4 frames later for a natural, whip-like motion. This is called <b>overlap (follow-through)</b>. In 14-4 we use this rig to make a walk.
+[3107] <b>Figure 14-4</b>The actual Parent &amp; Link column. Hand_R → 6 Forearm_R → 9 UpperArm_R → 7 Torso → 10 Pelvis → 1 null (Master_Control). The head is linked to 7 Torso, and the thighs to 10 Pelvis.
+[3108] Master_Control Position X to move forward, Y to bob with each step. Thigh and shin Rotation swing opposite left and right, and the arms swing opposite to the leg on the same side. The side-view walk is covered in detail in 14-4.
+[3109] <b>Going further</b>For characters with many joints, the free script <b>Duik</b> builds IK (drag the fingertip and the whole arm bends to follow). To bend limbs like rubber, put Puppet pins (15-6) on a single-piece arm.
+[3110] <span class="tag t1">Follow Along</span> 14-4 A Side-View Walk — One Cycle from Four Poses
+[3111] <b>Figure 14-5</b>Parts sheet for the side-view walk (facing left). Each limb segment has a ball joint at its top end, and the red dot is the anchor point. Arm and leg parts are drawn once and imported twice for the front and back.
+[3112] <b>Figure 14-6</b>The four poses in the practice file. The robot faces left. The light limbs are the near (front) side and the dark limbs are the far (back) side. From frame 15 the front and back legs swap and the same four poses repeat.
+[3113] <span class="tag t1">Follow Along</span> 14-5 Grouping (Precompose)
+[3114] <b>Figure 14-7</b>The Pre-compose window. When grouping several layers, only Move all attributes is available.
+[3115] Features that need “default transform values”, such as the 3D Camera Tracker (Ch. 20), are fixed by precomposing the footage with Move all attributes. This is an error we actually hit while writing this book.
+[3116] <span class="tag t2">Why?</span> 14-6 Masks
+[3117] <span class="tag t2">Why?</span> 14-7 Track Mattes
+[3118] <b>Figure 14-8</b>The video below shows only inside the shape of the matte layer (text).
+[3119] Since 2022 (23.0) you can choose any layer in the Track Matte column, and it does not have to sit right above (the Modes view ② in Chapter 12).
+[3120] <span class="tag t2">Why?</span> 14-8 Blending Modes
+[3121] Click <b>Toggle Switches / Modes</b> at the bottom of the timeline (<span class="k">F4</span>) to switch between the switches columns and the <b>Mode</b> column (Figure 12-4).
+[3122] 15-1 The Structure of a Shape
+[3123] 15-2 Common Parts (Path Operations)
+[3124] 15-3 Practice — A Check Mark That Draws Itself
+[3125] 15-4 Importing Illustrator Files
+[3126] <span class="tag t4">Industry Standard</span> 15-5 Motion Graphics Know-how — Trails, Glow, Paths
+[3127] <b>Figure 15-1</b>Left: text with two layers of Glow (edge Radius 14, spread Radius 60). Right: a trail made with Echo (12 copies, Decay 0.82) on a moving circle. Light effects come alive on a dark background.
+[3128] The method in Figure 17-2. Each trail can have its own color and size, so there is more design freedom than with Echo
+[3129] <span class="tag t1">Follow Along</span> 15-6 Puppet Pins — Bending an Image Like a Joint
+[3130] <b>Figure 15-2</b>① Puppet pin tool and Mesh options (Show, Expansion 3, Density 10) ② the Puppet effect created in Effect Controls ③ three pins (yellow dots) and the mesh. Left is the original; right is the result of moving only the top pin. Composition <span class="mono">05-2_퍼펫핀</span>.
+[3131] <b>Pin types</b>Position, Starch (stiffens), Bend (rotation and scale in place), Advanced (position, rotation and scale) and Overlap (front/back when overlapping). Position pins are enough at first. For swaying in the wind, put <span class="mono">wiggle(1, 15)</span> on a pin position (17-3).
+[3132] <span class="tag t1">Follow Along</span> 15-7 Particles — Dust, Sparks, Smoke, Shatter
+[3133] <b>Figure 15-3</b>Six particle looks made only with AE’s built-in effects. Compositions <span class="mono">05-4~05-8_파티클_…</span>. In ③, set Particle Type to Line for rain.
+[3134] To put it over background footage, change the layer’s blending mode to <b>Add</b> or <b>Screen</b>. The black background disappears and only the light remains (14-8).
+[3135] <b>Figure 15-4</b>The same effect with defaults (left) and with changed values (right, at 2 s). Composition <span class="mono">05-3_파티클_입자</span>.
+[3136] <b>Figure 15-5</b>CC Particle World in Effect Controls. ① Gravity under Physics ② particle shape and size under Particle. Change the numbers one at a time and watch how the screen changes.
+[3137] <b>Compared with Higgsfield</b>Change Weather in 4-1 wets the ground and changes the light in one go. CC Rainfall only makes streaks, but you can adjust thickness, amount and direction frame by frame, and it costs no credits. Layering both—adding only foreground streaks on top of the AI result—also works well.
+[3138] <span class="tag t1">Follow Along</span> 15-8 Audio-Reactive Graphics
+[3139] <b>Figure 15-6</b>① Keyframe Assistant in the Animation menu ② Convert Audio to Keyframes.
+[3140] Add an expression to the property you want to move so it reads the Both Channels Slider value. Use <span class="mono">linear()</span> to map the loudness range (0–85) to bar height (8–100%) (17-6).
+[3141] <b>Figure 15-7</b>① The three sliders of the automatically created Audio Amplitude layer ② seven bars whose height follows the loudness ③ keyframes on every frame. The value at 1 s 13 f is 26. Composition <span class="mono">05-9_소리반응</span>.
+[3142] 16-1 Text Settings — Character and Paragraph Panels
+[3143] 16-2 How Text Animators Work
+[3144] <b>Figure 16-1</b>Three lines with different animators, at 1 s. From the top: slide in (Position), grow in (Scale), typewriter (Opacity). ① Add properties and selectors with the Add ▸ button ② two keyframes on the Range Selector move the range ③ the property this animator changes, Opacity 0%. Composition <span class="mono">06_텍스트애니메이터</span>.
+[3145] Add a <b>Wiggly Selector</b> instead of a Range Selector and each character wobbles on its own; an <b>Expression Selector</b> lets you give each character a different value with expressions (Ch. 17).
+[3146] <b>The bridge’s limit</b>As seen in Chapter 6, the current Claude bridge could not move Range Selector keyframes. A realistic split is to let AI build the animator’s skeleton and adjust the timing by hand.
+[3147] 16-3 Faster with Presets
+[3148] 16-4 Kinetic Typography
+[3149] Videos where words pop and grow in time with speech. Expand the audio layer to see the waveform (<span class="k">LL</span>), add markers (numeric keypad <span class="k">*</span>) where each word starts, and place the word layers on the markers. You can also read marker positions with an expression to pop them automatically (17-9).
+[3150] <b>Syncing with sound</b>Text that appears before the voice feels off. Bringing it in 2–3 frames after the marker looks in sync. With music that has a clear beat, you can also link size to loudness with the method in 15-8.
+[3151] 16-5 Captions
+[3152] Import a caption file (.srt) made with Premiere’s automatic transcription (Speech to Text) into AE, or design a caption style with AE text layers and export it as a <b>MOGRT</b> (Ch. 24) so you only change the words in Premiere.
+[3153] 17-1 Adding and Removing Expressions
+[3154] <b>Figure 17-1</b>Expressions as graphs: horizontal is time, vertical is value. The shape of motion made by one line of code.
+[3155] <b>Figure 17-2</b>The actual AE screen (1 s 18 f). The dark circle is the current position; the pale circles are positions 0.07 s apart. The trail is made with one line: <span class="mono">thisComp.layer("M1").transform.position.valueAtTime(time-0.07)</span>. Composition <span class="mono">07-1_익스프레션_움직임</span> is in the GitHub project file.
+[3156] 17-2 Basic Vocabulary
+[3157] 17-3 Shaking — wiggle
+[3158] 17-4 Moving with Time — time
+[3159] 17-5 Repeating — loopOut, loopIn
+[3160] 17-6 Mapping Values — linear, ease, clamp
+[3161] <b>Figure 17-3</b>The actual AE screen (07-2_익스프레션_값, 1 s 15 f). Top left: for the same 3-second move, linear spaces evenly, ease is dense at both ends, and easeOut only at the end. Top right: a valueAtTime trail. Bottom left: rotation and scale fixed with seedRandom. Bottom right: a bar facing the orange dot with atan2. Bottom: a progress bar filling to thisComp.duration.
+[3162] 17-7 Bounce and Settle — Inertial Bounce
+[3163] 17-8 Following and Offsets — valueAtTime, index
+[3164] 17-9 Moving with Markers
+[3165] <b>Figure 17-4</b>① Three markers on the layer (numeric keypad <span class="k">*</span>) ② the Scale expression. Each time the time indicator passes a marker, the circle grows and settles. The sample uses amplitude 60 and decay 6 for a bigger pop. Composition <span class="mono">07-4_익스프레션_마커</span>.
+[3166] <span class="lbl">EXPRESSION · React to Audio Loudness (Scale) — step by step in 15-8</span>// First: right-click the audio layer → Keyframe Assistant → Convert Audio to Keyframes<br/>a = thisComp.layer("Audio Amplitude").effect("Both Channels")("Slider");<br/>s = linear(a, 0, 20, 100, 140);<br/>[s, s];
+[3167] 17-10 Randomness — random, seedRandom
+[3168] 17-11 Text Expressions — Source Text
+[3169] 17-12 Auto-Sizing Boxes — sourceRectAtTime
+[3170] <b>Figure 17-5</b>The actual AE screen (07-3_익스프레션_글자). Typewriter (Text Animator), an auto box with sourceRectAtTime, a rig controlling six bars with one Slider, and a number counter with easeOut on the Numbers effect (counting up to 2027).
+[3171] 17-13 Space and Direction
+[3172] 17-14 Fitting to the Composition Length
+[3173] 17-15 Building Paths — createPath
+[3174] <b>Figure 17-6</b>createPath builds a path from a list of point coordinates. Pass the positions of two nulls as points, and the line is redrawn whenever you move a null. Leave the two tangent arrays empty for a straight line.
+[3175] 17-16 Expression Controls — Building a Rig
+[3176] Gather Slider, Angle, Checkbox, Color, Point and Layer controls from Effect → Expression Controls on a null and have many layers reference them, and you have a “rig” controlling everything from one place. When exporting a MOGRT (Ch. 24), these controls become the handles in Premiere.
+[3177] 17-17 When There Is an Error
+[3178] <b>If it worked</b>As in Figure 17-2, one circle and three trails follow along with one line of code.
+[3179] 18-1 Why Green?
+[3180] 18-2 When Blue Screen Is Still Used
+[3181] 18-3 Shooting for a Clean Key — Lighting Setup
+[3182] <b>Figure 18-1</b>Green-screen lighting layout (seen from above; generated with Higgsfield GPT Image and labeled). Screen lights ①② light only the screen evenly, not the actor; actor lights ③④⑤ are placed so they don’t hit the screen. The actor stands 2–3 m from the screen to avoid green reflections (spill) and shadows.
+[3183] <b>Figure 18-2</b>This is how it looks in a real studio (an example made with Higgsfield GPT Image). There are separate lights for the screen and for the person, and the person stands away from the screen.
+[3184] Put tracking markers (× marks) on the screen (Ch. 20)
+[3185] 18-4 Keying with Keylight — Practice
+[3186] <b>Figure 18-3</b>The original. The screen edges are dark and blotchy, so it is uneven — exactly the “common mistake” in 18-3.
+[3187] <b>Figure 18-4</b>Result after only picking the Screen Colour. Most of it keys out with just this.
+[3188] Cut away anything outside the screen (lights, stands) with a pen-tool mask (a garbage matte). Finally, tidy the edges with <b>Key Cleaner</b> and give the person the same color tone as the background (Ch. 22).
+[3189] <b>Figure 18-5</b>Screen Matte view. Gray background = still half transparent.
+[3190] <b>Figure 18-6</b>After Clip Black 35 and Clip White 85. Background black, person white. The white patches in the four corners are areas the lights didn’t reach, so cut them away with a mask.
+[3191] <b>Compared with AI</b>Higgsfield Remove BG (Ch. 3) extracts people without green cloth, and AE’s Object Matte (Ch. 21) also makes a matte with one click. Broadcast and film still use chroma key because it can extract even semi-transparent parts — a single hair, a glass, smoke — precisely. As of 2026, AI mattes are fast but still fall short of chroma key in edge quality and frame-to-frame consistency.
+[3192] 18-5 Chroma Key in Film and What Comes Next
+[3193] 18-6 Motion Capture — Extracting Only the Movement
+[3194] Higgsfield’s <b>Motion Control</b> (4-4) is an application of the AI markerless method. It extracts the motion from a reference video and applies it to another person’s image. In AE, the character video made this way is cut out with Keylight or Remove BG and composited with a background.
+[3195] Shoot your own: with a phone and green cloth, film one shot that follows the 18-3 lighting principles and one that breaks them, and compare the Screen Mattes.
+[3196] 19-1 Three Trackers
+[3197] Standing text on the ground (Ch. 20)
+[3198] 19-2 The Tracker Panel at a Glance
+[3199] Applies the 3D Camera Tracker (Chapter 20)
+[3200] Applies Warp Stabilizer, which removes shake automatically (19-8)
+[3201] <span class="tag t1">Follow Along</span> 19-3 One-Point Tracking — Attach to a Null and Make Text Follow
+[3202] Parent it to the null. Put text-in animations (Chapter 16) on the text layer itself and they will play while following
+[3203] Same method. If the target moves closer or farther away, use two-point tracking (19-4) so the size follows too
+[3204] Draw a mask on an adjustment layer and parent it to the null to recolor or blur just that area. For targets that change shape, mask tracking (19-7) works better
+[3205] <span class="tag t1">Follow Along</span> 19-4 Two-Point Tracking — When the Target Turns and Grows
+[3206] <span class="tag t1">Follow Along</span> 19-5 Four-Point Tracking — Replacing a Handheld Screen
+[3207] <b>Figure 19-1</b>Track Camera, Track in Boris FX Mocha, Warp Stabilizer VFX and Track Motion in the Animation menu.
+[3208] <b>Figure 19-2</b>Click Track Motion and the Layer panel with Track Points opens on the right and the Tracker panel below.
+[3209] 19-6 Mocha AE — Tracking a Plane Instead of a Point
+[3210] A point tracker follows one small pattern, so it fails when a finger covers it or it blurs. <b>Mocha AE</b>, included with After Effects, follows <b>an entire flat plane</b>, so it holds up even when part of it is hidden. Use it when the screen replacement in 19-5 keeps slipping.
+[3211] <span class="tag t1">Follow Along</span> 19-7 Mask Tracking — Hiding Faces and License Plates
+[3212] 19-8 Removing Shake — Warp Stabilizer and Stabilize Motion
+[3213] 20-1 3D Camera Tracker
+[3214] <b>Figure 20-1</b>Error on the first attempt: “layer must be the same size as the composition with default transforms”. It was because the video had been scaled to 150%.
+[3215] <b>Figure 20-2</b>Fix: precompose the video (Move all attributes) and analyze again. After about 1 minute 30 seconds, track points (small colored dots) appeared.
+[3216] <b>Figure 20-3</b>① Right-click the target that appears on the ground ② Create Text and Camera. The same menu can also create a solid, a null or a shadow catcher.
+[3217] <b>Figure 20-4</b>The result. As the camera moves forward, the text grows with the perspective and stays in place. Text: Nanum Gothic ExtraBold 90 px. Composition <span class="mono">10-1_3D트래커</span>.
+[3218] 20-2 Reading the 3D Camera Tracker Effect Controls
+[3219] 20-3 The Target Menu — What You Can Create
+[3220] A 3D solid stuck to the target plane. Swap in an image to replace signs, posters and screens (20-5)
+[3221] A 3D null at that spot. A handle to hang logos, precomps and 3D models on (20-4)
+[3222] A floor that only receives shadows, plus a light. Makes standing text cast shadows on the real floor (20-6)
+[3223] <span class="tag t1">Follow Along</span> 20-4 Standing a Logo or Image on a Null
+[3224] Finish the analysis as in step 1 of 20-1. With the 3D Camera Tracker effect name clicked and selected, drag to select points on the floor where the logo should stand.
+[3225] <span class="tag t1">Follow Along</span> 20-5 Replacing a Sign on a Wall
+[3226] 20-6 Adding Shadows — Shadow Catcher
+[3227] 20-7 When It Doesn't Solve Well
+[3228] Precompose (Move all attributes) and analyze again (Figure 20-1)
+[3229] 20-8 Replacing the Sky
+[3230] <b>Doing it with AI</b>Higgsfield Change Time of Day (4-2) changes not only the sky but also the light on the buildings. By hand only the sky changes and you match the light yourself, but you keep full control of the original quality and the result.
+[3231] 21-1 From Roto Brush to Object Matte
+[3232] 21-2 Practice — Separating a Walking Person
+[3233] 21-3 Content-Aware Fill — Removing Objects
+[3234] <b>Figure 21-1</b>An ellipse mask drawn around the cone in Subtract mode. Content-Aware Fill fills the black empty area with the surrounding road.
+[3235] <b>Figure 21-2</b>① The area emptied by the mask ② Fill Method: Object ③ Generate Fill Layer. Analysis and generation for 5 seconds (150 frames) took about 1 minute.
+[3236] <b>Figure 21-3</b>Before filling (left) and after (right). The surrounding road continues where the cone was. Composition <span class="mono">11_물체지우기</span>.
+[3237] <b>Compared with Higgsfield Draw to Edit</b>Content-Aware Fill keeps the original quality and is free, but leaves traces on complex backgrounds. Draw to Edit (3-4) repaints for a natural look, but costs credits and may change the resolution. Use AE for simple objects and AI generation for complex scenes.
+[3238] 22-2 Practice — Bringing Flat Footage to Life
+[3239] <b>Figure 22-1</b>Before correction. Gray sky, low contrast — typical of a log original.
+[3240] <b>Figure 22-2</b>Lumetri Basic Correction: Temperature 25, Saturation 170, Contrast 70, Whites 25, Blacks −25. The values were entered through the Claude bridge (0 credits).
+[3241] 23-1 Turning On 3D Layers
+[3242] <b>Figure 23-1</b>AE’s 3D space. Y grows downward and Z grows with distance. When the camera passes layers at different depths, parallax appears.
+[3243] 23-2 Cameras
+[3244] Parent the camera to a null and simply rotating the null gives a smooth orbit shot (23-9).
+[3245] <b>Figure 23-2</b>The Camera Settings window (Ctrl+Alt+Shift+C). ① Type: One-Node moves freely, Two-Node looks at a Point of Interest ② Preset: lens in mm — 35–50 mm looks natural ③ Film Size and Angle of View: field of view ④ Enable Depth of Field: background blur ⑤ Create Camera From Current View.
+[3246] 23-3 Lights and Shadows
+[3247] <b>Figure 23-3</b>Five lights. The same principles as real film lighting.
+[3248] 23-4 Importing 3D Models
+[3249] <span class="tag t1">Follow Along</span> 23-5 Seeing Space with 4 Camera Views
+[3250] <b>Figure 23-4</b>The actual 4 Views screen (View → Switch View Layout → 4 Views). The same scene from four directions. The Top pane shows the depth difference between two cards; the Right pane shows the camera position (pink lines).
+[3251] <b>Figure 23-5</b>4 Views after adding a Spot light. The cone-shaped lines are the reach of the light (Cone Angle), and the Active Camera pane shows the Cone Feather getting darker toward the edges.
+[3252] <span class="tag t2">Why?</span> 23-6 Handling Each Type of Light
+[3253] <b>Figure 23-6</b>The Light Settings window (Ctrl+Alt+Shift+L). ① Light Type ② Color ③ Intensity ④ Cone Angle and Cone Feather (Spot only) ⑤ Falloff — with None, brightness is the same regardless of distance.
+[3254] <b>Figure 23-7</b>The roles of light compared in photos (generated with Higgsfield GPT Image). Key gives form, fill the depth of shadow, rim separation from the background. AE 3D lights follow the same principle: Key = Spot, Fill = Point (low intensity), Rim = Spot from behind.
+[3255] <b>Figure 23-8</b>The same person and scene change genre with the lighting design (generated with Higgsfield GPT Image). To imitate in AE: ① one Spot, Ambient 0% ② 2–3 Points with low contrast + Ambient 40% ③ frontal Parallel + Ambient 30% ④ rim from a warm Spot behind, fill from a Point in front at 30% ⑤ several colored Points, Falloff Smooth ⑥ an orange Point mixed with a blue Parallel.
+[3256] <span class="tag t2">Why?</span> 23-7 3D File Formats You Can Bring In
+[3257] <span class="tag t1">Follow Along</span> 23-8 Adjusting Materials and Textures
+[3258] <span class="tag t1">Follow Along</span> 23-9 Orbiting the Camera on a Null
+[3259] Keyframing a camera directly makes circular moves hard. Instead, put a null at the center of the subject and make the camera its child, and <b>just rotating the null makes the camera circle</b>. It is the same principle as rotating a shoulder to make the hand draw a circle (14-3). Composition <span class="mono">13-4_카메라널궤도</span>.
+[3260] <b>Figure 23-9</b>The timeline of the practice file. ① Orbit_Null’s parent is 2 Crane_Null, with an expression on Y Rotation ② an up-and-down expression on Crane_Null Position ③ Camera 1’s parent is 1 Orbit_Null.
+[3261] <b>Figure 23-10</b>The result of rotating only the null and leaving the camera alone. The same scene from the front, upper right and left. The depth difference between the two cards is visible.
+[3262] 23-10 Axes and Rotation, Fully Explained — X, Y, Z, Orientation, Shortcuts
+[3263] Switch to assigned 3D views (23-5)
+[3264] 23-11 Understanding Texture Maps — The Seven Images of a PBR Material
+[3265] <b>Substance materials (.sbsar)</b>: import materials from Adobe Substance 3D Assets and choose them from the Material dropdown. The maps are inside the material, and you change color and roughness with sliders (1-7).
+[3266] <b>Layers as materials (27.0)</b>: use a composition, video or image as Base Color. Good for moving screens and signs (1-7).
+[3267] 23-12 Element 3D — The Best-Known 3D Plug-in
+[3268] Drag a material (metal, glass, chrome, etc.) from <b>Presets</b> at the bottom onto the model. Change the Diffuse, Specularity, Reflectivity, Normal Bump and Illumination textures in the <b>Edit</b> panel on the right. The maps from 23-11 are used here directly.
+[3269] <b>Figure 24-1</b>How a video gets out the door. Each part of this book covers one step of this flow.
+[3270] 24-1 Two Output Paths
+[3271] 24-2 Output Settings by Use
+[3272] 24-3 Going Back and Forth with Premiere — Dynamic Link
+[3273] 24-4 MOGRT — Templates Edited in Premiere
+[3274] <b>Figure 24-2</b>① Right-click Source Text in the timeline → Add Property to Essential Graphics.
+[3275] <b>Figure 24-3</b>The Essential Graphics panel. ① Primary: the composition to make into a template ② registered property (text content) ③ Export Motion Graphics Template. Composition <span class="mono">07-3_익스프레션_글자</span>.
+[3276] <b>Linking to Chapter 17</b>Include expression controls (17-16) and an auto-sizing box (17-12), and you get a MOGRT whose box grows by itself even when an editor types a long name.
+[3277] 24-5 Photoshop and Illustrator Files
+[3278] 24-6 Tidying and Backup
+[3279] 24-7 When Rendering Is Slow
+[3280] <span class="tag t1">Follow Along</span> 24-8 One Lap Around the Render Queue — Reading Every Setting
+[3281] 24-9 Formats at a Glance — MP4 (H.264), MOV, AVI, 4K
+[3282] <span class="tag t1">Follow Along</span> 24-10 Rendering with a Transparent Background (Alpha)
+[3283] <span class="tag t1">Follow Along</span> 24-11 Image Sequences — Rendering to JPG/PNG and Importing Again
+[3284] 24-12 Importing a Whole Project (.aep)
+[3285] First, on the original computer, use <b>File → Dependencies → Collect Files</b> to gather the project and its sources into one folder (24-6). Move that folder into your project folder.
+[3286] If files are missing (names in italics), relink them with Replace Footage from 12-4. The other files in the same folder relink along with it.
+[3287] <b>File → Import → Import Adobe Premiere Pro Project</b>, or Dynamic Link from Premiere (24-3)
+[3288] As Composition - Retain Layer Sizes (24-5). To edit Illustrator text, use SVG (1-7)
+[3289] 24-13 The Idea of Templates — Five Forms
+[3290] Exported with Essential Graphics; in Premiere only text and colors are changed (24-4)
+[3291] Change colors all at once in the <b>Controller</b> or <b>Color Control</b> layer most templates include (the same idea as the rigs in 17-16).
+[3292] <b>Templates and skill</b>Templates help you meet deadlines, but they're only yours as far as you can change them. Knowing the rigs (17-16), Essential Graphics (24-4) and precomposing (14-5) from this book lets you take templates apart and reshape them—and eventually build your own templates to sell or share with your team.
+[3293] 25-1 Tools That Work Well Alongside
+[3294] 25-2 Tools Worth Comparing
+[3295] <b>Figure 26-1</b>Scenes of AE in use in different jobs (example scenes made with Higgsfield GPT Image). Same program, different balance of features.
+[3296] Gather brand colors in one expression Color Control and you can change all colors at once (17-16).
+[3297] Automate number count-ups and % displays with Source Text expressions (17-11).
+[3298] 26-1 How Experienced Pros Work — The Professional Pipeline
+[3299] Build control layers (17-16) for color, text and speed, then animate. When revisions come, change only the control values
+[3300] Linear keys for position and timing only (blocking) → speed in the Graph Editor (13-4) → overlap and follow-through (polish)
+[3301] Safe areas, typos, disabled layers, loudness, renders per spec (24-8), backup with Collect Files
+[3302] 26-2 Handling Heavy Projects — Techniques of Experienced Users
+[3303] Render a finished heavy precomp with Post-Render Action: <b>Import &amp; Replace Usage</b> and swap it for video (24-8). If changes come, switch back to the original composition
+[3304] Run .jsx files with <b>File → Scripts → Run Script File</b>, and put scripts you use often in the Scripts folder to use them as panels from the Window menu. For repetitive work such as batch renaming and arranging layers. Today the AI Assistant (Chapter 1) and the Claude bridge (Chapter 6) take over much of this role
+[3305] 27-1 A 5-Shot Storyboard with Claude
+[3306] Video generation · practice method in Ch. 3
+[3307] Delivery quality with Upscale (3-5)
+[3308] Lower third (7-1)
+[3309] Logo reveal and transition (7-2), Shorts with Reframe (3-3)
+[3310] 27-2 Making Cheap Storyboard Frames and Placing Them in AE
+[3311] <b>Figure 27-1</b> The 5-shot photoreal storyboard finished inside AE (24장_스토리보드_v2). Each frame is its own layer, so changing a shot means swapping only that layer.
+[3312] 27-3 Finishing It as a Student Project
+[3313] AI Assistant check for gaps and disabled layers (1-2)
+[3314] <span class="tag t3">One Step Further</span> 27-4 Advanced Project — A 30-Second Cinematic Opening Title
+[3315] In Material Assignment, set Metallic 1 and Roughness 0.25. If you have a Substance metal material (.sbsar), apply brushed metal to the front and dark metal to the sides separately (1-7).
+[3316] As in 23-11, set an HDRI as the Environment Light's Source and turn off the HDRI layer's eye. Surrounding light starts to reflect on the letters.
+[3317] Create a camera (50 mm) and parent it to a null (23-9). Push the null's Z Position forward slowly by −400 over 30 seconds (dolly in), and ease the last keyframe with <b>Easy Ease In</b> (<span class="k">Shift+F9</span>) so it stops smoothly.
+[3318] Using method B from 15-7, make two Fractal Noise fog layers, turn on their 3D switches, and place one in front of the text (Z −300) and one behind (Z 600). Parallax appears between the fog layers as the camera passes.
+[3319] Using method ① from 15-7, make tiny dust particles (Faded Sphere, Birth Size 0.02, Velocity 0.02, Gravity 0) with Opacity 40% and Mode Add. Dust floating in the light gives a sense of space.
+[3320] Render the master as 4K ProRes 422 HQ, and make the delivery version from that file in Media Encoder as 4K H.264 at 40 Mbps (24-9).
+[3321] Linear keys, everything moves at once. Use easing and 0.1–0.3 s offsets (17-8)
+[3322] <b>Working with AI</b>Fog, dust and light sources or background scenes can be generated in Higgsfield on black and laid on with Screen mode (Chapters 3–5), and repetitive adjustment-layer setup, naming and expressions can be handed to the Claude bridge (Chapter 6) or the AI Assistant (Chapter 1). People make the judgments. Deciding “where the hero moment is” is the director's job.
+[3323] 28-1 The Actual Cost of This Book’s Exercises
+[3324] 28-2 How to Save
+[3325] 28-3 Copyright and Review
+[3326] 29-1 How Things Will Change
+[3327] 29-2 Higgsfield Academy and Certificates
+[3328] 29-3 Adobe Certification
+[3329] 29-4 Higgsfield Film Festivals and Contests
+[3330] 29-5 What to Do After This Book
+[3331] Finish the café storyboard from Chapter 27 as a real video and add it to your portfolio
+[3332] 3D models, text extrusion, replication (23-12)
+[3333] The bigger version of Mocha AE (built in, 19-6). Adds removal, stabilization and lens correction
+[3334] AI generation and editing panels and the Claude bridge (Chapters 2–7)
+[3335] All expressions from Chapter 17 (.js files with comments)
+[3336] The source file was renamed or moved. Right-click → Replace Footage → File (12-4)
+[3337] It is the bottom layer, or the mode was set inside a precomp (14-8)

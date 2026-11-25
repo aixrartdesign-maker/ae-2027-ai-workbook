@@ -2,7 +2,7 @@
 import re, sys, html as H
 S=open('/tmp/b13_b.html',encoding='utf-8').read()
 sys.path.insert(0,'/home/claude/book/tools'); import ins_rig; S=ins_rig.apply(S)
-import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S)
+import ins_extra, ins_more; S=ins_extra.apply(S); S=ins_extra.apply2(S); S=ins_more.apply3(S); import ins_pro; S=ins_pro.apply4(S); import ins_reorder; S=ins_reorder.apply6(S); S=ins_reorder.apply7(S)
 
 # ---- stray challenge boxes on the TOC page -> move into chapters 06, 07, 12
 m=re.search(r'<section class="chapter toc-page">.*?</section>',S,flags=re.S)
@@ -15,7 +15,9 @@ def add_to_chapter(no,box):
     pat=r'(<div class="ch-no">CHAPTER '+no+r'</div>.*?)(</section>)'
     S,k=re.subn(pat,lambda mm:mm.group(1)+box+'\n'+mm.group(2),S,count=1,flags=re.S)
     assert k==1
-add_to_chapter('06',strays[0]); add_to_chapter('07',strays[1]); add_to_chapter('12',strays[2])
+import os
+_R2=os.environ.get('RENUM2','1')=='1'
+add_to_chapter('16' if _R2 else '06',strays[0]); add_to_chapter('17' if _R2 else '07',strays[1]); add_to_chapter('22' if _R2 else '12',strays[2])
 
 # ---- chapter ids + collect titles
 parts=[]; cur=None
@@ -61,15 +63,14 @@ def entry(kind,cid,label,title):
     if ' — ' in t:
         a,b=t.split(' — ',1); t=a+'<em> — '+b+'</em>'
     return f'<div class="te"><span class="tn">{lab}</span><span class="tt">{t}</span><span class="pn" data-target="{cid}"></span></div>'
-idx=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 4'][0]
+idx=[i for i,t in enumerate(toc) if t[0]=='part' and t[2]=='PART 6'][0]
 colA=''.join(entry(*t) for t in toc[:idx]); colB=''.join(entry(*t) for t in toc[idx:])
 newtoc=('<section class="chapter toc-page" data-break="1">\n<div class="ch-no">CONTENTS</div>\n<h1 class="ch">차례</h1>\n'
         '<div class="toc1">'+colA+'</div>\n</section>\n'
         '<section class="chapter toc-page toc-cont" data-break="1">\n<div class="toc1">'+colB+'</div>\n</section>')
 S=S.replace(toc_sec,newtoc)
 # PART 0 starts a new page
-S=S.replace('<section class="part" id="part-0" style="break-before:page;margin-top:0">','<section class="part" id="part-0" data-break="1">')
-assert 'data-break="1"><div class="no">PART 0' in S
+S=re.sub(r'(<section class="part" id="part-\d+") style="break-before:page;margin-top:0">',r'\1 data-break="1">',S)
 
 # ---- shortcuts: 8 small tables -> one 4-column table (splittable by rows)
 gm=re.search(r'<div class="sc-grid">(.*?)</div>\n<div class="warn"><b>한글 입력 상태 주의</b>',S,flags=re.S)
