@@ -166,5 +166,7 @@ back='''<section class="cover back" id="backcover">
   <div class="author">안지아 지음</div>
   <div class="draft">2027 EDITION · 2026.11</div>
 </section>'''
+S=S.replace('<div class="draft">2027 EDITION · 2026.11</div>','<div class="draft pub">주식회사 도쉼</div>',1)
+S=S.replace('</style>','.cover .draft.pub { font-size:10pt; font-weight:700; color:var(--ink,#00005B); letter-spacing:.02em; }\n</style>',1)
 S=S.replace('</body></html>',back+'\n</body></html>',1)
 open('/tmp/b13_c.html','w',encoding='utf-8').write(S)
