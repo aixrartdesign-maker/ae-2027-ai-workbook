@@ -1,0 +1,137 @@
+[4040] 20-9 Same tool, different roles — one table
+[4041] When you practise tracking, the same tool does completely different jobs from case to case. If you can first say <b>“the role this tool plays in this shot”</b> rather than just its name, you will know what to reach for even in a shot you have never seen. Cases T1–T4 below are done in this chapter, and T5–T8 in Chapter 21.
+[4042] Role ①
+[4043] Role ②
+[4044] Role ③
+[4045] Perspective corner pin (4-point)
+[4046] T1 replace a handheld phone screen
+[4047] T2 replace a wall-mounted TV screen
+[4048] T3 replace a street billboard screen
+[4049] T1 remove the phone screen's green so fingers stay in front
+[4050] Ch. 19 remove the green screen behind a person
+[4051] T2 remove only a green card placed over the TV during the shoot
+[4052] T4 bend a flat chart onto a curved wall
+[4053] T3 make the billboard screen ripple like a wave
+[4054] Bend a logo slightly like a flag
+[4055] T5 lay text flat on a rooftop (Text)
+[4056] T6 lay video over a crosswalk (Solid)
+[4057] T7·T8 a handle on a wall or building (Null)
+[4058] T6 Overlay: add colour while keeping the white stripes
+[4059] T2 Screen: put the original reflection back over the screen
+[4060] T7 Multiply: graffiti that shows the wall texture
+[4061] 20-3 receive a 1-point track so text follows
+[4062] 21-4 a fixed point in 3D space
+[4063] T7 parent for text that follows a person
+[4064] Ch. 10 the point bars grow up from
+[4065] T5 slide text across the roof plane
+[4066] T8 the centre a 3D word spins around
+[4067] T3 make the billboard look lit
+[4068] Ch. 16 neon text
+[4069] T6 bloom on the floor video
+[4070] 20-10 Usage checklist by tool
+[4071] Check once before practising and once more when a result looks wrong. Going down the list as if filling in boxes catches most mistakes.
+[4072] <b>A. Perspective corner pin (4-point tracking)</b>
+[4073] I selected the video layer first, then pressed <b>Track Motion</b> in the Tracker panel (a tracker name appears in Current Track)
+[4074] Track Type is <b>Perspective corner pin</b>
+[4075] Track Points 1–4 are placed <b>top-left → top-right → bottom-left → bottom-right</b>
+[4076] Each point sits on a high-contrast corner (bezel edge, white dot) that stays in frame to the end
+[4077] After analysis the paths are smooth; if a frame jumps, I re-analysed from that frame
+[4078] I picked the replacement layer in Edit Target, and after Apply that layer has a Corner Pin effect and Position keys
+[4079] If the new screen is smaller than the original, I raised the layer's Scale to cover the edges
+[4080] The keyed layer (the original) is <b>above</b> the replacement screen
+[4081] I picked Screen Colour from the widest, most even green
+[4082] I switched View to Screen Matte and checked that white (keep) and black (remove) are clean
+[4083] Green left on edges → Despill Bias; holes → Clip White
+[4084] I set the layer's size and position before bending (Vertex values are in layer coordinates)
+[4085] The 4 vertices sit on the wall corners and the 8 tangents at 1/3 and 2/3 along the curves
+[4086] Quality is 8 or higher so bent text does not look stepped
+[4087] If the camera moves, I know it fits only one frame, so I use it on locked shots or split the surface into strips
+[4088] The video layer matches the comp size and has default Transform values (otherwise precompose)
+[4089] Analysis is done: Effect Controls shows the frame count and <b>Create Camera</b> is active
+[4090] With the effect name clicked, the track points are visible
+[4091] The target lies <b>flat</b> on the intended surface (floor, roof, wall); if it tilts I picked three other points
+[4092] I chose what to create by role: words = Text, video or image = Solid, a handle for other layers = Null
+[4093] On playback it sticks to the surface at the start, middle and end
+[4094] <b>E. Blending and finishing</b>
+[4095] Where a pattern should show through (floor, wall) I used Overlay or Multiply; for screen reflections, Screen
+[4096] If the composite is sharper than the footage I lowered Opacity to 85–95% or added Add Grain
+[4097] A glowing screen gets Glow; a real object gets a shadow (21-6)
+[4098] <span class="tag t1">Follow Along</span> 20-11 Practice cases T1–T4 — four screen replacements
+[4099] 5-second 720p clips made with Higgsfield Seedance 2.0 Mini (5 credits each): a hand holding a green-screen phone, a living room with a wall-mounted TV, a billboard on a night street, a lobby with a curved media wall. The replacement screens are frames from Claude cases 1–3 in Chapter 10. Comps are 1280×720, 5 seconds, 24 fps.
+[4100] T1. Phone screen replacement — 4-point tracking + Keylight
+[4101] Role: <b>Perspective corner pin</b> follows the screen's four corners, and <b>Keylight</b> removes the green so fingers appear in front of the new screen.
+[4102] In comp <span class="mono">T1_폰크로마키</span>, place the source video (<span class="mono">원본_폰</span>) and the vertical image to insert (<span class="mono">넣을화면_쇼츠</span>). Click the source layer and press <b>Track Motion</b> in the Tracker panel. The Layer panel opens.
+[4103] Set Track Type to <b>Perspective corner pin</b> and four points appear. Move each point's inner box onto the white dot at a screen corner. If dragging is fiddly, click a point to select it and nudge it with the arrow keys (<span class="k">Shift</span>+arrow moves 10 pixels).
+[4104] <b>Figure 20-3</b> The four points placed on the white dots at the green screen's corners. The Tracker panel on the right shows Motion Source 원본_폰 and Track Type Perspective corner pin.
+[4105] Press <b>Analyze forward</b> (▶). A 5-second clip finishes in a few seconds. The four points follow the corners and leave paths.
+[4106] <b>Figure 20-4</b> After analysis. The short line beside each point is its path frame by frame.
+[4107] Press <b>Edit Target…</b>, choose Layer <span class="mono">넣을화면_쇼츠</span>, OK, then <b>Apply</b>. The image gets a <b>Corner Pin</b> effect with keys on every frame for the four corners and Position.
+[4108] <b>Figure 20-5</b> The Motion Target dialog. Choose the replacement layer under “Apply Motion To: Layer”.
+[4109] The first result leaves a <b>green border</b> around the new screen, because the white dots were slightly inside the screen edge. We raised the replacement layer's Scale to <b>133%, 122%</b> (width and height separately) to cover the green.
+[4110] Move the source layer <b>above</b> the replacement (<b>Layer → Arrange → Bring Layer to Front</b>), add <b>Effect → Keying → Keylight (1.2)</b> and pick the green with Screen Colour. When a finger crosses the screen, the hand stays in front.
+[4111] <b>Figure 20-6</b> Keylight (Screen Colour green) in Effect Controls on the left; Corner Pin keys Upper Left to Lower Right on every frame in the timeline below.
+[4112] <b>Figure 20-7</b> Left: right after Apply, a green border remains. Right: after raising Scale and adding Keylight (2.5 s).
+[4113] T2. Wall-mounted TV — same 4 points, different result
+[4114] Role: the same <b>Perspective corner pin</b> as T1, but this time it follows <b>the four corners of the TV bezel</b> instead of white dots. This case shows how hard a glossy black screen really is to track.
+[4115] Select <span class="mono">원본_TV</span>, Track Motion → Perspective corner pin. Place the four points on the outer bezel corners. Letting the inner box hold half TV and half wall makes the corner shape clearer.
+[4116] Analyze forward → choose <span class="mono">넣을화면_그래프</span> in Edit Target → Apply.
+[4117] <b>Figure 20-8</b> Analysis result. The two right points followed the bezel, but the paths of the two left points (Track Points 1 and 3) curved into the screen.
+[4118] <b>Figure 20-9</b> At 0.5 s (left) it is accurate. At 4.5 s (right) the camera has moved closer, the wall brightness behind the left corners changed, the points slipped and the chart spills outside the TV.
+[4119] <b>How to fix it</b>① Go to the frame where a point starts to slip (about 1.2 s in this clip), put just that point back on the corner and re-analyse from that frame. ② Turn on <b>Adapt Feature On Every Frame</b> in Options…. ③ If it still fails, track the whole TV screen with <b>Mocha AE</b> (20-6), which follows a plane instead of points. Mocha is far stronger on reflective screens.
+[4120] <b>Add the reflection back</b>After replacing, duplicate the original TV layer, put it on top, set the blending mode to <b>Screen</b> and Opacity to 20–30%. The window reflection from the original screen shows faintly over the new one and sells the shot.
+[4121] T3. Street billboard — 4 points + Glow
+[4122] Role: the same 4-point tracking now follows <b>a billboard frame against the sky</b>. High contrast made this the best-sticking case.
+[4123] Select <span class="mono">원본_전광판</span>, Track Motion → Perspective corner pin. Place the four points on the billboard screen's corners.
+[4124] <b>Figure 20-10</b> The four points placed. The white lines between them preview the shape of the replacement screen; when they overlap the billboard border, the points are in place.
+[4125] Analyze forward. The camera swings a lot, but all four points hold to the end. Choose <span class="mono">넣을화면_카운트</span> in Edit Target → Apply.
+[4126] <b>Figure 20-11</b> The last frame at 5 s. The paths of all four points (light-blue bands) are still on the billboard corners.
+[4127] Add <b>Effect → Stylize → Glow</b> to the replacement layer: Glow Radius 40, Glow Intensity 0.6. The screen looks lit on the night street.
+[4128] <b>Figure 20-12</b> 0.5 s (left) and 3.5 s (right). As the camera turns and the billboard grows, the countdown screen stays inside the frame.
+[4129] <b>Waving billboard</b>A screen that ripples like a wave must be bent <b>before the Corner Pin</b>. Precompose the replacement image, add <b>Wave Warp</b> or Bezier Warp inside the precomp, and apply the track to the precomp layer outside. With the effect order reversed, the ripple spills past the billboard.
+[4130] T4. Curved media wall — Bezier Warp
+[4131] Role: 4-point tracking can only fit flat surfaces. For a curved wall, first bend the image with <b>Bezier Warp</b>.
+[4132] Select <span class="mono">넣을화면_그래프</span> and add <b>Effect → Distort → Bezier Warp</b>. Move the four vertices (Top Left Vertex, Right Top Vertex, Bottom Right Vertex, Left Bottom Vertex) to the four corners of the wall screen.
+[4133] For the top curve, move Top Left Tangent and Top Right Tangent to 1/3 and 2/3 along the wall's top line. Do the same for the bottom. You can also click the target icon next to a name in Effect Controls and then click in the viewer.
+[4134] <b>Figure 20-13</b> The 12 vertex and tangent values of Bezier Warp, exactly as used in this book (coordinates in the 1920×1080 layer).
+[4135] <b>Figure 20-14</b> Original (left) and result (right) at 0 s. The top and bottom of the chart bend along the wall's curve and perspective.
+[4136] <b>Know the limit</b>In this clip the camera moves a lot, so it fits only the frame at 0 s. Tracking a curved surface is hard with After Effects' built-in tools. Use it on locked-off shots, or split the curve into <b>3–4 flat strips</b>, 4-point track each strip and place them side by side.
+[4137] <span class="tag t1">Follow Along</span> 21-9 Practice cases T5–T8 — attaching to space
+[4138] Seedance 2.0 Mini 5-second 720p clips: a drone circling a rooftop and a walk across a crosswalk (5 credits each). T7 and T8 apply the same steps to the walking-person clip from Chapter 6 and a street clip.
+[4139] T5. Text on a rooftop floor — Create Text and Camera
+[4140] Role: the 3D Camera Tracker finds <b>the roof plane</b>, and Text lies on it like a helipad marking.
+[4141] In <span class="mono">T5_옥상텍스트</span>, select <span class="mono">원본_옥상</span> and press <b>Track Camera</b> in the Tracker panel. A blue band reads “Analyzing in background (step 1 of 2)”. This clip finished in about 30 seconds.
+[4142] <b>Figure 21-5</b> Analysing. In Effect Controls on the left, 3D Camera Tracker shows Initializing… and a Cancel button.
+[4143] When analysis ends, click the effect name <b>3D Camera Tracker</b>. When the coloured points appear, drag around the points on the roof to select them. Check that the red target lies <b>flat</b> on the roof.
+[4144] <b>Figure 21-6</b> The red target lying on the front of the roof. When Effect Controls shows “121 frames”, analysis is complete.
+[4145] Right-click the target → <b>Create Text and Camera</b>. <span class="mono">Text</span> and <span class="mono">3D Tracker Camera</span> appear in the timeline.
+[4146] <b>Figure 21-7</b> The target's right-click menu. From the same target you choose Text, Solid, Null or Shadow Catcher according to the role (table in 21-3).
+[4147] Pick the <b>Type Tool</b> in the toolbar, click the text in the viewer, press <span class="k">Ctrl+A</span> to select it all and type <span class="mono">H  SKY 2027</span>. Character settings: Malgun Gothic Bold, 30 px, tracking 40, lime green.
+[4148] If the text hangs over the roof edge, change the Anchor Point to <b>slide it across the plane</b>. In this book we put the expression <span class="mono">value + [-50, 130, 0]</span> on Anchor Point to move it to the middle of the roof. Changing Position lifts it off the plane, but changing the Anchor Point of a layer lying on the plane slides it along the plane.
+[4149] <b>Figure 21-8</b> The Properties panel. The text made by the tracker is fitted to the roof with Scale 2000% and Orientation (274°, 357°, 321°). Leave these values alone.
+[4150] <b>Figure 21-9</b> 0.5 s (left) and 4.5 s (right). As the drone circles, the text stays as if painted on the roof.
+[4151] <b>For text that hovers and spins like a helicopter</b>① Add 90 to Orientation X to stand the text up, ② raise Anchor Point Y to lift it off the roof, ③ put <span class="mono">time*90</span> on Y Rotation so it turns 90° per second. ④ Drop a shadow on the floor with the Shadow Catcher from 21-6 to make it feel airborne.
+[4152] T6. Video on a crosswalk — Create Solid and Camera
+[4153] Role: the same tracker now finds <b>the road plane</b>, and a Solid becomes the screen laid on it. Overlay keeps the white stripes.
+[4154] Track Camera on <span class="mono">원본_횡단보도</span>. When it finishes, click the effect name and hover near points on the crosswalk stripes. When a triangle joining three nearby points and a target appear, click to select them.
+[4155] <b>Figure 21-10</b> Selecting three yellow points created a target lying on the road. Mixing near and far points makes the plane's tilt accurate.
+[4156] Right-click the target → <b>Create Solid and Camera</b>. <span class="mono">Track Solid 1</span> lies on the road. Raise Scale to 550% to cover the crosswalk.
+[4157] Add <b>Effect → Generate → 4-Color Gradient</b> to the solid, set blending to <b>Overlay</b> and Opacity 85%. To lay video, hold <span class="k">Alt</span> and drag the video from the Project panel onto the solid to replace it (21-5).
+[4158] <b>Figure 21-11</b> 0.5 s (left) and 4.5 s (right). Even as the camera crosses and turns, the colour stays on the road, and thanks to Overlay the white stripes remain visible.
+[4159] <b>When people and cars pass</b>The floor video covers their feet. Cut out just the passers-by with Roto Brush (Ch. 22 Object Matte) and put them back on top.
+[4160] T7. Wall graffiti and following text — extension
+[4161] Role: the 3D tracker handles the wall and 1-point tracking handles the person. Two trackers do different jobs in one shot.
+[4162] Track Camera on the walking-person clip from Chapter 6. Drag-select the points on the person, right-click → <b>Delete Selected Points</b> (turn on Auto-delete Points Across Time under Advanced to delete them in other frames too).
+[4163] Select points on the wall so the target <b>stands</b> parallel to the wall, then Create Solid and Camera. Replace the solid with a graffiti image (PNG with transparent background) and set blending to <b>Multiply</b>. The brick texture shows through the art.
+[4164] Make the following text with the 1-point tracking from 20-3. Track a distinct spot such as the person's shoulder with Track Motion, Apply to a <b>null</b>, and parent the text to the null.
+[4165] The wall target stands parallel to the wall rather than lying like a floor
+[4166] I deleted the track points on the person
+[4167] Graffiti uses Multiply, text uses Normal
+[4168] T8. 3D text on a building — extension
+[4169] Role: a Null becomes <b>a handle</b> on the ground in front of the building, and extruded 3D text stands on it.
+[4170] Track Camera on the street clip → select points on the ground in front of the building → <b>Create Null and Camera</b>.
+[4171] Set <b>Composition → Composition Settings → 3D Renderer</b> to <b>Advanced 3D</b>. Type the text, turn on the 3D Layer switch and raise <b>Geometry Options → Extrusion Depth</b> to 40 to give it depth.
+[4172] Parent the text to <span class="mono">Track Null 1</span> and set Position to 0, 0, 0. Add 90 to Orientation X to stand it up, and catch its shadow with a Shadow Catcher as in 21-6.
+[4173] 3D Renderer is Advanced 3D and Extrusion Depth is above 0
+[4174] The bottom of the text touches the real ground (adjust Position Y)
+[4175] The light direction matches the sun in the footage
+[4176] 138 (real captures, hand-made diagrams, generated images with annotations)

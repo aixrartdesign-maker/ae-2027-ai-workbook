@@ -1,0 +1,137 @@
+[4040] 20-9 La misma función, papeles distintos — en una tabla
+[4041] Al practicar el seguimiento verás que la misma función hace trabajos muy distintos según el caso. Si primero puedes decir <b>«el papel que cumple esta función en este plano»</b> en vez de solo su nombre, sabrás qué usar incluso en un plano que nunca has visto. Los casos T1–T4 se hacen en este capítulo y T5–T8 en el capítulo 21.
+[4042] Papel ①
+[4043] Papel ②
+[4044] Papel ③
+[4045] Perspective corner pin (4 puntos)
+[4046] T1 cambiar la pantalla de un móvil en la mano
+[4047] T2 cambiar la pantalla de un televisor de pared
+[4048] T3 cambiar la pantalla de una valla luminosa
+[4049] T1 quitar el verde de la pantalla del móvil para que los dedos queden delante
+[4050] Cap. 19 quitar el fondo verde detrás de una persona
+[4051] T2 quitar solo una tarjeta verde colocada sobre el televisor al grabar
+[4052] T4 curvar un gráfico plano sobre una pared curva
+[4053] T3 hacer que la pantalla de la valla ondule
+[4054] Curvar un logotipo ligeramente, como una bandera
+[4055] T5 tumbar un texto sobre la azotea (Text)
+[4056] T6 extender un vídeo sobre un paso de peatones (Solid)
+[4057] T7·T8 un asa en una pared o un edificio (Null)
+[4058] T6 Overlay: añadir color conservando las rayas blancas
+[4059] T2 Screen: devolver el reflejo original sobre la pantalla
+[4060] T7 Multiply: grafiti que deja ver la textura de la pared
+[4061] 20-3 recibir un seguimiento de 1 punto para que el texto siga
+[4062] 21-4 un punto fijo en el espacio 3D
+[4063] T7 padre del texto que sigue a una persona
+[4064] Cap. 10 el punto desde el que crecen las barras
+[4065] T5 deslizar el texto sobre el plano de la azotea
+[4066] T8 el centro sobre el que gira un texto 3D
+[4067] T3 que la valla parezca encendida
+[4068] Cap. 16 texto de neón
+[4069] T6 resplandor del vídeo en el suelo
+[4070] 20-10 Lista de comprobación por función
+[4071] Revísala una vez antes de practicar y otra cuando un resultado se vea raro. Si la recorres de arriba abajo como quien rellena casillas, la mayoría de los errores aparecen aquí.
+[4072] <b>A. Perspective corner pin (seguimiento de 4 puntos)</b>
+[4073] Primero seleccioné la capa de vídeo y luego pulsé <b>Track Motion</b> en el panel Tracker (en Current Track aparece el nombre del rastreador)
+[4074] Track Type es <b>Perspective corner pin</b>
+[4075] Los Track Point 1–4 están en el orden <b>arriba izquierda → arriba derecha → abajo izquierda → abajo derecha</b>
+[4076] Cada punto está sobre una esquina de alto contraste (borde del marco, punto blanco) que permanece en cuadro hasta el final
+[4077] Tras el análisis las trayectorias son suaves; si un fotograma salta, volví a analizar desde ese fotograma
+[4078] En Edit Target elegí la capa de reemplazo y, tras Apply, esa capa tiene el efecto Corner Pin y claves de Position
+[4079] Si la pantalla nueva es más pequeña que la original, aumenté el Scale de la capa para cubrir los bordes
+[4080] La capa con la clave (la original) está <b>encima</b> de la pantalla de reemplazo
+[4081] Tomé Screen Colour del verde más amplio y uniforme
+[4082] Cambié View a Screen Matte y comprobé que el blanco (conservar) y el negro (quitar) están limpios
+[4083] Verde en los bordes → Despill Bias; agujeros → Clip White
+[4084] Fijé el tamaño y la posición de la capa antes de curvarla (los valores Vertex están en coordenadas de la capa)
+[4085] Los 4 vértices están en las esquinas de la pared y las 8 tangentes a 1/3 y 2/3 de las curvas
+[4086] Quality está en 8 o más para que el texto curvado no se vea escalonado
+[4087] Si la cámara se mueve, sé que solo encaja en un fotograma: lo uso en planos fijos o divido la superficie en franjas
+[4088] La capa de vídeo tiene el tamaño de la composición y valores de Transform por defecto (si no, precomponer)
+[4089] El análisis terminó: Effect Controls muestra el número de fotogramas y <b>Create Camera</b> está activo
+[4090] Con el nombre del efecto seleccionado se ven los puntos de seguimiento
+[4091] La diana está <b>tumbada</b> sobre la superficie deseada (suelo, azotea, pared); si se inclina, elegí otros tres puntos
+[4092] Elegí qué crear según el papel: palabras = Text, vídeo o imagen = Solid, asa para otras capas = Null
+[4093] Al reproducir, se mantiene pegado a la superficie al principio, en medio y al final
+[4094] <b>E. Fusión y acabado</b>
+[4095] Donde debe verse un dibujo (suelo, pared) usé Overlay o Multiply; para reflejos de pantalla, Screen
+[4096] Si lo compuesto es más nítido que el metraje, bajé Opacity a 85–95% o añadí Add Grain
+[4097] Una pantalla que brilla lleva Glow; un objeto real, sombra (21-6)
+[4098] <span class="tag t1">Paso a paso</span> 20-11 Casos prácticos T1–T4 — cuatro cambios de pantalla
+[4099] Clips de 5 segundos a 720p hechos con Higgsfield Seedance 2.0 Mini (5 créditos cada uno): una mano con un móvil de pantalla verde, un salón con televisor de pared, una valla luminosa en una calle de noche y un vestíbulo con un muro multimedia curvo. Las pantallas de reemplazo son fotogramas de los casos de Claude 1–3 del capítulo 10. Composiciones de 1280×720, 5 segundos y 24 fps.
+[4100] T1. Cambiar la pantalla del móvil — 4 puntos + Keylight
+[4101] Papel: <b>Perspective corner pin</b> sigue las cuatro esquinas de la pantalla y <b>Keylight</b> quita el verde para que los dedos queden delante de la pantalla nueva.
+[4102] En la composición <span class="mono">T1_폰크로마키</span>, coloca el vídeo original (<span class="mono">원본_폰</span>) y la imagen vertical que se va a insertar (<span class="mono">넣을화면_쇼츠</span>). Haz clic en la capa original y pulsa <b>Track Motion</b> en el panel Tracker. Se abre el panel Layer.
+[4103] Cambia Track Type a <b>Perspective corner pin</b> y aparecen cuatro puntos. Lleva el recuadro interior de cada punto sobre el punto blanco de cada esquina de la pantalla. Si arrastrar resulta difícil, haz clic en el punto para seleccionarlo y muévelo con las flechas (<span class="k">Shift</span>+flecha mueve 10 píxeles).
+[4104] <b>Figura 20-3</b> Los cuatro puntos sobre los puntos blancos de las esquinas de la pantalla verde. A la derecha, el panel Tracker muestra Motion Source 원본_폰 y Track Type Perspective corner pin.
+[4105] Pulsa <b>Analyze forward</b> (▶). Un clip de 5 segundos termina en unos segundos. Los cuatro puntos siguen las esquinas y dejan trayectorias.
+[4106] <b>Figura 20-4</b> Tras el análisis. La línea corta junto a cada punto es su trayectoria fotograma a fotograma.
+[4107] Pulsa <b>Edit Target…</b>, elige la capa <span class="mono">넣을화면_쇼츠</span>, OK y luego <b>Apply</b>. La imagen recibe el efecto <b>Corner Pin</b> con claves en cada fotograma para las cuatro esquinas y Position.
+[4108] <b>Figura 20-5</b> La ventana Motion Target. En «Apply Motion To: Layer» se elige la capa de reemplazo.
+[4109] El primer resultado deja un <b>borde verde</b> alrededor de la pantalla nueva, porque los puntos blancos estaban un poco hacia dentro del borde. Subimos el Scale de la capa de reemplazo a <b>133%, 122%</b> (ancho y alto por separado) para cubrir el verde.
+[4110] Sube la capa original <b>encima</b> del reemplazo (<b>Layer → Arrange → Bring Layer to Front</b>), añade <b>Effect → Keying → Keylight (1.2)</b> y toma el verde con Screen Colour. Cuando un dedo cruza la pantalla, la mano queda delante.
+[4111] <b>Figura 20-6</b> A la izquierda, Keylight (Screen Colour verde) en Effect Controls; abajo, en la línea de tiempo, las claves de Corner Pin de Upper Left a Lower Right en cada fotograma.
+[4112] <b>Figura 20-7</b> Izquierda: justo después de Apply queda un borde verde. Derecha: tras aumentar Scale y aplicar Keylight (2,5 s).
+[4113] T2. Televisor de pared — los mismos 4 puntos, otro resultado
+[4114] Papel: el mismo <b>Perspective corner pin</b> que en T1, pero ahora sigue <b>las cuatro esquinas del marco del televisor</b> en lugar de puntos blancos. Este caso muestra lo difícil que es seguir una pantalla negra y brillante.
+[4115] Selecciona <span class="mono">원본_TV</span>, Track Motion → Perspective corner pin. Coloca los cuatro puntos en las esquinas exteriores del marco. Si el recuadro interior contiene mitad televisor y mitad pared, la forma de la esquina se distingue mejor.
+[4116] Analyze forward → en Edit Target elige <span class="mono">넣을화면_그래프</span> → Apply.
+[4117] <b>Figura 20-8</b> Resultado del análisis. Los dos puntos de la derecha siguieron el marco, pero las trayectorias de los dos de la izquierda (Track Point 1 y 3) se curvaron hacia dentro de la pantalla.
+[4118] <b>Figura 20-9</b> A 0,5 s (izquierda) es exacto. A 4,5 s (derecha) la cámara se ha acercado, el brillo de la pared tras las esquinas izquierdas cambió, los puntos resbalaron y el gráfico se sale del televisor.
+[4119] <b>Cómo corregirlo</b>① Ve al fotograma en que un punto empieza a resbalar (en este clip, hacia 1,2 s), devuelve solo ese punto a la esquina y vuelve a analizar desde ahí. ② En Options… activa <b>Adapt Feature On Every Frame</b>. ③ Si aun así falla, sigue toda la pantalla con <b>Mocha AE</b> (20-6), que sigue un plano en lugar de puntos. En pantallas con reflejos Mocha es mucho más fiable.
+[4120] <b>Devolver el reflejo</b>Tras el cambio, duplica la capa original del televisor, ponla arriba, modo de fusión <b>Screen</b> y Opacity 20–30%. El reflejo de la ventana de la pantalla original se ve tenue sobre la nueva y el plano resulta creíble.
+[4121] T3. Valla luminosa en la calle — 4 puntos + Glow
+[4122] Papel: el mismo seguimiento de 4 puntos sigue ahora <b>el marco de una valla recortado contra el cielo</b>. El alto contraste lo convirtió en el caso que mejor se pegó.
+[4123] Selecciona <span class="mono">원본_전광판</span>, Track Motion → Perspective corner pin. Coloca los cuatro puntos en las esquinas de la pantalla de la valla.
+[4124] <b>Figura 20-10</b> Los cuatro puntos colocados. Las líneas blancas entre ellos anticipan la forma de la pantalla de reemplazo; si coinciden con el marco de la valla, los puntos están en su sitio.
+[4125] Analyze forward. La cámara gira mucho, pero los cuatro puntos aguantan hasta el final. En Edit Target elige <span class="mono">넣을화면_카운트</span> → Apply.
+[4126] <b>Figura 20-11</b> El último fotograma, a 5 s. Las trayectorias de los cuatro puntos (bandas celestes) siguen en las esquinas de la valla.
+[4127] Añade a la capa de reemplazo <b>Effect → Stylize → Glow</b>: Glow Radius 40, Glow Intensity 0.6. La pantalla parece encendida en la calle de noche.
+[4128] <b>Figura 20-12</b> 0,5 s (izquierda) y 3,5 s (derecha). Aunque la cámara gira y la valla crece, la cuenta atrás se mantiene dentro del marco.
+[4129] <b>Valla ondulante</b>Una pantalla que ondula hay que curvarla <b>antes del Corner Pin</b>. Precompón la imagen de reemplazo, aplica <b>Wave Warp</b> o Bezier Warp dentro de la precomposición y aplica el seguimiento a la capa de precomposición de fuera. Si el orden de los efectos se invierte, la onda se sale de la valla.
+[4130] T4. Muro multimedia curvo — Bezier Warp
+[4131] Papel: el seguimiento de 4 puntos solo encaja superficies planas. Para una pared curva, primero curva la imagen con <b>Bezier Warp</b>.
+[4132] Selecciona <span class="mono">넣을화면_그래프</span> y añade <b>Effect → Distort → Bezier Warp</b>. Lleva los cuatro vértices (Top Left Vertex, Right Top Vertex, Bottom Right Vertex, Left Bottom Vertex) a las cuatro esquinas de la pantalla de la pared.
+[4133] Para la curva superior, lleva Top Left Tangent y Top Right Tangent a 1/3 y 2/3 de la línea superior de la pared. Haz lo mismo abajo. También puedes pulsar el icono de diana junto al nombre en Effect Controls y hacer clic en el visor.
+[4134] <b>Figura 20-13</b> Los 12 valores de vértices y tangentes de Bezier Warp, tal como se usaron en este libro (coordenadas en la capa de 1920×1080).
+[4135] <b>Figura 20-14</b> Original (izquierda) y resultado (derecha) a 0 s. La parte superior e inferior del gráfico se curvan siguiendo la curva y la perspectiva de la pared.
+[4136] <b>Recuerda el límite</b>En este clip la cámara se mueve mucho, así que solo encaja el fotograma de 0 s. Seguir una superficie curva es difícil con las herramientas propias de After Effects. Úsalo en planos fijos o divide la curva en <b>3–4 franjas planas</b>, sigue cada franja con 4 puntos y colócalas una junto a otra.
+[4137] <span class="tag t1">Paso a paso</span> 21-9 Casos prácticos T5–T8 — pegar cosas al espacio
+[4138] Clips de Seedance 2.0 Mini de 5 segundos a 720p: un dron que rodea una azotea y un paso por un cruce peatonal (5 créditos cada uno). T7 y T8 aplican los mismos pasos al clip de la persona caminando del capítulo 6 y a un clip de calle.
+[4139] T5. Texto en el suelo de la azotea — Create Text and Camera
+[4140] Papel: 3D Camera Tracker encuentra <b>el plano de la azotea</b> y Text se tumba en él como la marca de un helipuerto.
+[4141] En <span class="mono">T5_옥상텍스트</span>, selecciona <span class="mono">원본_옥상</span> y pulsa <b>Track Camera</b> en el panel Tracker. Aparece una franja azul con «Analyzing in background (step 1 of 2)». Este clip terminó en unos 30 segundos.
+[4142] <b>Figura 21-5</b> Analizando. En Effect Controls, a la izquierda, 3D Camera Tracker muestra Initializing… y el botón Cancel.
+[4143] Cuando termine el análisis, haz clic en el nombre del efecto <b>3D Camera Tracker</b>. Cuando aparezcan los puntos de color, arrastra alrededor de los puntos de la azotea para seleccionarlos. Comprueba que la diana roja esté <b>tumbada</b> sobre la azotea.
+[4144] <b>Figura 21-6</b> La diana roja tumbada en la parte delantera de la azotea. Si Effect Controls muestra «121 frames», el análisis ha terminado.
+[4145] Clic derecho en la diana → <b>Create Text and Camera</b>. En la línea de tiempo aparecen <span class="mono">Text</span> y <span class="mono">3D Tracker Camera</span>.
+[4146] <b>Figura 21-7</b> El menú contextual de la diana. Desde la misma diana se elige Text, Solid, Null o Shadow Catcher según el papel (tabla de 21-3).
+[4147] Elige <b>Type Tool</b> en la barra de herramientas, haz clic en el texto del visor, pulsa <span class="k">Ctrl+A</span> para seleccionarlo todo y escribe <span class="mono">H  SKY 2027</span>. Ajustes de Character: Malgun Gothic Bold, 30 px, interletraje 40, verde lima.
+[4148] Si el texto cuelga del borde de la azotea, cambia el Anchor Point para <b>deslizarlo por el plano</b>. En este libro pusimos la expresión <span class="mono">value + [-50, 130, 0]</span> en Anchor Point para llevarlo al centro de la azotea. Cambiar Position lo despega del plano, pero cambiar el Anchor Point de una capa tumbada la desliza a lo largo del plano.
+[4149] <b>Figura 21-8</b> El panel Properties. El texto creado por el rastreador está ajustado a la azotea con Scale 2000% y Orientation (274°, 357°, 321°). No toques estos valores.
+[4150] <b>Figura 21-9</b> 0,5 s (izquierda) y 4,5 s (derecha). Mientras el dron gira, el texto se mantiene como si estuviera pintado en la azotea.
+[4151] <b>Texto que flota y gira como un helicóptero</b>① Suma 90 a Orientation X para poner el texto de pie, ② sube Anchor Point Y para separarlo de la azotea y ③ pon <span class="mono">time*90</span> en Y Rotation para que gire 90° por segundo. ④ Proyecta una sombra en el suelo con el Shadow Catcher de 21-6 para que parezca flotar.
+[4152] T6. Vídeo sobre un paso de peatones — Create Solid and Camera
+[4153] Papel: el mismo rastreador encuentra ahora <b>el plano de la calzada</b> y un Solid se convierte en la pantalla extendida encima. Overlay conserva las rayas blancas.
+[4154] Track Camera en <span class="mono">원본_횡단보도</span>. Al terminar, haz clic en el nombre del efecto y pasa el ratón cerca de los puntos de las rayas del paso. Cuando aparezcan un triángulo que une tres puntos cercanos y una diana, haz clic para seleccionarlos.
+[4155] <b>Figura 21-10</b> Al seleccionar tres puntos amarillos apareció una diana tumbada en la calzada. Mezclar puntos cercanos y lejanos da una inclinación del plano más precisa.
+[4156] Clic derecho en la diana → <b>Create Solid and Camera</b>. <span class="mono">Track Solid 1</span> queda tumbado en la calzada. Sube Scale a 550% para cubrir el paso.
+[4157] Añade al sólido <b>Effect → Generate → 4-Color Gradient</b>, modo de fusión <b>Overlay</b> y Opacity 85%. Para poner vídeo, arrastra el vídeo del panel Project sobre el sólido con <span class="k">Alt</span> pulsada para sustituirlo (21-5).
+[4158] <b>Figura 21-11</b> 0,5 s (izquierda) y 4,5 s (derecha). Aunque la cámara cruza y cambia de dirección, el color se queda en la calzada y, gracias a Overlay, las rayas blancas siguen visibles.
+[4159] <b>Cuando pasan personas y coches</b>El vídeo del suelo les tapa los pies. Recorta solo a los transeúntes con Roto Brush (cap. 22, Object Matte) y vuelve a ponerlos encima.
+[4160] T7. Grafiti en la pared y texto que sigue — ampliación
+[4161] Papel: el rastreador 3D se ocupa de la pared y el seguimiento de 1 punto de la persona. En un mismo plano, dos rastreadores hacen trabajos distintos.
+[4162] Track Camera en el clip de la persona caminando del capítulo 6. Selecciona arrastrando los puntos sobre la persona, clic derecho → <b>Delete Selected Points</b> (si activas Auto-delete Points Across Time en Advanced, se borran también en otros fotogramas).
+[4163] Selecciona puntos de la pared para que la diana quede <b>de pie</b>, paralela a la pared, y luego Create Solid and Camera. Sustituye el sólido por una imagen de grafiti (PNG con fondo transparente) y pon el modo <b>Multiply</b>. La textura del ladrillo se ve a través del dibujo.
+[4164] El texto que sigue a la persona se hace con el seguimiento de 1 punto de 20-3. Sigue con Track Motion un punto claro, como el hombro, aplícalo a un <b>nulo</b> y haz que el texto sea hijo de ese nulo.
+[4165] La diana de la pared está de pie, paralela a la pared, y no tumbada como un suelo
+[4166] Borré los puntos de seguimiento sobre la persona
+[4167] Grafiti en Multiply, texto en Normal
+[4168] T8. Texto 3D junto a un edificio — ampliación
+[4169] Papel: un Null se convierte en <b>el asa</b> sobre el suelo frente al edificio y un texto 3D con volumen se levanta sobre él.
+[4170] Track Camera en el clip de calle → selecciona puntos del suelo frente al edificio → <b>Create Null and Camera</b>.
+[4171] Cambia <b>Composition → Composition Settings → 3D Renderer</b> a <b>Advanced 3D</b>. Escribe el texto, activa el interruptor 3D Layer y sube <b>Geometry Options → Extrusion Depth</b> a 40 para darle grosor.
+[4172] Haz que el texto sea hijo de <span class="mono">Track Null 1</span> y pon Position en 0, 0, 0. Suma 90 a Orientation X para ponerlo de pie y recoge su sombra con un Shadow Catcher como en 21-6.
+[4173] 3D Renderer es Advanced 3D y Extrusion Depth es mayor que 0
+[4174] La base del texto toca el suelo real (ajusta Position Y)
+[4175] La dirección de la luz coincide con el sol del metraje
+[4176] 138 (capturas reales, diagramas hechos a mano e imágenes generadas con rótulos)
