@@ -72,9 +72,11 @@ CASES = '''<h2>10-3 Claude 제작 사례 다섯 가지 — 말 한 번으로 시
 
 <h3>사례 5. 구독 버튼 클릭</h3>
 <div class="prompt"><span class="lbl">PROMPT · Claude에게</span>1920×1080, 5초 컴포지션 "Claude사례5_구독버튼". 밝은 배경 가운데 빨간 둥근 "구독" 버튼이 톡 튀어나오고, 동그란 커서가 오른쪽 아래에서 다가와 1.5초에 누르면 버튼이 살짝 눌렸다가 회색 "구독중" 버튼으로 바뀌고 빨간 물결이 퍼지게. 커서는 3초쯤 빠져나가.</div>
-<figure class="shot wide"><img src="img/CLAUDE_CASE_5.jpg"><figcaption><b>그림 10-8</b> 0.3초 · 1.2초 · 1.75초 · 2.8초. 빨강·회색 버튼 두 장을 겹쳐 두고 불투명도로 바꿉니다.</figcaption></figure>
-<figure class="shot"><img src="img/CLAUDE_CASE_5_AE.jpg"><figcaption><b>그림 10-8</b> 애펙 화면(2초). 커서의 Position·Scale·Opacity 키와 글자_구독중의 Opacity 키가 클릭 시점(1.5초)에 모여 있습니다.</figcaption></figure>
-<div class="tip"><b>고친 점</b>“구독중 ✓”의 체크 기호가 맑은 고딕에 없어 빈칸으로 나왔습니다. 기호를 빼고 “구독중”만 남겼습니다. 기호가 필요하면 셰이프로 체크 모양을 그리거나 기호가 있는 글꼴을 씁니다. 커서는 셰이프 원으로 대신했는데, 실제 마우스 모양이 필요하면 아이콘 이미지를 불러와 같은 위치 키를 붙입니다.</div>
+<div class="prompt"><span class="lbl">PROMPT · 힉스필드 GPT Image 2 (배경 소스, 0.75크레딧×2장)</span>Premium motion-graphics end-screen background for a creative video channel, designed by a senior motion designer. 16:9. Deep indigo-to-violet gradient with soft glowing lime-green and coral light orbs, subtle grain, bokeh. A large empty frosted-glass rounded card in the center, an empty circular glass slot for a profile avatar above its top edge, lower third left empty for a button. No text, no logos.</div>
+<div class="prompt"><span class="lbl">PROMPT · Claude에게 (2단계)</span>방금 만든 배경 이미지를 배경 프리컴포즈(구독_채널카드)에 깔고, 유리 카드 위 동그란 자리에 프로필 원과 “M”, 그 아래 채널 이름 “모션 실습 채널”과 “구독자 1.2만명 · 동영상 86개”를 흰 글자로 넣어 줘. 버튼·커서·물결은 널 하나에 묶어 150%로 키우고 카드 아래쪽에 놓아. 시작 버튼은 코럴 레드, 구독중 버튼은 흰색.</div>
+<figure class="shot wide"><img src="img/CLAUDE_CASE_5.jpg"><figcaption><b>그림 10-8</b> 1.2초 · 1.75초 · 2.8초. 배경은 힉스필드 GPT Image 2로 만든 유리 카드 이미지, 그 위의 프로필·채널 이름·버튼·커서·물결은 모두 애펙 레이어입니다.</figcaption></figure>
+<figure class="shot"><img src="img/CLAUDE_CASE_5_AE.jpg"><figcaption><b>그림 10-8</b> 애펙 화면(2초). 버튼·커서·물결은 맨 위 널(Null 15)에 묶여 함께 커지고, 커서의 Position·Scale·Opacity 키와 글자_구독중의 Opacity 키가 클릭 시점(1.5초)에 모여 있습니다. 맨 아래 레이어가 배경 프리컴포즈 구독_채널카드입니다.</figcaption></figure>
+<div class="tip"><b>고친 점</b>“구독중 ✓”의 체크 기호가 맑은 고딕에 없어 빈칸으로 나왔습니다. 기호를 빼고 “구독중”만 남겼습니다. 기호가 필요하면 셰이프로 체크 모양을 그리거나 기호가 있는 글꼴을 씁니다. 커서는 셰이프 원으로 대신했는데, 실제 마우스 모양이 필요하면 아이콘 이미지를 불러와 같은 위치 키를 붙입니다. 처음 버전은 밝은 회색 바탕에 작은 버튼만 있어 밋밋했습니다. 배경을 GPT 이미지로 바꾸고 버튼을 널로 묶어 키웠습니다. 브리지의 셰이프 색 바꾸기가 흰색으로만 들어가서, 버튼 색은 <b>Effect → Generate → Fill</b>로 입혔습니다.</div>
 <div class="note"><b>다섯 사례에서 공통으로 배운 것</b>① 레이어 이름을 한글로 정해 달라고 하면 나중에 “막대_12월만 초록으로”처럼 이름으로 고칠 수 있습니다. ② 결과는 반드시 콘택트 시트(여러 시점 한 장)로 확인합니다. ③ 글꼴은 PostScript 이름으로, 기호는 글꼴에 있는지 확인합니다. ④ 부모는 움직임을 넣기 전에 겁니다.</div>
 '''
 

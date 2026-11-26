@@ -22,4 +22,7 @@ def apply11(S):
     S = rep(S, '<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div>같은 클립으로 ‘따뜻한 광고’, ‘차가운 다큐’, ‘빛바랜 회상’ 세 룩을 만들고 각각 조정 레이어에 저장하세요.</div>\n', '')
     S = rep(S, '<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span> 심화</div><ul><li>같은 영상으로 “따뜻한 추억”, “차가운 스릴러”, “광고처럼 깨끗한” 세 가지 룩 만들기. Lumetri Scopes 캡처를 함께 제출.</li></ul></div>',
             '<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div>같은 클립으로 ‘따뜻한 광고’, ‘차가운 다큐’, ‘빛바랜 회상’ 세 룩을 만들어 각각 조정 레이어에 저장하고, Lumetri Scopes 캡처를 함께 제출하세요.</div>')
+    S = rep(S, '<tr><td>회사가 마이크로소프트·구글 환경이다</td><td>Copilot·Gemini의 MCP 지원 도구. 회사 보안 정책을 먼저 확인</td></tr>\n', '')
+    S = rep(S, '<b>막혔을 때</b>플러그인이 보이지 않으면 요금제와 지역을 확인하고, 새 대화에서 힉스필드를 이름으로 불러 봅니다. 대화마다 커넥터를 켜는 스위치가 있는 경우도 있습니다. 연결 오류가 나면 커넥터를 지우고 다시 추가한 뒤 도구 목록을 새로 고칩니다.',
+            '<b>막혔을 때</b>플러그인이 안 보이면 요금제·지역을 확인하고 새 대화에서 힉스필드를 이름으로 불러 봅니다. 연결 오류는 커넥터를 지웠다 다시 추가하면 대부분 풀립니다.')
     return S
