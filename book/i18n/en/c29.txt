@@ -1,0 +1,5 @@
+[4178] <b>Rules for any AI</b>Do logins and payments yourself. Connect only through official lists (plugins, marketplace) or official addresses. Give a newly connected AI low-credit tasks first. This book tested bridge control only with Claude, so try a short task first with any other AI.
+[4179] Sources: official Higgsfield, OpenAI and Adobe help pages and the Adobe newsroom (2025.12.10). Checked November 2026.
+[4180] Make a rig that controls wiggle’s frequency and amount with one Slider Control and link it to five layers with the Pick Whip.
+[4181] Advanced: gather Slider, Color and Checkbox controls on one null into a “lower-third rig” (box auto-sizing with sourceRectAtTime, batch colour change, entrance on/off), export it as a MOGRT and check it in Premiere.
+[4182] Make three looks from the same clip — “warm commercial”, “cold documentary” and “faded memory” — save each on an adjustment layer, and hand in Lumetri Scopes captures with them.

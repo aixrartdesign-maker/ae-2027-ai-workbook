@@ -256,8 +256,8 @@ ul, ol { margin:0 0 3mm; }
 li { margin-bottom:.7mm; line-height:1.55; }
 .role .rh { font-size:10.4pt; }
 
-.pg.memo .memo-h { font-size:8pt; font-weight:800; letter-spacing:.3em; color:#6b63e6; padding-bottom:3mm; border-bottom:.35mm solid #cfcbff; }
-.pg.memo .memo-lines { height:205mm; background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 8.7mm, #e6e5f2 8.7mm, #e6e5f2 9mm); }
+.pg.memo .memo-h { font-size:8pt; font-weight:800; letter-spacing:.3em; color:#8a8e96; padding-bottom:3mm; }
+.pg.memo .memo-lines { height:205mm; background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 8.7mm, #ececee 8.7mm, #ececee 9mm); }
 
 /* TOC v3: one column, one line per entry */
 .toc1 { margin-top:7mm; }
@@ -806,7 +806,6 @@ h2 { margin:9mm 0 2.3mm; }
 <div class="step"><div class="n">3</div><div class="b">로그인 창이 열리면 힉스필드로 직접 로그인합니다.</div></div>
 <div class="step"><div class="n">4</div><div class="b">애펙에서 힉스필드 패널을 열고 Bridge MCP의 <b>Connect</b>를 누른 상태에서, 대화창에 “지금 열린 애펙의 컴포지션 목록을 보여 줘”라고 시험합니다.</div></div>
 
-<div class="note"><b>요금제와 권한</b>커스텀 MCP 서버를 쓸 수 있는 요금제와 쓰기(조작) 권한 범위는 ChatGPT 요금제와 시기에 따라 달랐습니다. 이 책은 브리지 조작을 Claude에서만 확인했으므로, 다른 AI에서는 같은 결과가 나오는지 짧은 작업으로 먼저 시험하세요.</div>
 
 <h2>5-4 ChatGPT 안의 어도비 — Adobe for ChatGPT</h2>
 <p>어도비는 2025년 12월 포토샵·Adobe Express·Acrobat을 ChatGPT 안에서 쓸 수 있게 했고, 지금은 하나의 <b>Adobe 커넥터</b>로 포토샵, 프리미어, Firefly, Express, Acrobat 등의 기능을 대화로 부를 수 있습니다. 애펙 자체가 들어간 것은 아니지만, 소스를 다듬는 데 유용합니다.</p>
@@ -816,7 +815,6 @@ h2 { margin:9mm 0 2.3mm; }
 <tr><td>“Adobe Express로 행사 포스터 만들어 줘”</td><td>영상과 함께 쓸 홍보물</td></tr>
 <tr><td>“Adobe Acrobat, 이 PDF에서 표만 뽑아 줘”</td><td>자막·데이터 그래픽용 자료 정리</td></tr>
 </table>
-<p>더 세밀하게 고치려면 대화 안의 버튼으로 웹·데스크톱 앱으로 넘어가 이어서 작업합니다.</p>
 
 <h2>5-5 어떤 AI를 고를까</h2>
 <table>
@@ -826,8 +824,8 @@ h2 { margin:9mm 0 2.3mm; }
 <tr><td>스크립트·자동화를 함께 한다</td><td>Cursor·Codex·Claude Code + 힉스필드 CLI</td></tr>
 <tr><td>회사가 마이크로소프트·구글 환경이다</td><td>Copilot·Gemini의 MCP 지원 도구. 회사 보안 정책을 먼저 확인</td></tr>
 </table>
-<div class="warn"><b>어떤 AI든 지킬 것</b>로그인과 결제는 본인이 직접 합니다. 연결은 공식 목록(플러그인·마켓플레이스)이나 공식 주소로만 합니다. 처음 연결한 AI에는 크레딧이 적게 드는 작업부터 시킵니다.</div>
-<p class="src">출처: Higgsfield 도움말 “How do I connect Higgsfield to Claude, ChatGPT, or another AI agent?”, OpenAI 개발자 문서·커뮤니티 공지(ChatGPT 개발자 모드와 커스텀 MCP), Adobe 뉴스룸(2025.12.10), Adobe 도움말 “Adobe for ChatGPT”. 2026년 11월 확인.</p>
+<div class="warn"><b>어떤 AI든 지킬 것</b>로그인과 결제는 본인이 직접 합니다. 연결은 공식 목록(플러그인·마켓플레이스)이나 공식 주소로만 합니다. 처음 연결한 AI에는 크레딧이 적게 드는 작업부터 시킵니다. 브리지 조작은 이 책에서 Claude로만 확인했으니, 다른 AI는 짧은 작업으로 먼저 시험하세요.</div>
+<p class="src">출처: Higgsfield·OpenAI·Adobe 공식 도움말과 Adobe 뉴스룸(2025.12.10). 2026년 11월 확인.</p>
 <h2>이 장 점검</h2>
 <div class="stuck"><b>막혔을 때</b>플러그인이 보이지 않으면 요금제와 지역을 확인하고, 새 대화에서 힉스필드를 이름으로 불러 봅니다. 대화마다 커넥터를 켜는 스위치가 있는 경우도 있습니다. 연결 오류가 나면 커넥터를 지우고 다시 추가한 뒤 도구 목록을 새로 고칩니다.</div>
 </section>
@@ -1871,8 +1869,7 @@ h2 { margin:9mm 0 2.3mm; }
 <h2>이 장 점검</h2>
 <div class="ok"><b>성공하면</b>그림 18-2처럼 원 하나와 잔상 세 개가 한 줄 코드로 따라 움직입니다.</div>
 <div class="stuck"><b>막혔을 때</b>주황 오류 띠가 뜨면 따옴표 안 레이어 이름이 정확한지(띄어쓰기 포함), 영문 엔진(JavaScript)이 Project Settings → Expressions에 선택되어 있는지 확인합니다. 해결 뒤에는 띠 오른쪽 X로 닫습니다.</div>
-<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div>Slider Control 하나로 wiggle의 빈도와 세기를 조절하는 리그를 만들고, 같은 리그를 다른 레이어 다섯 개에 Pick Whip으로 연결해 보세요.</div>
-<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span> 심화</div><ul><li>널 하나에 Slider·Color·Checkbox 컨트롤을 모은 “하단 자막 리그” 만들기. 이름 길이에 따라 상자 자동 조절(sourceRectAtTime), 색 일괄 변경, 등장 애니메이션 on/off.</li><li>MOGRT로 내보내 프리미어에서 동작 확인.</li></ul></div>
+<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div><ul><li>Slider Control 하나로 wiggle의 빈도와 세기를 조절하는 리그를 만들어 레이어 다섯 개에 Pick Whip으로 연결하기.</li><li>심화: 널 하나에 Slider·Color·Checkbox를 모은 “하단 자막 리그”(sourceRectAtTime로 상자 자동 조절, 색 일괄 변경, 등장 on/off)를 MOGRT로 내보내 프리미어에서 확인.</li></ul></div>
 </section>
 <section class="part" id="part-7"><div class="no">PART 7</div><h1>합성과 VFX</h1><p>찍은 영상과 만든 그림을 한 화면처럼 보이게 하는 기술입니다. 영화의 특수효과가 여기서 출발합니다. 이 부의 실습 소스는 모두 힉스필드로 만들었고, 깃허브 저장소의 <span class="mono">sources/</span>에 목록과 프롬프트가 있습니다.</p></section>
 
@@ -2404,8 +2401,7 @@ h2 { margin:9mm 0 2.3mm; }
 <h2>이 장 점검</h2>
 <div class="ok"><b>성공하면</b>스코프(Lumetri Scopes)에서 흰 곳은 90~95, 검은 곳은 5~10 근처에 있습니다.</div>
 <div class="stuck"><b>막혔을 때</b>화면이 탁하면 Contrast보다 Whites·Blacks를 먼저 벌립니다. 피부가 붉거나 초록이면 Vectorscope의 피부선(Skin line)에 맞춥니다.</div>
-<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div>같은 클립으로 ‘따뜻한 광고’, ‘차가운 다큐’, ‘빛바랜 회상’ 세 룩을 만들고 각각 조정 레이어에 저장하세요.</div>
-<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span> 심화</div><ul><li>같은 영상으로 “따뜻한 추억”, “차가운 스릴러”, “광고처럼 깨끗한” 세 가지 룩 만들기. Lumetri Scopes 캡처를 함께 제출.</li></ul></div>
+<div class="layer3"><div class="lh"><span class="tag t5">도전 과제</span></div>같은 클립으로 ‘따뜻한 광고’, ‘차가운 다큐’, ‘빛바랜 회상’ 세 룩을 만들어 각각 조정 레이어에 저장하고, Lumetri Scopes 캡처를 함께 제출하세요.</div>
 </section>
 <section class="part" id="part-8"><div class="no">PART 8</div><h1>3D와 실무</h1><p>평면을 넘어 공간을 만들고, 완성한 작업을 제대로 내보내 다른 프로그램·사람과 주고받는 법입니다.</p></section>
 

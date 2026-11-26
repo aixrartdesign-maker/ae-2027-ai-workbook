@@ -1,0 +1,5 @@
+[4178] <b>Reglas para cualquier IA</b>Los inicios de sesión y los pagos hazlos tú. Conecta solo desde listas oficiales (plugins, marketplace) o direcciones oficiales. A una IA recién conectada, encárgale primero tareas que gasten pocos créditos. En este libro el control por el puente solo se comprobó con Claude, así que con otra IA prueba antes una tarea corta.
+[4179] Fuentes: ayuda oficial de Higgsfield, OpenAI y Adobe, y sala de prensa de Adobe (10.12.2025). Comprobado en noviembre de 2026.
+[4180] Haz un rig que controle la frecuencia y la fuerza de wiggle con un Slider Control y enlázalo con el Pick Whip a cinco capas.
+[4181] Avanzado: reúne en un nulo controles Slider, Color y Checkbox en un «rig de rótulos» (caja que se ajusta con sourceRectAtTime, cambio de color en bloque, entrada on/off), expórtalo como MOGRT y compruébalo en Premiere.
+[4182] Haz tres looks con el mismo clip —«anuncio cálido», «documental frío» y «recuerdo desvaído»—, guarda cada uno en una capa de ajuste y entrega capturas de Lumetri Scopes.
