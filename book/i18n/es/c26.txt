@@ -1,0 +1,10 @@
+[4030] <b>Figura 10-5</b> La pantalla de AE. Las capas tienen nombres en coreano, como «막대_12월» y «값_12월», y al desplegarlas con la tecla U solo aparecen claves de Scale en las barras y de Position y Opacity en los números.
+[4031] <b>Figura 10-6</b> 0,5 s · 2,5 s · 4,5 s · 5,6 s. El anillo se forma superponiendo dos círculos: uno exterior (morado) y uno interior (color de fondo).
+[4032] <b>Figura 10-7</b> La pantalla de AE (2 s 15 f). Cada capa de número tiene 2–4 claves de Scale y Opacity, colocadas en escalera a un segundo de distancia.
+[4033] <b>Figura 10-8</b> 0,35 s · 0,9 s · 1,6 s · 3 s. La tarjeta solo tiene 3 claves de posición; el texto y el botón de dentro suben siguiendo a su padre (la tarjeta).
+[4034] <b>Figura 10-9</b> La pantalla de AE. En la columna Parent &amp; Link aparece «8. 카드» (tarjeta). Basta con mover la tarjeta y el texto y el botón de dentro la siguen.
+[4035] <b>Figura 10-10</b> 1,5 s · 3,2 s · 4,8 s · 6,4 s. La capa del texto solo tiene dos claves de posición (0 s y 8 s), y el título está emparentado con ella y sube a la vez.
+[4036] <b>Figura 10-11</b> La pantalla de AE. 크레딧_본문 solo tiene dos claves de Position, a 0 s y 8 s, y el padre del título es «1. 크레딧_본문».
+[4037] <b>Figura 10-12</b> 0,3 s · 1,2 s · 1,75 s · 2,8 s. Los botones rojo y gris están superpuestos y se alternan con la opacidad.
+[4038] <b>Figura 10-13</b> La pantalla de AE (2 s). Las claves de Position, Scale y Opacity del cursor y las de Opacity de 글자_구독중 se concentran en el clic (1,5 s).
+[4039] 119 (capturas reales, diagramas hechos a mano e imágenes generadas con rótulos)
